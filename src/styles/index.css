@@ -1,0 +1,56 @@
+/* @import './global.css'; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import './normalize.css';
+@import './navbar.css';
+@import './home.css';
+
+:root {
+    --font-Poppins: 'Poppins', sans-serif;
+    --primary: #2b325c;
+    /* --primary: #274472; */
+    /* --primary: #213547; */
+    /* --primaryDk: #142533; */
+    --primaryDk: #172947;
+    --secundaryLg: #ec4850;
+    --secundary: #ab353a;
+
+    --scrollbarBG: #1c1c1c;
+    --thumbBG: #9ca3af88;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    background: var(--primary);
+}
+
+/* scroll */
+
+body::-webkit-scrollbar {
+    width: 11px;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

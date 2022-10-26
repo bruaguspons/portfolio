@@ -1,0 +1,183 @@
+.container-home {
+    --typewriterSpeed: 6s;
+    --typewriterCharactersGmail: 22;
+    --typewriterCharactersGit: 23;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* wave effect */
+.container-name {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    color: transparent;
+    font-size: 5rem;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.border {
+    color: var(--primary);
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+}
+
+.wave {
+    color: var(--secundaryLg);
+    animation: wave 3s ease-in-out infinite;
+    position: absolute;
+}
+
+/* sub title */
+h2 {
+    /* margin-top: 10rem; */
+    font-size: 3rem;
+    color: var(--thumbBG);
+}
+
+h2>span {
+    font-weight: bold;
+    color: var(--secundaryLg);
+}
+
+footer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    color: white;
+}
+
+footer>a>span {
+    font-size: 1rem;
+}
+
+
+/* contacts effect */
+
+.write-effect {
+    font-family: "Source Sans Pro", sans-serif;
+    color: var(--secundary);
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+.dynamic-text-git,
+.dynamic-text-gmail {
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    position: relative;
+    font-family: "Source Code Pro", monospace;
+    width: max-content;
+}
+
+.dynamic-text-git::before,
+.dynamic-text-git::after,
+.dynamic-text-gmail::before,
+.dynamic-text-gmail::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.dynamic-text-git::before {
+    background: var(--primary);
+    animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharactersGit)) 1s alternate;
+    animation-iteration-count: infinite;
+}
+
+.dynamic-text-git::after {
+    width: 0.125em;
+    background: black;
+    animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharactersGit)) 1s alternate,
+        blink 750ms steps(var(--typewriterCharactersGit)) infinite;
+    animation-iteration-count: infinite;
+}
+
+.dynamic-text-gmail::before {
+    background: var(--primary);
+    animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharactersGmail)) 1s alternate;
+    animation-iteration-count: infinite;
+}
+
+.dynamic-text-gmail::after {
+    width: 0.125em;
+    background: black;
+    animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharactersGmail)) 1s alternate,
+        blink 750ms steps(var(--typewriterCharactersGmail)) infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes typewriter {
+    0% {
+        left: 0%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+
+@keyframes wave {
+
+    0%,
+    100% {
+        clip-path: polygon(0% 47%,
+                10% 48%,
+                33% 54%,
+                54% 60%,
+                70% 61%,
+                84% 59%,
+                100% 52%,
+                100% 100%,
+                0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0% 60%,
+                15% 65%,
+                34% 66%,
+                51% 62%,
+                67% 58%,
+                84% 45%,
+                100% 46%,
+                100% 100%,
+                0% 100%);
+    }
+}
