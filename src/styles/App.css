@@ -1,22 +1,44 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.card {
+  background: var(--secundaryDk);
+  border: .5rem solid var(--secundary);
+  border-radius: 3rem;
+  /* margin: 2rem; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+
+.title {
+  display: flex;
+  flex-direction: row;
+}
+
+.title:before,
+.title:after {
+  content: "";
+  flex: 1 1;
+  height: 1px;
+  background: var(--color-text-secundary);
+  margin: auto;
+  transform: scale(0);
+  transition: all .2s ease-in;
+}
+
+.title:before {
+  margin-right: 10px
+}
+
+.title:after {
+  margin-left: 10px
+}
+
+.title:hover:before,
+.title:hover:after {
+  transform: scale(1);
 }

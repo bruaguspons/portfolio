@@ -1,8 +1,11 @@
 /* @import './global.css'; */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 @import './normalize.css';
+@import './App.css';
 @import './navbar.css';
 @import './home.css';
+@import './skills.css';
+@import './about.css';
 
 :root {
     --font-Poppins: 'Poppins', sans-serif;
@@ -13,9 +16,12 @@
     --primaryDk: #172947;
     --secundaryLg: #ec4850;
     --secundary: #ab353a;
+    --secundaryDk: #7d2f33;
 
     --scrollbarBG: #1c1c1c;
     --thumbBG: #9ca3af88;
+    --color-text: #ffffffe0;
+    --color-text-secundary: #ffffffcb;
 }
 
 html {

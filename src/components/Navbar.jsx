@@ -5,7 +5,7 @@ const Navbar = () => {
     const [btnClass, setBtnClass] = useState(false)
     const [navClass, setNavClass] = useState(false)
     const [btnSelect, setBtnSelect] = useState({
-        Home: false,
+        Home: true,
         About: false,
         Skills: false,
         Projects: false,

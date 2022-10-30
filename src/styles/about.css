@@ -1,0 +1,20 @@
+#about {
+    height: min-content;
+    margin: 1rem;
+}
+
+#about img {
+    width: 100%;
+    max-width: 15rem;
+    float: left;
+    margin-right: 1rem;
+    border: .25rem solid var(--color-text-secundary);
+    border-radius: 2rem;
+}
+
+#about p {
+    color: var(--color-text-secundary);
+    margin: 2rem;
+    text-align: left;
+    font-size: 1.5rem;
+}

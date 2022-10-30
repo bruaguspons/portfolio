@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 /* wave effect */
@@ -13,16 +14,17 @@
     position: relative;
     width: 100%;
     height: 100%;
+    z-index: 10;
 }
 
 h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-weight: 900;
     color: transparent;
     font-size: 5rem;
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    top: 2rem;
     left: 0;
     right: 0;
     text-align: center;
@@ -40,14 +42,14 @@ h1 {
 .wave {
     color: var(--secundaryLg);
     animation: wave 3s ease-in-out infinite;
-    position: absolute;
 }
 
 /* sub title */
 h2 {
-    /* margin-top: 10rem; */
+    margin: 0 auto;
+    margin-bottom: 2rem;
     font-size: 3rem;
-    color: var(--thumbBG);
+    color: var(--color-text);
 }
 
 h2>span {
@@ -55,6 +57,7 @@ h2>span {
     color: var(--secundaryLg);
 }
 
+/* social media logos */
 footer {
     width: 100%;
     height: 100%;
@@ -70,11 +73,23 @@ footer a {
     flex-direction: column;
     align-items: center;
     font-size: 3rem;
-    color: white;
+    color: var(--color-text);
+    transition: font-size 0.25s, color 0.25s;
 }
 
-footer>a>span {
+footer a span {
     font-size: 1rem;
+    transition: font-size 0.25s;
+}
+
+footer a:hover {
+    font-size: 4.5rem;
+    color: var(--secundaryLg);
+}
+
+footer>a:hover span {
+    font-size: 1.55rem;
+    /* color: var(--secundaryLg); */
 }
 
 
@@ -82,7 +97,7 @@ footer>a>span {
 
 .write-effect {
     font-family: "Source Sans Pro", sans-serif;
-    color: var(--secundary);
+    color: var(--secundaryLg);
     display: grid;
     place-content: center;
     text-align: center;
@@ -91,7 +106,8 @@ footer>a>span {
 .dynamic-text-git,
 .dynamic-text-gmail {
     margin-bottom: 1rem;
-    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    font-size: 2.5rem;
+    /* font-size: clamp(1rem, 3vw + 1rem, 4rem); */
     position: relative;
     font-family: "Source Code Pro", monospace;
     width: max-content;
@@ -158,26 +174,10 @@ footer>a>span {
 
     0%,
     100% {
-        clip-path: polygon(0% 47%,
-                10% 48%,
-                33% 54%,
-                54% 60%,
-                70% 61%,
-                84% 59%,
-                100% 52%,
-                100% 100%,
-                0% 100%);
+        clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
     }
 
     50% {
-        clip-path: polygon(0% 60%,
-                15% 65%,
-                34% 66%,
-                51% 62%,
-                67% 58%,
-                84% 45%,
-                100% 46%,
-                100% 100%,
-                0% 100%);
+        clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
     }
 }

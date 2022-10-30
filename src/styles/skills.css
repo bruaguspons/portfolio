@@ -1,0 +1,26 @@
+#skills {
+    margin: 1rem;
+}
+
+table {
+    margin: 0 auto;
+    max-width: 700px;
+    width: 100%;
+    line-height: 3rem;
+}
+
+thead tr {
+    color: var(--color-text);
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+table td div {
+    color: var(--color-text);
+    font-size: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
