@@ -23,8 +23,8 @@ const Home = () => {
                 <span>{'/>'}</span>
             </h2>
             <div className='write-effect'>
-                <div className='dynamic-text-git'><span>github.com/bruaguspons/</span></div>
-                <div className='dynamic-text-gmail'><span>bruaguspons@gmail.com/</span></div>
+                <div className='text-git'><h2>github.com/bruaguspons/.</h2></div>
+                <div className='text-gmail'><h2>bruaguspons@gmail.com/</h2></div>
             </div>
             <footer>
                 <a href="https://github.com/bruaguspons" target='_blank' title='GitHub'>

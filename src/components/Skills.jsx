@@ -12,95 +12,98 @@ import postgresql from './../assets/postgresql-icon.svg'
 import mongodb from './../assets/mongodb-icon.svg'
 const Skills = () => {
     return (
-        <div id='skills' >
-            <h2 className='title'>My skills</h2>
-            <table className='card'>
-                <thead>
-                    <tr>
-                        <th>Front-End</th>
-                        <th>Back-End</th>
-                        <th>Data Base</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <div>
-                                <img src={html5} alt="" />
-                                <span>Html5</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div>
-                                <img src={python} alt="" />
-                                <span>Python</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div>
-                                <img src={postgresql} alt="" />
-                                <span>Postgresql</span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <img src={css} alt="" />
-                                <span>Css</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div>
-                                <img src={nodejs} alt="" />
-                                <span>Nodejs</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div>
-                                <img src={mongodb} alt="" />
-                                <span>Mongodb</span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <img src={js} alt="" />
-                                <span>JavaScript</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div>
-                                <img src={express} alt="" />
-                                <span>Express</span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <img src={reactLogo} alt="" />
-                                <span>React</span>
-                            </div>
-                        </td>
-                        <td>
-                            <div>
-                                <img src={django} alt="" />
-                                <span>Django</span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <img src={redux} alt="" />
-                                <span>Redux</span>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div className="container-skills">
+
+            <div id='skills' >
+                <h2 className='title'>My skills</h2>
+                <table className='card'>
+                    <thead>
+                        <tr>
+                            <th>Front-End</th>
+                            <th>Back-End</th>
+                            <th>Data Base</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div>
+                                    <img src={html5} alt="" />
+                                    <span>Html5</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <img src={python} alt="" />
+                                    <span>Python</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <img src={postgresql} alt="" />
+                                    <span>Postgresql</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <img src={css} alt="" />
+                                    <span>Css</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <img src={nodejs} alt="" />
+                                    <span>Nodejs</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <img src={mongodb} alt="" />
+                                    <span>Mongodb</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <img src={js} alt="" />
+                                    <span>JavaScript</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <img src={express} alt="" />
+                                    <span>Express</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <img src={reactLogo} alt="" />
+                                    <span>React</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <img src={django} alt="" />
+                                    <span>Django</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <img src={redux} alt="" />
+                                    <span>Redux</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 }

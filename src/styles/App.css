@@ -17,6 +17,8 @@
 .title {
   display: flex;
   flex-direction: row;
+  font-size: 3rem;
+  color: var(--color-text);
 }
 
 .title:before,

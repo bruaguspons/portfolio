@@ -1,7 +1,7 @@
 .container-home {
     --typewriterSpeed: 6s;
-    --typewriterCharactersGmail: 22;
-    --typewriterCharactersGit: 23;
+    --typewriterCharactersGmail: 24;
+    --typewriterCharactersGit: 24;
     height: calc(100vh - 70px);
     display: flex;
     flex-direction: column;
@@ -58,14 +58,14 @@ h1.surname {
 }
 
 /* sub title */
-h2 {
+.container-home>h2 {
     margin: 0 auto;
     margin: 15.0vmin 0;
     font-size: 3rem;
     color: var(--color-text);
 }
 
-h2>span {
+.container-home>h2>span {
     font-weight: bold;
     color: var(--secundaryLg);
 }
@@ -107,80 +107,57 @@ footer>a:hover span {
 
 
 /* contacts effect */
-
-.write-effect {
-    font-family: "Source Sans Pro", sans-serif;
-    color: var(--secundaryLg);
-    display: grid;
-    place-content: center;
-    text-align: center;
-}
-
-.dynamic-text-git,
-.dynamic-text-gmail {
-    margin-bottom: 1rem;
+.write-effect h2 {
+    color: var(--color-text);
     font-size: 2rem;
-    /* font-size: clamp(1rem, 3vw + 1rem, 4rem); */
-    position: relative;
     font-family: "Source Code Pro", monospace;
-    width: max-content;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid var(--secundaryLg);
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    /* Gives that scrolling effect as the typing happens */
+    /* Adjust as needed */
+
 }
 
-.dynamic-text-git::before,
-.dynamic-text-git::after,
-.dynamic-text-gmail::before,
-.dynamic-text-gmail::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+.text-git h2 {
+    animation:
+        typing var(--typewriterSpeed) steps(var(--typewriterCharactersGit)) alternate infinite,
+        blink-caret .75s infinite;
 }
 
-.dynamic-text-git::before {
-    background: var(--primary);
-    animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharactersGit)) 1s alternate;
-    animation-iteration-count: infinite;
+.text-gmail h2 {
+    animation:
+        typing var(--typewriterSpeed) steps(var(--typewriterCharactersGmail)) alternate infinite,
+        blink-caret .75s infinite;
 }
 
-.dynamic-text-git::after {
-    width: 0.125em;
-    background: black;
-    animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharactersGit)) 1s alternate,
-        blink 750ms steps(var(--typewriterCharactersGit)) infinite;
-    animation-iteration-count: infinite;
-}
-
-.dynamic-text-gmail::before {
-    background: var(--primary);
-    animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharactersGmail)) 1s alternate;
-    animation-iteration-count: infinite;
-}
-
-.dynamic-text-gmail::after {
-    width: 0.125em;
-    background: black;
-    animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharactersGmail)) 1s alternate,
-        blink 750ms steps(var(--typewriterCharactersGmail)) infinite;
-    animation-iteration-count: infinite;
-}
-
-@keyframes typewriter {
-    0% {
-        left: 0%;
+@keyframes typing {
+    from {
+        width: 0
     }
 
-    100% {
-        left: 100%;
-    }
-}
-
-@keyframes blink {
     to {
-        background: transparent;
+        width: 100%
     }
 }
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--secundaryLg);
+    }
+}
+
 
 
 @keyframes wave {
@@ -224,8 +201,8 @@ footer>a:hover span {
 
 @media (max-width: 590px) {
 
-    .dynamic-text-git,
-    .dynamic-text-gmail {
+    .text-git h2,
+    .text-gmail h2 {
         font-size: 7.0vw;
     }
 

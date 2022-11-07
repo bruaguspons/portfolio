@@ -1,6 +1,11 @@
+.container-about {
+    margin: 0 1rem;
+}
+
 #about {
     height: min-content;
-    margin: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 #about img {
