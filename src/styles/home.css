@@ -30,6 +30,14 @@ h1 {
     text-align: center;
 }
 
+h1.name {
+    margin-right: 16rem;
+}
+
+h1.surname {
+    margin-left: 16rem;
+}
+
 .border {
     color: var(--primary);
     text-shadow:
@@ -47,7 +55,7 @@ h1 {
 /* sub title */
 h2 {
     margin: 0 auto;
-    margin-bottom: 2rem;
+    margin: 15.0vmin 0;
     font-size: 3rem;
     color: var(--color-text);
 }
@@ -106,7 +114,7 @@ footer>a:hover span {
 .dynamic-text-git,
 .dynamic-text-gmail {
     margin-bottom: 1rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     /* font-size: clamp(1rem, 3vw + 1rem, 4rem); */
     position: relative;
     font-family: "Source Code Pro", monospace;
@@ -173,11 +181,38 @@ footer>a:hover span {
 @keyframes wave {
 
     0%,
+
     100% {
         clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
     }
 
     50% {
         clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+}
+
+@media (max-width: 590px) {
+    h1.name {
+        font-size: 18.0vw;
+        margin-right: 0rem;
+        margin-top: 2rem;
+    }
+
+    h1.surname {
+        font-size: 18.0vw;
+        margin-left: 0rem;
+        margin-top: 6rem;
+    }
+}
+
+@media (max-width: 590px) {
+
+    .dynamic-text-git,
+    .dynamic-text-gmail {
+        font-size: 7.0vw;
+    }
+
+    h2 {
+        font-size: 10.0vw;
     }
 }

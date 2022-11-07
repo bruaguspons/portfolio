@@ -10,8 +10,10 @@ const Home = () => {
     return (
         <div className="container-home" id='home'>
             <div className='container-name'>
-                <h1 className='border'>Bruno Pons</h1>
-                <h1 className='wave'>Bruno Pons</h1>
+                <h1 className='border name'>Bruno</h1>
+                <h1 className='wave name'>Bruno</h1>
+                <h1 className='border surname'>Pons</h1>
+                <h1 className='wave surname'>Pons</h1>
             </div>
 
 

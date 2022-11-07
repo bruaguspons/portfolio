@@ -6,6 +6,8 @@
 @import './home.css';
 @import './skills.css';
 @import './about.css';
+@import './projects.css';
+@import './contact.css';
 
 :root {
     --font-Poppins: 'Poppins', sans-serif;
