@@ -10,12 +10,13 @@ import express from './../assets/expressjs-icon.svg'
 import django from './../assets/django-icon.svg'
 import postgresql from './../assets/postgresql-icon.svg'
 import mongodb from './../assets/mongodb-icon.svg'
+
+
 const Skills = () => {
     return (
-        <div className="container-skills">
-
+        <div className="container-skills reveal">
             <div id='skills' >
-                <h2 className='title'>My skills</h2>
+                <h2 className='title'>My Skills</h2>
                 <table className='card'>
                     <thead>
                         <tr>
@@ -28,19 +29,19 @@ const Skills = () => {
                         <tr>
                             <td>
                                 <div>
-                                    <img src={html5} alt="" />
+                                    <img src={html5} alt="Html5" />
                                     <span>Html5</span>
                                 </div>
                             </td>
                             <td>
                                 <div>
-                                    <img src={python} alt="" />
+                                    <img src={python} alt="Python" />
                                     <span>Python</span>
                                 </div>
                             </td>
                             <td>
                                 <div>
-                                    <img src={postgresql} alt="" />
+                                    <img src={postgresql} alt="Postgresql" />
                                     <span>Postgresql</span>
                                 </div>
                             </td>
@@ -48,19 +49,19 @@ const Skills = () => {
                         <tr>
                             <td>
                                 <div>
-                                    <img src={css} alt="" />
+                                    <img src={css} alt="Css" />
                                     <span>Css</span>
                                 </div>
                             </td>
                             <td>
                                 <div>
-                                    <img src={nodejs} alt="" />
+                                    <img src={nodejs} alt="Nodejs" />
                                     <span>Nodejs</span>
                                 </div>
                             </td>
                             <td>
                                 <div>
-                                    <img src={mongodb} alt="" />
+                                    <img src={mongodb} alt="Mongodb" />
                                     <span>Mongodb</span>
                                 </div>
                             </td>
@@ -68,13 +69,13 @@ const Skills = () => {
                         <tr>
                             <td>
                                 <div>
-                                    <img src={js} alt="" />
+                                    <img src={js} alt="JavaScript" />
                                     <span>JavaScript</span>
                                 </div>
                             </td>
                             <td>
                                 <div>
-                                    <img src={express} alt="" />
+                                    <img src={express} alt="Express" />
                                     <span>Express</span>
                                 </div>
                             </td>
@@ -82,13 +83,13 @@ const Skills = () => {
                         <tr>
                             <td>
                                 <div>
-                                    <img src={reactLogo} alt="" />
+                                    <img src={reactLogo} alt="React" />
                                     <span>React</span>
                                 </div>
                             </td>
                             <td>
                                 <div>
-                                    <img src={django} alt="" />
+                                    <img src={django} alt="Django" />
                                     <span>Django</span>
                                 </div>
                             </td>
@@ -96,7 +97,7 @@ const Skills = () => {
                         <tr>
                             <td>
                                 <div>
-                                    <img src={redux} alt="" />
+                                    <img src={redux} alt="Redux" />
                                     <span>Redux</span>
                                 </div>
                             </td>

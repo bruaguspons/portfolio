@@ -2,7 +2,7 @@ import React from 'react'
 import Potho from './../assets/IMG_20221028_171856-Copy.jpg'
 const About = () => {
     return (
-        <div className="container-about">
+        <div className="container-about reveal">
 
             <div id='about' >
                 <h2 className='title'>About Me</h2>
