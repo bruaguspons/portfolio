@@ -53,3 +53,9 @@ textarea {
     background: rgb(64, 64, 64);
     cursor: not-allowed;
 }
+
+@media (max-width: 700px) {
+    .contain-contact form {
+        font-size: var(--font-size-small);
+    }
+}

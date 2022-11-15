@@ -13,7 +13,7 @@ const About = () => {
                         👋Hi! i'm Bruno.
                         <br></br>
                         <br></br>
-                        I'm an enthusiastic computer science studient from Uruguay, I like to use Django and React for building web applications.
+                        I'm an enthusiastic computer science studient from Uruguay, I like to use Express/Django and React for building web applications.
                         <br></br>
                         I like to learn on my own and solve challenging problems. In my free time, I solve problems on HackerRank, read tech articles and I enjoy playing chess.
                         <br></br>
