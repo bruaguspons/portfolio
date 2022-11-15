@@ -14,7 +14,7 @@ const Projects = () => {
                         <h3>Social Media App</h3>
                         <div className='image'>
                             <a href="https://github.com/bruaguspons/Social-Media-React-Express" target='_blank'>
-                                <img src="./../../SocialMedia.png" alt="Social Media" />
+                                <img src="./../assets/SocialMedia.png" alt="Social Media" />
                             </a>
                         </div>
                         <p>Made With:</p>
@@ -41,7 +41,7 @@ const Projects = () => {
                         <h3>Blog-Site</h3>
                         <div className='image'>
                             <a href="https://github.com/bruaguspons/Blog-Django-React" target='_blank'>
-                                <img src="./../../Blog.png" alt="Social Media" />
+                                <img src="./../assets/Blog.png" alt="Social Media" />
                             </a>
                         </div>
                         <div className='tecs'>
