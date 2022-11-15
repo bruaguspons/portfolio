@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { AiOutlineMail, AiFillGithub, AiOutlineFilePdf } from 'react-icons/ai'
 
-import CV from "./../../public/CV.pdf"
+import CV from "./../assets/CV.pdf"
+
 const Home = () => {
     const [word, setWord] = useState(true)
     const handleAnimation = (e) => {
