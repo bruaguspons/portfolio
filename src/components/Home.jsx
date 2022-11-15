@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { AiOutlineMail, AiFillGithub, AiOutlineFilePdf } from 'react-icons/ai'
+
+import CV from "./../../public/CV.pdf"
 const Home = () => {
     const [word, setWord] = useState(true)
     const handleAnimation = (e) => {
@@ -35,7 +37,7 @@ const Home = () => {
                     <AiOutlineMail />
                     <span>Mail</span>
                 </a>
-                <a href="./../../public/CV.pdf" target='_blank' title='CV'>
+                <a href={CV} target='_blank' title='CV'>
                     <AiOutlineFilePdf />
                     <span>CV</span>
                 </a>
