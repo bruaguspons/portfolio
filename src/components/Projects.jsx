@@ -50,6 +50,7 @@ const Projects = () => {
                                     <img src={Blog} alt="Blog" />
                                 </a>
                             </div>
+                            <p>Made With:</p>
                             <div className='tecs'>
                                 <div className='icon'>
                                     <img src={django} alt="Django" />
