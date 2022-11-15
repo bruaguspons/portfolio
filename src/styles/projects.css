@@ -19,7 +19,12 @@
 .singleCard h3 {
     font-weight: bold;
     color: var(--color-text);
-    font-size: 2rem;
+    font-size: var(--font-size-big);
+}
+
+.singleCard p {
+    font-size: var(--font-size-normal);
+    color: var(--color-text);
 }
 
 #projects .image {
@@ -29,7 +34,7 @@
     overflow: hidden;
 }
 
-#projects img {
+#projects a>img {
     cursor: pointer;
     object-fit: cover;
     width: 100%;
@@ -37,7 +42,7 @@
     transition: all .5s;
 }
 
-#projects img:hover {
+#projects a>img:hover {
     transform: scale(1.25);
 }
 
@@ -58,8 +63,9 @@
     justify-content: space-evenly;
 }
 
-#projects button {
+.singleCard>a {
     cursor: pointer;
+    text-decoration: none;
     color: var(--color-text);
     margin: 1rem 0;
     padding: 1rem 2rem;
@@ -68,6 +74,6 @@
     background: var(--primary);
 }
 
-#projects button:hover {
+.singleCard>a:hover {
     background: var(--primaryLg);
 }

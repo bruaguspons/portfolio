@@ -16,15 +16,15 @@
     bottom: 0;
     margin: auto 0;
     margin-right: 2rem;
-    border: .25rem solid var(--color-text-secundary);
+    border: .25rem solid var(--color-text);
     border-radius: 2rem;
 }
 
 #about p {
-    color: var(--color-text-secundary);
+    color: var(--color-text);
     margin: 2rem;
     text-align: left;
-    font-size: 1.5rem;
+    font-size: var(--font-size-normal);
     line-height: 1.5em;
     display: flex;
 }
