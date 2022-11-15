@@ -39,7 +39,11 @@ const Projects = () => {
                     <div className='singleCard'>
 
                         <h3>Blog-Site</h3>
-                        <div style={{ background: 'grey', height: 200 + 'px', margin: 2 + 'rem' }}>Coming soon...</div>
+                        <div className='image'>
+                            <a href="https://github.com/bruaguspons/Blog-Django-React" target='_blank'>
+                                <img src="./../../Blog.png" alt="Social Media" />
+                            </a>
+                        </div>
                         <div className='tecs'>
                             <div className='icon'>
                                 <img src={django} alt="Django" />
@@ -50,7 +54,7 @@ const Projects = () => {
                                 <span>React</span>
                             </div>
                         </div>
-                        <a href='https://github.com/bruaguspons/Social-Media-React-Express' target="_blank">More Info</a>
+                        <a href='https://github.com/bruaguspons/Blog-Django-React' target="_blank">More Info</a>
                     </div>
                 </div>
             </div>
