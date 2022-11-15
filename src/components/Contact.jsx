@@ -36,16 +36,19 @@ const Contact = () => {
     }
     return (
         <div id='contact' className='reveal'>
-            <h2 className='title'>Contact</h2>
-            <div className='card contain-contact'>
-                <form className='contain-contact' onSubmit={handleSubmit}>
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder='example@email.com' onChange={handleSend} autoComplete='off'></input>
+            <div className='contain-contact'>
 
-                    <label htmlFor="message">Message:</label>
-                    <textarea name="message" id="message" rows="10" onChange={handleSend}></textarea>
-                    <button type="submit" disabled={!(send['email'] && send['message'])} className={send['email'] && send['message'] ? 'enabled' : 'disabled'}>Send</button>
-                </form>
+                <h2 className='title'>Contact</h2>
+                <div className='card '>
+                    <form className='t' onSubmit={handleSubmit}>
+                        <label htmlFor="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder='example@email.com' onChange={handleSend} autoComplete='off'></input>
+
+                        <label htmlFor="message">Message:</label>
+                        <textarea name="message" id="message" rows="10" onChange={handleSend}></textarea>
+                        <button type="submit" disabled={!(send['email'] && send['message'])} className={send['email'] && send['message'] ? 'enabled' : 'disabled'}>Send</button>
+                    </form>
+                </div>
             </div>
         </div>
     )

@@ -112,6 +112,7 @@ nav>ul>li>a.selected {
     }
 
     #btn-window {
+        margin-right: 5px;
         display: flex;
         flex-direction: column;
         justify-content: center;
