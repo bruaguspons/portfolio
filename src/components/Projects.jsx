@@ -3,6 +3,10 @@ import mongodb from './../assets/mongodb-icon.svg'
 import express from './../assets/expressjs-icon.svg'
 import reactLogo from './../assets/reactjs-icon.svg'
 import django from './../assets/django-icon.svg'
+
+
+import SocialMedia from './../assets/SocialMedia.png'
+import Blog from './../assets/Blog.png'
 const Projects = () => {
     return (
         <div id='projects' className='reveal'>
@@ -14,7 +18,7 @@ const Projects = () => {
                         <h3>Social Media App</h3>
                         <div className='image'>
                             <a href="https://github.com/bruaguspons/Social-Media-React-Express" target='_blank'>
-                                <img src="./../assets/SocialMedia.png" alt="Social Media" />
+                                <img src={SocialMedia} alt="Social Media" />
                             </a>
                         </div>
                         <p>Made With:</p>
@@ -41,7 +45,7 @@ const Projects = () => {
                         <h3>Blog-Site</h3>
                         <div className='image'>
                             <a href="https://github.com/bruaguspons/Blog-Django-React" target='_blank'>
-                                <img src="./../assets/Blog.png" alt="Social Media" />
+                                <img src={Blog} alt="Blog" />
                             </a>
                         </div>
                         <div className='tecs'>

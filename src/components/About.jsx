@@ -9,7 +9,7 @@ const About = () => {
                 <section className='card'>
 
                     <p>
-                        <img src={Potho} alt="" />
+                        <img src={Potho} alt="Bruno" />
                         👋Hi! i'm Bruno.
                         <br></br>
                         <br></br>
