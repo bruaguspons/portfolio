@@ -12,6 +12,7 @@
 :root {
     --font-Poppins: 'Poppins', sans-serif;
     --font-size-normal: clamp(0.5rem, 10vw, 1.5rem);
+    --font-size-small: clamp(.5rem, 5vw, 1rem);
     --font-size-big: clamp(1rem, 5vw, 2rem);
     --primary: #2b325c;
     --primaryLg: #384178;

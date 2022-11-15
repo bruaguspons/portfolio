@@ -16,7 +16,7 @@ table {
 
 thead tr {
     color: var(--color-text);
-    font-size: var(--font-size-big);
+    font-size: var(--font-size-normal);
 }
 
 
@@ -35,13 +35,13 @@ table td div {
         border-spacing: 1rem;
     }
 
-    /* thead tr {
-        font-size: 1.4rem;
+    thead tr {
+        font-size: var(--font-size-small);
     }
 
     table td div {
-        font-size: 1.2rem;
-    } */
+        font-size: var(--font-size-small);
+    }
 
     table td div img {
         height: 3rem;
