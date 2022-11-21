@@ -103,12 +103,18 @@ nav>ul>li>a.selected {
 
     nav>ul>li {
         width: 100%;
+        background: #ca793f;
     }
 
     nav>ul>li>a {
         width: 100%;
         line-height: calc((100vh - 60px)/5);
-        color: var(--thumbBG);
+        color: var(--color-text);
+    }
+
+
+    nav>ul>li>a.selected {
+        background: var(--secundaryLg);
     }
 
     #btn-window {

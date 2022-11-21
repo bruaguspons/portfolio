@@ -25,17 +25,17 @@ textarea {
     width: 70%;
     outline: none;
     color: var(--color-text);
-    background: var(--primary);
+    background: var(--primaryLg);
     border: none;
     border: 1px solid black;
-    border-radius: 1.5rem;
+    border-radius: .5rem;
     padding: .8rem 2rem;
 }
 
 .contain-contact button {
     color: var(--color-text);
     padding: .5rem 1.3rem;
-    border: 2px solid black;
+    border: .1rem solid black;
     border-radius: 1rem;
     background: var(--primary);
     cursor: pointer;
@@ -48,7 +48,7 @@ textarea {
 .contain-contact button.disabled {
     color: rgba(255, 255, 255, 0.422);
     padding: .5rem 1.3rem;
-    border: 2px solid black;
+    border: .1rem solid black;
     border-radius: 1rem;
     background: rgb(64, 64, 64);
     cursor: not-allowed;

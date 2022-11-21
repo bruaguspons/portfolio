@@ -7,8 +7,9 @@
 
 .card {
   background: var(--secundaryDk);
-  border: .5rem solid var(--secundary);
-  border-radius: 3rem;
+  border: .2rem solid var(--secundary);
+  border-radius: 1rem;
+  /* backdrop-filter: blur(1rem) */
   /* margin: 2rem; */
 }
 
