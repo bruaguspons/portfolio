@@ -56,9 +56,9 @@ h1.surname {
     animation: wave2 3s ease-in-out infinite;
 }
 
-.glow {
+/* .glow {
     animation: glow 1.5s infinite alternate;
-}
+} */
 
 /* sub title */
 .container-home>h2 {
@@ -222,7 +222,7 @@ footer>a:hover span {
     }
 }
 
-@keyframes glow {
+/* @keyframes glow {
     from {
         text-shadow: 0px 0px 5px var(--secundaryLg), 0px 0px 5px var(--primary);
     }
@@ -230,4 +230,4 @@ footer>a:hover span {
     to {
         text-shadow: 0px 0px 20px var(--secundaryLg), 0px 0px 20px var(--primary);
     }
-}
+} */
