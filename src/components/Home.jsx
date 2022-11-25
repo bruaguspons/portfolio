@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AiOutlineMail, AiFillGithub, AiOutlineFilePdf } from 'react-icons/ai'
+import { AiOutlineMail, AiFillGithub, AiOutlineFilePdf, AiFillLinkedin } from 'react-icons/ai'
 
 import CV from "./../assets/CV.pdf"
 
@@ -37,6 +37,10 @@ const Home = () => {
                 <a href="https://github.com/bruaguspons" target='_blank' title='GitHub'>
                     <AiFillGithub />
                     <span>Github</span>
+                </a>
+                <a href="https://www.linkedin.com/in/bruno-pons-7b1547252/" target='_blank' title='Linkedin'>
+                    <AiFillLinkedin />
+                    <span>Linkedin</span>
                 </a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=someone@gmail.com" target="_blank" title='Mail'>
                     <AiOutlineMail />
