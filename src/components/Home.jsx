@@ -1,14 +1,7 @@
 import React, { useState } from 'react'
-import { AiOutlineMail, AiFillGithub, AiOutlineFilePdf, AiFillLinkedin } from 'react-icons/ai'
-
-import CV from "./../assets/CV.pdf"
+import { AiOutlineMail, AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 
 const Home = () => {
-    const [word, setWord] = useState(true)
-    const handleAnimation = (e) => {
-        console.log(e)
-        setWord(!word)
-    }
 
     return (
         <div className="container-home" id='home'>
@@ -42,13 +35,9 @@ const Home = () => {
                     <AiFillLinkedin />
                     <span>Linkedin</span>
                 </a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=someone@gmail.com" target="_blank" title='Mail'>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=bruaguspons@gmail.com" target="_blank" title='Mail'>
                     <AiOutlineMail />
                     <span>Mail</span>
-                </a>
-                <a href={CV} target='_blank' title='CV'>
-                    <AiOutlineFilePdf />
-                    <span>CV</span>
                 </a>
             </footer>
         </div>
