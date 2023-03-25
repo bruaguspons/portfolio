@@ -35,7 +35,7 @@ const Home = () => {
                     <AiFillLinkedin />
                     <span>Linkedin</span>
                 </a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=bruaguspons@gmail.com" target="_blank" title='Mail'>
+                <a href="mailto:bruaguspons@gmail.com" target="_blank" title='Mail'>
                     <AiOutlineMail />
                     <span>Mail</span>
                 </a>
