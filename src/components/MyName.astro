@@ -1,0 +1,13 @@
+---
+import TextColor from "./TextColor.astro";
+
+interface Props {
+    className?: string;
+}
+const { className } = Astro.props;
+---
+
+<p class={`mx-10 font-bold ${className}`}>
+    <span>Bruno</span>
+    <TextColor>Pons</TextColor>
+</p>

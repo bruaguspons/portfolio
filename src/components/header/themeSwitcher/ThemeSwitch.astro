@@ -1,0 +1,62 @@
+---
+interface Props {
+    defaultTheme?: "dark" | "light" | "system";
+}
+
+const { defaultTheme } = Astro.props;
+---
+
+<span id="astro-color-scheme-switch">
+    <slot />
+</span>
+
+<style>
+    :global(.dark) {
+        color-scheme: dark;
+    }
+</style>
+
+<script define:vars={{ defaultTheme }}>
+    const themeMatcher = window.matchMedia("(prefers-color-scheme: dark)");
+    const systemTheme = themeMatcher.matches ? "dark" : "light";
+
+    const updateAppliedTheme = (value) => {
+        document.documentElement.classList.remove("light", "dark");
+        document.documentElement.classList.add(value);
+        document.documentElement.setAttribute("data-theme", value);
+    };
+
+    const updateTheme = (value) => {
+        const theme = value === "system" ? systemTheme : value;
+        updateAppliedTheme(theme);
+        localStorage.setItem("theme", value);
+    };
+
+    const getTheme = () => {
+        if (
+            typeof localStorage !== "undefined" &&
+            localStorage.getItem("theme")
+        ) {
+            return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            return "dark";
+        }
+        return defaultTheme;
+    };
+
+    const themeSwitch = document.getElementById("astro-color-scheme-switch");
+    const element = themeSwitch.querySelector("button");
+    if (!element) {
+        throw new Error(
+            `plugin-astro-color-scheme: <"button"> element must be present inside 'themeSwitch' or change the 'strategy' attribute`,
+        );
+    }
+
+    updateTheme(getTheme());
+    element.addEventListener("click", (event) => {
+        const theme = getTheme();
+        const settheme = theme === "dark" ? "light" : "dark";
+        updateTheme(settheme);
+    });
+</script>

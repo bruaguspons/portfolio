@@ -1,0 +1,38 @@
+---
+import ImageCircule from "@/components/ImageCircle.astro";
+import { getI18N } from "@/i18n";
+import ButtonLink from "../ButtonLink.astro";
+import TextColor from "../TextColor.astro";
+
+const { currentLocale } = Astro;
+
+const i18n = getI18N({ currentLocale });
+---
+
+<section class="flex h-full items-center justify-center">
+    <div class="flex max-w-[980px]">
+        <div class="">
+            <span class="text-lg">
+                {i18n.HOME.greeting}
+            </span>
+            <p class="text-3xl font-extrabold my-4">
+                {i18n.HOME.profession[1]}
+                <TextColor>
+                    {i18n.HOME.profession[2]}
+                </TextColor>
+                {i18n.HOME.profession[3]}
+            </p>
+            <p class="text-zinc-300 text-base text-wrap">
+                {i18n.HOME.description}
+            </p>
+
+            <div class="mt-10">
+                <ButtonLink href="career">{i18n.HOME.career}</ButtonLink>
+                <ButtonLink href="projects">{i18n.HOME.projects}</ButtonLink>
+            </div>
+        </div>
+        <div class="mx-10">
+            <ImageCircule />
+        </div>
+    </div>
+</section>

@@ -1,0 +1,21 @@
+---
+interface Props {
+    href: string;
+}
+
+const { href } = Astro.props;
+
+const { url } = Astro.request;
+
+let defaultColor = "from-white to-white";
+
+if (url.includes(href)) {
+    defaultColor = "from-purple-500 to-blue-500";
+}
+---
+
+<a
+    href={href}
+    class={`font-extrabold text-transparent bg-clip-text bg-gradient-to-r ${defaultColor} hover:from-purple-500 hover:to-blue-500`}
+    ><slot /></a
+>

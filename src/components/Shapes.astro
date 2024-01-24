@@ -1,0 +1,78 @@
+---
+import type { PosShapesType, ShapesType } from "../types";
+import {
+    getRandomShape,
+    getRandomDeg,
+    getRandomSize,
+    getRandomPos,
+} from "../utils";
+
+interface Props {
+    shape?: ShapesType;
+    deg?: number;
+    size?: string;
+    pos?: PosShapesType;
+}
+
+let { shape, deg, size, pos } = Astro.props;
+
+shape = getRandomShape(shape);
+deg = getRandomDeg(deg);
+size = getRandomSize(size);
+const [posX, posY] = getRandomPos(pos);
+---
+
+<div
+    class="bg-gradient-to-br from-purple-500 to-blue-500 absolute oscillate"
+    data-randX={3}
+    data-randX={2}
+    style={{
+        clipPath: shape,
+        transform: `rotate(${deg}deg);`,
+        height: `${size}rem;`,
+        width: `${size}rem;`,
+        top: `${posY}%;`,
+        left: `${posX}%;`,
+    }}
+>
+</div>
+
+<script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".oscillate").forEach((e) => {
+            e.style.setProperty("--randX", Math.random() * 10 - 5); // Valor entre -5 y 5
+            e.style.setProperty("--randY", Math.random() * 10 - 5); // Valor entre -5 y 5
+        });
+    });
+</script>
+
+<style is:global>
+    .oscillate {
+        animation: oscillation 5s linear infinite;
+    }
+
+    @keyframes oscillation {
+        0%,
+        100% {
+            transform: translate(0, 0);
+        }
+        25% {
+            transform: translate(
+                calc(-3px * var(--randX)),
+                calc(3px * var(--randY))
+            );
+        }
+        50% {
+            transform: translate(
+                calc(3px * var(--randX)),
+                calc(-3px * var(--randY))
+            );
+        }
+        75% {
+            transform: translate(
+                calc(-3px * var(--randX)),
+                calc(-3px * var(--randY))
+            );
+        }
+    }
+</style>

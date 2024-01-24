@@ -1,0 +1,17 @@
+{
+    "HOME": {
+        "greeting": "Hi, i'm Bruno Pons 👋",
+        "profession": {
+            "1": "I'm",
+            "2": "Full-Stack",
+            "3": "Developer."
+        },
+        "description": "I specialize in delivering clean and effective full-stack solutions. Proficient in front-end frameworks, adept in back-end development, and skilled in ensuring seamless integration. I am deeply passionate about fostering innovation and prioritizing user-centric design. ",
+        "career": "My career",
+        "projects": "My projects"
+    },
+    "ABOUT": {
+        "title": "About me",
+        "content": "sfsdfsf sdf sf sf sf sfd sdf s"
+    }
+}
