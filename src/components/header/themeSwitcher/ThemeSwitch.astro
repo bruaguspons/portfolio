@@ -6,9 +6,12 @@ interface Props {
 const { defaultTheme } = Astro.props;
 ---
 
-<span id="astro-color-scheme-switch">
+<button
+    class="bg-background-100 dark:bg-background-600 border-black dark:border-background-100 text-background-600 dark:text-background-100 hover:bg-background-200 dark:hover:bg-background-500 transition duration-150 px-3 py-1 rounded-lg flex gap-2 items-center border"
+    id="astro-color-scheme-switch"
+>
     <slot />
-</span>
+</button>
 
 <style>
     :global(.dark) {
@@ -45,19 +48,24 @@ const { defaultTheme } = Astro.props;
         return defaultTheme;
     };
 
-    const themeSwitch = document.getElementById("astro-color-scheme-switch");
-    const element = themeSwitch.querySelector("button");
-    if (!element) {
-        throw new Error(
-            `plugin-astro-color-scheme: <"button"> element must be present inside 'themeSwitch' or change the 'strategy' attribute`,
-        );
-    }
+    const handleClick = (element) => {
+        console.log("entro aca con este elemento: ", element);
+        element.addEventListener("click", (event) => {
+            console.log("hizo click");
+            const theme = getTheme();
+            const settheme = theme === "dark" ? "light" : "dark";
+            updateTheme(settheme);
+        });
+    };
+
+    const element = document.getElementById("astro-color-scheme-switch");
 
     updateTheme(getTheme());
-    // document.addEventListener("astro:after-swap", updateTheme(getTheme()));
-    element.addEventListener("click", (event) => {
-        const theme = getTheme();
-        const settheme = theme === "dark" ? "light" : "dark";
-        updateTheme(settheme);
+    handleClick(element);
+    document.addEventListener("astro:after-swap", () => {
+        const element = document.getElementById("astro-color-scheme-switch");
+        console.log("entro a este evento de astro");
+        updateTheme(getTheme());
+        handleClick(element);
     });
 </script>

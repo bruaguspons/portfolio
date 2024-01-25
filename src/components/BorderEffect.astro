@@ -10,8 +10,8 @@ const { color1, color2 } = Astro.props ?? {
 };
 ---
 
-<div class="box relative -z-10 p-10 h-72">
-    <div class="box-content z-10 relative h-full w-full flex items-center">
+<div class="box relative z-10 py-10 px-20 h-72">
+    <div class="box-content z-20 relative h-full w-full flex items-center">
         <slot />
     </div>
 </div>
@@ -26,14 +26,14 @@ const { color1, color2 } = Astro.props ?? {
             transparent 40%,
             #a855f7 50%
         );
-        animation: animate 5s linear infinite;
+        animation: animate 8s linear infinite;
         /* animation-play-state: paused; */
         border-radius: 12px;
     }
 
-    /* .box:hover {
-        animation-play-state: running;
-    } */
+    .box:hover {
+        animation-play-state: paused;
+    }
 
     @property --a {
         syntax: "<angle>";
@@ -53,8 +53,8 @@ const { color1, color2 } = Astro.props ?? {
     .box::after {
         content: "";
         position: absolute;
-        inset: 8px;
+        inset: 6px;
         background: #13151a;
-        border-radius: 4px;
+        border-radius: 6px;
     }
 </style>

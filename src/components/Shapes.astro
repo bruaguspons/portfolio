@@ -20,6 +20,9 @@ shape = getRandomShape(shape);
 deg = getRandomDeg(deg);
 size = getRandomSize(size);
 const [posX, posY] = getRandomPos(pos);
+
+const randX = Math.random() * 10 - 5; // Valor entre -5 y 5
+const randY = Math.random() * 10 - 5; // Valor entre -5 y 5
 ---
 
 <div
@@ -37,16 +40,7 @@ const [posX, posY] = getRandomPos(pos);
 >
 </div>
 
-<script is:inline>
-    document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll(".oscillate").forEach((e) => {
-            e.style.setProperty("--randX", Math.random() * 10 - 5); // Valor entre -5 y 5
-            e.style.setProperty("--randY", Math.random() * 10 - 5); // Valor entre -5 y 5
-        });
-    });
-</script>
-
-<style is:inline>
+<style define:vars={{ randX, randY }}>
     .oscillate {
         animation: oscillation 5s linear infinite;
     }
