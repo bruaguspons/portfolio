@@ -1,16 +1,28 @@
 ---
 import { getI18N } from "@/i18n";
-import MyName from "../MyName.astro";
+import Carousel from "./carousel/Carousel.astro";
+import TextColor from "../TextColor.astro";
+import BorderEffect from "../BorderEffect.astro";
 
 const { currentLocale } = Astro;
 
 const i18n = getI18N({ currentLocale });
 ---
 
-<section class="flex h-full items-center justify-center">
-    <div class="flex max-w-[980px]">
-        <span>{i18n.ABOUT.title}</span>
-        <MyName className="text-xl" />
-        <p>{i18n.ABOUT.content}</p>
+<section class="flex flex-col h-full items-center justify-center">
+    <div class="flex flex-col max-w-[980px]">
+        <p class="font-bold mb-4">
+            <TextColor className="text-3xl ">
+                {i18n.ABOUT.title}
+            </TextColor>
+        </p>
+
+        <BorderEffect>
+            <p>{i18n.ABOUT.content}</p>
+        </BorderEffect>
+
+        <div>
+            <Carousel />
+        </div>
     </div>
 </section>

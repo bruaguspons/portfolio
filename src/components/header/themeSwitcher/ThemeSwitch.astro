@@ -54,6 +54,7 @@ const { defaultTheme } = Astro.props;
     }
 
     updateTheme(getTheme());
+    // document.addEventListener("astro:after-swap", updateTheme(getTheme()));
     element.addEventListener("click", (event) => {
         const theme = getTheme();
         const settheme = theme === "dark" ? "light" : "dark";

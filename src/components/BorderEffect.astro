@@ -1,0 +1,60 @@
+---
+interface Props {
+    color1?: string;
+    color2?: string;
+}
+
+const { color1, color2 } = Astro.props ?? {
+    color1: "#a855f7",
+    color2: "#3b82f6 ",
+};
+---
+
+<div class="box relative -z-10 p-10 h-72">
+    <div class="box-content z-10 relative h-full w-full flex items-center">
+        <slot />
+    </div>
+</div>
+
+<style is:inline define:vars={{ color1, color2 }}>
+    .box {
+        background: repeating-conic-gradient(
+            from var(--a),
+            #a855f7 0%,
+            #a855f7 5%,
+            transparent 5%,
+            transparent 40%,
+            #a855f7 50%
+        );
+        animation: animate 5s linear infinite;
+        /* animation-play-state: paused; */
+        border-radius: 12px;
+    }
+
+    /* .box:hover {
+        animation-play-state: running;
+    } */
+
+    @property --a {
+        syntax: "<angle>";
+        inherits: false;
+        initial-value: 0deg;
+    }
+
+    @keyframes animate {
+        0% {
+            --a: 0deg;
+        }
+        100% {
+            --a: 360deg;
+        }
+    }
+
+    .box::after {
+        content: "";
+        position: absolute;
+        inset: 8px;
+        background: #13151a;
+        border-radius: 4px;
+    }
+</style>
