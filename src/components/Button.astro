@@ -1,0 +1,29 @@
+---
+interface Props {
+    href?: string;
+    className?: string;
+}
+
+const { href, className } = Astro.props;
+---
+
+{
+    href ? (
+        <a
+            href={href}
+            class={`relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-background-600 rounded-lg group bg-gradient-to-br from-purple-500 to-blue-500 hover:from-purple-500 hover:to-blue-500 hover:text-white dark:text-white focus:outline-none focus:from-purple-700 focus:to-blue-700 ${className}`}
+        >
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-150 bg-white dark:bg-background-600 rounded-md group-hover:bg-opacity-0 group-focus:bg-opacity-0">
+                <slot />
+            </span>
+        </a>
+    ) : (
+        <button
+            class={`relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-background-600 rounded-lg group bg-gradient-to-br from-purple-500 to-blue-500 hover:from-purple-500 hover:to-blue-500 hover:text-white dark:text-white focus:outline-none focus:from-purple-700 focus:to-blue-700 cursor-default ${className} `}
+        >
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-150 bg-white dark:bg-background-600 rounded-md group-hover:bg-opacity-0 group-focus:bg-opacity-0  w-max">
+                <slot />
+            </span>
+        </button>
+    )
+}

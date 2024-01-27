@@ -1,0 +1,22 @@
+---
+interface Props {
+    classNameCard?: string;
+    classNameContent?: string;
+}
+
+const { classNameCard, classNameContent } = Astro.props;
+---
+
+<div
+    class={`card relative z-30  
+         before:absolute before:-top-1 before:-left-1 before:-right-1 before:-bottom-1 before:bg-gradient-to-r before:from-purple-500 before:to-blue-500 before:-z-10 before:rounded-xl
+    
+         after:absolute after:-top-1 after:-left-1 after:-right-1 after:-bottom-1 after:bg-gradient-to-r after:from-purple-500 after:to-blue-500 after:-z-10 after:blur-xl after:rounded-xl
+    
+         ${classNameCard}
+    `}
+>
+    <div class={`bg-background-500 p-8 rounded-lg ${classNameContent}`}>
+        <slot />
+    </div>
+</div>

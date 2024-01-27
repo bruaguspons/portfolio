@@ -1,7 +1,7 @@
 ---
 import ImageCircule from "@/components/ImageCircle.astro";
 import { getI18N } from "@/i18n";
-import ButtonLink from "../ButtonLink.astro";
+import Button from "../Button.astro";
 import TextColor from "../TextColor.astro";
 
 const { currentLocale } = Astro;
@@ -27,8 +27,10 @@ const i18n = getI18N({ currentLocale });
             </p>
 
             <div class="mt-10">
-                <ButtonLink href="career">{i18n.HOME.career}</ButtonLink>
-                <ButtonLink href="projects">{i18n.HOME.projects}</ButtonLink>
+                <Button className="mr-2" href="career">
+                    {i18n.HOME.career}
+                </Button>
+                <Button href="projects">{i18n.HOME.projects}</Button>
             </div>
         </div>
         <div class="mx-10">

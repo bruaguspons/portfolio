@@ -1,0 +1,38 @@
+---
+import TimeLineEnding from "./TimeLineEnding.astro";
+import TimeLineItem from "./TimeLineItem.astro";
+---
+
+<section
+    class="flex flex-col items-center justify-center bg-background-600 min-h-full"
+>
+    <div class="timeline max-w-[980px]">
+        <TimeLineEnding id={0} />
+        <TimeLineItem
+            id={1}
+            date="2023-Ene"
+            title="Montevideo COMM"
+            content="I specialize in delivering clean and effective full-stack solutions. Proficient in front-end frameworks, adept in back-end development, and skilled in ensuring seamless integration. I am deeply passionate about fostering innovation and prioritizing user-centric design."
+        />
+        <TimeLineItem
+            id={2}
+            date="2022"
+            title="Montevideo COMM"
+            content="I specialize in delivering clean and effective full-stack solutions. Proficient in front-end frameworks, adept in back-end development, and skilled in ensuring seamless integration. I am deeply passionate about fostering innovation and prioritizing user-centric design."
+        />
+        <TimeLineEnding id={3} desc />
+    </div>
+</section>
+
+<style>
+    .timeline {
+        display: grid;
+        grid-template-areas:
+            "date0 timeline0 content0"
+            "date1 timeline1 content1"
+            "date2 timeline2 content2"
+            "date3 timeline3 content3";
+        grid-template-columns: auto auto 1fr;
+        grid-template-rows: 1fr;
+    }
+</style>
