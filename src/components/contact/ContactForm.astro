@@ -1,0 +1,18 @@
+---
+import Button from "../Button.astro";
+import ContactInput from "./ContactInput.astro";
+---
+
+<form action="" class="flex flex-col items-center gap-4" novalidate>
+    <ContactInput id="name" label="Name" autocomplete="given-name" />
+    <ContactInput id="lastName" label="Last Name" autocomplete="family-name" />
+    <ContactInput
+        id="email"
+        label="Email"
+        autocomplete="email"
+        type="email"
+        required
+    />
+
+    <Button type="submit" className="cursor-pointer my-4">Send</Button>
+</form>

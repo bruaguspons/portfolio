@@ -12,15 +12,15 @@ const { id, desc } = Astro.props;
     {
         desc ? (
             <>
-                <div class="relative bg-background-400 w-1 h-5 mx-5 z-10 mt-2" />
-                <div class="relative bg-background-400 w-1 h-3 mx-5 z-10 mt-2" />
-                <div class="relative bg-background-400 w-1 h-1 mx-5 z-10 mt-2" />
+                <div class="relative bg-background-400 dark:bg-background-200 w-1 h-5 mx-5 z-10 mt-2 rounded-full" />
+                <div class="relative bg-background-400 dark:bg-background-200 w-1 h-3 mx-5 z-10 mt-2 rounded-full" />
+                <div class="relative bg-background-400 dark:bg-background-200 w-1 h-1 mx-5 z-10 mt-2  rounded-full" />
             </>
         ) : (
             <>
-                <div class="relative bg-background-400 w-1 h-1 mx-5 z-10 mb-2" />
-                <div class="relative bg-background-400 w-1 h-3 mx-5 z-10 mb-2" />
-                <div class="relative bg-background-400 w-1 h-5 mx-5 z-10 mb-2" />
+                <div class="relative bg-background-400 dark:bg-background-200 w-1 h-1 mx-5 z-10 mb-2 rounded-full" />
+                <div class="relative bg-background-400 dark:bg-background-200 w-1 h-3 mx-5 z-10 mb-2 rounded-full" />
+                <div class="relative bg-background-400 dark:bg-background-200 w-1 h-5 mx-5 z-10 mb-2 rounded-full" />
             </>
         )
     }

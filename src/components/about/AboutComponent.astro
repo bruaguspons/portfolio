@@ -4,27 +4,29 @@ import Carousel from "./carousel/Carousel.astro";
 import TextColor from "../TextColor.astro";
 // import BorderEffect from "../BorderEffect.astro";
 import CardEffect from "../CardEffect.astro";
+import SubTitle from "../SubTitle.astro";
+import LayoutContent from "@/layouts/LayoutContent.astro";
 
 const { currentLocale } = Astro;
 
 const i18n = getI18N({ currentLocale });
 ---
 
-<section class="flex flex-col h-full items-center justify-center">
-    <div class="flex flex-col max-w-[980px]">
-        <p class="font-bold text-3xl mb-4">
+<LayoutContent>
+    <div class="flex-grow flex flex-col justify-start gap-10">
+        <SubTitle>
             <TextColor>
                 {i18n.ABOUT.title[1]}
             </TextColor>
             {i18n.ABOUT.title[2]}
-        </p>
+        </SubTitle>
 
         <CardEffect classNameCard="mt-4 after:blur-lg">
             <p class="text-lg">{i18n.ABOUT.content}</p>
         </CardEffect>
 
-        <div>
-            <Carousel />
-        </div>
+        <!-- <div class="inline-flex"> -->
+        <Carousel />
+        <!-- </div> -->
     </div>
-</section>
+</LayoutContent>

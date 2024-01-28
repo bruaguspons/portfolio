@@ -5,31 +5,49 @@ import TextColor from "@/components/TextColor.astro";
 
 interface Props {
     id: number;
+    rounded_top?: boolean;
+    rounded_bottom?: boolean;
     date: string;
     title: string;
     content: string;
     delay?: number;
 }
 
-const { id, date, title, content, delay } = Astro.props;
+const { id, rounded_top, rounded_bottom, date, title, content, delay } =
+    Astro.props;
+
+let rounded = "";
+if (rounded_top) {
+    rounded = "rounded-t-full";
+}
+if (rounded_bottom) {
+    rounded = "rounded-b-full";
+}
 ---
 
 <!-- <div class="flex justify-center"> -->
-<div class={`[grid-area:date${id}] flex items-center justify-end`}>
+<div
+    id={`date-${id}`}
+    class={`[grid-area:date${id}] flex items-center justify-end`}
+>
     <Button className="focus:from-purple-500 focus:to-blue-500">
         {date}
     </Button>
 </div>
-<div class={`[grid-area${id}:timeline]`}>
-    <div class="relative bg-background-400 w-1 h-full mx-5 z-10">
+<div id={`timeline-${id}`} class={`[grid-area${id}:timeline]`}>
+    <div
+        class={`relative bg-background-400 dark:bg-background-200 w-1 h-full mx-5 z-10 ${rounded}`}
+    >
         <div
-            class="absolute custom-top left-1/2 w-4 h-4 rounded-full bg-gradient-to-t from-purple-500 to-blue-500 -translate-x-1/2"
+            class="absolute custom-top left-1/2 w-4 h-4 rounded-full bg-gradient-to-t from-purple-500 to-red-400 dark:to-blue-500 -translate-x-1/2"
         >
         </div>
     </div>
 </div>
-<div class="flex items-center justify-center relative">
-    <CardEffect classNameCard="[grid-area:content${id}] my-4 after:blur-md">
+<div id={`content-${id}`} class="flex items-center justify-center relative">
+    <CardEffect
+        classNameCard="[grid-area:content${id}] my-4 after:blur-md dark:after:blur-md"
+    >
         <h3>
             <TextColor>
                 {title}

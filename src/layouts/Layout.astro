@@ -27,34 +27,25 @@ const { title } = Astro.props;
 		<ViewTransitions />
 	</head>
 	<body
-		class="text-white h-screen bg-background-600 box-border flex flex-col overflow-hidden"
+		class="text-black dark:text-white h-screen dark:bg-background-600 bg-background-100 box-border flex flex-col overflow-x-hidden transition ease-in duration-150"
 	>
 		<Header />
 
-		<slot />
-
+		<main class="flex-auto">
+			<slot />
+		</main>
 		<style is:global>
 			html {
 				scroll-behavior: smooth;
 				scrollbar-width: thin;
-				scrollbar-color: var(--thumbBG) var(--primaryDk);
-
-				font-family: system-ui, sans-serif;
-				/* background: #13151a; */
 			}
 
 			html::-webkit-scrollbar {
 				width: 11px;
 			}
 
-			html::-webkit-scrollbar-track {
-				background: var(--primaryDk);
-			}
-
 			html::-webkit-scrollbar-thumb {
-				background-color: var(--thumbBG);
 				border-radius: 6px;
-				border: 3px solid var(--primaryDk);
 			}
 		</style>
 	</body>

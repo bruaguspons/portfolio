@@ -1,10 +1,11 @@
 ---
-import { getI18N } from "@/i18n";
+import LayoutContent from "@/layouts/LayoutContent.astro";
 import SubTitle from "../SubTitle.astro";
 import TextColor from "../TextColor.astro";
-import TimeLine from "./timeline/TimeLine.astro";
+import { getI18N } from "@/i18n";
+import BorderEffect from "../BorderEffect.astro";
+import ContactForm from "./ContactForm.astro";
 
-import LayoutContent from "@/layouts/LayoutContent.astro";
 const { currentLocale } = Astro;
 
 const i18n = getI18N({ currentLocale });
@@ -13,11 +14,14 @@ const i18n = getI18N({ currentLocale });
 <LayoutContent>
     <div class="flex-grow flex flex-col justify-start gap-10">
         <SubTitle>
-            {i18n.CAREER.title[1]}
             <TextColor>
-                {i18n.CAREER.title[2]}
+                {i18n.ABOUT.title[1]}
             </TextColor>
+            {i18n.ABOUT.title[2]}
         </SubTitle>
-        <TimeLine />
+
+        <BorderEffect>
+            <ContactForm />
+        </BorderEffect>
     </div>
 </LayoutContent>

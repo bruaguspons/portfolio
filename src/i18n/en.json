@@ -16,5 +16,19 @@
             "2": "me"
         },
         "content": "I'm a passionate web developer with over 2 years of experience and a dedicated computer science student hailing from Uruguay 🌐. I enjoy building web applications using a variety of technologies, always striving to create great and clean solutions for challenging problems 💻. I have a penchant for independent learning and thrive on tackling complex issues. In my free time, you'll find me honing my skills on HackerRank, diving into tech articles, and relishing a good game of chess ♟️. Let's code and conquer together!"
+    },
+    "CAREER": {
+        "title":{
+            "1": "My ",
+            "2": "Career"
+        },
+        "content": "I'm a passionate web developer with over 2 years of experience and a dedicated computer science student hailing from Uruguay 🌐. I enjoy building web applications using a variety of technologies, always striving to create great and clean solutions for challenging problems 💻. I have a penchant for independent learning and thrive on tackling complex issues. In my free time, you'll find me honing my skills on HackerRank, diving into tech articles, and relishing a good game of chess ♟️. Let's code and conquer together!"
+    },
+    "PROJECTS": {
+        "title":{
+            "1": "Some of my ",
+            "2": "Projects"
+        },
+        "content": "I'm a passionate web developer with over 2 years of experience and a dedicated computer science student hailing from Uruguay 🌐. I enjoy building web applications using a variety of technologies, always striving to create great and clean solutions for challenging problems 💻. I have a penchant for independent learning and thrive on tackling complex issues. In my free time, you'll find me honing my skills on HackerRank, diving into tech articles, and relishing a good game of chess ♟️. Let's code and conquer together!"
     }
 }

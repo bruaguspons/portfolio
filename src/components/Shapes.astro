@@ -26,7 +26,7 @@ const randY = Math.random() * 10 - 5; // Valor entre -5 y 5
 ---
 
 <div
-    class="bg-gradient-to-br from-purple-500 to-blue-500 absolute oscillate"
+    class="bg-gradient-to-br from-purple-500 to-red-400 dark:to-blue-500 absolute oscillate"
     data-randX={3}
     data-randX={2}
     style={{
@@ -42,7 +42,7 @@ const randY = Math.random() * 10 - 5; // Valor entre -5 y 5
 
 <style define:vars={{ randX, randY }}>
     .oscillate {
-        animation: oscillation 5s linear infinite;
+        animation: oscillation 5s ease-in-out infinite;
     }
 
     @keyframes oscillation {

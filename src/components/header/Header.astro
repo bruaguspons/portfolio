@@ -1,25 +1,40 @@
 ---
 import MyName from "../MyName.astro";
 import Link from "./Link.astro";
+// import LenguageSwitcher from "./lenguageSwitcher/LenguageSwitcher.astro";
+import LenguageSwitcher2 from "./lenguageSwitcher/LenguageSwitcher2.astro";
 import ChangerColorPrefBtn from "./themeSwitcher/ChangerColorPrefBtn.astro";
 ---
 
 <header
-    class="w-full h-14 bg-background-600 sticky flex items-center justify-between"
+    class="w-full sticky bg-background-100 dark:bg-background-600 top-0 transition ease-in duration-150"
 >
-    <div>
-        <MyName />
-    </div>
+    <!-- <div class="w-full h-14 flex items-center justify-between"> -->
+    <div class="w-full h-14 custom_grid">
+        <div class="col1 flex items-center justify-center">
+            <MyName />
+        </div>
 
-    <div class="flex gap-10">
-        <Link href="home">Home</Link>
-        <Link href="about">About</Link>
-        <Link href="career">Career</Link>
-        <Link href="projects">Projects</Link>
-        <Link href="contact">Contact</Link>
-    </div>
+        <div class="col2 flex justify-center items-center gap-10">
+            <Link href="home">Home</Link>
+            <Link href="about">About</Link>
+            <Link href="career">Career</Link>
+            <Link href="projects">Projects</Link>
+            <Link href="contact">Contact</Link>
+        </div>
 
-    <div class="mx-10">
-        <ChangerColorPrefBtn cliente:only />
+        <div class="col3 mx-10 flex items-center justify-center gap-10">
+            <LenguageSwitcher2 />
+            <ChangerColorPrefBtn cliente:only />
+        </div>
     </div>
 </header>
+
+<style>
+    .custom_grid {
+        display: grid;
+        grid-template-areas: "col1 col2 col3";
+        grid-template-columns: 250px 1fr 250px;
+        grid-template-rows: 1fr;
+    }
+</style>
