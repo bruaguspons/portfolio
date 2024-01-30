@@ -1,22 +1,18 @@
 ---
 interface Props {
-    color1?: string;
-    color2?: string;
+    classList?: string;
 }
 
-const { color1, color2 } = Astro.props ?? {
-    color1: "#a855f7",
-    color2: "#3b82f6 ",
-};
+const { classList } = Astro.props;
 ---
 
-<div class="box relative z-10 py-10 px-20">
+<div class={`box relative z-10 py-10 px-20 ${classList}`}>
     <div class="box-content z-20 relative h-full w-full flex items-center">
         <slot />
     </div>
 </div>
 
-<style is:inline define:vars={{ color1, color2 }}>
+<style is:inline>
     .box {
         background: repeating-conic-gradient(
             from var(--a),

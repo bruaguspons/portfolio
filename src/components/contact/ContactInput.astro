@@ -3,8 +3,8 @@ interface Props {
     id: string;
     label: string;
     autocomplete: string;
-    type?: "email" | null | undefined;
-    required?: boolean;
+    type?: "textarea" | "email" | null | undefined;
+    required?: boolean | null;
 }
 
 const { id, label, autocomplete, type, required } = Astro.props;
@@ -16,13 +16,25 @@ const { id, label, autocomplete, type, required } = Astro.props;
         {required && <span class="text-red-500">*</span>}
         :
     </label>
-    <input
-        id={id}
-        name={id}
-        type={type ?? "text"}
-        autocomplete={autocomplete}
-        class="focus:outline-none bg-background-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-background-400 dark:border-background-600 dark:placeholder-neutral-400 dark:text-neutral-100 dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        required={required}
-        placeholder={label}
-    />
+    {
+        type === "textarea" ? (
+            <textarea
+                id={id}
+                name={id}
+                class="focus:outline-none bg-background-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-background-400 dark:border-background-600 dark:placeholder-neutral-400 dark:text-neutral-100 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required={required}
+                placeholder={label}
+            />
+        ) : (
+            <input
+                id={id}
+                name={id}
+                type={type ?? "text"}
+                autocomplete={autocomplete}
+                class="focus:outline-none bg-background-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-background-400 dark:border-background-600 dark:placeholder-neutral-400 dark:text-neutral-100 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required={required}
+                placeholder={label}
+            />
+        )
+    }
 </div>

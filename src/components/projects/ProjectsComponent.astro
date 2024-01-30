@@ -13,9 +13,9 @@ const i18n = getI18N({ currentLocale });
 <LayoutContent>
     <div class="flex-grow flex flex-col justify-start gap-10">
         <SubTitle>
-            {i18n.PROJECTS.title[1]}
+            {i18n.PROJECTS.TITLE[1]}
             <TextColor>
-                {i18n.PROJECTS.title[2]}
+                {i18n.PROJECTS.TITLE[2]}
             </TextColor>
         </SubTitle>
 
@@ -74,7 +74,7 @@ const i18n = getI18N({ currentLocale });
                 </div>
                 <div class="h-full w-full" slot="back"></div>
             </CardFlip>
-            <CardFlip>
+            <CardFlip effectEnable={false}>
                 <div class="h-full w-full" slot="front">
                     <div
                         class="h-full w-full block rounded-lg bg-white dark:bg-neutral-700"

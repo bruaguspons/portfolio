@@ -1,31 +1,81 @@
 {
     "HOME": {
-        "greeting": "Hi, i'm Bruno Pons 👋",
-        "profession": {
-            "1": "I'm",
+        "GREETING": "Hola, soy Bruno Pons 👋",
+        "PROFESSION": {
+            "1": "Soy un",
             "2": "Full-Stack",
             "3": "Developer."
         },
-        "description": "I specialize in delivering clean and effective full-stack solutions. Proficient in front-end frameworks, adept in back-end development, and skilled in ensuring seamless integration. I am deeply passionate about fostering innovation and prioritizing user-centric design. ",
-        "career": "My career",
-        "projects": "My projects"
+        "DESCRIPTION": "Me especializo en ofrecer soluciones completas y efectivas full-stack. Domino los frameworks de front-end, tengo destreza en el desarrollo de back-end y me centro en asegurar una integración fluida. Me apasiona profundamente fomentar la innovación y priorizar el diseño centrado en el usuario.",
+        "CAREER": "Mi carrera",
+        "PROJECTS": "Mis proyectos"
     },
     "ABOUT": {
-        "title": "About me",
-        "content": "sfsdfsf sdf sf sf sf sfd sdf s"
+        "TITLE":{
+            "1": "Acerca",
+            "2": " de mi"
+        },
+        "CONTENT": "Soy un apasionado desarrollador web con más de 2 años de experiencia y un dedicado estudiante de la facultad de ingenieria de Uruguay 🌐. Disfruto construyendo aplicaciones web utilizando una variedad de tecnologías, siempre esforzándome por crear soluciones excelentes y limpias para problemas desafiantes 💻. Tengo predilección por el aprendizaje independiente y prospero enfrentando problemas complejos. En mi tiempo libre, me encontrarás perfeccionando mis habilidades en HackerRank, sumergiéndome en artículos tecnológicos y disfrutando de una buena partida de ajedrez ♟️. "
     },
     "CAREER": {
-        "title":{
-            "1": "About",
-            "2": "me"
+        "TITLE":{
+            "1": "Mi ",
+            "2": "Carrera"
         },
-        "content": "I'm a passionate web developer with over 2 years of experience and a dedicated computer science student hailing from Uruguay 🌐. I enjoy building web applications using a variety of technologies, always striving to create great and clean solutions for challenging problems 💻. I have a penchant for independent learning and thrive on tackling complex issues. In my free time, you'll find me honing my skills on HackerRank, diving into tech articles, and relishing a good game of chess ♟️. Let's code and conquer together!"
+        "CONTENT": "I'm a passionate web developer with over 2 years of experience and a dedicated computer science student hailing from Uruguay 🌐. I enjoy building web applications using a variety of technologies, always striving to create great and clean solutions for challenging problems 💻. I have a penchant for independent learning and thrive on tackling complex issues. In my free time, you'll find me honing my skills on HackerRank, diving into tech articles, and relishing a good game of chess ♟️. Let's code and conquer together!"
     },
     "PROJECTS": {
-        "title":{
-            "1": "My ",
-            "2": "Career"
+        "TITLE":{
+            "1": "Algunos de mis ",
+            "2": "Proyectos"
         },
-        "content": "I'm a passionate web developer with over 2 years of experience and a dedicated computer science student hailing from Uruguay 🌐. I enjoy building web applications using a variety of technologies, always striving to create great and clean solutions for challenging problems 💻. I have a penchant for independent learning and thrive on tackling complex issues. In my free time, you'll find me honing my skills on HackerRank, diving into tech articles, and relishing a good game of chess ♟️. Let's code and conquer together!"
+        "CONTENT": "I'm a passionate web developer with over 2 years of experience and a dedicated computer science student hailing from Uruguay 🌐. I enjoy building web applications using a variety of technologies, always striving to create great and clean solutions for challenging problems 💻. I have a penchant for independent learning and thrive on tackling complex issues. In my free time, you'll find me honing my skills on HackerRank, diving into tech articles, and relishing a good game of chess ♟️. Let's code and conquer together!"
+    },
+    "CONTACT": {
+        "TITLE":{
+            "1": "Contact",
+            "2": "me"
+        },
+        "NAME":{
+            "ID": "name",
+            "LABEL": "Name",
+            "AUTOCOMPLETE": "given-name",
+            "TYPE": null,
+            "REQUIRED": false,
+            "ERRORS": {
+                "EMPTY": "Name field must not be empty."
+            }
+        },
+        "LASTNAME":{
+            "ID": "name",
+            "LABEL": "Last Name",
+            "AUTOCOMPLETE": "given-name",
+            "TYPE": null,
+            "REQUIRED": false,
+            "ERRORS": {
+                "EMPTY": "Last Name field must not be empty."
+            }
+        },
+        "EMAIL": {
+            "ID": "name",
+            "LABEL": "Email",
+            "AUTOCOMPLETE": "given-name",
+            "TYPE": null,
+            "REQUIRED": false,
+            "ERRORS": {
+                "EMPTY": "Email field must not be empty.",
+                "FORMAT": "Email format is not correct."
+            }
+        },
+        "MESSAGE": {
+            "ID": "message",
+            "LABEL": "Message",
+            "AUTOCOMPLETE": "",
+            "TYPE": "textarea",
+            "REQUIRED": true,
+            "ERRORS": {
+                "EMPTY": "Message field must not be empty."
+            }
+        }
     }
 }

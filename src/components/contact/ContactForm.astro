@@ -1,18 +1,61 @@
 ---
 import Button from "../Button.astro";
 import ContactInput from "./ContactInput.astro";
+import { doSubmit, isValidEmail } from "./utils";
+
+interface Field {
+    id: string;
+    label: string;
+    autocomplete: string;
+    type: "textarea" | "email" | null | undefined;
+    required: boolean | null;
+}
+
+interface Props {
+    fields: Field[];
+}
+
+const { fields } = Astro.props;
+
+const errors = { username: "", email: "", password: "" };
+if (Astro.request.method === "POST") {
+    try {
+        const data = await Astro.request.formData();
+        const name = data.get("username");
+        const email = data.get("email");
+
+        if (typeof name !== "string" || name.length < 1) {
+            errors.username += "Please enter a username. ";
+        }
+        if (typeof email !== "string" || !isValidEmail(email)) {
+            errors.email += "Email is not valid. ";
+        }
+        const hasErrors = Object.values(errors).some((msg) => msg);
+        if (!hasErrors) {
+            const ok = await doSubmit(data);
+            if (ok) {
+            }
+        }
+    } catch (error) {
+        if (error instanceof Error) {
+            console.error(error.message);
+        }
+    }
+}
 ---
 
 <form action="" class="flex flex-col items-center gap-4" novalidate>
-    <ContactInput id="name" label="Name" autocomplete="given-name" />
-    <ContactInput id="lastName" label="Last Name" autocomplete="family-name" />
-    <ContactInput
-        id="email"
-        label="Email"
-        autocomplete="email"
-        type="email"
-        required
-    />
+    {
+        fields.map((field) => (
+            <ContactInput
+                id={field.id}
+                label={field.label}
+                autocomplete={field.autocomplete}
+                type={field.type}
+                required={field.required}
+            />
+        ))
+    }
 
     <Button type="submit" className="cursor-pointer my-4">Send</Button>
 </form>

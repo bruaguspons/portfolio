@@ -15,13 +15,44 @@ const i18n = getI18N({ currentLocale });
     <div class="flex-grow flex flex-col justify-start gap-10">
         <SubTitle>
             <TextColor>
-                {i18n.ABOUT.title[1]}
+                {i18n.CONTACT.TITLE[1]}
             </TextColor>
-            {i18n.ABOUT.title[2]}
+            {i18n.ABOUT.TITLE[2]}
         </SubTitle>
 
-        <BorderEffect>
-            <ContactForm />
+        <BorderEffect classList="mb-10">
+            <ContactForm
+                fields={[
+                    {
+                        id: i18n.CONTACT.NAME.ID,
+                        label: i18n.CONTACT.NAME.LABEL,
+                        autocomplete: i18n.CONTACT.NAME.AUTOCOMPLETE,
+                        type: i18n.CONTACT.NAME.TYPE,
+                        required: i18n.CONTACT.NAME.REQUIRED,
+                    },
+                    {
+                        id: i18n.CONTACT.LASTNAME.ID,
+                        label: i18n.CONTACT.LASTNAME.LABEL,
+                        autocomplete: i18n.CONTACT.LASTNAME.AUTOCOMPLETE,
+                        type: i18n.CONTACT.LASTNAME.TYPE,
+                        required: i18n.CONTACT.LASTNAME.REQUIRED,
+                    },
+                    {
+                        id: i18n.CONTACT.EMAIL.ID,
+                        label: i18n.CONTACT.EMAIL.LABEL,
+                        autocomplete: i18n.CONTACT.EMAIL.AUTOCOMPLETE,
+                        type: i18n.CONTACT.EMAIL.TYPE,
+                        required: i18n.CONTACT.EMAIL.REQUIRED,
+                    },
+                    {
+                        id: i18n.CONTACT.MESSAGE.ID,
+                        label: i18n.CONTACT.MESSAGE.LABEL,
+                        autocomplete: i18n.CONTACT.MESSAGE.AUTOCOMPLETE,
+                        type: i18n.CONTACT.MESSAGE.TYPE,
+                        required: i18n.CONTACT.MESSAGE.REQUIRED,
+                    },
+                ]}
+            />
         </BorderEffect>
     </div>
 </LayoutContent>
