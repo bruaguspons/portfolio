@@ -53,10 +53,11 @@ const i18n = getI18N({ currentLocale });
                         autocomplete: i18n.CONTACT.MESSAGE.AUTOCOMPLETE,
                         type: i18n.CONTACT.MESSAGE.TYPE as "textarea",
                         required: i18n.CONTACT.MESSAGE.REQUIRED,
-                        errors: i18n.CONTACT.LASTNAME.ERRORS,
+                        errors: i18n.CONTACT.MESSAGE.ERRORS,
                     },
                 ]}
                 submitError={i18n.CONTACT.SUBMITERROR}
+                fieldsError={i18n.CONTACT.FIELDSERROR}
             />
         </BorderEffect>
     </div>

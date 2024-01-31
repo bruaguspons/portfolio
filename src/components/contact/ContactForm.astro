@@ -16,9 +16,10 @@ interface Field {
 interface Props {
     fields: Field[];
     submitError: string;
+    fieldsError: string;
 }
 
-const { fields, submitError } = Astro.props;
+const { fields, submitError, fieldsError } = Astro.props;
 
 const errors = { email: "", message: "" };
 let generalErrors = "";
@@ -34,17 +35,38 @@ if (Astro.request.method === "POST") {
             if (field.id === "email")
                 errors.email = getInputError("email", email, field.errors);
             if (field.id === "message")
-                errors.email = getInputError("text", message, field.errors);
+                errors.message = getInputError(
+                    "textarea",
+                    message,
+                    field.errors,
+                );
         }
 
+        console.log({ errors });
+
         const hasErrors = Object.values(errors).some((msg) => msg);
+
+        console.log({ hasErrors });
+
         if (!hasErrors) {
             data.set("message", JSON.stringify({ message, name, lastName }));
 
-            const ok = await doSubmit(data);
+            const dataJson = {
+                email: email,
+                message: JSON.stringify({
+                    name,
+                    lastName,
+                    message,
+                }),
+            };
+
+            console.log({ dataJson });
+            const ok = await doSubmit(JSON.stringify(dataJson));
             if (!ok) {
                 generalErrors = submitError;
             }
+        } else {
+            generalErrors = fieldsError;
         }
     } catch (error) {
         if (error instanceof Error) {
@@ -54,7 +76,7 @@ if (Astro.request.method === "POST") {
 }
 ---
 
-<form action="" class="flex flex-col items-center gap-4" novalidate>
+<form method="POST" class="flex flex-col items-center gap-4" novalidate>
     {
         fields.map((field) => (
             <ContactInput
@@ -69,7 +91,7 @@ if (Astro.request.method === "POST") {
         ))
     }
 
-    {generalErrors && <span>{generalErrors}</span>}
+    {generalErrors && <span class="text-red-500 my-2">{generalErrors}</span>}
 
     <Button type="submit" className="cursor-pointer my-4">Send</Button>
 </form>

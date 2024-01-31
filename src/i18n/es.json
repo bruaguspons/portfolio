@@ -75,6 +75,7 @@
                 "empty": "Message field must not be empty."
             }
         },
-        "SUBMITERROR": "Error"
+        "SUBMITERROR": "Error al hacer submit",
+        "FIELDSERROR": "Errores en los inputs"
     }
 }

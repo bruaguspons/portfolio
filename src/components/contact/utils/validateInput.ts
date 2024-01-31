@@ -17,10 +17,11 @@ const validateInput = (inpType: string, value: string, errors: InputError | unde
             container.classList.remove('fade-out')
             container.classList.add('fade-in')
         } else {
-            container.style.display =''
-
-            container.classList.remove('fade-in')
-            container.classList.add('fade-out')
+            
+            if(container.classList.contains('fade-in')){
+                container.classList.remove('fade-in')
+                container.classList.add('fade-out')
+            }
     
         }
     }
