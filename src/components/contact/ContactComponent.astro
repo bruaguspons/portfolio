@@ -29,6 +29,7 @@ const i18n = getI18N({ currentLocale });
                         autocomplete: i18n.CONTACT.NAME.AUTOCOMPLETE,
                         type: i18n.CONTACT.NAME.TYPE,
                         required: i18n.CONTACT.NAME.REQUIRED,
+                        errors: i18n.CONTACT.LASTNAME.ERRORS,
                     },
                     {
                         id: i18n.CONTACT.LASTNAME.ID,
@@ -36,22 +37,26 @@ const i18n = getI18N({ currentLocale });
                         autocomplete: i18n.CONTACT.LASTNAME.AUTOCOMPLETE,
                         type: i18n.CONTACT.LASTNAME.TYPE,
                         required: i18n.CONTACT.LASTNAME.REQUIRED,
+                        errors: i18n.CONTACT.LASTNAME.ERRORS,
                     },
                     {
                         id: i18n.CONTACT.EMAIL.ID,
                         label: i18n.CONTACT.EMAIL.LABEL,
                         autocomplete: i18n.CONTACT.EMAIL.AUTOCOMPLETE,
-                        type: i18n.CONTACT.EMAIL.TYPE,
+                        type: i18n.CONTACT.EMAIL.TYPE as "email",
                         required: i18n.CONTACT.EMAIL.REQUIRED,
+                        errors: i18n.CONTACT.EMAIL.ERRORS,
                     },
                     {
                         id: i18n.CONTACT.MESSAGE.ID,
                         label: i18n.CONTACT.MESSAGE.LABEL,
                         autocomplete: i18n.CONTACT.MESSAGE.AUTOCOMPLETE,
-                        type: i18n.CONTACT.MESSAGE.TYPE,
+                        type: i18n.CONTACT.MESSAGE.TYPE as "textarea",
                         required: i18n.CONTACT.MESSAGE.REQUIRED,
+                        errors: i18n.CONTACT.LASTNAME.ERRORS,
                     },
                 ]}
+                submitError={i18n.CONTACT.SUBMITERROR}
             />
         </BorderEffect>
     </div>

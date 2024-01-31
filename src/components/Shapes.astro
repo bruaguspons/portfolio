@@ -2,7 +2,7 @@
 import type { PosShapesType, ShapesType } from "../types";
 import {
     getRandomShape,
-    getRandomDeg,
+    // getRandomDeg,
     getRandomSize,
     getRandomPos,
 } from "../utils";
@@ -14,10 +14,10 @@ interface Props {
     pos?: PosShapesType;
 }
 
-let { shape, deg, size, pos } = Astro.props;
+let { shape, size, pos } = Astro.props;
 
 shape = getRandomShape(shape);
-deg = getRandomDeg(deg);
+// deg = getRandomDeg(deg);
 size = getRandomSize(size);
 const [posX, posY] = getRandomPos(pos);
 
@@ -31,7 +31,7 @@ const randY = Math.random() * 10 - 5; // Valor entre -5 y 5
     data-randX={2}
     style={{
         clipPath: shape,
-        transform: `rotate(${deg}deg);`,
+        // transform: `rotate(${deg}deg);`,
         height: `${size}rem;`,
         width: `${size}rem;`,
         top: `${posY}%;`,

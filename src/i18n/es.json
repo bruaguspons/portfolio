@@ -43,28 +43,26 @@
             "TYPE": null,
             "REQUIRED": false,
             "ERRORS": {
-                "EMPTY": "Name field must not be empty."
             }
         },
         "LASTNAME":{
-            "ID": "name",
+            "ID": "lastName",
             "LABEL": "Last Name",
-            "AUTOCOMPLETE": "given-name",
+            "AUTOCOMPLETE": "family-name",
             "TYPE": null,
             "REQUIRED": false,
             "ERRORS": {
-                "EMPTY": "Last Name field must not be empty."
             }
         },
         "EMAIL": {
-            "ID": "name",
+            "ID": "email",
             "LABEL": "Email",
-            "AUTOCOMPLETE": "given-name",
-            "TYPE": null,
-            "REQUIRED": false,
+            "AUTOCOMPLETE": "email",
+            "TYPE": "email",
+            "REQUIRED": true,
             "ERRORS": {
-                "EMPTY": "Email field must not be empty.",
-                "FORMAT": "Email format is not correct."
+                "empty": "Email field must not be empty.",
+                "format": "Email format is not correct."
             }
         },
         "MESSAGE": {
@@ -74,8 +72,9 @@
             "TYPE": "textarea",
             "REQUIRED": true,
             "ERRORS": {
-                "EMPTY": "Message field must not be empty."
+                "empty": "Message field must not be empty."
             }
-        }
+        },
+        "SUBMITERROR": "Error"
     }
 }

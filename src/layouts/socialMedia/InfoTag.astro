@@ -1,0 +1,49 @@
+---
+declare global {
+    interface Window {
+        socialMediaPanel?: boolean;
+    }
+}
+---
+
+<button
+    id="infoTag"
+    class="fixed bottom-10 right-0 h-10 w-16 bg-gradient-to-r from-purple-500 to-pink-500 dark:to-blue-500 rounded-s-full translate-x-5 hover:translate-x-0 transition-transform duration-150 z-40"
+>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-8 w-8 mx-2 text-white"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path><path d="M12 9h.01"
+        ></path><path d="M11 12h1v4h1"></path></svg
+    >
+</button>
+
+<script>
+    const handleClick = (elem: HTMLElement | null) => {
+        console.log({ elem });
+        elem?.addEventListener("click", () => {
+            console.log("hizo click en el elemento");
+            const panel = document.getElementById("socialMediaPanel");
+
+            if (panel) {
+                panel.style.display = "";
+                panel.classList.remove("hide-panel");
+                panel.classList.add("show-panel");
+            }
+        });
+    };
+    handleClick(document.getElementById("infoTag"));
+    document.addEventListener("astro:after-swap", () => {
+        const elem = document.getElementById("infoTag");
+        handleClick(elem);
+    });
+</script>

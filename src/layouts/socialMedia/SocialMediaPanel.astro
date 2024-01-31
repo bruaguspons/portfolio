@@ -1,0 +1,69 @@
+---
+import CloseSocialMediaPanel from "./CloseSocialMediaPanel.astro";
+import GithubIcon from "./Icons/GithubIcon.astro";
+import LinkedinIcon from "./Icons/LinkedinIcon.astro";
+import MailIcon from "./Icons/MailIcon.astro";
+---
+
+<div
+    id="socialMediaPanel"
+    style="display: none;"
+    class="hide-panel fixed h-full w-full sm:w-48 bg-background-400 right-0 z-50"
+>
+    <CloseSocialMediaPanel />
+    <div class="flex flex-col h-full w-full justify-evenly">
+        <a
+            href="https://github.com/bruaguspons"
+            target="_blank"
+            class="flex flex-col items-center mx-[35%] sm:mx-[30%]"
+        >
+            <GithubIcon />
+            <span class="text-5xl sm:text-xl">Github</span>
+        </a>
+        <a
+            href="https://www.linkedin.com/in/bruno-pons-7b1547252/"
+            target="_blank"
+            class="flex flex-col items-center mx-[35%] sm:mx-[30%]"
+        >
+            <LinkedinIcon />
+            <span class="text-5xl sm:text-xl">Linkedin</span>
+        </a>
+        <a
+            href="mailto:bruaguspons@gmail.com"
+            target="_blank"
+            class="flex flex-col items-center mx-[35%] sm:mx-[30%]"
+        >
+            <MailIcon />
+            <span class="text-5xl sm:text-xl">Mail</span>
+        </a>
+    </div>
+</div>
+
+<style>
+    .show-panel {
+        animation: Show 0.3s ease-in-out forwards;
+    }
+    .hide-panel {
+        animation: Hide 0.3s ease-in-out forwards;
+    }
+
+    @keyframes Hide {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(100%);
+        }
+    }
+
+    @keyframes Show {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+</style>

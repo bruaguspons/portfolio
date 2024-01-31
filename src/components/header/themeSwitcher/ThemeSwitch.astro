@@ -50,9 +50,7 @@ const { defaultTheme } = Astro.props;
     };
 
     const handleClick = (element) => {
-        console.log("entro aca con este elemento: ", element);
         element.addEventListener("click", (event) => {
-            console.log("hizo click");
             const theme = getTheme();
             const settheme = theme === "dark" ? "light" : "dark";
             updateTheme(settheme);
@@ -65,7 +63,6 @@ const { defaultTheme } = Astro.props;
     handleClick(element);
     document.addEventListener("astro:after-swap", () => {
         const element = document.getElementById("astro-color-scheme-switch");
-        console.log("entro a este evento de astro");
         updateTheme(getTheme());
         handleClick(element);
     });

@@ -1,7 +1,8 @@
 ---
 import Button from "../Button.astro";
-import ContactInput from "./ContactInput.astro";
-import { doSubmit, isValidEmail } from "./utils";
+import ContactInput from "./ContactInput.tsx";
+import type { InputError } from "./types";
+import { doSubmit, getInputError } from "./utils";
 
 interface Field {
     id: string;
@@ -9,31 +10,40 @@ interface Field {
     autocomplete: string;
     type: "textarea" | "email" | null | undefined;
     required: boolean | null;
+    errors?: InputError;
 }
 
 interface Props {
     fields: Field[];
+    submitError: string;
 }
 
-const { fields } = Astro.props;
+const { fields, submitError } = Astro.props;
 
-const errors = { username: "", email: "", password: "" };
+const errors = { email: "", message: "" };
+let generalErrors = "";
 if (Astro.request.method === "POST") {
     try {
         const data = await Astro.request.formData();
-        const name = data.get("username");
-        const email = data.get("email");
+        const message = (data.get("message") as string) ?? "";
+        const email = (data.get("email") as string) ?? "";
+        const name = (data.get("name") as string) ?? "";
+        const lastName = (data.get("lastName") as string) ?? "";
 
-        if (typeof name !== "string" || name.length < 1) {
-            errors.username += "Please enter a username. ";
+        for (const field of fields) {
+            if (field.id === "email")
+                errors.email = getInputError("email", email, field.errors);
+            if (field.id === "message")
+                errors.email = getInputError("text", message, field.errors);
         }
-        if (typeof email !== "string" || !isValidEmail(email)) {
-            errors.email += "Email is not valid. ";
-        }
+
         const hasErrors = Object.values(errors).some((msg) => msg);
         if (!hasErrors) {
+            data.set("message", JSON.stringify({ message, name, lastName }));
+
             const ok = await doSubmit(data);
-            if (ok) {
+            if (!ok) {
+                generalErrors = submitError;
             }
         }
     } catch (error) {
@@ -53,9 +63,13 @@ if (Astro.request.method === "POST") {
                 autocomplete={field.autocomplete}
                 type={field.type}
                 required={field.required}
+                errors={field.errors}
+                client:load
             />
         ))
     }
+
+    {generalErrors && <span>{generalErrors}</span>}
 
     <Button type="submit" className="cursor-pointer my-4">Send</Button>
 </form>

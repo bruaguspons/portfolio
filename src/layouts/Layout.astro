@@ -1,6 +1,8 @@
 ---
 import Header from "@/components/header/Header.astro";
 import { ViewTransitions } from "astro:transitions";
+import InfoTag from "./socialMedia/InfoTag.astro";
+import SocialMediaPanel from "./socialMedia/SocialMediaPanel.astro";
 
 interface Props {
 	title: string;
@@ -27,13 +29,17 @@ const { title } = Astro.props;
 		<ViewTransitions />
 	</head>
 	<body
-		class="text-black dark:text-white h-screen dark:bg-background-600 bg-background-100 box-border flex flex-col overflow-x-hidden transition ease-in duration-150"
+		class="text-black dark:text-white h-screen dark:bg-background-600 bg-background-100 box-border flex flex-col overflow-x-hidden transition ease-in duration-150 relative"
 	>
 		<Header transition:persist />
 
 		<main class="flex-auto">
 			<slot />
 		</main>
+
+		<InfoTag />
+		<SocialMediaPanel />
+
 		<style is:global>
 			html {
 				scroll-behavior: smooth;

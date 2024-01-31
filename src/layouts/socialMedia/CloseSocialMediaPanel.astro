@@ -1,0 +1,31 @@
+<button
+    id="closeSocialMediaBtn"
+    class="w-1/12 aspect-square m-[10%] fixed group"
+>
+    <div
+        class="absolute top-0 left-0 right-0 bottom-0 m-auto h-1/6 w-full rounded-full transition duration-150 rotate-45 bg-white group-hover:bg-gradient-to-r group-hover:from-purple-500 group-hover:to-blue-500"
+    >
+    </div>
+    <div
+        class="absolute top-0 left-0 right-0 bottom-0 m-auto h-1/6 w-full rounded-full transition duration-150 -rotate-45 bg-white group-hover:bg-gradient-to-r group-hover:from-purple-500 group-hover:to-blue-500"
+    >
+    </div>
+</button>
+<script>
+    const handleClick = () => {
+        document
+            .getElementById("closeSocialMediaBtn")
+            ?.addEventListener("click", () => {
+                const panel = document.getElementById("socialMediaPanel");
+
+                if (panel && panel.classList.contains("show-panel")) {
+                    panel.classList.remove("show-panel");
+                    panel.classList.add("hide-panel");
+                }
+            });
+    };
+    handleClick();
+    document.addEventListener("astro:after-swap", () => {
+        handleClick();
+    });
+</script>
