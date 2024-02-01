@@ -17,6 +17,8 @@ const isChecked = url.includes("es");
     const value = e.target.checked;
     let newUrl = url.replace("/es/", "/en/");
     if (value) newUrl = url.replace("/en/", "/es/");
-    return (window.location.href = newUrl);
+    setTimeout(() => {
+      return (window.location.href = newUrl);
+    }, 400);
   });
 </script>
