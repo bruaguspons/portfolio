@@ -12,20 +12,22 @@ import ChangerColorPrefBtn from "./themeSwitcher/ChangerColorPrefBtn.astro";
 >
     <!-- <div class="w-full h-14 flex items-center justify-between"> -->
     <div
-        class="w-full h-14 flex justify-evenly sm:grid custom_grid dark:bg-background-600"
+        class="w-full h-14 grid grid-cols-12 bg-background-100 dark:bg-background-600 transition ease-in duration-150"
     >
         <div
-            class="col1 flex items-center justify-center dark:bg-background-600"
+            class="col-span-4 sm:col-span-2 lg:col-span-3 h-full flex items-center justify-center"
         >
             <MyName />
         </div>
 
-        <div class="h-full sm:hidden">
+        <div
+            class="col-span-4 sm:col-span-8 lg:col-span-6 h-full sm:hidden flex items-center justify-center"
+        >
             <DropDownMenuLinks />
         </div>
         <div
             id="header-links"
-            class="col2 flex flex-col bg-background-400 w-full h-[calc(100vh-3.5rem)] justify-evenly absolute top-0 -translate-y-full transition-transform duration-500 -z-30 sm:translate-y-0 sm:h-full sm:bg-transparent sm:static sm:flex sm:flex-row sm:justify-center items-center sm:gap-10 sm:z-0"
+            class="col-span-4 sm:col-span-8 lg:col-span-6 flex flex-col bg-background-400 w-full h-[calc(100vh-3.5rem)] justify-evenly absolute top-0 -translate-y-full transition-transform duration-500 -z-30 sm:translate-y-0 sm:h-full sm:bg-transparent sm:static sm:flex sm:flex-row sm:justify-center items-center sm:gap-10 sm:z-0"
         >
             <Link href="home">Home</Link>
             <Link href="about">About</Link>
@@ -34,29 +36,23 @@ import ChangerColorPrefBtn from "./themeSwitcher/ChangerColorPrefBtn.astro";
             <Link href="contact">Contact</Link>
         </div>
 
-        <div class="h-auto sm:hidden">
+        <div
+            class="col-span-4 sm:col-span-2 lg:col-span-3 h-full lg:hidden flex items-center justify-center"
+        >
             <DropDownMenuSettings />
         </div>
         <div
             id="header-settings"
-            class="col3 flex flex-col bg-background-400 w-full h-auto justify-evenly absolute top-0 -translate-y-full transition-transform duration-500 -z-30 gap-10 py-10 sm:flex-row sm:translate-y-0 sm:h-full sm:bg-transparent sm:static items-center sm:justify-center sm:z-0 sm:py-0"
+            class="col-span-4 sm:col-span-2 lg:col-span-3 flex flex-col bg-background-400 w-full h-auto justify-evenly absolute top-0 -translate-y-full transition-transform duration-500 -z-30 gap-10 py-10 sm:flex-row lg:flex-row lg:translate-y-0 lg:h-full lg:bg-transparent lg:static items-center lg:justify-center lg:z-0 lg:py-0"
         >
             <div class="flex flex-col items-center gap-4">
-                <span>Change Lenguage:</span>
+                <span class="lg:hidden">Change Lenguage:</span>
                 <LenguageSwitcher />
             </div>
             <div class="flex flex-col items-center gap-4">
-                <span>Change Theme:</span>
+                <span class="lg:hidden">Change Theme:</span>
                 <ChangerColorPrefBtn cliente:only />
             </div>
         </div>
     </div>
 </header>
-
-<style>
-    .custom_grid {
-        grid-template-areas: "col1 col2 col3";
-        grid-template-columns: 250px 1fr 250px;
-        grid-template-rows: 1fr;
-    }
-</style>

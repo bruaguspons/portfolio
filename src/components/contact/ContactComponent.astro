@@ -12,7 +12,9 @@ const i18n = getI18N({ currentLocale });
 ---
 
 <LayoutContent>
-    <div class="flex-grow flex flex-col justify-start gap-10">
+    <div
+        class="flex-grow flex flex-col justify-start items-center w-full gap-10 px-10"
+    >
         <SubTitle>
             <TextColor>
                 {i18n.CONTACT.TITLE[1]}
@@ -20,7 +22,7 @@ const i18n = getI18N({ currentLocale });
             {i18n.ABOUT.TITLE[2]}
         </SubTitle>
 
-        <BorderEffect classList="mb-10">
+        <BorderEffect classList="mb-10 sm:max-w-[560px]">
             <ContactForm
                 fields={[
                     {
