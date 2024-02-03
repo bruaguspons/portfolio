@@ -35,7 +35,7 @@
                     "One of my most notable contributions to the news portal was the integration of artificial intelligence to optimize the work of journalists, especially in headline generation. We designed an AI-based title suggestion system that significantly streamlined the headline creation process by generating proposals in line with the content of the news."
                 ],
                 "IMAGE_SRC":"/montevideo-comm.webp",
-                "LINK": "/en/career/montevideo-comm",
+                "LINK": "/career/montevideo-comm",
                 "SLUG": "montevideo-comm"
             },
             {
@@ -47,7 +47,7 @@
                     "Through personal projects and self-directed experimentation, I have strengthened my ability to tackle technical challenges and find innovative solutions."
                 ],
                 "IMAGE_SRC":"/fing.webp",
-                "LINK": "/en/career/university-projects",
+                "LINK": "/career/university-projects",
                 "SLUG": "university-projects"
             }
         ]

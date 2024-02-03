@@ -1,1 +1,7 @@
-<meta http-equiv="refresh" content="0;url=/en/home" />
+---
+const { currentLocale } = Astro;
+
+const baseUrl = Astro.request.url.replace(/(es|en)(.*)$/, "") + currentLocale;
+---
+
+<meta http-equiv="refresh" content={`0;url=${baseUrl}/home`} />

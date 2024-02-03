@@ -36,7 +36,7 @@
 
                 ],
                 "IMAGE_SRC":"/montevideo-comm.webp",
-                "LINK": "/es/career/montevideo-comm",
+                "LINK": "/career/montevideo-comm",
                 "SLUG": "montevideo-comm"
             },
             {
@@ -48,7 +48,7 @@
                     "A través de proyectos personales y experimentación autodidacta, he fortalecido mi capacidad para enfrentar desafíos técnicos y encontrar soluciones innovadoras."
                 ],
                 "IMAGE_SRC":"/fing.webp",
-                "LINK": "/es/career/university-projects",
+                "LINK": "/career/university-projects",
                 "SLUG": "university-projects"
             }
         ]

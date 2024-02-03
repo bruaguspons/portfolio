@@ -7,6 +7,8 @@ import LenguageSwitcher from "./lenguageSwitcher/LenguageSwitcher.astro";
 import ChangerColorPrefBtn from "./themeSwitcher/ChangerColorPrefBtn.astro";
 
 const { currentLocale } = Astro;
+
+const baseUrl = Astro.request.url.replace(/(es|en)(.*)$/, "") + currentLocale;
 ---
 
 <header
@@ -31,11 +33,11 @@ const { currentLocale } = Astro;
             id="header-links"
             class="col-span-4 sm:col-span-8 lg:col-span-6 flex flex-col bg-background-400 w-full h-[calc(100vh-3.5rem)] justify-evenly absolute top-0 -translate-y-full transition-transform duration-500 -z-30 sm:translate-y-0 sm:h-full sm:bg-transparent sm:static sm:flex sm:flex-row sm:justify-center items-center sm:gap-10 sm:z-0"
         >
-            <Link href={`/${currentLocale}/home`}>Home</Link>
-            <Link href={`/${currentLocale}/about`}>About</Link>
-            <Link href={`/${currentLocale}/career`}>Career</Link>
-            <Link href={`/${currentLocale}/projects`}>Projects</Link>
-            <Link href={`/${currentLocale}/contact`}>Contact</Link>
+            <Link href={`${baseUrl}/home`}>Home</Link>
+            <Link href={`${baseUrl}/about`}>About</Link>
+            <Link href={`${baseUrl}/career`}>Career</Link>
+            <Link href={`${baseUrl}/projects`}>Projects</Link>
+            <Link href={`${baseUrl}/contact`}>Contact</Link>
         </div>
 
         <div

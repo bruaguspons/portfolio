@@ -7,6 +7,8 @@ import TextColor from "../TextColor.astro";
 const { currentLocale } = Astro;
 
 const i18n = getI18N({ currentLocale });
+
+const baseUrl = Astro.request.url.replace(/(es|en)(.*)$/, "") + currentLocale;
 ---
 
 <section
@@ -35,10 +37,10 @@ const i18n = getI18N({ currentLocale });
             <div
                 class="w-full flex justify-center lg:justify-start gap-5 mt-10"
             >
-                <Button className="" href={`/${currentLocale}/career`}>
+                <Button className="" href={`${baseUrl}/career`}>
                     {i18n.HOME.CAREER}
                 </Button>
-                <Button href={`/${currentLocale}/projects`}>
+                <Button href={`${baseUrl}/projects`}>
                     {i18n.HOME.PROJECTS}
                 </Button>
             </div>

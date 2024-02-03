@@ -8,6 +8,8 @@ import LayoutContent from "@/layouts/LayoutContent.astro";
 const { currentLocale } = Astro;
 
 const i18n = getI18N({ currentLocale });
+
+const baseUrl = Astro.request.url.replace(/(es|en)(.*)$/, "") + currentLocale;
 ---
 
 <LayoutContent>
@@ -24,7 +26,7 @@ const i18n = getI18N({ currentLocale });
             items={i18n.CAREER.ITEMS.map((item) => ({
                 date: item.DATE,
                 title: item.TITLE,
-                link: item.LINK,
+                link: baseUrl + item.LINK,
             }))}
         />
     </div>
