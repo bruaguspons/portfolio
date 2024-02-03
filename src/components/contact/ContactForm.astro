@@ -2,7 +2,7 @@
 import Button from "../Button.astro";
 import ContactInput from "./ContactInput.tsx";
 import type { InputError } from "./types";
-import { doSubmit, getInputError } from "./utils";
+// import { doSubmit, getInputError } from "./utils";
 
 interface Field {
     id: string;
@@ -19,56 +19,56 @@ interface Props {
     fieldsError: string;
 }
 
-const { fields, submitError, fieldsError } = Astro.props;
+const { fields } = Astro.props;
 
-const errors = { email: "", message: "" };
+// const errors = { email: "", message: "" };
 let generalErrors = "";
-if (Astro.request.method === "POST") {
-    try {
-        const data = await Astro.request.formData();
-        const message = (data.get("message") as string) ?? "";
-        const email = (data.get("email") as string) ?? "";
-        const name = (data.get("name") as string) ?? "";
-        const lastName = (data.get("lastName") as string) ?? "";
+// if (Astro.request.method === "POST") {
+//     try {
+//         const data = await Astro.request.formData();
+//         const message = (data.get("message") as string) ?? "";
+//         const email = (data.get("email") as string) ?? "";
+//         const name = (data.get("name") as string) ?? "";
+//         const lastName = (data.get("lastName") as string) ?? "";
 
-        for (const field of fields) {
-            if (field.id === "email")
-                errors.email = getInputError("email", email, field.errors);
-            if (field.id === "message")
-                errors.message = getInputError(
-                    "textarea",
-                    message,
-                    field.errors,
-                );
-        }
+//         for (const field of fields) {
+//             if (field.id === "email")
+//                 errors.email = getInputError("email", email, field.errors);
+//             if (field.id === "message")
+//                 errors.message = getInputError(
+//                     "textarea",
+//                     message,
+//                     field.errors,
+//                 );
+//         }
 
-        const hasErrors = Object.values(errors).some((msg) => msg);
+//         const hasErrors = Object.values(errors).some((msg) => msg);
 
-        if (!hasErrors) {
-            data.set("message", JSON.stringify({ message, name, lastName }));
+//         if (!hasErrors) {
+//             data.set("message", JSON.stringify({ message, name, lastName }));
 
-            const dataJson = {
-                email: email,
-                message: JSON.stringify({
-                    name,
-                    lastName,
-                    message,
-                }),
-            };
+//             const dataJson = {
+//                 email: email,
+//                 message: JSON.stringify({
+//                     name,
+//                     lastName,
+//                     message,
+//                 }),
+//             };
 
-            const ok = await doSubmit(JSON.stringify(dataJson));
-            if (!ok) {
-                generalErrors = submitError;
-            }
-        } else {
-            generalErrors = fieldsError;
-        }
-    } catch (error) {
-        if (error instanceof Error) {
-            console.error(error.message);
-        }
-    }
-}
+//             const ok = await doSubmit(JSON.stringify(dataJson));
+//             if (!ok) {
+//                 generalErrors = submitError;
+//             }
+//         } else {
+//             generalErrors = fieldsError;
+//         }
+//     } catch (error) {
+//         if (error instanceof Error) {
+//             console.error(error.message);
+//         }
+//     }
+// }
 ---
 
 <form method="POST" class="flex flex-col items-center gap-4 w-full" novalidate>
