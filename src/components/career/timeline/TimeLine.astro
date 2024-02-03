@@ -1,6 +1,8 @@
 ---
 import TimeLineEnding from "./TimeLineEnding.astro";
 import TimeLineItem from "./TimeLineItem.astro";
+import TimeLineItemMobile from "./TimeLineItemMobile.astro";
+import TimeLineDot from "./TimeLineDot.astro";
 
 interface Item {
     date: string;
@@ -14,7 +16,7 @@ interface Props {
 const { items } = Astro.props;
 ---
 
-<div class="grid grid-cols-11 mx-10">
+<div class="hidden sm:grid grid-cols-11 mx-10">
     <TimeLineEnding />
     {
         items.map((item, ind) => (
@@ -29,16 +31,31 @@ const { items } = Astro.props;
     }
     <TimeLineEnding desc />
 </div>
-
-<style>
-    .timeline {
-        display: grid;
-        grid-template-areas:
-            "date0 timeline0 content0"
-            "date1 timeline1 content1"
-            "date2 timeline2 content2"
-            "date3 timeline3 content3";
-        grid-template-columns: auto auto 1fr;
-        grid-template-rows: 1fr;
+<div class="flex flex-col items-center sm:hidden mx-10">
+    <TimeLineEnding />
+    {
+        items.map((item, ind) => {
+            return ind === items.length - 1 ? (
+                <TimeLineItemMobile
+                    rounded_top={ind === 0}
+                    rounded_bottom={ind === items.length - 1}
+                    date={item.date}
+                    title={item.title}
+                    link={item.link}
+                />
+            ) : (
+                <>
+                    <TimeLineItemMobile
+                        rounded_top={ind === 0}
+                        rounded_bottom={ind === items.length - 1}
+                        date={item.date}
+                        title={item.title}
+                        link={item.link}
+                    />
+                    <TimeLineDot />
+                </>
+            );
+        })
     }
-</style>
+    <TimeLineEnding desc />
+</div>
