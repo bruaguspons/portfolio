@@ -25,73 +25,108 @@
             "1": "My ",
             "2": "Career"
         },
-        "ITEMS": {
-            "1": {
+        "ITEMS": [
+            {
                 "DATE": "2023, Ene - Present",
                 "TITLE": "Montevideo COMM",
                 "CONTENT": "As a software developer at Montevideo COMM, I have played an integral role in the creation and maintenance of technological solutions. My main focus has been front-end development using HTML, CSS, and JavaScript, along with the use of GeneXus for the back-end. Through my experience and technical skills, I have contributed to major projects, such as the Montevideo Portal news portal. Additionally, I have contributed to custom applications for prominent clients such as the Catholic University of Uruguay (UCU) and Republic AFAP (RAFAP), meeting their specific needs with tailor-made solutions.",
-                "LINK": "/en/career/montevideo-comm"
+                "IMAGE_SRC":"/montevideo-comm.webp",
+                "LINK": "/en/career/montevideo-comm",
+                "SLUG": "montevideo-comm"
             },
-            "2": {
+            {
                 "DATE": "2021 - Present",
                 "TITLE": "University | Self projects",
                 "CONTENT": "During my time at UDELAR, I have been immersed in the Computer Engineering program, where I have acquired a solid foundation of knowledge in technology and web development. However, my learning didn't stop in the classrooms. I have dedicated time outside of the curriculum to delve into web application development, exploring various technologies both in the front-end and back-end. This personal initiative has allowed me to expand my skills beyond what is taught in class and develop a comprehensive understanding of web programming. Through personal projects and self-directed experimentation, I have strengthened my ability to tackle technical challenges and find innovative solutions.",
-                "LINK": "/en/career/university-projects"
+                "IMAGE_SRC":"/fing.webp",
+                "LINK": "/en/career/university-projects",
+                "SLUG": "university-projects"
             }
-        }
+        ]
     },
     "PROJECTS": {
         "TITLE":{
             "1": "Some of my ",
             "2": "Projects"
         },
-        "CONTENT": "I'm a passionate web developer with over 2 years of experience and a dedicated computer science student hailing from Uruguay 🌐. I enjoy building web applications using a variety of technologies, always striving to create great and clean solutions for challenging problems 💻. I have a penchant for independent learning and thrive on tackling complex issues. In my free time, you'll find me honing my skills on HackerRank, diving into tech articles, and relishing a good game of chess ♟️. Let's code and conquer together!"
+        "ITEMS": [
+            {
+                "TITLE": "Spotify Clone",
+                "CONTENT": "A simplified clone of the Spotify application, created with TypeScript + React + Express.",
+                "IMAGE_URL": "/assets/spotifyClone.webp",
+                "GITHUB_URL": "https://github.com/bruaguspons/spotify-clone-react",
+                "APP_URL": "",
+                "COMMING_SOON": false
+            },
+            {
+                "TITLE": "Space Invader",
+                "CONTENT": "Recreated from the classic arcade game Space Invaders, entirely made with TypeScript.",
+                "IMAGE_URL": "/assets/spaceInvaders.webp",
+                "GITHUB_URL": "https://github.com/bruaguspons/SpaceInvaders",
+                "APP_URL": "https://bruaguspons.github.io/SpaceInvaders/",
+                "COMMING_SOON": false
+            },
+            {
+                "TITLE": "Chess + AI",
+                "CONTENT": "The usual chess game, but the computer's moves are made with artificial intelligence.",
+                "IMAGE_URL": "",
+                "GITHUB_URL": "",
+                "APP_URL": "",
+                "COMMING_SOON": true
+            }
+        ],
+        "COMMING_SOON_TEXT": "Comming soon ...",
+        "GITHUB_MORE_INFO": "For more information, check the code by clicking on the icon below:",
+        "APP_MORE_INFO": "By clicking on the button below, you can test the application:",
+        "APP_BUTTON_TEXT": "Try it out!"
     },
     "CONTACT": {
         "TITLE":{
             "1": "Contact",
             "2": "me"
         },
-        "NAME":{
-            "ID": "name",
-            "LABEL": "Name",
-            "AUTOCOMPLETE": "given-name",
-            "TYPE": null,
-            "REQUIRED": false,
-            "ERRORS": {
+        "FIELDS":[
+            {
+                "ID": "name",
+                "LABEL": "Name",
+                "AUTOCOMPLETE": "given-name",
+                "TYPE": null,
+                "REQUIRED": false,
+                "ERRORS": {
+                }
+            },
+            {
+                "ID": "lastName",
+                "LABEL": "Last Name",
+                "AUTOCOMPLETE": "family-name",
+                "TYPE": null,
+                "REQUIRED": false,
+                "ERRORS": {
+                }
+            },
+             {
+                "ID": "email",
+                "LABEL": "Email",
+                "AUTOCOMPLETE": "email",
+                "TYPE": "email",
+                "REQUIRED": true,
+                "ERRORS": {
+                    "empty": "The Email field must not be empty.",
+                    "format": "The Email format is incorrect."
+                }
+            },
+             {
+                "ID": "message",
+                "LABEL": "Message",
+                "AUTOCOMPLETE": "",
+                "TYPE": "textarea",
+                "REQUIRED": true,
+                "ERRORS": {
+                    "empty": "The Message field must not be empty."
+                }
             }
-        },
-        "LASTNAME":{
-            "ID": "lastName",
-            "LABEL": "Last Name",
-            "AUTOCOMPLETE": "family-name",
-            "TYPE": null,
-            "REQUIRED": false,
-            "ERRORS": {
-            }
-        },
-        "EMAIL": {
-            "ID": "email",
-            "LABEL": "Email",
-            "AUTOCOMPLETE": "email",
-            "TYPE": "email",
-            "REQUIRED": true,
-            "ERRORS": {
-                "empty": "Email field must not be empty.",
-                "format": "Email format is not correct."
-            }
-        },
-        "MESSAGE": {
-            "ID": "message",
-            "LABEL": "Message",
-            "AUTOCOMPLETE": "",
-            "TYPE": "textarea",
-            "REQUIRED": true,
-            "ERRORS": {
-                "empty": "Message field must not be empty."
-            }
-        },
-        "SUBMITERROR": "Error al hacer submit",
-        "FIELDSERROR": "Errores en los inputs"
+        ],
+        "SUBMITERROR": "An error has occurred. Please try again later.",
+        "FIELDSERROR": "There are errors in the fields. Please, complete them again."
     }
 }

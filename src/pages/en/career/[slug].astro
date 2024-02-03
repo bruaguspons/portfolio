@@ -1,0 +1,35 @@
+---
+import CarrerContent from "@/components/career/CarrerContent.astro";
+// import { getI18N } from "@/i18n";
+import Layout from "@/layouts/Layout.astro";
+
+const { slug } = Astro.params;
+
+// const { currentLocale } = Astro;
+// const i18n = getI18N({ currentLocale });
+
+export async function getStaticPaths() {
+    return [
+        {
+            params: {
+                slug: "university-projects",
+            },
+        },
+        {
+            params: {
+                slug: "montevideo-comm",
+            },
+        },
+    ];
+
+    // return i18n.CAREER.ITEMS.map((item) => ({
+    //     params: {
+    //         slug: item.SLUG,
+    //     },
+    // }));
+}
+---
+
+<Layout title="Portfolio - Bruno Pons">
+    <CarrerContent slug={slug} />
+</Layout>
