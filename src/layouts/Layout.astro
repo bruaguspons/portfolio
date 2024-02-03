@@ -41,9 +41,24 @@ const { title } = Astro.props;
 		<SocialMediaPanel />
 
 		<style is:global>
+			/* @font-face {
+				font-family: Geist;
+				src:
+					url("/fonts/Geist-Black.woff2") format("woff"),
+					url("/fonts/Geist-Bold.woff2") format("woff"),
+					url("/fonts/Geist-Light.woff2") format("woff"),
+					url("/fonts/Geist-Medium.woff2") format("woff"),
+					url("/fonts/Geist-Regular.woff2") format("woff"),
+					url("/fonts/Geist-SemiBold.woff2") format("woff"),
+					url("/fonts/Geist-Thin.woff2") format("woff"),
+					url("/fonts/Geist-UltraBlack.woff2") format("woff"),
+					url("/fonts/Geist-UltraLight.woff2") format("woff"),
+					url("/fonts/GeistVariableVF.woff2") format("woff");
+			} */
 			html {
 				scroll-behavior: smooth;
 				scrollbar-width: thin;
+				/* font-family: Geist, Arial, sans-serif; */
 			}
 
 			html::-webkit-scrollbar {

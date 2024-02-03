@@ -29,17 +29,26 @@
             {
                 "DATE": "2023, Ene - Presente",
                 "TITLE": "Montevideo COMM",
-                "CONTENT": "Como desarrollador de software en Montevideo COMM, he desempeñado un papel integral en la creación y mantenimiento de soluciones tecnológicas. Mi enfoque principal ha sido el desarrollo front-end utilizando HTML, CSS y JavaScript, junto con el uso de GeneXus para el back-end. A través de mi experiencia y habilidades técnicas, he contribuido en grandes proyectos, tales como el portal de noticias Montevideo Portal. Además, he contribuido en aplicaciones personalizadas para clientes destacados como la Universidad Católica del Uruguay (UCU) y República AFAP (RAFAP), satisfaciendo sus necesidades específicas con soluciones a medida.",
+                "CONTENT": [
+                    "Como profesional en desarrollo de software en Montevideo COMM, he desempeñado un papel esencial en la creación y mantenimiento de soluciones tecnológicas. Me he enfocado principalmente en el desarrollo front-end utilizando HTML, CSS y JavaScript, complementado con la utilización de GeneXus para el back-end.",
+                    "A lo largo de mi trayectoria, he contribuido en grandes proyectos, como el prestigioso portal de noticias Montevideo Portal. Además, he colaborado en la creación de aplicaciones personalizadas para clientes destacados, satisfaciendo sus requerimientos específicos con soluciones a la medida.",
+                    "Una de mis contribuciones más destacadas al portal de noticias fue la integración de inteligencia artificial para optimizar el trabajo de los periodistas, especialmente en la generación de titulares. Diseñamos un sistema de sugerencias de títulos basado en IA que agilizó considerablemente el proceso de creación de encabezados al generar propuestas acordes al contenido de la noticia."
+
+                ],
                 "IMAGE_SRC":"/montevideo-comm.webp",
-                "LINK": "/en/career/montevideo-comm",
+                "LINK": "/es/career/montevideo-comm",
                 "SLUG": "montevideo-comm"
             },
             {
                 "DATE": "2021 - Presente",
                 "TITLE": "Universidad | Proyectos personales",
-                "CONTENT": "Durante mi tiempo en la UDELAR, he estado inmerso en la carrera de Ingeniería en Computación, donde he adquirido una base sólida de conocimientos en tecnología y desarrollo web. Sin embargo, mi aprendizaje no se detuvo en las aulas. He dedicado tiempo fuera del plan de estudios para profundizar en la creación de aplicaciones web, explorando diversas tecnologías tanto en el front-end como en el back-end. Esta iniciativa personal me ha permitido expandir mis habilidades más allá de lo enseñado en clase y desarrollar una comprensión integral de la programación web. A través de proyectos personales y experimentación autodidacta, he fortalecido mi capacidad para enfrentar desafíos técnicos y encontrar soluciones innovadoras.",
+                "CONTENT": [
+                    "Durante mi tiempo en la UDELAR, he estado inmerso en la carrera de Ingeniería en Computación, donde he adquirido una base sólida de conocimientos en tecnología y desarrollo web.",
+                    "Sin embargo, mi aprendizaje no se detuvo en las aulas. He dedicado tiempo fuera del plan de estudios para profundizar en la creación de aplicaciones web, explorando diversas tecnologías tanto en el front-end como en el back-end. Esta iniciativa personal me ha permitido expandir mis habilidades más allá de lo enseñado en clase y desarrollar una comprensión integral de la programación web.", 
+                    "A través de proyectos personales y experimentación autodidacta, he fortalecido mi capacidad para enfrentar desafíos técnicos y encontrar soluciones innovadoras."
+                ],
                 "IMAGE_SRC":"/fing.webp",
-                "LINK": "/en/career/university-projects",
+                "LINK": "/es/career/university-projects",
                 "SLUG": "university-projects"
             }
         ]
