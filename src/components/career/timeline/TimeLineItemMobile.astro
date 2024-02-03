@@ -1,0 +1,89 @@
+---
+import CardEffect from "@/components/CardEffect.astro";
+import TextColor from "@/components/TextColor.astro";
+
+interface Props {
+    rounded_top?: boolean;
+    rounded_bottom?: boolean;
+    date: string;
+    title: string;
+    link: string;
+}
+
+const { rounded_top, rounded_bottom, date, title, link } = Astro.props;
+
+let roundedTop = "";
+let roundedBottom = "";
+if (rounded_top) {
+    roundedTop = "rounded-t-full";
+}
+if (rounded_bottom) {
+    roundedBottom = "rounded-b-full";
+}
+---
+
+{
+    rounded_top ? (
+        <>
+            <div class="h-4">
+                <div
+                    class={`relative bg-background-400 dark:bg-background-200 w-1 h-full mx-5 z-10 ${roundedTop}`}
+                />
+            </div>
+            <div class="h-4">
+                <div
+                    class={`relative bg-background-400 dark:bg-background-200 w-1 h-full mx-5 z-10`}
+                />
+            </div>
+        </>
+    ) : (
+        <div class="h-4">
+            <div
+                class={`relative bg-background-400 dark:bg-background-200 w-1 h-full mx-5 z-10`}
+            />
+        </div>
+    )
+}
+
+<div class="flex items-center justify-start relative">
+    <CardEffect
+        classNameCard="after:blur-md dark:after:blur-md"
+        classNameContent="flex flex-col items-center p-4"
+        isLink={true}
+        href={link}
+    >
+        <span>
+            <TextColor
+                className="text-xl group-hover:text-white transition duration-150"
+            >
+                {title}
+            </TextColor>
+        </span>
+        <span>
+            {date}
+        </span>
+    </CardEffect>
+</div>
+
+{
+    rounded_bottom ? (
+        <>
+            <div class="h-4">
+                <div
+                    class={`relative bg-background-400 dark:bg-background-200 w-1 h-full mx-5 z-10`}
+                />
+            </div>
+            <div class="h-4">
+                <div
+                    class={`relative bg-background-400 dark:bg-background-200 w-1 h-full mx-5 z-10 ${roundedBottom}`}
+                />
+            </div>
+        </>
+    ) : (
+        <div class="h-4">
+            <div
+                class={`relative bg-background-400 dark:bg-background-200 w-1 h-full mx-5 z-10`}
+            />
+        </div>
+    )
+}

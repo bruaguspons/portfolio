@@ -1,0 +1,38 @@
+---
+import { getI18N } from "@/i18n";
+import LayoutContent from "@/layouts/LayoutContent.astro";
+import SubTitle from "../SubTitle.astro";
+import TextColor from "../TextColor.astro";
+import CardProject from "./CardProject.astro";
+
+const { currentLocale } = Astro;
+
+const i18n = getI18N({ currentLocale });
+---
+
+<LayoutContent>
+    <div class="flex-grow flex flex-col justify-start gap-10">
+        <SubTitle id="proyect-subtitle">
+            {i18n.PROJECTS.TITLE[1]}
+            <TextColor>
+                {i18n.PROJECTS.TITLE[2]}
+            </TextColor>
+        </SubTitle>
+
+        <div class="flex items-center justify-center gap-10 flex-wrap mx-10">
+            {
+                i18n.PROJECTS.ITEMS.map((item, ind) => (
+                    <CardProject
+                        id={ind.toString()}
+                        imageUrl={item.IMAGE_URL}
+                        title={item.TITLE}
+                        content={item.CONTENT}
+                        githubUrl={item.GITHUB_URL}
+                        appUrl={item.APP_URL}
+                        commingSoon={item.COMMING_SOON}
+                    />
+                ))
+            }
+        </div>
+    </div>
+</LayoutContent>

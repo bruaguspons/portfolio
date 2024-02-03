@@ -1,0 +1,60 @@
+---
+import MyName from "../MyName.astro";
+import DropDownMenuLinks from "./DropDownMenuLinks.astro";
+import DropDownMenuSettings from "./DropDownMenuSettings.astro";
+import Link from "./Link.astro";
+import LenguageSwitcher from "./lenguageSwitcher/LenguageSwitcher.astro";
+import ChangerColorPrefBtn from "./themeSwitcher/ChangerColorPrefBtn.astro";
+
+const { currentLocale } = Astro;
+---
+
+<header
+    class="w-full sticky bg-background-100 dark:bg-background-600 top-0 transition ease-in duration-150 z-50"
+>
+    <!-- <div class="w-full h-14 flex items-center justify-between"> -->
+    <div
+        class="w-full h-14 grid grid-cols-12 bg-background-100 dark:bg-background-600 transition ease-in duration-150"
+    >
+        <div
+            class="col-span-4 sm:col-span-2 lg:col-span-3 h-full flex items-center justify-center"
+        >
+            <MyName />
+        </div>
+
+        <div
+            class="col-span-4 sm:col-span-8 lg:col-span-6 h-full sm:hidden flex items-center justify-center"
+        >
+            <DropDownMenuLinks />
+        </div>
+        <div
+            id="header-links"
+            class="col-span-4 sm:col-span-8 lg:col-span-6 flex flex-col bg-background-400 w-full h-[calc(100vh-3.5rem)] justify-evenly absolute top-0 -translate-y-full transition-transform duration-500 -z-30 sm:translate-y-0 sm:h-full sm:bg-transparent sm:static sm:flex sm:flex-row sm:justify-center items-center sm:gap-10 sm:z-0"
+        >
+            <Link href={`/${currentLocale}/home`}>Home</Link>
+            <Link href={`/${currentLocale}/about`}>About</Link>
+            <Link href={`/${currentLocale}/career`}>Career</Link>
+            <Link href={`/${currentLocale}/projects`}>Projects</Link>
+            <Link href={`/${currentLocale}/contact`}>Contact</Link>
+        </div>
+
+        <div
+            class="col-span-4 sm:col-span-2 lg:col-span-3 h-full lg:hidden flex items-center justify-center"
+        >
+            <DropDownMenuSettings />
+        </div>
+        <div
+            id="header-settings"
+            class="col-span-4 sm:col-span-2 lg:col-span-3 flex flex-col bg-background-400 w-full h-auto justify-evenly absolute top-0 -translate-y-full transition-transform duration-500 -z-30 gap-10 py-10 sm:flex-row lg:flex-row lg:translate-y-0 lg:h-full lg:bg-transparent lg:static items-center lg:justify-center lg:z-0 lg:py-0"
+        >
+            <div class="flex flex-col items-center gap-4">
+                <span class="lg:hidden">Change Lenguage:</span>
+                <LenguageSwitcher />
+            </div>
+            <div class="flex flex-col items-center gap-4">
+                <span class="lg:hidden">Change Theme:</span>
+                <ChangerColorPrefBtn cliente:only />
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,50 @@
+---
+import ImageCircule from "@/components/ImageCircle.astro";
+import { getI18N } from "@/i18n";
+import Button from "../Button.astro";
+import TextColor from "../TextColor.astro";
+
+const { currentLocale } = Astro;
+
+const i18n = getI18N({ currentLocale });
+---
+
+<section
+    class="flex h-full w-full items-center md:items-start lg:items-center justify-center pt-0 md:pt-20 lg:pt-0"
+>
+    <div
+        class="flex flex-col-reverse lg:flex-row w-full lg:max-w-[980px] mx-10"
+    >
+        <div class="flex flex-col items-center lg:items-start">
+            <span class="text-lg">
+                {i18n.HOME.GREETING}
+            </span>
+            <p
+                class="text-2xl sm:text-3xl font-extrabold my-4 text-center lg:text-left"
+            >
+                {i18n.HOME.PROFESSION[1]}
+                <TextColor>
+                    {i18n.HOME.PROFESSION[2]}
+                </TextColor>
+                {i18n.HOME.PROFESSION[3]}
+            </p>
+            <p class="text-zinc-700 dark:text-zinc-300 text-base text-wrap">
+                {i18n.HOME.DESCRIPTION}
+            </p>
+
+            <div
+                class="w-full flex justify-center lg:justify-start gap-5 mt-10"
+            >
+                <Button className="" href={`/${currentLocale}/career`}>
+                    {i18n.HOME.CAREER}
+                </Button>
+                <Button href={`/${currentLocale}/projects`}>
+                    {i18n.HOME.PROJECTS}
+                </Button>
+            </div>
+        </div>
+        <div class="mx-10 flex justify-center">
+            <ImageCircule />
+        </div>
+    </div>
+</section>

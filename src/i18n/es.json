@@ -1,0 +1,141 @@
+{
+    "HOME": {
+        "GREETING": "Hola, soy Bruno Pons 👋",
+        "PROFESSION": {
+            "1": "Soy un",
+            "2": "Full-Stack",
+            "3": "Developer."
+        },
+        "DESCRIPTION": "Me especializo en proporcionar soluciones integrales y efectivas full-stack. Gran dominio de los frameworks de front-end, hábil en desarrollo de back-end y me enfoco en lograr una integración fluida.",
+        "CAREER": "Mi carrera",
+        "PROJECTS": "Mis proyectos"
+    },
+    "ABOUT": {
+        "TITLE":{
+            "1": "Acerca",
+            "2": " de mi"
+        },
+        "CONTENT": {
+            "1": "Soy un apasionado desarrollador web con más de 2 años de experiencia y un dedicado estudiante de la facultad de ingenieria de Uruguay 🌐. Disfruto construyendo aplicaciones web utilizando una gran variedad de tecnologías, siempre esforzándome por crear soluciones excelentes y limpias para problemas desafiantes 💻.",
+            "2": "En mi tiempo libre, me encontrarás perfeccionando mis habilidades en HackerRank, sumergiéndome en artículos tecnológicos y disfrutando de una buena partida de ajedrez ♟️. "
+        } 
+    },
+    "CAREER": {
+        "TITLE":{
+            "1": "My ",
+            "2": "Career"
+        },
+        "ITEMS": [
+            {
+                "DATE": "2023, Ene - Presente",
+                "TITLE": "Montevideo COMM",
+                "CONTENT": [
+                    "Como profesional en desarrollo de software en Montevideo COMM, he desempeñado un papel esencial en la creación y mantenimiento de soluciones tecnológicas. Me he enfocado principalmente en el desarrollo front-end utilizando HTML, CSS y JavaScript, complementado con la utilización de GeneXus para el back-end.",
+                    "A lo largo de mi trayectoria, he contribuido en grandes proyectos, como el prestigioso portal de noticias Montevideo Portal. Además, he colaborado en la creación de aplicaciones personalizadas para clientes destacados, satisfaciendo sus requerimientos específicos con soluciones a la medida.",
+                    "Una de mis contribuciones más destacadas al portal de noticias fue la integración de inteligencia artificial para optimizar el trabajo de los periodistas, especialmente en la generación de titulares. Diseñamos un sistema de sugerencias de títulos basado en IA que agilizó considerablemente el proceso de creación de encabezados al generar propuestas acordes al contenido de la noticia."
+
+                ],
+                "IMAGE_SRC":"/montevideo-comm.webp",
+                "LINK": "/es/career/montevideo-comm",
+                "SLUG": "montevideo-comm"
+            },
+            {
+                "DATE": "2021 - Presente",
+                "TITLE": "Universidad | Proyectos personales",
+                "CONTENT": [
+                    "Durante mi tiempo en la UDELAR, he estado inmerso en la carrera de Ingeniería en Computación, donde he adquirido una base sólida de conocimientos en tecnología y desarrollo web.",
+                    "Sin embargo, mi aprendizaje no se detuvo en las aulas. He dedicado tiempo fuera del plan de estudios para profundizar en la creación de aplicaciones web, explorando diversas tecnologías tanto en el front-end como en el back-end. Esta iniciativa personal me ha permitido expandir mis habilidades más allá de lo enseñado en clase y desarrollar una comprensión integral de la programación web.", 
+                    "A través de proyectos personales y experimentación autodidacta, he fortalecido mi capacidad para enfrentar desafíos técnicos y encontrar soluciones innovadoras."
+                ],
+                "IMAGE_SRC":"/fing.webp",
+                "LINK": "/es/career/university-projects",
+                "SLUG": "university-projects"
+            }
+        ]
+    },
+    "PROJECTS": {
+        "TITLE":{
+            "1": "Algunos de mis ",
+            "2": "Proyectos"
+        },
+        "ITEMS": [
+            {
+                "TITLE": "Spotify Clone",
+                "CONTENT": "Un clon simplificado de la aplicacion de Spotify, creado con TypeScript + React + Express",
+                "IMAGE_URL": "/assets/spotifyClone.webp",
+                "GITHUB_URL": "https://github.com/bruaguspons/spotify-clone-react",
+                "APP_URL": "",
+                "COMMING_SOON": false
+            },
+            {
+                "TITLE": "Space Invader",
+                "CONTENT": "Recreado a partir del clásico juego de arcade Space Invaders, hecho enteramente con TypeScript.",
+                "IMAGE_URL": "/assets/spaceInvaders.webp",
+                "GITHUB_URL": "https://github.com/bruaguspons/SpaceInvaders",
+                "APP_URL": "https://bruaguspons.github.io/SpaceInvaders/",
+                "COMMING_SOON": false
+            },
+            {
+                "TITLE": "Chess + AI",
+                "CONTENT": "El juego de ajedrez habitual, pero los movimientos de la computadora se realizan con inteligencia artificial.",
+                "IMAGE_URL": "",
+                "GITHUB_URL": "",
+                "APP_URL": "",
+                "COMMING_SOON": true
+            }
+        ],
+        "COMMING_SOON_TEXT": "Próximamente ...",
+        "GITHUB_MORE_INFO": "Para más información, checkea el código haciendo click en la imagen de abajo:",
+        "APP_MORE_INFO": "Haciendo click en el botón de abajo, puedes probar la aplicación:",
+        "APP_BUTTON_TEXT": "Pruébala!"
+    },
+    "CONTACT": {
+        "TITLE":{
+            "1": "Contacta",
+            "2": "me"
+        },
+        "FIELDS":[
+            {
+                "ID": "name",
+                "LABEL": "Nombre",
+                "AUTOCOMPLETE": "given-name",
+                "TYPE": null,
+                "REQUIRED": false,
+                "ERRORS": {
+                }
+            },
+            {
+                "ID": "lastName",
+                "LABEL": "Apellido",
+                "AUTOCOMPLETE": "family-name",
+                "TYPE": null,
+                "REQUIRED": false,
+                "ERRORS": {
+                }
+            },
+             {
+                "ID": "email",
+                "LABEL": "Email",
+                "AUTOCOMPLETE": "email",
+                "TYPE": "email",
+                "REQUIRED": true,
+                "ERRORS": {
+                    "empty": "El campo Email no debe estar vacío.",
+                    "format": "El formato del Email no es correcto."
+                }
+            },
+             {
+                "ID": "message",
+                "LABEL": "Mensaje",
+                "AUTOCOMPLETE": "",
+                "TYPE": "textarea",
+                "REQUIRED": true,
+                "ERRORS": {
+                    "empty": "El campo Mensaje no debe estar vacío."
+                }
+            }
+        ],
+        "SUBMITERROR": "Ha ocurrido un error. Por favor, inténtalo de nuevo más tarde.",
+        "FIELDSERROR": "Hay errores en los campos. Por favor, vuelva a completarlos."
+    }
+}

@@ -1,0 +1,40 @@
+---
+import LayoutContent from "@/layouts/LayoutContent.astro";
+import SubTitle from "../SubTitle.astro";
+import TextColor from "../TextColor.astro";
+import { getI18N } from "@/i18n";
+import BorderEffect from "../BorderEffect.astro";
+import ContactForm from "./ContactForm.astro";
+
+const { currentLocale } = Astro;
+
+const i18n = getI18N({ currentLocale });
+---
+
+<LayoutContent>
+    <div
+        class="flex-grow flex flex-col justify-start items-center w-full gap-10 px-10"
+    >
+        <SubTitle>
+            <TextColor>
+                {i18n.CONTACT.TITLE[1]}
+            </TextColor>
+            {i18n.CONTACT.TITLE[2]}
+        </SubTitle>
+
+        <BorderEffect classList="mb-10 sm:max-w-[560px]">
+            <ContactForm
+                fields={i18n.CONTACT.FIELDS.map((field) => ({
+                    id: field.ID,
+                    label: field.LABEL,
+                    autocomplete: field.AUTOCOMPLETE,
+                    type: field.TYPE as "textarea" | "email" | null | undefined,
+                    required: field.REQUIRED,
+                    errors: field.ERRORS,
+                }))}
+                submitError={i18n.CONTACT.SUBMITERROR}
+                fieldsError={i18n.CONTACT.FIELDSERROR}
+            />
+        </BorderEffect>
+    </div>
+</LayoutContent>

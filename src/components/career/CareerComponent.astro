@@ -1,0 +1,31 @@
+---
+import { getI18N } from "@/i18n";
+import SubTitle from "../SubTitle.astro";
+import TextColor from "../TextColor.astro";
+import TimeLine from "./timeline/TimeLine.astro";
+
+import LayoutContent from "@/layouts/LayoutContent.astro";
+const { currentLocale } = Astro;
+
+const i18n = getI18N({ currentLocale });
+---
+
+<LayoutContent>
+    <div
+        class="flex-grow flex flex-col items-center justify-start gap-10 mb-10"
+    >
+        <SubTitle>
+            {i18n.CAREER.TITLE[1]}
+            <TextColor>
+                {i18n.CAREER.TITLE[2]}
+            </TextColor>
+        </SubTitle>
+        <TimeLine
+            items={i18n.CAREER.ITEMS.map((item) => ({
+                date: item.DATE,
+                title: item.TITLE,
+                link: item.LINK,
+            }))}
+        />
+    </div>
+</LayoutContent>

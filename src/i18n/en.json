@@ -1,0 +1,140 @@
+{
+    "HOME": {
+        "GREETING": "Hi, i'm Bruno Pons 👋",
+        "PROFESSION": {
+            "1": "I'm",
+            "2": "Full-Stack",
+            "3": "Developer."
+        },
+        "DESCRIPTION": "I specialize in providing comprehensive and effective full-stack solutions. deep understanding of front-end frameworks, skilled in back-end development, and focus on achieving seamless integration.",
+        "CAREER": "My career",
+        "PROJECTS": "My projects"
+    },
+    "ABOUT": {
+        "TITLE":{
+            "1": "About",
+            "2": "me"
+        },
+        "CONTENT": {
+            "1": "I am a passionate web developer with over 2 years of experience and a dedicated student at the Faculty of Engineering in Uruguay 🌐. I enjoy building web applications using a wide range of technologies, always striving to create excellent and clean solutions for challenging problems 💻.",
+            "2": "In my free time, you'll find me honing my skills on HackerRank, diving into tech articles, and enjoying a good game of chess ♟️. "
+        } 
+    },
+    "CAREER": {
+        "TITLE":{
+            "1": "My ",
+            "2": "Career"
+        },
+        "ITEMS": [
+            {
+                "DATE": "2023, Ene - Present",
+                "TITLE": "Montevideo COMM",
+                "CONTENT": [
+                    "As a software developer at Montevideo COMM, I have played an essential role in the creation and maintenance of technological solutions. I have primarily focused on front-end development using HTML, CSS, and JavaScript, complemented with the use of GeneXus for the back-end. ",
+                    "Throughout my career, I have contributed to major projects, such as the prestigious news portal Montevideo Portal. Additionally, I have collaborated in creating custom applications for prominent clients, meeting their specific requirements with tailored solutions.",
+                    "One of my most notable contributions to the news portal was the integration of artificial intelligence to optimize the work of journalists, especially in headline generation. We designed an AI-based title suggestion system that significantly streamlined the headline creation process by generating proposals in line with the content of the news."
+                ],
+                "IMAGE_SRC":"/montevideo-comm.webp",
+                "LINK": "/en/career/montevideo-comm",
+                "SLUG": "montevideo-comm"
+            },
+            {
+                "DATE": "2021 - Present",
+                "TITLE": "University | Self projects",
+                "CONTENT": [
+                    "During my time at UDELAR, I have been immersed in the Computer Engineering program, where I have acquired a solid foundation of knowledge in technology and web development.", 
+                    "However, my learning didn't stop in the classrooms. I have dedicated time outside of the curriculum to delve into web application development, exploring various technologies both in the front-end and back-end. This personal initiative has allowed me to expand my skills beyond what is taught in class and develop a comprehensive understanding of web programming.",
+                    "Through personal projects and self-directed experimentation, I have strengthened my ability to tackle technical challenges and find innovative solutions."
+                ],
+                "IMAGE_SRC":"/fing.webp",
+                "LINK": "/en/career/university-projects",
+                "SLUG": "university-projects"
+            }
+        ]
+    },
+    "PROJECTS": {
+        "TITLE":{
+            "1": "Some of my ",
+            "2": "Projects"
+        },
+        "ITEMS": [
+            {
+                "TITLE": "Spotify Clone",
+                "CONTENT": "A simplified clone of the Spotify application, created with TypeScript + React + Express.",
+                "IMAGE_URL": "/assets/spotifyClone.webp",
+                "GITHUB_URL": "https://github.com/bruaguspons/spotify-clone-react",
+                "APP_URL": "",
+                "COMMING_SOON": false
+            },
+            {
+                "TITLE": "Space Invader",
+                "CONTENT": "Recreated from the classic arcade game Space Invaders, entirely made with TypeScript.",
+                "IMAGE_URL": "/assets/spaceInvaders.webp",
+                "GITHUB_URL": "https://github.com/bruaguspons/SpaceInvaders",
+                "APP_URL": "https://bruaguspons.github.io/SpaceInvaders/",
+                "COMMING_SOON": false
+            },
+            {
+                "TITLE": "Chess + AI",
+                "CONTENT": "The usual chess game, but the computer's moves are made with artificial intelligence.",
+                "IMAGE_URL": "",
+                "GITHUB_URL": "",
+                "APP_URL": "",
+                "COMMING_SOON": true
+            }
+        ],
+        "COMMING_SOON_TEXT": "Comming soon ...",
+        "GITHUB_MORE_INFO": "For more information, check the code by clicking on the icon below:",
+        "APP_MORE_INFO": "By clicking on the button below, you can test the application:",
+        "APP_BUTTON_TEXT": "Try it out!"
+    },
+    "CONTACT": {
+        "TITLE":{
+            "1": "Contact",
+            "2": "me"
+        },
+        "FIELDS":[
+            {
+                "ID": "name",
+                "LABEL": "Name",
+                "AUTOCOMPLETE": "given-name",
+                "TYPE": null,
+                "REQUIRED": false,
+                "ERRORS": {
+                }
+            },
+            {
+                "ID": "lastName",
+                "LABEL": "Last Name",
+                "AUTOCOMPLETE": "family-name",
+                "TYPE": null,
+                "REQUIRED": false,
+                "ERRORS": {
+                }
+            },
+             {
+                "ID": "email",
+                "LABEL": "Email",
+                "AUTOCOMPLETE": "email",
+                "TYPE": "email",
+                "REQUIRED": true,
+                "ERRORS": {
+                    "empty": "The Email field must not be empty.",
+                    "format": "The Email format is incorrect."
+                }
+            },
+             {
+                "ID": "message",
+                "LABEL": "Message",
+                "AUTOCOMPLETE": "",
+                "TYPE": "textarea",
+                "REQUIRED": true,
+                "ERRORS": {
+                    "empty": "The Message field must not be empty."
+                }
+            }
+        ],
+        "SUBMITERROR": "An error has occurred. Please try again later.",
+        "FIELDSERROR": "There are errors in the fields. Please, complete them again."
+    }
+}

@@ -1,0 +1,28 @@
+---
+interface Props {
+    desc?: boolean;
+}
+
+const { desc } = Astro.props;
+---
+
+<div class="col-span-5"></div>
+<div class="col-span-1 grid place-items-center">
+    {
+        desc ? (
+            <>
+                <div class="relative bg-background-400 dark:bg-background-200 w-1 h-5 mx-5 z-10 mt-2 rounded-full" />
+                <div class="relative bg-background-400 dark:bg-background-200 w-1 h-3 mx-5 z-10 mt-2 rounded-full" />
+                <div class="relative bg-background-400 dark:bg-background-200 w-1 h-1 mx-5 z-10 mt-2  rounded-full" />
+            </>
+        ) : (
+            <>
+                <div class="relative bg-background-400 dark:bg-background-200 w-1 h-1 mx-5 z-10 mb-2 rounded-full" />
+                <div class="relative bg-background-400 dark:bg-background-200 w-1 h-3 mx-5 z-10 mb-2 rounded-full" />
+                <div class="relative bg-background-400 dark:bg-background-200 w-1 h-5 mx-5 z-10 mb-2 rounded-full" />
+            </>
+        )
+    }
+</div>
+
+<div class={`col-span-5`}></div>
