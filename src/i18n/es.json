@@ -6,7 +6,7 @@
             "2": "Full-Stack",
             "3": "Developer."
         },
-        "DESCRIPTION": "Me especializo en ofrecer soluciones completas y efectivas full-stack. Domino los frameworks de front-end, tengo destreza en el desarrollo de back-end y me centro en asegurar una integración fluida. Me apasiona profundamente fomentar la innovación y priorizar el diseño centrado en el usuario.",
+        "DESCRIPTION": "Me especializo en proporcionar soluciones integrales y efectivas full-stack. Gran dominio de los frameworks de front-end, hábil en desarrollo de back-end y me enfoco en lograr una integración fluida.",
         "CAREER": "Mi carrera",
         "PROJECTS": "Mis proyectos"
     },
@@ -15,14 +15,30 @@
             "1": "Acerca",
             "2": " de mi"
         },
-        "CONTENT": "Soy un apasionado desarrollador web con más de 2 años de experiencia y un dedicado estudiante de la facultad de ingenieria de Uruguay 🌐. Disfruto construyendo aplicaciones web utilizando una variedad de tecnologías, siempre esforzándome por crear soluciones excelentes y limpias para problemas desafiantes 💻. Tengo predilección por el aprendizaje independiente y prospero enfrentando problemas complejos. En mi tiempo libre, me encontrarás perfeccionando mis habilidades en HackerRank, sumergiéndome en artículos tecnológicos y disfrutando de una buena partida de ajedrez ♟️. "
+        "CONTENT": {
+            "1": "Soy un apasionado desarrollador web con más de 2 años de experiencia y un dedicado estudiante de la facultad de ingenieria de Uruguay 🌐. Disfruto construyendo aplicaciones web utilizando una gran variedad de tecnologías, siempre esforzándome por crear soluciones excelentes y limpias para problemas desafiantes 💻.",
+            "2": "En mi tiempo libre, me encontrarás perfeccionando mis habilidades en HackerRank, sumergiéndome en artículos tecnológicos y disfrutando de una buena partida de ajedrez ♟️. "
+        } 
     },
     "CAREER": {
         "TITLE":{
-            "1": "Mi ",
-            "2": "Carrera"
+            "1": "My ",
+            "2": "Career"
         },
-        "CONTENT": "I'm a passionate web developer with over 2 years of experience and a dedicated computer science student hailing from Uruguay 🌐. I enjoy building web applications using a variety of technologies, always striving to create great and clean solutions for challenging problems 💻. I have a penchant for independent learning and thrive on tackling complex issues. In my free time, you'll find me honing my skills on HackerRank, diving into tech articles, and relishing a good game of chess ♟️. Let's code and conquer together!"
+        "ITEMS": {
+            "1": {
+                "DATE": "2023, Ene - Presente",
+                "TITLE": "Montevideo COMM",
+                "CONTENT": "Como desarrollador de software en Montevideo COMM, he desempeñado un papel integral en la creación y mantenimiento de soluciones tecnológicas. Mi enfoque principal ha sido el desarrollo front-end utilizando HTML, CSS y JavaScript, junto con el uso de GeneXus para el back-end. A través de mi experiencia y habilidades técnicas, he contribuido en grandes proyectos, tales como el portal de noticias Montevideo Portal. Además, he contribuido en aplicaciones personalizadas para clientes destacados como la Universidad Católica del Uruguay (UCU) y República AFAP (RAFAP), satisfaciendo sus necesidades específicas con soluciones a medida.",
+                "LINK": "/en/career/montevideo-comm"
+            },
+            "2": {
+                "DATE": "2021 - Presente",
+                "TITLE": "Universidad | Proyectos personales",
+                "CONTENT": "Durante mi tiempo en la UDELAR, he estado inmerso en la carrera de Ingeniería en Computación, donde he adquirido una base sólida de conocimientos en tecnología y desarrollo web. Sin embargo, mi aprendizaje no se detuvo en las aulas. He dedicado tiempo fuera del plan de estudios para profundizar en la creación de aplicaciones web, explorando diversas tecnologías tanto en el front-end como en el back-end. Esta iniciativa personal me ha permitido expandir mis habilidades más allá de lo enseñado en clase y desarrollar una comprensión integral de la programación web. A través de proyectos personales y experimentación autodidacta, he fortalecido mi capacidad para enfrentar desafíos técnicos y encontrar soluciones innovadoras.",
+                "LINK": "/en/career/university-projects"
+            }
+        }
     },
     "PROJECTS": {
         "TITLE":{

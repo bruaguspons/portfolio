@@ -4,17 +4,15 @@ import CardEffect from "@/components/CardEffect.astro";
 import TextColor from "@/components/TextColor.astro";
 
 interface Props {
-    id: number;
     rounded_top?: boolean;
     rounded_bottom?: boolean;
     date: string;
     title: string;
-    content: string;
     delay?: number;
+    link: string;
 }
 
-const { id, rounded_top, rounded_bottom, date, title, content, delay } =
-    Astro.props;
+const { rounded_top, rounded_bottom, date, title, delay, link } = Astro.props;
 
 let rounded = "";
 if (rounded_top) {
@@ -26,15 +24,12 @@ if (rounded_bottom) {
 ---
 
 <!-- <div class="flex justify-center"> -->
-<div
-    id={`date-${id}`}
-    class={`[grid-area:date${id}] flex items-center justify-end`}
->
-    <Button className="focus:from-purple-500 focus:to-blue-500">
+<div class={`col-span-5 flex items-center justify-end`}>
+    <Button href={link} className="focus:from-purple-500 focus:to-blue-500">
         {date}
     </Button>
 </div>
-<div id={`timeline-${id}`} class={`[grid-area${id}:timeline]`}>
+<div class="col-span-1 flex items-center justify-center">
     <div
         class={`relative bg-background-400 dark:bg-background-200 w-1 h-full mx-5 z-10 ${rounded}`}
     >
@@ -44,16 +39,16 @@ if (rounded_bottom) {
         </div>
     </div>
 </div>
-<div id={`content-${id}`} class="flex items-center justify-center relative">
+<div class="col-span-5 flex items-center justify-start relative">
     <CardEffect
-        classNameCard="[grid-area:content${id}] my-4 after:blur-md dark:after:blur-md"
+        classNameCard="my-6 after:blur-md dark:after:blur-md"
+        classNameContent="p-4"
     >
-        <h3>
-            <TextColor>
+        <span>
+            <TextColor className="text-xl">
                 {title}
             </TextColor>
-        </h3>
-        <p>{content}</p>
+        </span>
     </CardEffect>
 </div>
 <!-- </div> -->

@@ -1,14 +1,13 @@
 ---
 interface Props {
-    id: number;
     desc?: boolean;
 }
 
-const { id, desc } = Astro.props;
+const { desc } = Astro.props;
 ---
 
-<div class={`[grid-area:date${id}]`}></div>
-<div class={`[grid-area${id}:timeline]`}>
+<div class="col-span-5"></div>
+<div class="col-span-1 grid place-items-center">
     {
         desc ? (
             <>
@@ -25,4 +24,5 @@ const { id, desc } = Astro.props;
         )
     }
 </div>
-<div class={`[grid-area:content${id}]`}></div>
+
+<div class={`col-span-5`}></div>

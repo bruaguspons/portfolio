@@ -1,15 +1,18 @@
 ---
 interface Props {
+    id: string;
     effectEnable?: boolean;
 }
 
-const { effectEnable = true } = Astro.props;
+const { effectEnable = true, id } = Astro.props;
 ---
 
 <div class="w-60 h-96 group [perspective:800px]">
     <div
+        id={`card-flip-${id}`}
         class={`card ${
-            effectEnable && "group-hover:[transform:rotateY(180deg)]"
+            effectEnable &&
+            "group-hover:[transform:rotateY(180deg)] sm:[transform:rotateY(0deg)] sm:group-hover:[transform:rotateY(180deg)]"
         } h-full w-full relative transition-transform duration-1000 [transform-style:preserve-3d]`}
     >
         <div
@@ -24,3 +27,26 @@ const { effectEnable = true } = Astro.props;
         </div>
     </div>
 </div>
+
+<script define:vars={{ id, effectEnable }}>
+    const cardFlip = document.getElementById(`card-flip-${id}`);
+    if (cardFlip && effectEnable) {
+        cardFlip.addEventListener("click", (e) => {
+            if (
+                cardFlip.classList.contains(
+                    "group-hover:[transform:rotateY(180deg)]",
+                )
+            ) {
+                cardFlip.classList.remove(
+                    "group-hover:[transform:rotateY(180deg)]",
+                );
+                cardFlip.classList.add("[transform:rotateY(180deg)]");
+            } else {
+                cardFlip.classList.remove("[transform:rotateY(180deg)]");
+                cardFlip.classList.add(
+                    "group-hover:[transform:rotateY(180deg)]",
+                );
+            }
+        });
+    }
+</script>

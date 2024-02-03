@@ -2,9 +2,6 @@ import { isValidEmail } from ".";
 import type { InputError } from "../types";
 
 const getError = (errors: InputError | undefined, type: string) => {
-
-    console.log(errors)
-
     if (type === "empty") return errors?.empty ?? "";
     if (type === "format") return errors?.format ?? "";
     return "";

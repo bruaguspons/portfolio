@@ -6,7 +6,7 @@
             "2": "Full-Stack",
             "3": "Developer."
         },
-        "DESCRIPTION": "I specialize in delivering clean and effective full-stack solutions. Proficient in front-end frameworks, adept in back-end development, and skilled in ensuring seamless integration. I am deeply passionate about fostering innovation and prioritizing user-centric design. ",
+        "DESCRIPTION": "I specialize in providing comprehensive and effective full-stack solutions. deep understanding of front-end frameworks, skilled in back-end development, and focus on achieving seamless integration.",
         "CAREER": "My career",
         "PROJECTS": "My projects"
     },
@@ -15,14 +15,30 @@
             "1": "About",
             "2": "me"
         },
-        "CONTENT": "I'm a passionate web developer with over 2 years of experience and a dedicated computer science student hailing from Uruguay 🌐. I enjoy building web applications using a variety of technologies, always striving to create great and clean solutions for challenging problems 💻. I have a penchant for independent learning and thrive on tackling complex issues. In my free time, you'll find me honing my skills on HackerRank, diving into tech articles, and relishing a good game of chess ♟️. Let's code and conquer together!"
+        "CONTENT": {
+            "1": "I am a passionate web developer with over 2 years of experience and a dedicated student at the Faculty of Engineering in Uruguay 🌐. I enjoy building web applications using a wide range of technologies, always striving to create excellent and clean solutions for challenging problems 💻.",
+            "2": "In my free time, you'll find me honing my skills on HackerRank, diving into tech articles, and enjoying a good game of chess ♟️. "
+        } 
     },
     "CAREER": {
         "TITLE":{
             "1": "My ",
             "2": "Career"
         },
-        "CONTENT": "I'm a passionate web developer with over 2 years of experience and a dedicated computer science student hailing from Uruguay 🌐. I enjoy building web applications using a variety of technologies, always striving to create great and clean solutions for challenging problems 💻. I have a penchant for independent learning and thrive on tackling complex issues. In my free time, you'll find me honing my skills on HackerRank, diving into tech articles, and relishing a good game of chess ♟️. Let's code and conquer together!"
+        "ITEMS": {
+            "1": {
+                "DATE": "2023, Ene - Present",
+                "TITLE": "Montevideo COMM",
+                "CONTENT": "As a software developer at Montevideo COMM, I have played an integral role in the creation and maintenance of technological solutions. My main focus has been front-end development using HTML, CSS, and JavaScript, along with the use of GeneXus for the back-end. Through my experience and technical skills, I have contributed to major projects, such as the Montevideo Portal news portal. Additionally, I have contributed to custom applications for prominent clients such as the Catholic University of Uruguay (UCU) and Republic AFAP (RAFAP), meeting their specific needs with tailor-made solutions.",
+                "LINK": "/en/career/montevideo-comm"
+            },
+            "2": {
+                "DATE": "2021 - Present",
+                "TITLE": "University | Self projects",
+                "CONTENT": "During my time at UDELAR, I have been immersed in the Computer Engineering program, where I have acquired a solid foundation of knowledge in technology and web development. However, my learning didn't stop in the classrooms. I have dedicated time outside of the curriculum to delve into web application development, exploring various technologies both in the front-end and back-end. This personal initiative has allowed me to expand my skills beyond what is taught in class and develop a comprehensive understanding of web programming. Through personal projects and self-directed experimentation, I have strengthened my ability to tackle technical challenges and find innovative solutions.",
+                "LINK": "/en/career/university-projects"
+            }
+        }
     },
     "PROJECTS": {
         "TITLE":{

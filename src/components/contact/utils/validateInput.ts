@@ -7,8 +7,6 @@ const validateInput = (inpType: string, value: string, errors: InputError | unde
     const error = getInputError(inpType, value, errors)
     const container =  document.getElementById(containerId)
 
-    console.log({error, container})
-
     if(container){
         if(error){
             container.innerHTML = error

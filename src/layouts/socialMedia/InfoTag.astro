@@ -27,9 +27,7 @@ declare global {
 
 <script>
     const handleClick = (elem: HTMLElement | null) => {
-        console.log({ elem });
         elem?.addEventListener("click", () => {
-            console.log("hizo click en el elemento");
             const panel = document.getElementById("socialMediaPanel");
 
             if (panel) {

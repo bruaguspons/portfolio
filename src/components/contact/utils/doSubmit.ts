@@ -5,8 +5,6 @@ const doSubmit = async (data: string) => {
         body: data
     })
 
-    console.log({response})
-
     return response.ok
 }
 

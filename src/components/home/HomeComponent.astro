@@ -33,10 +33,12 @@ const i18n = getI18N({ currentLocale });
             <div
                 class="w-full flex justify-center sm:justify-start gap-5 mt-10"
             >
-                <Button className="" href="career">
+                <Button className="" href={`/${currentLocale}/career`}>
                     {i18n.HOME.CAREER}
                 </Button>
-                <Button href="projects">{i18n.HOME.PROJECTS}</Button>
+                <Button href={`/${currentLocale}/projects`}>
+                    {i18n.HOME.PROJECTS}
+                </Button>
             </div>
         </div>
         <div class="mx-10">

@@ -42,11 +42,7 @@ if (Astro.request.method === "POST") {
                 );
         }
 
-        console.log({ errors });
-
         const hasErrors = Object.values(errors).some((msg) => msg);
-
-        console.log({ hasErrors });
 
         if (!hasErrors) {
             data.set("message", JSON.stringify({ message, name, lastName }));
@@ -60,7 +56,6 @@ if (Astro.request.method === "POST") {
                 }),
             };
 
-            console.log({ dataJson });
             const ok = await doSubmit(JSON.stringify(dataJson));
             if (!ok) {
                 generalErrors = submitError;

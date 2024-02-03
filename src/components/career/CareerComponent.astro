@@ -11,13 +11,28 @@ const i18n = getI18N({ currentLocale });
 ---
 
 <LayoutContent>
-    <div class="flex-grow flex flex-col justify-start gap-10">
+    <div
+        class="flex-grow flex flex-col items-center justify-start gap-10 mb-10"
+    >
         <SubTitle>
             {i18n.CAREER.TITLE[1]}
             <TextColor>
                 {i18n.CAREER.TITLE[2]}
             </TextColor>
         </SubTitle>
-        <TimeLine />
+        <TimeLine
+            items={[
+                {
+                    date: i18n.CAREER.ITEMS["1"].DATE,
+                    title: i18n.CAREER.ITEMS["1"].TITLE,
+                    link: i18n.CAREER.ITEMS["1"].LINK,
+                },
+                {
+                    date: i18n.CAREER.ITEMS["2"].DATE,
+                    title: i18n.CAREER.ITEMS["2"].TITLE,
+                    link: i18n.CAREER.ITEMS["2"].LINK,
+                },
+            ]}
+        />
     </div>
 </LayoutContent>
