@@ -8,7 +8,8 @@ const { currentLocale } = Astro;
 
 const i18n = getI18N({ currentLocale });
 
-const baseUrl = Astro.request.url.replace(/(es|en)(.*)$/, "") + currentLocale;
+const baseUrl = Astro.request.url.replace(/(es|en)(.*)$/, "");
+const baseUrlWithLocale = baseUrl + currentLocale;
 ---
 
 <section
@@ -37,16 +38,16 @@ const baseUrl = Astro.request.url.replace(/(es|en)(.*)$/, "") + currentLocale;
             <div
                 class="w-full flex justify-center lg:justify-start gap-5 mt-10"
             >
-                <Button className="" href={`${baseUrl}/career`}>
+                <Button className="" href={`${baseUrlWithLocale}/career`}>
                     {i18n.HOME.CAREER}
                 </Button>
-                <Button href={`${baseUrl}/projects`}>
+                <Button href={`${baseUrlWithLocale}/projects`}>
                     {i18n.HOME.PROJECTS}
                 </Button>
             </div>
         </div>
         <div class="mx-10 flex justify-center">
-            <ImageCircule />
+            <ImageCircule src={baseUrl + "bruno_pons.webp"} />
         </div>
     </div>
 </section>
