@@ -1,8 +1,17 @@
 ---
 import HomeComponent from "@/components/home/HomeComponent.astro";
 import Layout from "@/layouts/Layout.astro";
+
+const url = Astro.request.url;
+const baseUrl = url.replace(/(es|en)(.*)$/, "");
 ---
 
 <Layout title="Portfolio - Bruno Pons">
+	<link
+		rel="preload"
+		as="image"
+		href={baseUrl + "bruno_pons.webp"}
+		slot="metaData"
+	/>
 	<HomeComponent />
 </Layout>
