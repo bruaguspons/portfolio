@@ -134,7 +134,8 @@
                 }
             }
         ],
-        "SUBMITERROR": "An error has occurred. Please try again later.",
-        "FIELDSERROR": "There are errors in the fields. Please, complete them again."
+        "SUBMIT_ERROR": "An error has occurred. Please try again later.",
+        "SUBMIT_SUCCESS": "Your email has been sent successfully! I'll get back to you as soon as possible. Thanks for reaching out!",
+        "SEND_TEXT": "Enviar"
     }
 }

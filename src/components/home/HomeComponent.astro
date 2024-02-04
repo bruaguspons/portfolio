@@ -34,12 +34,14 @@ const baseUrlWithLocale = baseUrl + currentLocale;
                 </TextColor>
                 {i18n.HOME.PROFESSION[3]}
             </p>
-            <p class="text-zinc-700 dark:text-zinc-300 text-base text-wrap">
+            <p
+                class="text-neutral-500 dark:text-neutral-400 text-base text-wrap"
+            >
                 {i18n.HOME.DESCRIPTION}
             </p>
 
             <div
-                class="w-full flex justify-center lg:justify-start gap-5 mt-10"
+                class="w-full flex justify-center lg:justify-start gap-5 my-10"
             >
                 <Button className="" href={`${baseUrlWithLocale}/career`}>
                     {i18n.HOME.CAREER}

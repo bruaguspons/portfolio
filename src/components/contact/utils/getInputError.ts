@@ -7,7 +7,7 @@ const getError = (errors: InputError | undefined, type: string) => {
     return "";
 };
 
-const getInputError = (inpType: string, inpValue: string, errors: InputError | undefined) => {
+const getInputError = (inpType: "textarea" | "email" | null | undefined, inpValue: string, errors: InputError | undefined) => {
 
     if (inpType === 'textarea'){
         // format error

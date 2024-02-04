@@ -19,12 +19,12 @@ interface Props {
 
 const ContactInput = ({ id, label, autocomplete, type, required, errors }: Props) => {
     const handleBlur = (e: FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        validateInput(type ?? '', e.target.value, errors, `${id}-error`);
+        validateInput(type, e.target.value, errors, `${id}-error`);
 
     }
   return (
     <div className="flex flex-col w-full">
-        <label className="mb-2 text-neutral-100" htmlFor={id}>
+        <label className="mb-2" htmlFor={id}>
             {label}
             {required && <span className="text-red-500"> *</span>}
             {" :"}
@@ -34,7 +34,7 @@ const ContactInput = ({ id, label, autocomplete, type, required, errors }: Props
                 <textarea
                     id={id}
                     name={id}
-                    className="focus:outline-none bg-background-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-background-400 dark:border-background-600 dark:placeholder-neutral-400 dark:text-neutral-100 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="focus:outline-none bg-white dark:bg-background-400 rounded-lg w-full p-2.5 placeholder-neutral-500 dark:placeholder-neutral-400 transition ease-in duration-150"
                     required={required ?? false}
                     placeholder={label}
                     rows={5}
@@ -46,7 +46,7 @@ const ContactInput = ({ id, label, autocomplete, type, required, errors }: Props
                     name={id}
                     type={type ?? "text"}
                     autoComplete={autocomplete}
-                    className="focus:outline-none bg-background-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-background-400 dark:border-background-600 dark:placeholder-neutral-400 dark:text-neutral-100 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="focus:outline-none bg-white dark:bg-background-400 rounded-lg w-full p-2.5 placeholder-neutral-500 dark:placeholder-neutral-400 transition ease-in duration-150"
                     required={required?? false}
                     placeholder={label}
                     onBlur={handleBlur}

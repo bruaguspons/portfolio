@@ -15,7 +15,7 @@ const currentLocale = getLangFromUrl(new URL(url));
 const baseUrl = url.replace(/(es|en)(.*)$/, "") + currentLocale;
 ---
 
-<a href={`${baseUrl}/home`} class={` font-bold ${className} min-w-max`}>
-    <span>Bruno</span>
+<a href={`${baseUrl}/home`} class={` font-bold ${className} min-w-max `}>
+    <span class="transition-none">Bruno</span>
     <TextColor>Pons</TextColor>
 </a>

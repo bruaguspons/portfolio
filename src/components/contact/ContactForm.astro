@@ -2,7 +2,6 @@
 import Button from "../Button.astro";
 import ContactInput from "./ContactInput.tsx";
 import type { InputError } from "./types";
-// import { doSubmit, getInputError } from "./utils";
 
 interface Field {
     id: string;
@@ -17,61 +16,18 @@ interface Props {
     fields: Field[];
     submitError: string;
     fieldsError: string;
+    sendText: string;
 }
 
-const { fields } = Astro.props;
-
-// const errors = { email: "", message: "" };
-let generalErrors = "";
-// if (Astro.request.method === "POST") {
-//     try {
-//         const data = await Astro.request.formData();
-//         const message = (data.get("message") as string) ?? "";
-//         const email = (data.get("email") as string) ?? "";
-//         const name = (data.get("name") as string) ?? "";
-//         const lastName = (data.get("lastName") as string) ?? "";
-
-//         for (const field of fields) {
-//             if (field.id === "email")
-//                 errors.email = getInputError("email", email, field.errors);
-//             if (field.id === "message")
-//                 errors.message = getInputError(
-//                     "textarea",
-//                     message,
-//                     field.errors,
-//                 );
-//         }
-
-//         const hasErrors = Object.values(errors).some((msg) => msg);
-
-//         if (!hasErrors) {
-//             data.set("message", JSON.stringify({ message, name, lastName }));
-
-//             const dataJson = {
-//                 email: email,
-//                 message: JSON.stringify({
-//                     name,
-//                     lastName,
-//                     message,
-//                 }),
-//             };
-
-//             const ok = await doSubmit(JSON.stringify(dataJson));
-//             if (!ok) {
-//                 generalErrors = submitError;
-//             }
-//         } else {
-//             generalErrors = fieldsError;
-//         }
-//     } catch (error) {
-//         if (error instanceof Error) {
-//             console.error(error.message);
-//         }
-//     }
-// }
+const { fields, submitError, fieldsError, sendText } = Astro.props;
 ---
 
-<form method="POST" class="flex flex-col items-center gap-4 w-full" novalidate>
+<form
+    id="form-contact"
+    method="POST"
+    class="flex flex-col items-center gap-4 w-full"
+    novalidate
+>
     {
         fields.map((field) => (
             <ContactInput
@@ -86,7 +42,73 @@ let generalErrors = "";
         ))
     }
 
-    {generalErrors && <span class="text-red-500 my-2">{generalErrors}</span>}
+    <span id="generalErrors" class="hidden text-red-500 my-2"></span>
 
-    <Button type="submit" className="cursor-pointer my-4">Send</Button>
+    <Button type="submit" className="cursor-pointer my-4">{sendText}</Button>
 </form>
+
+<script is:inline define:vars={{ fields, submitError, fieldsError }}>
+    const generalErrors = document.getElementById("generalErrors");
+    const form = document.getElementById("form-contact");
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            (async () => {
+                const { doSubmit, getInputError } = await import("./utils");
+                try {
+                    const data = new FormData(form);
+                    const message = data.get("message") ?? "";
+                    const email = data.get("email") ?? "";
+                    const name = data.get("name") ?? "";
+                    const lastName = data.get("lastName") ?? "";
+
+                    for (const field of fields) {
+                        if (field.id === "email")
+                            errors.email = getInputError(
+                                "email",
+                                email,
+                                field.errors,
+                            );
+                        if (field.id === "message")
+                            errors.message = getInputError(
+                                "textarea",
+                                message,
+                                field.errors,
+                            );
+                    }
+
+                    const hasErrors = Object.values(errors).some((msg) => msg);
+
+                    if (!hasErrors) {
+                        data.set(
+                            "message",
+                            JSON.stringify({ message, name, lastName }),
+                        );
+
+                        const dataJson = {
+                            email: email,
+                            message: JSON.stringify({
+                                name,
+                                lastName,
+                                message,
+                            }),
+                        };
+
+                        const ok = await doSubmit(JSON.stringify(dataJson));
+                        if (!ok) {
+                            generalErrors.innerHTML = submitError;
+                            generalErrors.classList.remove("hidden");
+                        }
+                    } else {
+                        generalErrors.innerHTML = fieldsError;
+                        generalErrors.classList.remove("hidden");
+                    }
+                } catch (error) {
+                    if (error instanceof Error) {
+                        console.error(error.message);
+                    }
+                }
+            })();
+        });
+    }
+</script>

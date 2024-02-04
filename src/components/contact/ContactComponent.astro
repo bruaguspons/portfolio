@@ -4,7 +4,7 @@ import SubTitle from "../SubTitle.astro";
 import TextColor from "../TextColor.astro";
 import { getI18N, getLangFromUrl } from "@/i18n";
 import BorderEffect from "../BorderEffect.astro";
-import ContactForm from "./ContactForm.astro";
+import ContactForm from "./ContactForm";
 
 // const { currentLocale } = Astro;
 
@@ -35,8 +35,10 @@ const i18n = getI18N({ currentLocale });
                     required: field.REQUIRED,
                     errors: field.ERRORS,
                 }))}
-                submitError={i18n.CONTACT.SUBMITERROR}
-                fieldsError={i18n.CONTACT.FIELDSERROR}
+                submitError={i18n.CONTACT.SUBMIT_ERROR}
+                submitSuccess={i18n.CONTACT.SUBMIT_SUCCESS}
+                sendText={i18n.CONTACT.SEND_TEXT}
+                client:load
             />
         </BorderEffect>
     </div>

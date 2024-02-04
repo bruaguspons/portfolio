@@ -135,7 +135,8 @@
                 }
             }
         ],
-        "SUBMITERROR": "Ha ocurrido un error. Por favor, inténtalo de nuevo más tarde.",
-        "FIELDSERROR": "Hay errores en los campos. Por favor, vuelva a completarlos."
+        "SUBMIT_ERROR": "Ha ocurrido un error. Por favor, inténtalo de nuevo más tarde.",
+        "SUBMIT_SUCCESS": "¡Tu correo se ha enviado correctamente! Te responderé lo antes posible. ¡Gracias por ponerte en contacto!",
+        "SEND_TEXT": "Enviar"
     }
 }

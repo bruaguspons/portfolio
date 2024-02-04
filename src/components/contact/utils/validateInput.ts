@@ -1,7 +1,7 @@
-import { getInputError } from "."
+import { fadeIn, fadeOut, getInputError } from "."
 import type { InputError } from "../types"
 
-const validateInput = (inpType: string, value: string, errors: InputError | undefined, containerId: string) =>{
+const validateInput = (inpType: "textarea" | "email" | null | undefined, value: string, errors: InputError | undefined, containerId: string) =>{
     
 
     const error = getInputError(inpType, value, errors)
@@ -9,21 +9,12 @@ const validateInput = (inpType: string, value: string, errors: InputError | unde
 
     if(container){
         if(error){
-            container.innerHTML = error
-            container.style.display =''
-            
-            container.classList.remove('fade-out')
-            container.classList.add('fade-in')
+            fadeIn(container, error)
         } else {
-            
-            if(container.classList.contains('fade-in')){
-                container.classList.remove('fade-in')
-                container.classList.add('fade-out')
-            }
-    
+            fadeOut(container)
         }
     }
-    
+    return !!error
 }
 
 export default validateInput

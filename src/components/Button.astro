@@ -1,31 +1,45 @@
 ---
 interface Props {
     href?: string;
+    target?: string;
     className?: string;
     type?: "submit" | "reset" | "button" | null | undefined;
 }
 
-const { href, className, type } = Astro.props;
+const { href, target, className, type } = Astro.props;
 ---
 
 {
     href ? (
         <a
             href={href}
-            class={`relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-background-600 rounded-lg group bg-gradient-to-br from-purple-500 to-red-400 dark:to-blue-500 hover:from-purple-500 hover:to-red-400 dark:hover:to-blue-500 dark:text-white hover:text-white focus:outline-none focus:from-purple-600 focus:to-red-500 dark:focus:to-blue-700 transform active:scale-90 transition-transform ${className}`}
+            target={target}
+            class={`button-hover relative inline-flex items-center justify-center p-0.5 overflow-hidden font-medium text-background-600 rounded-lg group bg-gradient-to-br from-purple-500 to-red-400 dark:to-blue-500 dark:text-neutral-300 focus:outline-none active:from-purple-600 active:to-red-500 dark:active:to-blue-700 transform active:scale-90 transition-transform ${className}`}
         >
-            <span class="relative px-5 py-2.5 transition-all ease-in duration-150 bg-background-100 dark:bg-background-600 rounded-md group-hover:bg-opacity-0 group-focus:bg-opacity-0">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-150 bg-background-100 dark:bg-background-600 rounded-md w-max">
                 <slot />
             </span>
         </a>
     ) : (
         <button
-            class={`relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-background-600 rounded-lg group bg-gradient-to-br from-purple-500 to-red-400 dark:to-blue-500 hover:from-purple-500 hover:to-red-400 dark:hover:to-blue-500 dark:text-white hover:text-white focus:outline-none focus:from-purple-600 focus:to-red-500 dark:focus:to-blue-700 cursor-default transform active:scale-90 transition-transform ${className} `}
+            class={`button-hover relative inline-flex items-center justify-center p-0.5 overflow-hidden font-medium text-background-600 rounded-lg group bg-gradient-to-br from-purple-500 to-red-400 dark:to-blue-500 dark:text-neutral-300 focus:outline-none active:from-purple-600 active:to-red-500 dark:active:to-blue-700 transform active:scale-90 transition-transform ${className} cursor-default`}
             type={type}
         >
-            <span class="relative px-5 py-2.5 transition-all ease-in duration-150 bg-background-100 dark:bg-background-600 rounded-md group-hover:bg-opacity-0 group-focus:bg-opacity-0  w-max">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-150 bg-background-100 dark:bg-background-600 rounded-md w-max">
                 <slot />
             </span>
         </button>
     )
 }
+
+<style>
+    a.button-hover:hover,
+    button.button-hover:hover {
+        color: #ffffff;
+    }
+
+    a.button-hover:hover span,
+    button.button-hover:hover span {
+        background: transparent;
+    }
+</style>

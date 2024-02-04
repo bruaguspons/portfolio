@@ -27,12 +27,22 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "");
 			href={baseUrl + "/favicon-dark.svg"}
 			media="(prefers-color-scheme: dark)"
 		/>
+		<meta
+			name="theme-color"
+			media="(prefers-color-scheme: light)"
+			content="#f0f0f0"
+		/>
+		<meta
+			name="theme-color"
+			media="(prefers-color-scheme: dark)"
+			content="#13151A"
+		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
 	<body
-		class="text-black dark:text-white h-screen w-screen dark:bg-background-600 bg-background-100 box-border flex flex-col overflow-x-hidden transition ease-in duration-150 relative"
+		class="text-neutral-700 dark:text-neutral-300 font-semibold h-screen w-screen dark:bg-background-600 bg-background-100 box-border flex flex-col overflow-x-hidden transition ease-in duration-150 relative"
 	>
 		<Header />
 
