@@ -8,7 +8,7 @@ import MailIcon from "@/icons/MailIcon.astro";
 <div
     id="socialMediaPanel"
     style="display: none;"
-    class="hide-panel fixed h-full w-full sm:w-48 bg-background-400 right-0 z-50"
+    class="hide-panel fixed h-full w-full sm:w-48 bg-background-400 right-0 z-40 sm:rounded-l-3xl sm:shadow-2xl sm:shadow-black"
 >
     <CloseSocialMediaPanel />
     <div class="flex flex-col h-full w-full justify-evenly items-center">
@@ -42,7 +42,7 @@ import MailIcon from "@/icons/MailIcon.astro";
     </div>
 </div>
 
-<style>
+<style is:inline>
     .show-panel {
         animation: Show 0.3s ease-in-out forwards;
     }

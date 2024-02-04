@@ -28,7 +28,7 @@ const { effectEnable = true, id } = Astro.props;
     </div>
 </div>
 
-<script define:vars={{ id, effectEnable }}>
+<script is:inline define:vars={{ id, effectEnable }}>
     const cardFlip = document.getElementById(`card-flip-${id}`);
     if (cardFlip && effectEnable) {
         cardFlip.addEventListener("click", (e) => {

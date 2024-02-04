@@ -7,7 +7,12 @@ interface Props {
 const { from_color, to_color } = Astro.props;
 ---
 
-<button id="btn-settings" class="h-full aspect-square p-2" data-open="false">
+<button
+    id="btn-settings"
+    aria-label="Menu settings"
+    class="h-full aspect-square p-2"
+    data-open="false"
+>
     <svg
         xmlns="http://www.w3.org/2000/svg"
         class="gradient-bg"
@@ -37,30 +42,25 @@ const { from_color, to_color } = Astro.props;
 </button>
 
 <script>
+    import {
+        hideGreyPanel,
+        showGreyPanel,
+        showSettingsPanel,
+        hideSettingsPanel,
+        hideLinksPanel,
+    } from "@/utils";
     const handleClick = () => {
         const button = document.getElementById("btn-settings");
-        const settings = document.getElementById("header-settings");
         if (button) {
             button.addEventListener("click", () => {
                 const isOpen = button.dataset.open;
                 if (isOpen === "false") {
-                    button.dataset.open = "true";
-                    if (
-                        settings &&
-                        settings.classList.contains("-translate-y-full")
-                    ) {
-                        settings.classList.remove("-translate-y-full");
-                        settings.classList.add("translate-y-14");
-                    }
+                    hideLinksPanel();
+                    showGreyPanel(25);
+                    showSettingsPanel();
                 } else {
-                    button.dataset.open = "false";
-                    if (
-                        settings &&
-                        settings.classList.contains("translate-y-14")
-                    ) {
-                        settings.classList.remove("translate-y-14");
-                        settings.classList.add("-translate-y-full");
-                    }
+                    hideGreyPanel();
+                    hideSettingsPanel();
                 }
             });
         }

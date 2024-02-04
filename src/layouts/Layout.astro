@@ -3,6 +3,7 @@ import Header from "@/components/header/Header.astro";
 import { ViewTransitions } from "astro:transitions";
 import InfoTag from "./socialMedia/InfoTag.astro";
 import SocialMediaPanel from "./socialMedia/SocialMediaPanel.astro";
+import GreyPanel from "./GreyPanel.astro";
 
 interface Props {
 	title: string;
@@ -42,7 +43,7 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "");
 		<ViewTransitions />
 	</head>
 	<body
-		class="text-neutral-700 dark:text-neutral-300 font-semibold h-screen w-screen dark:bg-background-600 bg-background-100 box-border flex flex-col overflow-x-hidden transition ease-in duration-150 relative"
+		class="text-neutral-700 dark:text-neutral-300 font-semibold h-screen w-screen dark:bg-background-600 bg-background-100 box-border flex flex-col overflow-x-hidden transition ease-in duration-150 relative z-0"
 	>
 		<Header />
 
@@ -52,6 +53,7 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "");
 
 		<InfoTag />
 		<SocialMediaPanel />
+		<GreyPanel />
 
 		<style is:global>
 			/* @font-face {

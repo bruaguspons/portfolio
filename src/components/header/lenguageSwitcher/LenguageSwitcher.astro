@@ -12,7 +12,7 @@ const isChecked = url.includes("es");
   <span>ES</span>
 </div>
 
-<script define:vars={{ url }}>
+<script is:inline define:vars={{ url }}>
   document.getElementById("switch")?.addEventListener("change", (e) => {
     const value = e.target.checked;
     let newUrl = url.replace("/es/", "/en/");

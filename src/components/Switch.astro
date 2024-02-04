@@ -7,7 +7,7 @@ interface Props {
 const { id, isChecked } = Astro.props;
 ---
 
-<label for={id} class="relative inline-block w-14 h-5">
+<label class="relative inline-block w-14 h-5">
     <input
         id={id}
         name="switch"
@@ -24,7 +24,7 @@ const { id, isChecked } = Astro.props;
         `}></span>
 </label>
 
-<style>
+<style is:inline>
     input:checked + .slider:before {
         -webkit-transform: translateX(30px);
         -ms-transform: translateX(30px);

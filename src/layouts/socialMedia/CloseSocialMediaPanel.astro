@@ -11,17 +11,15 @@
     >
     </div>
 </button>
+
 <script>
+    import { hideGreyPanel, hideSocialMediaPanel } from "@/utils";
     const handleClick = () => {
         document
             .getElementById("closeSocialMediaBtn")
             ?.addEventListener("click", () => {
-                const panel = document.getElementById("socialMediaPanel");
-
-                if (panel && panel.classList.contains("show-panel")) {
-                    panel.classList.remove("show-panel");
-                    panel.classList.add("hide-panel");
-                }
+                hideGreyPanel();
+                hideSocialMediaPanel();
             });
     };
     handleClick();

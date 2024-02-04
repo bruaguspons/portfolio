@@ -1,0 +1,23 @@
+<div
+    id="greyPanel"
+    class="absolute h-full w-full bg-zinc-500/50 top-0 hidden sm:hidden"
+>
+</div>
+<script>
+    import {
+        hideGreyPanel,
+        hideSocialMediaPanel,
+        hideLinksPanel,
+        hideSettingsPanel,
+    } from "@/utils";
+    const panel = document.getElementById("greyPanel");
+
+    if (panel) {
+        panel.addEventListener("click", () => {
+            hideGreyPanel();
+            hideSocialMediaPanel();
+            hideLinksPanel();
+            hideSettingsPanel();
+        });
+    }
+</script>

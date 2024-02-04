@@ -14,13 +14,13 @@ const { defaultTheme } = Astro.props;
     <slot />
 </button>
 
-<style>
+<style is:global>
     :global(.dark) {
         color-scheme: dark;
     }
 </style>
 
-<script define:vars={{ defaultTheme }}>
+<script is:inline define:vars={{ defaultTheme }}>
     const themeMatcher = window.matchMedia("(prefers-color-scheme: dark)");
     const systemTheme = themeMatcher.matches ? "dark" : "light";
 
@@ -51,6 +51,7 @@ const { defaultTheme } = Astro.props;
 
     const handleClick = (element) => {
         element.addEventListener("click", (event) => {
+            console.log({ defaultTheme });
             const theme = getTheme();
             const settheme = theme === "dark" ? "light" : "dark";
             updateTheme(settheme);
