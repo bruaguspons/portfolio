@@ -28,31 +28,8 @@ export async function getStaticPaths() {
     //     },
     // }));
 }
-
-const url = Astro.request.url;
-const baseUrl = url.replace(/(es|en)(.*)$/, "");
 ---
 
 <Layout title="Portfolio - Bruno Pons">
-    {
-        slug === "university-projects" && (
-            <link
-                rel="preload"
-                as="image"
-                href={baseUrl + "/fing.webp"}
-                slot="metaData"
-            />
-        )
-    }
-    {
-        slug === "montevideo-comm" && (
-            <link
-                rel="preload"
-                as="image"
-                href={baseUrl + "/montevideo-comm.webp"}
-                slot="metaData"
-            />
-        )
-    }
     <CarrerContent slug={slug} />
 </Layout>

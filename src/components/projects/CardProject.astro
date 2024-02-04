@@ -4,6 +4,10 @@ import CardFlip from "../CardFlip.astro";
 import TextColor from "../TextColor.astro";
 import GithubIcon from "@/icons/GithubIcon.astro";
 import Button from "../Button.astro";
+import { Image } from "astro:assets";
+
+import Spotify from "./../../../public/spotifyClone.webp";
+import SpaceInvaders from "./../../../public/spaceInvaders.webp";
 
 interface Props {
     id: string;
@@ -31,6 +35,8 @@ const url = Astro.request.url;
 const currentLocale = getLangFromUrl(new URL(url));
 
 const i18n = getI18N({ currentLocale });
+
+const isSpotify = title === "Spotify Clone";
 ---
 
 <CardFlip id={id} effectEnable={!commingSoon}>
@@ -57,11 +63,21 @@ const i18n = getI18N({ currentLocale });
                             </div>
                         </div>
                     ) : (
-                        <img
-                            class="w-full h-full object-cover object-center"
-                            src={imageUrl}
-                            alt=""
-                        />
+                        <>
+                            {isSpotify ? (
+                                <Image
+                                    class="w-full h-full object-cover object-center"
+                                    src={Spotify}
+                                    alt={title}
+                                />
+                            ) : (
+                                <Image
+                                    class="w-full h-full object-cover object-center"
+                                    src={SpaceInvaders}
+                                    alt={title}
+                                />
+                            )}
+                        </>
                     )
                 }
             </div>
