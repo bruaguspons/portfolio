@@ -79,9 +79,22 @@ const i18n = getI18N({ currentLocale });
     >
         <div class="flex flex-col items-center flex-0 mb-5 gap-2">
             <span>{i18n.PROJECTS.GITHUB_MORE_INFO}</span>
-            <a href={githubUrl} target="_blank" class="w-16">
-                <GithubIcon from_color="#A855F6" to_color="#3b82f6" />
-            </a>
+            <GithubIcon
+                gradientName="github-gradient-light"
+                href={githubUrl}
+                target="_blank"
+                className="hidden dark:block w-14"
+                from_color="#A855F6"
+                to_color="#3b82f6"
+            />
+            <GithubIcon
+                gradientName="github-gradient-dark"
+                href={githubUrl}
+                target="_blank"
+                className="block dark:hidden w-14"
+                from_color="#A855F6"
+                to_color="#f87171"
+            />
         </div>
         <div class="flex flex-col items-center gap-4">
             {

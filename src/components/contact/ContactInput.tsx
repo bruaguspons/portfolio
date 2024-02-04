@@ -26,7 +26,7 @@ const ContactInput = ({ id, label, autocomplete, type, required, errors }: Props
     <div className="flex flex-col w-full">
         <label className="mb-2" htmlFor={id}>
             {label}
-            {required && <span className="text-red-500"> *</span>}
+            {required && <span className="text-red-400"> *</span>}
             {" :"}
         </label>
         {
@@ -53,7 +53,7 @@ const ContactInput = ({ id, label, autocomplete, type, required, errors }: Props
                 />
             )
         }
-        <span className="text-red-500 my-2" style={{display:'none'}} id={`${id}-error`}></span>
+        <span className="text-red-400 my-2" style={{display:'none'}} id={`${id}-error`}></span>
     </div>
   )
 }

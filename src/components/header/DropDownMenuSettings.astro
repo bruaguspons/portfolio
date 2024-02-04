@@ -15,7 +15,7 @@ const { from_color, to_color } = Astro.props;
 >
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="gradient-bg"
+        class="gradient-settings-bg"
         viewBox="0 0 24 24"
         stroke-width="2"
         stroke="currentColor"
@@ -24,12 +24,12 @@ const { from_color, to_color } = Astro.props;
         stroke-linejoin="round"
     >
         <style type="text/css">
-            button:hover .gradient-bg path {
-                stroke: url(#MyGradient);
+            button:hover .gradient-settings-bg path {
+                stroke: url(#GradientSettings);
             }
         </style>
         <defs>
-            <linearGradient id="MyGradient">
+            <linearGradient id="GradientSettings">
                 <stop offset="5%" stop-color={from_color}></stop>
                 <stop offset="95%" stop-color={to_color}></stop>
             </linearGradient>

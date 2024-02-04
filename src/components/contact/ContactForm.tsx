@@ -102,7 +102,7 @@ const ContactForm = ({fields, submitError,submitSuccess, sendText}: Props) => {
         ))
     }
 
-    <span ref={generalErrorsRef} id="generalErrors" style={{display:'none'}} className="text-red-500 my-2"></span>
+    <span ref={generalErrorsRef} id="generalErrors" style={{display:'none'}} className="text-red-400 my-2"></span>
     <span ref={generalSuccessRef} id="generalErrors" style={{display:'none'}} className="text-green-500 my-2"></span>
 
     <ButtonSubmit>{sendText}</ButtonSubmit>

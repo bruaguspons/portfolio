@@ -5,6 +5,7 @@ export const showSocialMediaPanel = () => {
         panel.style.display = "";
         panel.classList.remove("hide-panel");
         panel.classList.add("show-panel");
+        panel.classList.add("sm:shadow-2xl");
     }
 }
 export const hideSocialMediaPanel = () => {
@@ -13,6 +14,7 @@ export const hideSocialMediaPanel = () => {
     if (panelSocialMedia && panelSocialMedia.classList.contains("show-panel")) {
         panelSocialMedia.classList.remove("show-panel");
         panelSocialMedia.classList.add("hide-panel");
+        panelSocialMedia.classList.remove("sm:shadow-2xl");
     }
 
 }

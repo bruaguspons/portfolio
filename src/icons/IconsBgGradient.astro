@@ -1,0 +1,25 @@
+---
+interface Props {
+    desc?: string | undefined;
+    href?: string | undefined;
+    target?: string | undefined;
+    className?: string | undefined;
+}
+
+const { desc, href, target, className } = Astro.props;
+---
+
+<a
+    href={href}
+    target={target}
+    class={`flex flex-col items-center group ${className}`}
+>
+    <slot />
+    {
+        desc && (
+            <span class="bg-clip-text bg-gradient-to-r group-hover:from-purple-500 group-hover:to-red-400 dark:group-hover:to-blue-500 group-hover:text-transparent dark:group-hover:text-transparent text-3xl sm:text-xl">
+                {desc}
+            </span>
+        )
+    }
+</a>
