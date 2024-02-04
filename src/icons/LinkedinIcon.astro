@@ -40,12 +40,16 @@ const { gradientName, desc, href, target, className, from_color, to_color } =
         .querySelectorAll(`.gradient-bg-${gradientName}`)
         .forEach((elem) => {
             elem.closest("a").addEventListener("mouseenter", () => {
-                const path = elem.querySelector("path");
-                if (path) path.style.fill = `url(#${gradientName})`;
+                const paths = elem.querySelectorAll("path");
+                if (paths.length)
+                    paths.forEach(
+                        (path) => (path.style.fill = `url(#${gradientName})`),
+                    );
             });
             elem.closest("a").addEventListener("mouseleave", () => {
-                const path = elem.querySelector("path");
-                if (path) path.style.fill = `currentColor`;
+                const paths = elem.querySelectorAll("path");
+                if (paths)
+                    paths.forEach((path) => (path.style.fill = `currentColor`));
             });
         });
 </script>

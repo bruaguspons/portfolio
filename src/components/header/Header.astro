@@ -16,10 +16,10 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "") + currentLocale;
 ---
 
 <header
-    class="w-full sticky bg-background-100 dark:bg-background-600 top-0 transition ease-in duration-150 z-30"
+    class="w-full sticky bg-background-100 dark:bg-background-600 top-0 transition ease-in-out duration-150 z-30"
 >
     <div
-        class="w-full h-14 grid grid-cols-12 bg-background-100 dark:bg-background-600 transition ease-in duration-150"
+        class="w-full h-14 grid grid-cols-12 bg-background-100 dark:bg-background-600 transition ease-in-out duration-150"
     >
         <div
             class="col-span-4 sm:col-span-2 lg:col-span-3 h-full flex items-center justify-center"
@@ -34,7 +34,7 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "") + currentLocale;
         </div>
         <div
             id="header-links"
-            class="col-span-4 sm:col-span-8 lg:col-span-6 flex flex-col bg-background-400 w-full h-[calc(100vh-3.5rem)] justify-evenly absolute top-0 -translate-y-full transition-transform duration-500 -z-30 sm:translate-y-0 sm:h-full sm:bg-transparent sm:static sm:flex sm:flex-row sm:justify-center items-center sm:gap-10 sm:z-0"
+            class="col-span-4 sm:col-span-8 lg:col-span-6 flex flex-col bg-background-200 dark:bg-background-400 w-full h-[calc(100vh-3.5rem)] justify-evenly absolute top-0 -translate-y-full -z-30 sm:translate-y-0 sm:h-full sm:bg-transparent sm:dark:bg-transparent sm:static sm:flex sm:flex-row sm:justify-center items-center sm:gap-10 sm:z-0 duration-500 transition-transform"
         >
             <Link href={`${baseUrl}/home`}>Home</Link>
             <Link href={`${baseUrl}/about`}>About</Link>
@@ -46,12 +46,23 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "") + currentLocale;
         <div
             class="col-span-4 sm:col-span-2 lg:col-span-3 h-full lg:hidden flex items-center justify-center"
         >
-            <DropDownMenuSettings from_color="#A855F6" to_color="#3b82f6" />
+            <DropDownMenuSettings
+                gradientName="settings-gradient-dark"
+                className="hidden dark:block"
+                from_color="#A855F6"
+                to_color="#3b82f6"
+            />
+            <DropDownMenuSettings
+                gradientName="settings-gradient-light"
+                className="block dark:hidden"
+                from_color="#A855F6"
+                to_color="#f87171"
+            />
         </div>
         <div
             id="header-settings"
             class={`
-            col-span-4 sm:col-span-2 flex flex-col bg-background-400 w-full h-auto justify-evenly absolute top-0 -translate-y-full transition-transform duration-500 -z-30 gap-10 py-10 sm:flex-row rounded-b-3xl shadow-2xl shadow-black
+            col-span-4 sm:col-span-2 flex flex-col bg-background-200 dark:bg-background-400 w-full h-auto justify-evenly absolute top-0 -translate-y-full transition-transform duration-500 -z-30 gap-10 py-10 sm:flex-row rounded-b-3xl  shadow-black
             
             lg:col-span-3 lg:flex-row lg:translate-y-0 lg:h-full lg:bg-transparent lg:static items-center lg:justify-center lg:z-0 lg:py-0 lg:rounded-none lg:shadow-none
             `}

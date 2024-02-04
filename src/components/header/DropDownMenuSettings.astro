@@ -1,35 +1,32 @@
 ---
 interface Props {
+    gradientName: string;
+    className?: string;
     from_color: string;
     to_color: string;
 }
 
-const { from_color, to_color } = Astro.props;
+const { gradientName, className, from_color, to_color } = Astro.props;
 ---
 
 <button
     id="btn-settings"
     aria-label="Menu settings"
-    class="h-full aspect-square p-2"
+    class={`h-full aspect-square p-2 btn-settings ${className}`}
     data-open="false"
 >
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="gradient-settings-bg"
         viewBox="0 0 24 24"
         stroke-width="2"
         stroke="currentColor"
         fill="none"
         stroke-linecap="round"
         stroke-linejoin="round"
+        class={`gradient-bg-${gradientName}`}
     >
-        <style type="text/css">
-            button:hover .gradient-settings-bg path {
-                stroke: url(#GradientSettings);
-            }
-        </style>
         <defs>
-            <linearGradient id="GradientSettings">
+            <linearGradient id={gradientName}>
                 <stop offset="5%" stop-color={from_color}></stop>
                 <stop offset="95%" stop-color={to_color}></stop>
             </linearGradient>
@@ -50,19 +47,22 @@ const { from_color, to_color } = Astro.props;
         hideLinksPanel,
     } from "@/utils";
     const handleClick = () => {
-        const button = document.getElementById("btn-settings");
-        if (button) {
-            button.addEventListener("click", () => {
-                const isOpen = button.dataset.open;
-                if (isOpen === "false") {
-                    hideLinksPanel();
-                    showGreyPanel(25);
-                    showSettingsPanel();
-                } else {
-                    hideGreyPanel();
-                    hideSettingsPanel();
-                }
-            });
+        const button: NodeListOf<HTMLElement> =
+            document.querySelectorAll(".btn-settings");
+        if (button.length) {
+            button.forEach((elem) =>
+                elem.addEventListener("click", () => {
+                    const isOpen = elem.dataset.open;
+                    if (isOpen === "false") {
+                        hideLinksPanel();
+                        showGreyPanel(25);
+                        showSettingsPanel();
+                    } else {
+                        hideGreyPanel();
+                        hideSettingsPanel();
+                    }
+                }),
+            );
         }
     };
 
@@ -70,4 +70,25 @@ const { from_color, to_color } = Astro.props;
     document.addEventListener("astro:after-swap", () => {
         handleClick();
     });
+</script>
+
+<script define:vars={{ gradientName }}>
+    document
+        .querySelectorAll(`.gradient-bg-${gradientName}`)
+        .forEach((elem) => {
+            elem.closest("button").addEventListener("mouseenter", () => {
+                const paths = elem.querySelectorAll("path");
+                if (paths.length)
+                    paths.forEach(
+                        (path) => (path.style.stroke = `url(#${gradientName})`),
+                    );
+            });
+            elem.closest("button").addEventListener("mouseleave", () => {
+                const paths = elem.querySelectorAll("path");
+                if (paths.length)
+                    paths.forEach(
+                        (path) => (path.style.stroke = `currentColor`),
+                    );
+            });
+        });
 </script>
