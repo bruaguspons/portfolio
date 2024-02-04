@@ -1,11 +1,14 @@
 ---
-import { getI18N } from "@/i18n";
+import { getI18N, getLangFromUrl } from "@/i18n";
 import LayoutContent from "@/layouts/LayoutContent.astro";
 import SubTitle from "../SubTitle.astro";
 import TextColor from "../TextColor.astro";
 import CardProject from "./CardProject.astro";
 
-const { currentLocale } = Astro;
+// const { currentLocale } = Astro;
+
+const url = Astro.request.url;
+const currentLocale = getLangFromUrl(new URL(url));
 
 const i18n = getI18N({ currentLocale });
 ---

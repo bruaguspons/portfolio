@@ -2,11 +2,14 @@
 import LayoutContent from "@/layouts/LayoutContent.astro";
 import SubTitle from "../SubTitle.astro";
 import TextColor from "../TextColor.astro";
-import { getI18N } from "@/i18n";
+import { getI18N, getLangFromUrl } from "@/i18n";
 import BorderEffect from "../BorderEffect.astro";
 import ContactForm from "./ContactForm.astro";
 
-const { currentLocale } = Astro;
+// const { currentLocale } = Astro;
+
+const url = Astro.request.url;
+const currentLocale = getLangFromUrl(new URL(url));
 
 const i18n = getI18N({ currentLocale });
 ---

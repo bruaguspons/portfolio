@@ -1,4 +1,5 @@
 ---
+import { getLangFromUrl } from "@/i18n";
 import TextColor from "./TextColor.astro";
 
 interface Props {
@@ -6,7 +7,10 @@ interface Props {
 }
 const { className } = Astro.props;
 
-const { currentLocale } = Astro;
+// const { currentLocale } = Astro;
+
+const url = Astro.request.url;
+const currentLocale = getLangFromUrl(new URL(url));
 ---
 
 <a href={`/${currentLocale}/home`} class={` font-bold ${className} min-w-max`}>

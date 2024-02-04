@@ -18,9 +18,10 @@ export const getI18N = ({
   return english
 }
 
-// export function getLangFromUrl(url: string) {
-//     const [, lang] = url.pathname.split('/');
-//     if(lang === undefined) return defaultLang
-//     if (lang in LANGUAGES) return lang as LANGUAGES;
-//     return defaultLang;
-// }
+export function getLangFromUrl(url: URL) {
+    const urlParts = url.pathname.split('/');
+    for(const part of urlParts){
+      if (part in LANGUAGES) return part as LANGUAGES;
+    }
+    return defaultLang
+}

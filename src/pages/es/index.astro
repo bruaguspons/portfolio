@@ -1,7 +1,10 @@
 ---
-const { currentLocale } = Astro;
+import { getLangFromUrl } from "@/i18n";
 
-const baseUrl = Astro.request.url.replace(/(es|en)(.*)$/, "") + currentLocale;
+// const { currentLocale } = Astro;
+const url = Astro.request.url;
+const currentLocale = getLangFromUrl(new URL(url));
+const baseUrl = url.replace(/(es|en)(.*)$/, "") + currentLocale;
 ---
 
 <meta http-equiv="refresh" content={`0;url=${baseUrl}/home`} />

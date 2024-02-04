@@ -8,11 +8,11 @@ export default defineConfig({
   integrations: [tailwind(), react()],
   site: 'https://bruaguspons.github.io',
   base: '/portfolio',
-  i18n: {
-    defaultLocale: "en",
-    locales: ["es", "en"],
-    routing: {
-      prefixDefaultLocale: false
-    }
-  }
+  // i18n: {
+  //   defaultLocale: "en",
+  //   locales: ["es", "en"],
+  //   routing: {
+  //     prefixDefaultLocale: true
+  //   }
+  // }
 });

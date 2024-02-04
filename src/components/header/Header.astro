@@ -1,4 +1,5 @@
 ---
+import { getLangFromUrl } from "@/i18n";
 import MyName from "../MyName.astro";
 import DropDownMenuLinks from "./DropDownMenuLinks.astro";
 import DropDownMenuSettings from "./DropDownMenuSettings.astro";
@@ -6,9 +7,12 @@ import Link from "./Link.astro";
 import LenguageSwitcher from "./lenguageSwitcher/LenguageSwitcher.astro";
 import ChangerColorPrefBtn from "./themeSwitcher/ChangerColorPrefBtn.astro";
 
-const { currentLocale } = Astro;
+// const { currentLocale } = Astro;
 
-const baseUrl = Astro.request.url.replace(/(es|en)(.*)$/, "") + currentLocale;
+const url = Astro.request.url;
+const currentLocale = getLangFromUrl(new URL(url));
+
+const baseUrl = url.replace(/(es|en)(.*)$/, "") + currentLocale;
 ---
 
 <header
