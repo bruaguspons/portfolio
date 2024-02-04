@@ -20,8 +20,11 @@ export const getI18N = ({
 
 export function getLangFromUrl(url: URL) {
     const urlParts = url.pathname.split('/');
+
+    const lenguageArr = Object.entries(LANGUAGES).map(item => item[1] as string)
+
     for(const part of urlParts){
-      if (part in LANGUAGES) return part as LANGUAGES;
+      if (lenguageArr.includes(part)) return part as LANGUAGES;
     }
     return defaultLang
 }

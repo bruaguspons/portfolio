@@ -9,6 +9,7 @@ import CardProject from "./CardProject.astro";
 
 const url = Astro.request.url;
 const currentLocale = getLangFromUrl(new URL(url));
+const baseUrl = url.replace(/(es|en)(.*)$/, "");
 
 const i18n = getI18N({ currentLocale });
 ---
@@ -27,7 +28,7 @@ const i18n = getI18N({ currentLocale });
                 i18n.PROJECTS.ITEMS.map((item, ind) => (
                     <CardProject
                         id={ind.toString()}
-                        imageUrl={item.IMAGE_URL}
+                        imageUrl={baseUrl + item.IMAGE_URL}
                         title={item.TITLE}
                         content={item.CONTENT}
                         githubUrl={item.GITHUB_URL}

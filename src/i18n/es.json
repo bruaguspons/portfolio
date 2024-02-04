@@ -78,7 +78,7 @@
             {
                 "TITLE": "Chess + AI",
                 "CONTENT": "El juego de ajedrez habitual, pero los movimientos de la computadora se realizan con inteligencia artificial.",
-                "IMAGE_URL": "",
+                "IMAGE_URL": "/assets/knight.svg",
                 "GITHUB_URL": "",
                 "APP_URL": "",
                 "COMMING_SOON": true

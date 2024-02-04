@@ -77,7 +77,7 @@
             {
                 "TITLE": "Chess + AI",
                 "CONTENT": "The usual chess game, but the computer's moves are made with artificial intelligence.",
-                "IMAGE_URL": "",
+                "IMAGE_URL": "/assets/knight.svg",
                 "GITHUB_URL": "",
                 "APP_URL": "",
                 "COMMING_SOON": true

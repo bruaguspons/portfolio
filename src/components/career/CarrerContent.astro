@@ -14,6 +14,7 @@ const url = Astro.request.url;
 const currentLocale = getLangFromUrl(new URL(url));
 
 const i18n = getI18N({ currentLocale });
+const baseUrl = url.replace(/(es|en)(.*)$/, "");
 
 const [item] = i18n.CAREER.ITEMS.filter((item) => item.SLUG === slug);
 ---
@@ -38,8 +39,8 @@ const [item] = i18n.CAREER.ITEMS.filter((item) => item.SLUG === slug);
                 <div class="w-60 h-60 flex justify-center mx-5">
                     <img
                         class="h-full w-full rounded-xl"
-                        src={item.IMAGE_SRC}
-                        alt={item.TITLE}
+                        src={baseUrl + item.IMAGE_SRC}
+                        alt={baseUrl + item.TITLE}
                     />
                 </div>
             </div>
