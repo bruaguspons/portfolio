@@ -62,7 +62,7 @@
             {
                 "TITLE": "Spotify Clone",
                 "CONTENT": "Un clon simplificado de la aplicacion de Spotify, creado con TypeScript + React + Express",
-                "IMAGE_URL": "/assets/spotifyClone.webp",
+                "IMAGE_URL": "/spotifyClone.webp",
                 "GITHUB_URL": "https://github.com/bruaguspons/spotify-clone-react",
                 "APP_URL": "",
                 "COMMING_SOON": false
@@ -70,7 +70,7 @@
             {
                 "TITLE": "Space Invader",
                 "CONTENT": "Recreado a partir del clásico juego de arcade Space Invaders, hecho enteramente con TypeScript.",
-                "IMAGE_URL": "/assets/spaceInvaders.webp",
+                "IMAGE_URL": "/spaceInvaders.webp",
                 "GITHUB_URL": "https://github.com/bruaguspons/SpaceInvaders",
                 "APP_URL": "https://bruaguspons.github.io/SpaceInvaders/",
                 "COMMING_SOON": false
@@ -78,7 +78,7 @@
             {
                 "TITLE": "Chess + AI",
                 "CONTENT": "El juego de ajedrez habitual, pero los movimientos de la computadora se realizan con inteligencia artificial.",
-                "IMAGE_URL": "/assets/knight.svg",
+                "IMAGE_URL": "/knight.svg",
                 "GITHUB_URL": "",
                 "APP_URL": "",
                 "COMMING_SOON": true

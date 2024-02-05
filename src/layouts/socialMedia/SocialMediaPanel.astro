@@ -1,4 +1,5 @@
 ---
+import CVIcon from "@/icons/CVIcon.astro";
 import CloseSocialMediaPanel from "./CloseSocialMediaPanel.astro";
 import GithubIcon from "@/icons/GithubIcon.astro";
 import LinkedinIcon from "@/icons/LinkedinIcon.astro";
@@ -60,6 +61,24 @@ import MailIcon from "@/icons/MailIcon.astro";
         <MailIcon
             gradientName="mail-gradient-light"
             desc="Mail"
+            href="mailto:bruaguspons@gmail.com"
+            target="_blank"
+            className="flex dark:hidden w-20"
+            from_color="#A855F6"
+            to_color="#f87171"
+        />
+        <CVIcon
+            gradientName="CV-gradient-dark"
+            desc="CV"
+            href="mailto:bruaguspons@gmail.com"
+            target="_blank"
+            className="hidden dark:flex w-20"
+            from_color="#A855F6"
+            to_color="#3b82f6"
+        />
+        <CVIcon
+            gradientName="CV-gradient-light"
+            desc="CV"
             href="mailto:bruaguspons@gmail.com"
             target="_blank"
             className="flex dark:hidden w-20"

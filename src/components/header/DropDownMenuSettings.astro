@@ -10,7 +10,6 @@ const { gradientName, className, from_color, to_color } = Astro.props;
 ---
 
 <button
-    id="btn-settings"
     aria-label="Menu settings"
     class={`h-full aspect-square p-2 btn-settings ${className}`}
     data-open="false"
@@ -46,7 +45,7 @@ const { gradientName, className, from_color, to_color } = Astro.props;
         hideSettingsPanel,
         hideLinksPanel,
     } from "@/utils";
-    const handleClick = () => {
+    const handleSwap = () => {
         const button: NodeListOf<HTMLElement> =
             document.querySelectorAll(".btn-settings");
         if (button.length) {
@@ -66,29 +65,36 @@ const { gradientName, className, from_color, to_color } = Astro.props;
         }
     };
 
-    handleClick();
+    handleSwap();
     document.addEventListener("astro:after-swap", () => {
-        handleClick();
+        handleSwap();
     });
 </script>
 
 <script define:vars={{ gradientName }}>
-    document
-        .querySelectorAll(`.gradient-bg-${gradientName}`)
-        .forEach((elem) => {
-            elem.closest("button").addEventListener("mouseenter", () => {
-                const paths = elem.querySelectorAll("path");
-                if (paths.length)
-                    paths.forEach(
-                        (path) => (path.style.stroke = `url(#${gradientName})`),
-                    );
+    const handleSwap = () => {
+        document
+            .querySelectorAll(`.gradient-bg-${gradientName}`)
+            .forEach((elem) => {
+                elem.closest("button").addEventListener("mouseenter", () => {
+                    const paths = elem.querySelectorAll("path");
+                    if (paths.length)
+                        paths.forEach(
+                            (path) =>
+                                (path.style.stroke = `url(#${gradientName})`),
+                        );
+                });
+                elem.closest("button").addEventListener("mouseleave", () => {
+                    const paths = elem.querySelectorAll("path");
+                    if (paths.length)
+                        paths.forEach(
+                            (path) => (path.style.stroke = `currentColor`),
+                        );
+                });
             });
-            elem.closest("button").addEventListener("mouseleave", () => {
-                const paths = elem.querySelectorAll("path");
-                if (paths.length)
-                    paths.forEach(
-                        (path) => (path.style.stroke = `currentColor`),
-                    );
-            });
-        });
+    };
+    handleSwap();
+    document.addEventListener("astro:after-swap", () => {
+        handleSwap();
+    });
 </script>

@@ -17,12 +17,10 @@ const { gradientName, desc, href, target, className, from_color, to_color } =
 
 <IconsBgGradient className={className} desc={desc} href={href} target={target}>
     <svg
-        stroke="currentColor"
-        fill="currentColor"
-        stroke-width="0"
-        viewBox="0 0 1024 1024"
-        xmlns="http://www.w3.org/2000/svg"
         class={`gradient-bg-${gradientName} ${className}`}
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
     >
         <defs>
             <linearGradient id={gradientName}>
@@ -31,9 +29,12 @@ const { gradientName, desc, href, target, className, from_color, to_color } =
             </linearGradient>
         </defs>
         <path
-            d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-40 110.8V792H136V270.8l-27.6-21.5 39.3-50.5 42.8 33.3h643.1l42.8-33.3 39.3 50.5-27.7 21.5zM833.6 232L512 482 190.4 232l-42.8-33.3-39.3 50.5 27.6 21.5 341.6 265.6a55.99 55.99 0 0 0 68.7 0L888 270.8l27.6-21.5-39.3-50.5-42.7 33.2z"
-        ></path></svg
-    >
+            d="M9 17H15M9 13H15M9 9H10M13 3H8.2C7.0799 3 6.51984 3 6.09202 3.21799C5.71569 3.40973 5.40973 3.71569 5.21799 4.09202C5 4.51984 5 5.0799 5 6.2V17.8C5 18.9201 5 19.4802 5.21799 19.908C5.40973 20.2843 5.71569 20.5903 6.09202 20.782C6.51984 21 7.0799 21 8.2 21H15.8C16.9201 21 17.4802 21 17.908 20.782C18.2843 20.5903 18.5903 20.2843 18.782 19.908C19 19.4802 19 18.9201 19 17.8V9M13 3L19 9M13 3V7.4C13 7.96005 13 8.24008 13.109 8.45399C13.2049 8.64215 13.3578 8.79513 13.546 8.89101C13.7599 9 14.0399 9 14.6 9H19"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+    </svg>
 </IconsBgGradient>
 
 <script define:vars={{ gradientName }}>
@@ -46,14 +47,14 @@ const { gradientName, desc, href, target, className, from_color, to_color } =
                     if (paths.length)
                         paths.forEach(
                             (path) =>
-                                (path.style.fill = `url(#${gradientName})`),
+                                (path.style.stroke = `url(#${gradientName})`),
                         );
                 });
                 elem.closest("a").addEventListener("mouseleave", () => {
                     const paths = elem.querySelectorAll("path");
                     if (paths.length)
                         paths.forEach(
-                            (path) => (path.style.fill = `currentColor`),
+                            (path) => (path.style.stroke = `currentColor`),
                         );
                 });
             });

@@ -37,20 +37,29 @@ const { gradientName, desc, href, target, className, from_color, to_color } =
 </IconsBgGradient>
 
 <script define:vars={{ gradientName }}>
-    document
-        .querySelectorAll(`.gradient-bg-${gradientName}`)
-        .forEach((elem) => {
-            elem.closest("a").addEventListener("mouseenter", () => {
-                const paths = elem.querySelectorAll("path");
-                if (paths.length)
-                    paths.forEach(
-                        (path) => (path.style.fill = `url(#${gradientName})`),
-                    );
+    const handleSwap = () => {
+        document
+            .querySelectorAll(`.gradient-bg-${gradientName}`)
+            .forEach((elem) => {
+                elem.closest("a").addEventListener("mouseenter", () => {
+                    const paths = elem.querySelectorAll("path");
+                    if (paths.length)
+                        paths.forEach(
+                            (path) =>
+                                (path.style.fill = `url(#${gradientName})`),
+                        );
+                });
+                elem.closest("a").addEventListener("mouseleave", () => {
+                    const paths = elem.querySelectorAll("path");
+                    if (paths.length)
+                        paths.forEach(
+                            (path) => (path.style.fill = `currentColor`),
+                        );
+                });
             });
-            elem.closest("a").addEventListener("mouseleave", () => {
-                const paths = elem.querySelectorAll("path");
-                if (paths)
-                    paths.forEach((path) => (path.style.fill = `currentColor`));
-            });
-        });
+    };
+    handleSwap();
+    document.addEventListener("astro:after-swap", () => {
+        handleSwap();
+    });
 </script>
