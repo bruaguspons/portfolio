@@ -4,6 +4,10 @@ import CloseSocialMediaPanel from "./CloseSocialMediaPanel.astro";
 import GithubIcon from "@/icons/GithubIcon.astro";
 import LinkedinIcon from "@/icons/LinkedinIcon.astro";
 import MailIcon from "@/icons/MailIcon.astro";
+
+const url = Astro.request.url;
+
+const baseUrl = url.replace(/(es|en)(.*)$/, "");
 ---
 
 <div
@@ -16,7 +20,7 @@ import MailIcon from "@/icons/MailIcon.astro";
         <GithubIcon
             gradientName="github-gradient-light"
             desc="Github"
-            href="mailto:bruaguspons@gmail.com"
+            href="https://github.com/bruaguspons"
             target="_blank"
             className="hidden dark:flex w-20"
             from_color="#A855F6"
@@ -25,7 +29,7 @@ import MailIcon from "@/icons/MailIcon.astro";
         <GithubIcon
             gradientName="github-gradient-dark"
             desc="Github"
-            href="mailto:bruaguspons@gmail.com"
+            href="https://github.com/bruaguspons"
             target="_blank"
             className="flex dark:hidden w-20"
             from_color="#A855F6"
@@ -34,7 +38,7 @@ import MailIcon from "@/icons/MailIcon.astro";
         <LinkedinIcon
             gradientName="linkedin-gradient-dark"
             desc="Linkedin"
-            href="mailto:bruaguspons@gmail.com"
+            href="https://www.linkedin.com/in/brunopons/"
             target="_blank"
             className="hidden dark:flex w-20"
             from_color="#A855F6"
@@ -43,7 +47,7 @@ import MailIcon from "@/icons/MailIcon.astro";
         <LinkedinIcon
             gradientName="linkedin-gradient-light"
             desc="Linkedin"
-            href="mailto:bruaguspons@gmail.com"
+            href="https://www.linkedin.com/in/brunopons/"
             target="_blank"
             className="flex dark:hidden w-20"
             from_color="#A855F6"
@@ -70,7 +74,7 @@ import MailIcon from "@/icons/MailIcon.astro";
         <CVIcon
             gradientName="CV-gradient-dark"
             desc="CV"
-            href="mailto:bruaguspons@gmail.com"
+            href={baseUrl + "/CV_2024.pdf"}
             target="_blank"
             className="hidden dark:flex w-20"
             from_color="#A855F6"
@@ -79,7 +83,7 @@ import MailIcon from "@/icons/MailIcon.astro";
         <CVIcon
             gradientName="CV-gradient-light"
             desc="CV"
-            href="mailto:bruaguspons@gmail.com"
+            href={baseUrl + "/CV_2024.pdf"}
             target="_blank"
             className="flex dark:hidden w-20"
             from_color="#A855F6"

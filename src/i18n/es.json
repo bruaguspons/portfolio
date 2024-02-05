@@ -138,5 +138,9 @@
         "SUBMIT_ERROR": "Ha ocurrido un error. Por favor, inténtalo de nuevo más tarde.",
         "SUBMIT_SUCCESS": "¡Tu correo se ha enviado correctamente! Te responderé lo antes posible. ¡Gracias por ponerte en contacto!",
         "SEND_TEXT": "Enviar"
+    },
+    "SETTINGS":{
+        "THEME_SWITCH":"Cambia el tema:",
+        "LENGUAGE_SWITCH":"Cambia el lenguaje:"
     }
 }

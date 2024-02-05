@@ -1,10 +1,10 @@
 ---
-import { getLangFromUrl } from "@/i18n";
+import { getI18N, getLangFromUrl } from "@/i18n";
 import MyName from "../MyName.astro";
 import DropDownMenuLinks from "./DropDownMenuLinks.astro";
 import DropDownMenuSettings from "./DropDownMenuSettings.astro";
 import Link from "./Link.astro";
-import LenguageSwitcher from "./lenguageSwitcher/LenguageSwitcher.astro";
+import LenguageSwitch from "./lenguageSwitch/LenguageSwitch.astro";
 import ChangerColorPrefBtn from "./themeSwitcher/ChangerColorPrefBtn.astro";
 
 // const { currentLocale } = Astro;
@@ -13,6 +13,8 @@ const url = Astro.request.url;
 const currentLocale = getLangFromUrl(new URL(url));
 
 const baseUrl = url.replace(/(es|en)(.*)$/, "") + currentLocale;
+
+const i18n = getI18N({ currentLocale });
 ---
 
 <header
@@ -34,7 +36,7 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "") + currentLocale;
         </div>
         <div
             id="header-links"
-            class="col-span-4 sm:col-span-8 lg:col-span-6 flex flex-col bg-background-200 dark:bg-background-400 w-full h-[calc(100vh-3.5rem)] justify-evenly fixed top-0 -translate-y-full -z-30 sm:translate-y-0 sm:h-full sm:bg-transparent sm:dark:bg-transparent sm:static sm:flex sm:flex-row sm:justify-center items-center sm:gap-10 sm:z-0 duration-500 transition-transform"
+            class="col-span-4 sm:col-span-8 lg:col-span-6 flex flex-col bg-background-200 dark:bg-background-400 w-full h-[calc(100%-3.5rem)] justify-evenly fixed top-0 -translate-y-full -z-30 sm:translate-y-0 sm:h-full sm:bg-transparent sm:dark:bg-transparent sm:static sm:flex sm:flex-row sm:justify-center items-center sm:gap-10 sm:z-0 duration-500 transition-transform"
         >
             <Link href={`${baseUrl}/home`}>Home</Link>
             <Link href={`${baseUrl}/about`}>About</Link>
@@ -68,11 +70,11 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "") + currentLocale;
             `}
         >
             <div class="flex flex-col items-center gap-4">
-                <span class="lg:hidden">Change Lenguage:</span>
-                <LenguageSwitcher />
+                <span class="lg:hidden">{i18n.SETTINGS.LENGUAGE_SWITCH}</span>
+                <LenguageSwitch />
             </div>
             <div class="flex flex-col items-center gap-4">
-                <span class="lg:hidden">Change Theme:</span>
+                <span class="lg:hidden">{i18n.SETTINGS.THEME_SWITCH}</span>
                 <ChangerColorPrefBtn cliente:only />
             </div>
         </div>
