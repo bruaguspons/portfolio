@@ -19,7 +19,8 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "");
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Portfolio bruno pons" />
+		<meta name="author" content="Bruno Pons" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href={baseUrl + "/favicon.svg"} />
 		<link
@@ -39,6 +40,20 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "");
 			content="#13151A"
 		/>
 		<meta name="generator" content={Astro.generator} />
+
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content="Portfolio bruno pons" />
+		<meta property="og:image" content={`${baseUrl}image_preview.png`} />
+		<meta
+			property="og:url"
+			content="https://bruaguspons.github.io/portfolio/"
+		/>
+		<meta property="og:type" content="website" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content="Portfolio bruno pons" />
+		<meta name="twitter:image" content={`${baseUrl}image_preview.png`} />
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
