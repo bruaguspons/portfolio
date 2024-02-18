@@ -1,7 +1,7 @@
 import english from './en.json'
 import spanish from './es.json'
 
-enum LANGUAGES  {
+export enum LANGUAGES  {
   ENGLISH = 'en',
   SPANISH = 'es'
 }
@@ -18,7 +18,7 @@ export const getI18N = ({
   return english
 }
 
-export function getLangFromUrl(url: URL) {
+export const getLangFromUrl = (url: URL) => {
     const urlParts = url.pathname.split('/');
 
     const lenguageArr = Object.entries(LANGUAGES).map(item => item[1] as string)

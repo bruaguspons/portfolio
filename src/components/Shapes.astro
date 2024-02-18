@@ -1,34 +1,31 @@
 ---
 import type { PosShapesType, ShapesType } from "../types";
 import {
-    getRandomShape,
     // getRandomDeg,
     getRandomSize,
     getRandomPos,
 } from "../utils";
 
 interface Props {
+    ind: number;
     shape?: ShapesType;
     deg?: number;
     size?: string;
     pos?: PosShapesType;
 }
 
-let { shape, size, pos } = Astro.props;
+let { ind, shape, size, pos } = Astro.props;
 
-shape = getRandomShape(shape);
 // deg = getRandomDeg(deg);
 size = getRandomSize(size);
 const [posX, posY] = getRandomPos(pos);
 
-const randX = Math.random() * 10 - 5; // Valor entre -5 y 5
-const randY = Math.random() * 10 - 5; // Valor entre -5 y 5
+// const randX = Math.random() * 5 + 5; // Valor entre -5 y 5
+// const randY = Math.random() * 5 + 5; // Valor entre -5 y 5
 ---
 
 <div
-    class="bg-gradient-to-br from-purple-500 to-red-400 dark:to-blue-500 absolute oscillate"
-    data-randX={3}
-    data-randX={2}
+    class="js-shape bg-gradient-to-br from-purple-500 to-red-400 dark:to-blue-500 absolute oscillate"
     style={{
         clipPath: shape,
         // transform: `rotate(${deg}deg);`,
@@ -36,37 +33,62 @@ const randY = Math.random() * 10 - 5; // Valor entre -5 y 5
         width: `${size}rem;`,
         top: `${posY}%;`,
         left: `${posX}%;`,
+        display: "none",
     }}
 >
 </div>
 
-<style define:vars={{ randX, randY }}>
+<script>
+    import { getRandomShape } from "@/utils";
+
+    const shapes: NodeListOf<HTMLElement> =
+        document.querySelectorAll(".js-shape");
+
+    shapes.forEach((shape, ind) => {
+        console.log(ind);
+        if (!shape.style.clipPath)
+            shape.style.clipPath = getRandomShape(undefined);
+
+        const randX = Math.random() * 5 + 2;
+        const randY = Math.random() * 5 + 2;
+        const randDelay = Math.floor(Math.random() * 5 + 5);
+        shape.style.setProperty("--randX", randX.toString());
+        shape.style.setProperty("--randY", randY.toString());
+        shape.style.setProperty("--randDelay", `-${randDelay}s`);
+        shape.style.display = "";
+    });
+</script>
+
+<style define:vars={{ ind }}>
     .oscillate {
         animation: oscillation 5s ease-in-out infinite;
+        animation-delay: var(--randDelay);
     }
 
     @keyframes oscillation {
-        0%,
-        100% {
-            transform: translate(0, 0);
-        }
-        25% {
-            transform: translate(
-                calc(-3px * var(--randX)),
-                calc(3px * var(--randY))
-            );
-        }
-        50% {
-            transform: translate(
-                calc(3px * var(--randX)),
-                calc(-3px * var(--randY))
-            );
-        }
-        75% {
-            transform: translate(
-                calc(-3px * var(--randX)),
-                calc(-3px * var(--randY))
-            );
+        .oscillate {
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(
+                    calc(-3px * var(--randX)),
+                    calc(3px * var(--randY))
+                );
+            }
+            50% {
+                transform: translate(
+                    calc(3px * var(--randX)),
+                    calc(-3px * var(--randY))
+                );
+            }
+            75% {
+                transform: translate(
+                    calc(-3px * var(--randX)),
+                    calc(-3px * var(--randY))
+                );
+            }
         }
     }
 </style>

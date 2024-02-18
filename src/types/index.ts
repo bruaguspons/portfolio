@@ -1,2 +1,2 @@
-export { default as PosShapesType } from './PosShapesType.d';
-export { default as ShapesType } from './ShapesType.d';
+export * from './PosShapesType.d';
+export * from './ShapesType.d';

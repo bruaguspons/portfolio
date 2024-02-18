@@ -4,10 +4,13 @@ import CloseSocialMediaPanel from "./CloseSocialMediaPanel.astro";
 import GithubIcon from "@/icons/GithubIcon.astro";
 import LinkedinIcon from "@/icons/LinkedinIcon.astro";
 import MailIcon from "@/icons/MailIcon.astro";
+import { getLangFromUrl, LANGUAGES } from "@/i18n";
 
 const url = Astro.request.url;
 
 const baseUrl = url.replace(/(es|en)(.*)$/, "");
+
+const currentLocale = getLangFromUrl(new URL(url));
 ---
 
 <div
@@ -74,7 +77,9 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "");
         <CVIcon
             gradientName="CV-gradient-dark"
             desc="CV"
-            href={baseUrl + "/CV_2024.pdf"}
+            href={baseUrl + currentLocale === LANGUAGES.ENGLISH
+                ? "/CV_BRUNO_PONS.pdf"
+                : "/CV_BRUNO_PONS_ES.pdf"}
             target="_blank"
             className="hidden dark:flex w-20"
             from_color="#A855F6"
@@ -83,7 +88,9 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "");
         <CVIcon
             gradientName="CV-gradient-light"
             desc="CV"
-            href={baseUrl + "/CV_2024.pdf"}
+            href={baseUrl + currentLocale === LANGUAGES.ENGLISH
+                ? "/CV_BRUNO_PONS.pdf"
+                : "/CV_BRUNO_PONS_ES.pdf"}
             target="_blank"
             className="flex dark:hidden w-20"
             from_color="#A855F6"
