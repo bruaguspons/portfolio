@@ -1,27 +1,16 @@
 ---
+import { getRandomPosFromSector } from "@/utils";
 import type { PosShapesType, ShapesType } from "../types";
-import {
-    // getRandomDeg,
-    getRandomSize,
-    getRandomPos,
-} from "../utils";
 
 interface Props {
     ind: number;
     shape?: ShapesType;
     deg?: number;
-    size?: string;
     pos?: PosShapesType;
 }
 
-let { ind, shape, size, pos } = Astro.props;
-
-// deg = getRandomDeg(deg);
-size = getRandomSize(size);
-const [posX, posY] = getRandomPos(pos);
-
-// const randX = Math.random() * 5 + 5; // Valor entre -5 y 5
-// const randY = Math.random() * 5 + 5; // Valor entre -5 y 5
+let { ind, shape, pos } = Astro.props;
+const [posX, posY] = getRandomPosFromSector(pos);
 ---
 
 <div
@@ -29,8 +18,6 @@ const [posX, posY] = getRandomPos(pos);
     style={{
         clipPath: shape,
         // transform: `rotate(${deg}deg);`,
-        height: `${size}rem;`,
-        width: `${size}rem;`,
         top: `${posY}%;`,
         left: `${posX}%;`,
         display: "none",
@@ -39,7 +26,7 @@ const [posX, posY] = getRandomPos(pos);
 </div>
 
 <script>
-    import { getRandomShape } from "@/utils";
+    import { getRandomShape, getRandomSize, getRandomPos } from "@/utils";
 
     const shapes: NodeListOf<HTMLElement> =
         document.querySelectorAll(".js-shape");
@@ -49,12 +36,26 @@ const [posX, posY] = getRandomPos(pos);
         if (!shape.style.clipPath)
             shape.style.clipPath = getRandomShape(undefined);
 
+        // Random Move
         const randX = Math.random() * 5 + 2;
         const randY = Math.random() * 5 + 2;
         const randDelay = Math.floor(Math.random() * 5 + 5);
         shape.style.setProperty("--randX", randX.toString());
         shape.style.setProperty("--randY", randY.toString());
         shape.style.setProperty("--randDelay", `-${randDelay}s`);
+
+        // Random Size
+        const randomSize = getRandomSize();
+        shape.style.width = `${randomSize}rem`;
+        shape.style.height = `${randomSize}rem`;
+
+        // Random Pos
+        if (!shape.style.top && !shape.style.left) {
+            const [posX, posY] = getRandomPos();
+            shape.style.top = `${posY}%`;
+            shape.style.left = `${posX}%`;
+        }
+
         shape.style.display = "";
     });
 </script>
@@ -66,29 +67,27 @@ const [posX, posY] = getRandomPos(pos);
     }
 
     @keyframes oscillation {
-        .oscillate {
-            0%,
-            100% {
-                transform: translate(0, 0);
-            }
-            25% {
-                transform: translate(
-                    calc(-3px * var(--randX)),
-                    calc(3px * var(--randY))
-                );
-            }
-            50% {
-                transform: translate(
-                    calc(3px * var(--randX)),
-                    calc(-3px * var(--randY))
-                );
-            }
-            75% {
-                transform: translate(
-                    calc(-3px * var(--randX)),
-                    calc(-3px * var(--randY))
-                );
-            }
+        0%,
+        100% {
+            transform: translate(0, 0);
+        }
+        25% {
+            transform: translate(
+                calc(-3px * var(--randX)),
+                calc(3px * var(--randY))
+            );
+        }
+        50% {
+            transform: translate(
+                calc(3px * var(--randX)),
+                calc(-3px * var(--randY))
+            );
+        }
+        75% {
+            transform: translate(
+                calc(-3px * var(--randX)),
+                calc(-3px * var(--randY))
+            );
         }
     }
 </style>

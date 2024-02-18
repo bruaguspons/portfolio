@@ -11,6 +11,12 @@ const url = Astro.request.url;
 const baseUrl = url.replace(/(es|en)(.*)$/, "");
 
 const currentLocale = getLangFromUrl(new URL(url));
+const cvUrl =
+    currentLocale === LANGUAGES.ENGLISH
+        ? "CV_BRUNO_PONS_EN.pdf"
+        : "CV_BRUNO_PONS_ES.pdf";
+
+console.log(cvUrl);
 ---
 
 <div
@@ -77,9 +83,7 @@ const currentLocale = getLangFromUrl(new URL(url));
         <CVIcon
             gradientName="CV-gradient-dark"
             desc="CV"
-            href={baseUrl + currentLocale === LANGUAGES.ENGLISH
-                ? "/CV_BRUNO_PONS.pdf"
-                : "/CV_BRUNO_PONS_ES.pdf"}
+            href={baseUrl + cvUrl}
             target="_blank"
             className="hidden dark:flex w-20"
             from_color="#A855F6"
@@ -88,9 +92,7 @@ const currentLocale = getLangFromUrl(new URL(url));
         <CVIcon
             gradientName="CV-gradient-light"
             desc="CV"
-            href={baseUrl + currentLocale === LANGUAGES.ENGLISH
-                ? "/CV_BRUNO_PONS.pdf"
-                : "/CV_BRUNO_PONS_ES.pdf"}
+            href={baseUrl + cvUrl}
             target="_blank"
             className="flex dark:hidden w-20"
             from_color="#A855F6"

@@ -1,5 +1,4 @@
-const getRandomSize = (size: string | undefined) => {
-    if(size !== undefined) return size
+const getRandomSize = () => {
     return (Math.random() * (1.5 - 0.75) + 0.75).toFixed(2);
 }
 
