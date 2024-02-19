@@ -72,29 +72,63 @@ const { gradientName, className, from_color, to_color } = Astro.props;
 </script>
 
 <script define:vars={{ gradientName }}>
+    const handleEvent = (elem, start, isMobile) => {
+        if (start) {
+            const paths = elem.querySelectorAll("path");
+            if (paths.length)
+                paths.forEach(
+                    (path) => (path.style.stroke = `url(#${gradientName})`),
+                );
+            changeSpan(elem, start, isMobile);
+            return;
+        }
+        const paths = elem.querySelectorAll("path");
+        if (paths.length)
+            paths.forEach((path) => (path.style.stroke = `currentColor`));
+
+        changeSpan(elem, start, isMobile);
+    };
+
     const handleSwap = () => {
+        const isMobile = window.innerWidth <= 640;
         document
             .querySelectorAll(`.gradient-bg-${gradientName}`)
             .forEach((elem) => {
-                elem.closest("button").addEventListener("mouseenter", () => {
-                    const paths = elem.querySelectorAll("path");
-                    if (paths.length)
-                        paths.forEach(
-                            (path) =>
-                                (path.style.stroke = `url(#${gradientName})`),
-                        );
-                });
-                elem.closest("button").addEventListener("mouseleave", () => {
-                    const paths = elem.querySelectorAll("path");
-                    if (paths.length)
-                        paths.forEach(
-                            (path) => (path.style.stroke = `currentColor`),
-                        );
-                });
+                if (isMobile) {
+                    elem.closest("button").addEventListener(
+                        "touchstart",
+                        () => handleEvent(elem, true, isMobile),
+                        { passive: true },
+                    );
+                    elem.closest("button").addEventListener(
+                        "touchmove",
+                        () => handleEvent(elem, false, isMobile),
+                        { passive: true },
+                    );
+                    elem.closest("button").addEventListener(
+                        "touchend",
+                        () => handleEvent(elem, false, isMobile),
+                        { passive: true },
+                    );
+                } else {
+                    elem.closest("button").addEventListener(
+                        "mouseenter",
+                        () => handleEvent(elem, true, isMobile),
+                        { passive: true },
+                    );
+                    elem.closest("button").addEventListener(
+                        "mouseleave",
+                        () => handleEvent(elem, false, isMobile),
+                        { passive: true },
+                    );
+                }
             });
     };
+
+    window.addEventListener("resize", handleSwap);
     handleSwap();
     document.addEventListener("astro:after-swap", () => {
+        window.addEventListener("resize", handleSwap);
         handleSwap();
     });
 </script>

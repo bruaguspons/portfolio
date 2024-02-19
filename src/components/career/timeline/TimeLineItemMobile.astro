@@ -52,13 +52,11 @@ if (rounded_bottom) {
         isLink={true}
         href={link}
     >
-        <span>
-            <TextColor
-                className="text-xl group-hover:text-background-100 transition duration-150"
-            >
-                {title}
-            </TextColor>
-        </span>
+        <TextColor
+            className="text-xl sm:group-hover:text-background-100 group-active:text-background-100 transition duration-150 "
+        >
+            {title}
+        </TextColor>
         <span>
             {date}
         </span>

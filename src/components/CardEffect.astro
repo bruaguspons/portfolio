@@ -23,7 +23,7 @@ const { classNameCard, classNameContent, isLink = false, href } = Astro.props;
         >
             <div
                 class={`bg-background-100 dark:bg-background-500 p-8 rounded-lg ${classNameContent} transition-all ease-in-out duration-150
-                        group-hover:bg-transparent
+                group-active:bg-transparent sm:group-hover:bg-transparent
                 `}
             >
                 <slot />
