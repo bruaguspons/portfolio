@@ -27,34 +27,41 @@ const [posX, posY] = getRandomPosFromSector(pos);
 <script>
     import { getRandomShape, getRandomSize, getRandomPos } from "@/utils";
 
-    const shapes: NodeListOf<HTMLElement> =
-        document.querySelectorAll(".js-shape");
+    const handleSwap = () => {
+        const shapes: NodeListOf<HTMLElement> =
+            document.querySelectorAll(".js-shape");
 
-    shapes.forEach((shape) => {
-        if (!shape.style.clipPath)
-            shape.style.clipPath = getRandomShape(undefined);
+        shapes.forEach((shape) => {
+            if (!shape.style.clipPath)
+                shape.style.clipPath = getRandomShape(undefined);
 
-        // Random Move
-        const randX = Math.random() * 5 + 2;
-        const randY = Math.random() * 5 + 2;
-        const randDelay = Math.floor(Math.random() * 5 + 5);
-        shape.style.setProperty("--randX", randX.toString());
-        shape.style.setProperty("--randY", randY.toString());
-        shape.style.setProperty("--randDelay", `-${randDelay}s`);
+            // Random Move
+            const randX = Math.random() * 5 + 2;
+            const randY = Math.random() * 5 + 2;
+            const randDelay = Math.floor(Math.random() * 5 + 5);
+            shape.style.setProperty("--randX", randX.toString());
+            shape.style.setProperty("--randY", randY.toString());
+            shape.style.setProperty("--randDelay", `-${randDelay}s`);
 
-        // Random Size
-        const randomSize = getRandomSize();
-        shape.style.width = `${randomSize}rem`;
-        shape.style.height = `${randomSize}rem`;
+            // Random Size
+            const randomSize = getRandomSize();
+            shape.style.width = `${randomSize}rem`;
+            shape.style.height = `${randomSize}rem`;
 
-        // Random Pos
-        if (!shape.style.top && !shape.style.left) {
-            const [posX, posY] = getRandomPos();
-            shape.style.top = `${posY}%`;
-            shape.style.left = `${posX}%`;
-        }
+            // Random Pos
+            if (!shape.style.top && !shape.style.left) {
+                const [posX, posY] = getRandomPos();
+                shape.style.top = `${posY}%`;
+                shape.style.left = `${posX}%`;
+            }
 
-        shape.style.display = "";
+            shape.style.display = "";
+        });
+    };
+
+    handleSwap();
+    document.addEventListener("astro:after-swap", () => {
+        handleSwap();
     });
 </script>
 
