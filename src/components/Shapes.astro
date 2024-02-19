@@ -31,8 +31,7 @@ const [posX, posY] = getRandomPosFromSector(pos);
     const shapes: NodeListOf<HTMLElement> =
         document.querySelectorAll(".js-shape");
 
-    shapes.forEach((shape, ind) => {
-        console.log(ind);
+    shapes.forEach((shape) => {
         if (!shape.style.clipPath)
             shape.style.clipPath = getRandomShape(undefined);
 

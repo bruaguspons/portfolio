@@ -17,12 +17,12 @@ const { gradientName, desc, href, target, className, from_color, to_color } =
 
 <IconsBgGradient className={className} desc={desc} href={href} target={target}>
     <svg
+        class={`gradient-bg-${gradientName} ${className}`}
         stroke="currentColor"
         fill="currentColor"
         stroke-width="0"
         viewBox="0 0 1024 1024"
         xmlns="http://www.w3.org/2000/svg"
-        class={`gradient-bg-${gradientName} ${className}`}
     >
         <defs>
             <linearGradient id={gradientName}>
@@ -36,29 +36,87 @@ const { gradientName, desc, href, target, className, from_color, to_color } =
     >
 </IconsBgGradient>
 <script define:vars={{ gradientName }}>
+    const changeSpan = (elem, start, isMobile) => {
+        if (!isMobile) return;
+
+        const span = elem.closest("a")?.querySelector("span");
+        console.log(span);
+        if (start) {
+            span.classList.add(
+                "from-purple-500",
+                "to-red-400",
+                "dark:to-blue-500",
+                "text-transparent",
+                "dark:text-transparent",
+            );
+            return;
+        }
+        span.classList.remove(
+            "from-purple-500",
+            "to-red-400",
+            "dark:to-blue-500",
+            "text-transparent",
+            "dark:text-transparent",
+        );
+    };
+
+    const handleEvent = (elem, start, isMobile) => {
+        if (start) {
+            const paths = elem.querySelectorAll("path");
+            if (paths.length)
+                paths.forEach(
+                    (path) => (path.style.fill = `url(#${gradientName})`),
+                );
+            changeSpan(elem, start, isMobile);
+            return;
+        }
+        const paths = elem.querySelectorAll("path");
+        if (paths.length)
+            paths.forEach((path) => (path.style.fill = `currentColor`));
+
+        changeSpan(elem, start, isMobile);
+    };
+
     const handleSwap = () => {
+        const isMobile = window.innerWidth <= 640;
         document
             .querySelectorAll(`.gradient-bg-${gradientName}`)
             .forEach((elem) => {
-                elem.closest("a").addEventListener("mouseenter", () => {
-                    const paths = elem.querySelectorAll("path");
-                    if (paths.length)
-                        paths.forEach(
-                            (path) =>
-                                (path.style.fill = `url(#${gradientName})`),
-                        );
-                });
-                elem.closest("a").addEventListener("mouseleave", () => {
-                    const paths = elem.querySelectorAll("path");
-                    if (paths.length)
-                        paths.forEach(
-                            (path) => (path.style.fill = `currentColor`),
-                        );
-                });
+                if (isMobile) {
+                    elem.closest("a").addEventListener(
+                        "touchstart",
+                        () => handleEvent(elem, true, isMobile),
+                        { passive: true },
+                    );
+                    elem.closest("a").addEventListener(
+                        "touchmove",
+                        () => handleEvent(elem, false, isMobile),
+                        { passive: true },
+                    );
+                    elem.closest("a").addEventListener(
+                        "touchend",
+                        () => handleEvent(elem, false, isMobile),
+                        { passive: true },
+                    );
+                } else {
+                    elem.closest("a").addEventListener(
+                        "mouseenter",
+                        () => handleEvent(elem, true, isMobile),
+                        { passive: true },
+                    );
+                    elem.closest("a").addEventListener(
+                        "mouseleave",
+                        () => handleEvent(elem, false, isMobile),
+                        { passive: true },
+                    );
+                }
             });
     };
+
+    window.addEventListener("resize", handleSwap);
     handleSwap();
     document.addEventListener("astro:after-swap", () => {
+        window.addEventListener("resize", handleSwap);
         handleSwap();
     });
 </script>

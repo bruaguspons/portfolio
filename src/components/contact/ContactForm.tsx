@@ -1,7 +1,7 @@
 import { useRef } from "react";
-import ButtonSubmit from "./ButtonSubmit.tsx";
-import ContactInput from "./ContactInput.tsx";
-import type { InputError } from "./types/index.ts";
+import ButtonSubmit from "./ButtonSubmit";
+import ContactInput from "./ContactInput";
+import type { InputError } from "./types";
 import {doSubmit, fadeIn, fadeOut, validateInput} from "./utils";
 
 interface Field {
@@ -64,19 +64,24 @@ const ContactForm = ({fields, submitError,submitSuccess, sendText}: Props) => {
                     }),
                 };
 
-                (async () => {
-                    const ok = await doSubmit(JSON.stringify(dataJson));
+                doSubmit(JSON.stringify(dataJson))
+                .then(ok => {
                     if (!ok) {
                         fadeIn(generalErrorsRef.current as HTMLSpanElement, submitError)
                     } else {
                         form.reset()
                         fadeIn(generalSuccessRef.current as HTMLSpanElement, submitSuccess)
                     }
-                })()
+                })
+                .catch(error => {
+                    console.error("Error al enviar el formulario:", error);
+                    fadeIn(generalErrorsRef.current as HTMLSpanElement, submitError)
+                });
             }
         } catch (error) {
             if (error instanceof Error) {
-                console.error(error.message);
+                console.error("Error al enviar el formulario:", error.message);
+                fadeIn(generalErrorsRef.current as HTMLSpanElement, submitError)
             }
         }
     }
