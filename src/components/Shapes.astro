@@ -3,13 +3,12 @@ import { getRandomPosFromSector } from "@/utils";
 import type { PosShapesType, ShapesType } from "../types";
 
 interface Props {
-    ind: number;
     shape?: ShapesType;
     deg?: number;
     pos?: PosShapesType;
 }
 
-let { ind, shape, pos } = Astro.props;
+let { shape, pos } = Astro.props;
 const [posX, posY] = getRandomPosFromSector(pos);
 ---
 
@@ -59,7 +58,7 @@ const [posX, posY] = getRandomPosFromSector(pos);
     });
 </script>
 
-<style define:vars={{ ind }}>
+<style>
     .oscillate {
         animation: oscillation 5s ease-in-out infinite;
         animation-delay: var(--randDelay);
