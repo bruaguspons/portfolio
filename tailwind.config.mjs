@@ -32,6 +32,9 @@ export default {
 					600: '#13151A',
 				}
 			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+			  },
 
 		},
 	},

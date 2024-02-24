@@ -25,7 +25,10 @@ const i18n = getI18N({ currentLocale });
             {i18n.CONTACT.TITLE[2]}
         </SubTitle>
 
-        <BorderEffect classList="mb-10 sm:max-w-[560px]">
+        <BorderEffect
+            classListBorder="mb-10 sm:max-w-[560px]"
+            classListContent="bg-background-100/20"
+        >
             <ContactForm
                 fields={i18n.CONTACT.FIELDS.map((field) => ({
                     id: field.ID,

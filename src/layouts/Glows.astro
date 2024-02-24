@@ -1,0 +1,17 @@
+---
+interface Props {
+    cant?: number | undefined;
+}
+
+const cant = Astro.props.cant ?? 1;
+---
+
+<div
+    class="absolute top-0 bottom-0 left-0 right-0 m-auto h-full w-full -z-20 flex flex-col justify-around items-center"
+>
+    {
+        [...Array(cant)].map(() => (
+            <div class="w-96 aspect-square rounded-full bg-gradient-radial from-purple-500/95 dark:from-blue-500/95 to-transparent blur-[100px]" />
+        ))
+    }
+</div>

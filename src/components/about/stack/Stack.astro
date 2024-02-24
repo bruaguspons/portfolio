@@ -1,0 +1,76 @@
+---
+import StackGroup from "./StackGroup.astro";
+import ImageGroup from "./ImageGroup.astro";
+import TextColor from "@/components/TextColor.astro";
+import Css3Icon from "@/icons/tech/Css3Icon.astro";
+import DjangoIcon from "@/icons/tech/DjangoIcon.astro";
+import DockerIcon from "@/icons/tech/DockerIcon.astro";
+import EslintIcon from "@/icons/tech/EslintIcon.astro";
+import ExpressIcon from "@/icons/tech/ExpressIcon.astro";
+import GitIcon from "@/icons/tech/GitIcon.astro";
+import Html5Icon from "@/icons/tech/Html5Icon.astro";
+import JavascriptIcon from "@/icons/tech/JavascriptIcon.astro";
+import MongodbIcon from "@/icons/tech/MongodbIcon.astro";
+import MysqlIcon from "@/icons/tech/MysqlIcon.astro";
+import PostgresqlIcon from "@/icons/tech/PostgresqlIcon.astro";
+import PythonIcon from "@/icons/tech/PythonIcon.astro";
+import ReactIcon from "@/icons/tech/ReactIcon.astro";
+import ReduxIcon from "@/icons/tech/ReduxIcon.astro";
+import TypescriptIcon from "@/icons/tech/TypescriptIcon.astro";
+---
+
+<TextColor className="mb-10 text-2xl">Stack</TextColor>
+
+<div class="flex flex-wrap items-center justify-center gap-16 mb-20">
+    <StackGroup title={"Frontend"}>
+        <ImageGroup text="Html" color="#dc5d2720" hoverColor="#dc5d2790">
+            <Html5Icon />
+        </ImageGroup>
+        <ImageGroup text="Css" color="#1572b620" hoverColor="#1572b690">
+            <Css3Icon />
+        </ImageGroup>
+        <ImageGroup text="JavaScript" color="#f0db4f20" hoverColor="#f0db4f90">
+            <JavascriptIcon />
+        </ImageGroup>
+        <ImageGroup text="ReactJs" color="#61dafb20" hoverColor="#61dafb90">
+            <ReactIcon />
+        </ImageGroup>
+        <ImageGroup text="Redux" color="#764abc20" hoverColor="#764abc90">
+            <ReduxIcon />
+        </ImageGroup>
+        <ImageGroup text="TypeScript" color="#007acc20" hoverColor="#007acc90">
+            <TypescriptIcon />
+        </ImageGroup>
+    </StackGroup>
+    <StackGroup title={"Backend"}>
+        <ImageGroup text="Django" color="#4faa4120" hoverColor="#4faa4190">
+            <DjangoIcon />
+        </ImageGroup>
+        <ImageGroup text="ExpressJs" color="#d4d4d420" hoverColor="#d4d4d490">
+            <ExpressIcon className=" text-neutral-700 dark:text-neutral-300" />
+        </ImageGroup>
+        <ImageGroup text="MongoDb" color="#4faa4120" hoverColor="#4faa4190">
+            <MongodbIcon />
+        </ImageGroup>
+        <ImageGroup text="MySql" color="#00618a20" hoverColor="#00618a90">
+            <MysqlIcon />
+        </ImageGroup>
+        <ImageGroup text="PostgreSql" color="#33679120" hoverColor="#33679190">
+            <PostgresqlIcon />
+        </ImageGroup>
+        <ImageGroup text="Python" color="#3671a120" hoverColor="#3671a190">
+            <PythonIcon />
+        </ImageGroup>
+    </StackGroup>
+    <StackGroup title={"Tools"}>
+        <ImageGroup text="Docker" color="#22afde20" hoverColor="#22afde90">
+            <DockerIcon />
+        </ImageGroup>
+        <ImageGroup text="EsLint" color="#8080f220" hoverColor="#8080f290">
+            <EslintIcon />
+        </ImageGroup>
+        <ImageGroup text="Git" color="#f34f2920" hoverColor="#f34f2990">
+            <GitIcon />
+        </ImageGroup>
+    </StackGroup>
+</div>

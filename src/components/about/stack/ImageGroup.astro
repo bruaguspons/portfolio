@@ -1,0 +1,58 @@
+---
+interface Props {
+    color: string;
+    hoverColor: string;
+    text: string;
+}
+
+const { text, color, hoverColor } = Astro.props;
+---
+
+<div
+    class={`imageGroup p-3 relative z-10 rounded-2xl w-16 aspect-square flex items-center justify-center border border-transparent transition duration-500 group
+
+    after:absolute after:-top-1 after:-left-1 after:-right-1 after:-bottom-1  after:-z-10 after:blur-xl after:rounded-xl
+    `}
+    style={{ backgroundColor: color }}
+>
+    <span
+        class="absolute -top-10 py-1 px-3 rounded-xl font-semibold opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition duration-500"
+        style={{ border: `1px solid ${hoverColor}`, color: hoverColor }}
+        >{text}</span
+    >
+    <slot />
+</div>
+
+<style define:vars={{ color, hoverColor }}>
+    .imageGroup:hover {
+        border: 1px solid var(--hoverColor);
+    }
+
+    @property --colorTransition {
+        syntax: "<color>";
+        initial-value: transparent;
+        inherits: false;
+    }
+
+    @property --hoverColorTransition {
+        syntax: "<color>";
+        initial-value: transparent;
+        inherits: false;
+    }
+
+    .imageGroup::after {
+        background: radial-gradient(
+            circle,
+            var(--hoverColorTransition) 52%,
+            var(--colorTransition) 100%
+        );
+        transition:
+            --colorTransition 0.5s,
+            --hoverColorTransition 0.5s;
+    }
+
+    .imageGroup:hover::after {
+        --hoverColorTransition: var(--hoverColor);
+        --colorTransition: var(--color);
+    }
+</style>
