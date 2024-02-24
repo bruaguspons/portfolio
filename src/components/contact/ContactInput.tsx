@@ -34,7 +34,7 @@ const ContactInput = ({ id, label, autocomplete, type, required, errors }: Props
                 <textarea
                     id={id}
                     name={id}
-                    className="focus:outline-none bg-white dark:bg-background-400 rounded-lg w-full p-2.5 placeholder-neutral-500 dark:placeholder-neutral-400 transition ease-in-out duration-150"
+                    className="focus:outline-none bg-background-400 rounded-lg w-full p-2.5 placeholder-neutral-400 transition ease-in-out duration-150"
                     required={required ?? false}
                     placeholder={label}
                     rows={5}
@@ -46,7 +46,7 @@ const ContactInput = ({ id, label, autocomplete, type, required, errors }: Props
                     name={id}
                     type={type ?? "text"}
                     autoComplete={autocomplete}
-                    className="focus:outline-none bg-white dark:bg-background-400 rounded-lg w-full p-2.5 placeholder-neutral-500 dark:placeholder-neutral-400 transition ease-in-out duration-150"
+                    className="focus:outline-none bg-background-400 rounded-lg w-full p-2.5 placeholder-neutral-400 transition ease-in-out duration-150"
                     required={required?? false}
                     placeholder={label}
                     onBlur={handleBlur}

@@ -25,26 +25,21 @@ if (rounded_bottom) {
 
 <!-- <div class="flex justify-center"> -->
 <div class={`col-span-5 flex items-center justify-end`}>
-    <Button
-        href={link}
-        className="focus:from-purple-500 focus:to-red-400 dark:focus:to-blue-500"
-    >
+    <Button href={link} className="focus:from-purple-500 focus:to-blue-500">
         {date}
     </Button>
 </div>
 <div class="col-span-1 flex items-center justify-center">
-    <div
-        class={`relative bg-background-400 dark:bg-background-200 w-1 h-full mx-5 z-10 ${rounded}`}
-    >
+    <div class={`relative bg-background-200 w-1 h-full mx-5 z-10 ${rounded}`}>
         <div
-            class="absolute custom-top left-1/2 w-4 h-4 rounded-full bg-gradient-to-t from-purple-500 to-red-400 dark:to-blue-500 -translate-x-1/2"
+            class="absolute custom-top left-1/2 w-4 h-4 rounded-full bg-gradient-to-t from-purple-500 to-blue-500 -translate-x-1/2"
         >
         </div>
     </div>
 </div>
 <div class="col-span-5 flex items-center justify-start relative">
     <CardEffect
-        classNameCard="my-6 after:blur-md dark:after:blur-md"
+        classNameCard="my-6 after:blur-md"
         classNameContent="p-4"
         isLink
         href={link}

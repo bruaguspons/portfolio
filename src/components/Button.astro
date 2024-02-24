@@ -14,18 +14,18 @@ const { href, target, className, type } = Astro.props;
         <a
             href={href}
             target={target}
-            class={`button-hover button-active relative inline-flex items-center justify-center p-0.5 overflow-hidden font-medium text-background-600 rounded-lg group bg-gradient-to-br from-purple-500 to-red-400 dark:to-blue-500 dark:text-neutral-300 focus:outline-none active:from-purple-600 active:to-red-400 dark:active:to-blue-700 transform active:scale-90 transition-transform ${className}`}
+            class={`button-hover button-active relative inline-flex items-center justify-center p-0.5 overflow-hidden font-medium  rounded-lg group bg-gradient-to-br from-purple-500 to-blue-500 focus:outline-none active:from-purple-600 active:to-blue-700 transform active:scale-90 transition-transform ${className}`}
         >
-            <span class="relative px-5 py-2.5 transition-all ease-in-out duration-150 bg-background-100 dark:bg-background-600 rounded-md w-max">
+            <span class="relative px-5 py-2.5 transition-all ease-in-out duration-150 bg-background-600 rounded-md w-max">
                 <slot />
             </span>
         </a>
     ) : (
         <button
-            class={`button-hover button-active relative inline-flex items-center justify-center p-0.5 overflow-hidden font-medium text-background-600 rounded-lg group bg-gradient-to-br from-purple-500 to-red-400 dark:to-blue-500 dark:text-neutral-300 focus:outline-none active:from-purple-600 active:to-red-400 dark:active:to-blue-700 transform active:scale-90 transition-transform ${className} cursor-default`}
+            class={`button-hover button-active relative inline-flex items-center justify-center p-0.5 overflow-hidden font-medium rounded-lg group bg-gradient-to-br from-purple-500 to-blue-500  focus:outline-none active:from-purple-600 active:to-blue-700 transform active:scale-90 transition-transform ${className} cursor-default`}
             type={type}
         >
-            <span class="relative px-5 py-2.5 transition-all ease-in-out duration-150 bg-background-100 dark:bg-background-600 rounded-md w-max">
+            <span class="relative px-5 py-2.5 transition-all ease-in-out duration-150  bg-background-600 rounded-md w-max">
                 <slot />
             </span>
         </button>

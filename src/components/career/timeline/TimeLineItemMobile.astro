@@ -27,27 +27,25 @@ if (rounded_bottom) {
         <>
             <div class="h-4">
                 <div
-                    class={`relative bg-background-400 dark:bg-background-200 w-1 h-full mx-5 z-10 ${roundedTop}`}
+                    class={`relative bg-background-200 w-1 h-full mx-5 z-10 ${roundedTop}`}
                 />
             </div>
             <div class="h-4">
                 <div
-                    class={`relative bg-background-400 dark:bg-background-200 w-1 h-full mx-5 z-10`}
+                    class={`relative bg-background-200 w-1 h-full mx-5 z-10`}
                 />
             </div>
         </>
     ) : (
         <div class="h-4">
-            <div
-                class={`relative bg-background-400 dark:bg-background-200 w-1 h-full mx-5 z-10`}
-            />
+            <div class={`relative bg-background-200 w-1 h-full mx-5 z-10`} />
         </div>
     )
 }
 
 <div class="flex items-center justify-start relative">
     <CardEffect
-        classNameCard="after:blur-md dark:after:blur-md"
+        classNameCard="after:blur-md"
         classNameContent="flex flex-col items-center p-4"
         isLink={true}
         href={link}
@@ -68,20 +66,18 @@ if (rounded_bottom) {
         <>
             <div class="h-4">
                 <div
-                    class={`relative bg-background-400 dark:bg-background-200 w-1 h-full mx-5 z-10`}
+                    class={`relative bg-background-200 w-1 h-full mx-5 z-10`}
                 />
             </div>
             <div class="h-4">
                 <div
-                    class={`relative bg-background-400 dark:bg-background-200 w-1 h-full mx-5 z-10 ${roundedBottom}`}
+                    class={`relative bg-background-200 w-1 h-full mx-5 z-10 ${roundedBottom}`}
                 />
             </div>
         </>
     ) : (
         <div class="h-4">
-            <div
-                class={`relative bg-background-400 dark:bg-background-200 w-1 h-full mx-5 z-10`}
-            />
+            <div class={`relative bg-background-200 w-1 h-full mx-5 z-10`} />
         </div>
     )
 }

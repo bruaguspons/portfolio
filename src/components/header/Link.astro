@@ -10,23 +10,21 @@ const { url } = Astro.request;
 
 const isCurrentLink = url.includes(href);
 
-const defaultColor = isCurrentLink
-    ? "text-transparent"
-    : "text-neutral-700 dark:text-neutral-300";
+const defaultColor = isCurrentLink ? "text-transparent" : "text-neutral-300";
 const activeBg = isCurrentLink
     ? ""
-    : "active:bg-white dark:active:bg-background-500 cursor-pointer ";
+    : "active:bg-background-500 cursor-pointer ";
 ---
 
 {
     isCurrentLink ? (
         <div
-            class={`w-full h-full sm:max-w-min ${activeBg}  sm:hover:bg-transparent sm:dark:hover:bg-transparent`}
+            class={`w-full h-full sm:max-w-min ${activeBg}  sm:hover:bg-transparent `}
         >
             <span
-                class={`font-bold ${defaultColor} bg-clip-text bg-gradient-to-r  from-purple-500 to-red-400 dark:to-blue-500 active:from-purple-500 active:to-red-400 dark:active:to-blue-500 active:text-transparent dark:active:text-transparent transition duration-150
+                class={`font-bold ${defaultColor} bg-clip-text bg-gradient-to-r  from-purple-500 to-blue-500 active:from-purple-500 active:to-blue-500 active:text-transparent transition duration-150
 
-                sm:hover:from-purple-500 sm:hover:to-red-400 dark:sm:hover:to-blue-500 sm:hover:text-transparent dark:sm:hover:text-transparent
+                sm:hover:from-purple-500 sm:hover:to-blue-500 sm:hover:text-transparent
 
                 w-full h-full flex justify-center items-center sm:w-auto
                 
@@ -38,13 +36,13 @@ const activeBg = isCurrentLink
         </div>
     ) : (
         <div
-            class={`w-full h-full sm:max-w-min ${activeBg} sm:hover:bg-transparent sm:dark:hover:bg-transparent`}
+            class={`w-full h-full sm:max-w-min ${activeBg} sm:hover:bg-transparent `}
         >
             <a
                 href={href}
-                class={`font-bold ${defaultColor} bg-clip-text bg-gradient-to-r  from-purple-500 to-red-400 dark:to-blue-500 active:from-purple-500 active:to-red-400 dark:active:to-blue-500 active:text-transparent dark:active:text-transparent transition duration-150
+                class={`font-bold ${defaultColor} bg-clip-text bg-gradient-to-r  from-purple-500 to-blue-500 active:from-purple-500 active:to-blue-500 active:text-transparent transition duration-150
                 
-                sm:hover:from-purple-500 sm:hover:to-red-400 dark:sm:hover:to-blue-500 sm:hover:text-transparent dark:sm:hover:text-transparent
+                sm:hover:from-purple-500 sm:hover:to-blue-500 sm:hover:text-transparent 
 
                 w-full h-full flex justify-center items-center sm:w-auto
 
