@@ -37,31 +37,26 @@ const { gradientName, desc, href, target, className, from_color, to_color } =
 </IconsBgGradient>
 
 <script define:vars={{ gradientName }}>
-    const changeSpan = (elem, start, isMobile) => {
-        if (!isMobile) return;
-
-        const span = elem.closest("a")?.querySelector("span");
-        console.log(span);
-        if (start) {
-            span.classList.add(
-                "from-purple-500",
-                "to-red-400",
-                "dark:to-blue-500",
-                "text-transparent",
-                "dark:text-transparent",
-            );
-            return;
-        }
-        span.classList.remove(
-            "from-purple-500",
-            "to-red-400",
-            "dark:to-blue-500",
-            "text-transparent",
-            "dark:text-transparent",
-        );
-    };
-
     const handleEvent = (elem, start, isMobile) => {
+        const changeSpan = (elem, start, isMobile) => {
+            if (!isMobile) return;
+
+            const span = elem.closest("a")?.querySelector("span");
+            console.log(span);
+            if (start) {
+                span.classList.add(
+                    "from-purple-500",
+                    "to-blue-500",
+                    "text-transparent",
+                );
+                return;
+            }
+            span.classList.remove(
+                "from-purple-500",
+                "to-blue-500",
+                "text-transparent",
+            );
+        };
         if (start) {
             const paths = elem.querySelectorAll("path");
             if (paths.length)

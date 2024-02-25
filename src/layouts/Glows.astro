@@ -1,0 +1,22 @@
+---
+interface Props {
+    cant?: number | undefined;
+    zIndex?: number | undefined;
+}
+
+const cant = Astro.props.cant ?? 1;
+const zIndex = Astro.props.zIndex ?? -20;
+---
+
+<div
+    class="absolute top-0 bottom-0 left-0 right-0 m-auto h-full w-full flex flex-col justify-around items-center"
+    style={{
+        zIndex: zIndex,
+    }}
+>
+    {
+        [...Array(cant)].map(() => (
+            <div class="w-96 aspect-square rounded-full bg-gradient-radial from-purple-500/95 to-transparent blur-[100px]" />
+        ))
+    }
+</div>

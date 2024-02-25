@@ -41,7 +41,7 @@ const isSpotify = title === "Spotify Clone";
 
 <CardFlip id={id} effectEnable={!commingSoon}>
     <div class="h-full w-full" slot="front">
-        <div class="h-full w-full block bg-white dark:bg-background-500">
+        <div class="h-full w-full block bg-background-400">
             <div
                 class="relative overflow-hidden h-1/3 w-full flex justify-center"
             >
@@ -83,34 +83,34 @@ const isSpotify = title === "Spotify Clone";
             </div>
             <div class="p-6">
                 <h3 class="text-center mb-4 font-bold text-lg">{title}</h3>
-                <p class="text-base text-neutral-600 dark:text-neutral-200">
+                <p class="text-base text-neutral-200 text-balance">
                     {content}
                 </p>
             </div>
         </div>
     </div>
     <div
-        class="h-full w-full flex flex-col items-center px-10 py-5 bg-white dark:bg-background-500"
+        class="h-full w-full flex flex-col items-center px-10 py-5 bg-background-400"
         slot="back"
     >
         <div class="flex flex-col items-center flex-0 mb-5 gap-2">
             <span>{i18n.PROJECTS.GITHUB_MORE_INFO}</span>
             <GithubIcon
-                gradientName="github-gradient-light"
+                gradientName="github-gradient-dark"
                 href={githubUrl}
                 target="_blank"
-                className="hidden dark:flex w-14"
+                className="flex w-14"
                 from_color="#A855F6"
                 to_color="#3b82f6"
             />
-            <GithubIcon
-                gradientName="github-gradient-dark"
+            <!-- <GithubIcon
+                gradientName="github-gradient-light"
                 href={githubUrl}
                 target="_blank"
                 className="flex dark:hidden w-14"
                 from_color="#A855F6"
                 to_color="#f87171"
-            />
+            /> -->
         </div>
         <div class="flex flex-col items-center gap-4">
             {

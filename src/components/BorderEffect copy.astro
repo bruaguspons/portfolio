@@ -1,6 +1,4 @@
 ---
-import Glows from "@/layouts/Glows.astro";
-
 interface Props {
     classListBorder?: string;
     classListContent?: string;
@@ -12,12 +10,11 @@ const { classListBorder, classListContent } = Astro.props;
 <div
     class={`box relative z-10 w-full h-full
     
-    before:absolute before:inset-[.3rem] before:bg-background-600 before:rounded-md
+    before:absolute before:inset-[.3rem]  before:rounded-md
     
     ${classListBorder}
     `}
 >
-    <Glows zIndex={10} />
     <div
         class={`rounded-md z-20 relative m-[.3rem] p-10 sm:py-10 sm:px-20 ${classListContent}`}
     >

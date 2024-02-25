@@ -1,11 +1,11 @@
 ---
 import { getI18N, getLangFromUrl } from "@/i18n";
-import Carousel from "./carousel/Carousel.astro";
 import TextColor from "../TextColor.astro";
 // import BorderEffect from "../BorderEffect.astro";
-import CardEffect from "../CardEffect.astro";
+import CardEffect from "../CommonCard.astro";
 import SubTitle from "../SubTitle.astro";
 import LayoutContent from "@/layouts/LayoutContent.astro";
+import Stack from "./stack/Stack.astro";
 
 // const { currentLocale } = Astro;
 
@@ -16,7 +16,7 @@ const i18n = getI18N({ currentLocale });
 ---
 
 <LayoutContent>
-    <div class="flex-grow flex flex-col justify-start gap-10">
+    <div class="flex-grow flex flex-col justify-start items-center gap-10">
         <SubTitle>
             <TextColor>
                 {i18n.ABOUT.TITLE[1]}
@@ -24,13 +24,24 @@ const i18n = getI18N({ currentLocale });
             {i18n.ABOUT.TITLE[2]}
         </SubTitle>
 
-        <CardEffect classNameCard="mt-4 mb-8 mx-10 after:blur-lg">
-            <p class="text-lg">{i18n.ABOUT.CONTENT[1]}</p>
-            <p class="text-lg">{i18n.ABOUT.CONTENT[2]}</p>
+        <CardEffect className="mt-4 mb-8 mx-10">
+            {
+                i18n.ABOUT.CONTENT.map((content, ind) => (
+                    <p
+                        class={`text-lg ${ind === i18n.ABOUT.CONTENT.length - 1 ? "" : "mb-4"}`}
+                    >
+                        {content}
+                    </p>
+                ))
+            }
         </CardEffect>
 
-        <!-- <div class="inline-flex"> -->
-        <Carousel />
-        <!-- </div> -->
+        <SubTitle>
+            {i18n.ABOUT.STACK.TITLE[1] + " "}
+            <TextColor>
+                {i18n.ABOUT.STACK.TITLE[2]}
+            </TextColor>
+        </SubTitle>
+        <Stack className="mx-10" />
     </div>
 </LayoutContent>

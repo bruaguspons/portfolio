@@ -4,12 +4,14 @@ import { ViewTransitions } from "astro:transitions";
 import InfoTag from "./socialMedia/InfoTag.astro";
 import SocialMediaPanel from "./socialMedia/SocialMediaPanel.astro";
 import GreyPanel from "./GreyPanel.astro";
+import Glows from "./Glows.astro";
 
 interface Props {
 	title: string;
+	cantGlows?: number;
 }
 
-const { title } = Astro.props;
+const { title, cantGlows } = Astro.props;
 
 const url = Astro.request.url;
 const baseUrl = url.replace(/(es|en)(.*)$/, "");
@@ -64,17 +66,19 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "");
 		<ViewTransitions />
 	</head>
 	<body
-		class="text-neutral-700 dark:text-neutral-300 font-semibold h-screen w-screen dark:bg-background-600 bg-background-100 box-border flex flex-col overflow-x-hidden transition ease-in-out duration-150 relative z-0 text-sm sm:text-base"
+		class="text-neutral-200 font-semibold min-h-screen w-screen bg-background-600 box-border flex flex-col overflow-x-hidden transition ease-in-out duration-150 relative z-0 text-sm sm:text-base"
 	>
 		<Header />
 
-		<main class="flex-auto">
+		<main class="flex-1 flex justify-center items-center">
 			<slot />
 		</main>
 
 		<InfoTag />
 		<SocialMediaPanel />
 		<GreyPanel />
+
+		<Glows cant={cantGlows} zIndex={-20} />
 
 		<style is:global>
 			/* @font-face {
@@ -91,18 +95,36 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "");
 					url("/fonts/Geist-UltraLight.woff2") format("woff"),
 					url("/fonts/GeistVariableVF.woff2") format("woff");
 			} */
-			html {
-				scroll-behavior: smooth;
-				scrollbar-width: thin;
-				/* font-family: Geist, Arial, sans-serif; */
+			::-webkit-scrollbar {
+				width: 10px;
+				height: 10px;
+				background: #13151a;
+				background-image: url("../icons/noisy.webp");
+			}
+			::-webkit-scrollbar-thumb {
+				background: #d1d9dc;
+				border-radius: 10px;
+				border: 3px solid #13151a;
+			}
+			::-webkit-scrollbar-thumb:hover {
+				background: #eeeef8;
+			}
+			::-webkit-scrollbar-corner {
+				display: none;
 			}
 
-			html::-webkit-scrollbar {
-				width: 11px;
-			}
-
-			html::-webkit-scrollbar-thumb {
-				border-radius: 6px;
+			main::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				background-image: url("../icons/noisy.webp");
+				pointer-events: none;
+				user-select: none;
 			}
 		</style>
 	</body>

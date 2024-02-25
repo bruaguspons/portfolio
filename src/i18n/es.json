@@ -15,10 +15,16 @@
             "1": "Acerca",
             "2": " de mi"
         },
-        "CONTENT": {
-            "1": "Soy un apasionado desarrollador web con más de 2 años de experiencia y un dedicado estudiante de la facultad de ingenieria de Uruguay 🌐. Disfruto construyendo aplicaciones web utilizando una gran variedad de tecnologías, siempre esforzándome por crear soluciones excelentes y limpias para problemas desafiantes 💻.",
-            "2": "En mi tiempo libre, me encontrarás perfeccionando mis habilidades en HackerRank, sumergiéndome en artículos tecnológicos y disfrutando de una buena partida de ajedrez ♟️. "
-        } 
+        "CONTENT": [ 
+            "Soy un apasionado desarrollador web con más de 2 años de experiencia y un dedicado estudiante de la facultad de ingenieria de Uruguay 🌐. Disfruto construyendo aplicaciones web utilizando una gran variedad de tecnologías, siempre esforzándome por crear soluciones excelentes y limpias para problemas desafiantes 💻.",
+            "En mi tiempo libre, me encontrarás perfeccionando mis habilidades en HackerRank, sumergiéndome en artículos tecnológicos y disfrutando de una buena partida de ajedrez ♟️. "
+        ],
+        "STACK": {
+            "TITLE": {
+                "1": "Tech",
+                "2": "Stack"
+            }
+        }
     },
     "CAREER": {
         "TITLE":{
@@ -141,6 +147,6 @@
     },
     "SETTINGS":{
         "THEME_SWITCH":"Cambia el tema:",
-        "LENGUAGE_SWITCH":"Cambia el lenguaje:"
+        "LANGUAGE_SWITCH":"Cambia el lenguaje:"
     }
 }
