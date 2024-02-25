@@ -79,14 +79,11 @@ const { gradientName, className, from_color, to_color } = Astro.props;
                 paths.forEach(
                     (path) => (path.style.stroke = `url(#${gradientName})`),
                 );
-            changeSpan(elem, start, isMobile);
             return;
         }
         const paths = elem.querySelectorAll("path");
         if (paths.length)
             paths.forEach((path) => (path.style.stroke = `currentColor`));
-
-        changeSpan(elem, start, isMobile);
     };
 
     const handleSwap = () => {
