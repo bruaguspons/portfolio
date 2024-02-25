@@ -1,11 +1,12 @@
 ---
 interface Props {
     color: string;
+    colorTransparent: string;
     hoverColor: string;
     text: string;
 }
 
-const { text, color, hoverColor } = Astro.props;
+const { text, color, colorTransparent, hoverColor } = Astro.props;
 ---
 
 <div
@@ -13,17 +14,16 @@ const { text, color, hoverColor } = Astro.props;
 
     after:absolute after:-top-1 after:-left-1 after:-right-1 after:-bottom-1  after:-z-10 after:blur-xl after:rounded-xl
     `}
-    style={{ backgroundColor: color }}
+    style={{ backgroundColor: colorTransparent }}
 >
     <span
-        class="absolute -top-10 py-1 px-3 rounded-xl font-semibold opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition duration-500"
-        style={{ border: `1px solid ${hoverColor}`, color: hoverColor }}
-        >{text}</span
+        class="absolute -top-10 py-1 px-3 rounded-xl font-bold opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition duration-500"
+        style={{ border: `1px solid ${hoverColor}`, color: color }}>{text}</span
     >
     <slot />
 </div>
 
-<style define:vars={{ color, hoverColor }}>
+<style define:vars={{ colorTransparent, hoverColor }}>
     .imageGroup:hover {
         border: 1px solid var(--hoverColor);
     }
@@ -53,6 +53,6 @@ const { text, color, hoverColor } = Astro.props;
 
     .imageGroup:hover::after {
         --hoverColorTransition: var(--hoverColor);
-        --colorTransition: var(--color);
+        --colorTransition: var(--colorTransparent);
     }
 </style>
