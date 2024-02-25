@@ -6,4 +6,14 @@ interface Props {
 const { className } = Astro.props;
 ---
 
-<img class={className} src="/src/icons/tech/linuxIcon.png" alt="Linux" />
+<div
+    id="linuxIcon"
+    class={`w-full aspect-square bg-contain bg-no-repeat bg-center ${className}`}
+>
+</div>
+
+<style>
+    #linuxIcon {
+        background-image: url("./linuxIcon.png");
+    }
+</style>
