@@ -43,18 +43,18 @@ if (rounded_bottom) {
     )
 }
 
-<div class="flex items-center justify-start relative">
+<div class="flex-1 flex items-center justify-center relative w-full px-10">
     <Button
         href={link}
-        className=""
-        classNameText="flex flex-col items-center py-6 px-8"
+        className="w-full"
+        classNameText="w-full flex flex-col items-center py-6 px-8"
     >
         <TextColor
-            className="text-xl sm:group-hover:text-background-100 group-active:text-background-100 transition duration-150 mb-2"
+            className="text-xl sm:group-hover:text-background-100 group-active:text-background-100 transition duration-150 mb-2 w-auto text-center"
         >
             {title}
         </TextColor>
-        <span class="text-lg">
+        <span class="text-lg w-max">
             {date}
         </span>
     </Button>

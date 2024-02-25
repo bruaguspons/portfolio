@@ -18,7 +18,7 @@ const { href, target, classNameText, className } = Astro.props;
             class={`button-hover button-active relative z-10 inline-flex items-center justify-center p-0.5 overflow-hidden font-medium  rounded-lg group bg-gradient-to-br from-purple-500 to-blue-500 focus:outline-none active:from-purple-600 active:to-blue-700 transform active:scale-90 transition ease-in-out duration-150 ${className}`}
         >
             <span
-                class={`relative px-5 py-2.5 transition-all ease-in-out duration-150 bg-background-600 rounded-md w-max ${classNameText}`}
+                class={`relative px-5 py-2.5 transition-all ease-in-out duration-150 bg-background-600 rounded-md ${classNameText}`}
             >
                 <slot />
             </span>

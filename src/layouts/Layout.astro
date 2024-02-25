@@ -9,9 +9,10 @@ import Glows from "./Glows.astro";
 interface Props {
 	title: string;
 	cantGlows?: number;
+	cantGlowsSm?: number;
 }
 
-const { title, cantGlows } = Astro.props;
+const { title, cantGlows, cantGlowsSm } = Astro.props;
 
 const url = Astro.request.url;
 const baseUrl = url.replace(/(es|en)(.*)$/, "");
@@ -78,7 +79,7 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "");
 		<SocialMediaPanel />
 		<GreyPanel />
 
-		<Glows cant={cantGlows} zIndex={-20} />
+		<Glows cantSm={cantGlowsSm} cant={cantGlows} zIndex={-20} />
 
 		<style is:global>
 			/* @font-face {

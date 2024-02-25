@@ -90,11 +90,11 @@ const isSpotify = title === "Spotify Clone";
         </div>
     </div>
     <div
-        class="h-full w-full flex flex-col items-center px-10 py-5 bg-background-400"
+        class="h-full w-full flex flex-col items-center p-6 bg-background-400"
         slot="back"
     >
         <div class="flex flex-col items-center flex-0 mb-5 gap-2">
-            <span>{i18n.PROJECTS.GITHUB_MORE_INFO}</span>
+            <span class="text-balance">{i18n.PROJECTS.GITHUB_MORE_INFO}</span>
             <GithubIcon
                 gradientName="github-gradient-dark"
                 href={githubUrl}
@@ -116,7 +116,9 @@ const isSpotify = title === "Spotify Clone";
             {
                 appUrl && (
                     <>
-                        <span>{i18n.PROJECTS.APP_MORE_INFO}</span>
+                        <span class="text-balance">
+                            {i18n.PROJECTS.APP_MORE_INFO}
+                        </span>
                         <Button href={appUrl} target="_blank">
                             {i18n.PROJECTS.APP_BUTTON_TEXT}
                         </Button>
