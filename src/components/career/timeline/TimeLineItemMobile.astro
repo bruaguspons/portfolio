@@ -1,5 +1,5 @@
 ---
-import CardEffect from "@/components/CardEffect.astro";
+import Button from "@/components/Button.astro";
 import TextColor from "@/components/TextColor.astro";
 
 interface Props {
@@ -44,21 +44,20 @@ if (rounded_bottom) {
 }
 
 <div class="flex items-center justify-start relative">
-    <CardEffect
-        classNameCard="after:blur-md"
-        classNameContent="flex flex-col items-center p-4"
-        isLink={true}
+    <Button
         href={link}
+        className=""
+        classNameText="flex flex-col items-center py-6 px-8"
     >
         <TextColor
-            className="text-xl sm:group-hover:text-background-100 group-active:text-background-100 transition duration-150 "
+            className="text-xl sm:group-hover:text-background-100 group-active:text-background-100 transition duration-150 mb-2"
         >
             {title}
         </TextColor>
-        <span>
+        <span class="text-lg">
             {date}
         </span>
-    </CardEffect>
+    </Button>
 </div>
 
 {

@@ -4,7 +4,7 @@ import MyName from "../MyName.astro";
 import DropDownMenuLinks from "./DropDownMenuLinks.astro";
 import DropDownMenuSettings from "./DropDownMenuSettings.astro";
 import Link from "./Link.astro";
-import LenguageSwitch from "./lenguageSwitch/LenguageSwitch.astro";
+import LanguageSwitch from "./languageSwitch/LanguageSwitch.astro";
 
 // const { currentLocale } = Astro;
 
@@ -16,9 +16,7 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "") + currentLocale;
 const i18n = getI18N({ currentLocale });
 ---
 
-<header
-    class="w-full sticky bg-background-600 top-0 transition ease-in-out duration-150 z-30"
->
+<header class="w-full sticky top-0 transition ease-in-out duration-150 z-30">
     <div
         class="w-full h-14 grid grid-cols-12 bg-background-600 transition ease-in-out duration-150"
     >
@@ -69,8 +67,8 @@ const i18n = getI18N({ currentLocale });
             `}
         >
             <div class="flex flex-col items-center gap-4">
-                <span class="lg:hidden">{i18n.SETTINGS.LENGUAGE_SWITCH}</span>
-                <LenguageSwitch />
+                <span class="lg:hidden">{i18n.SETTINGS.LANGUAGE_SWITCH}</span>
+                <LanguageSwitch />
             </div>
             <!-- <div class="flex flex-col items-center gap-4">
                 <span class="lg:hidden">{i18n.SETTINGS.THEME_SWITCH}</span>
@@ -80,7 +78,7 @@ const i18n = getI18N({ currentLocale });
     </div>
 </header>
 
-<style>
+<!-- <style>
     header::after {
         content: "";
         position: absolute;
@@ -94,4 +92,4 @@ const i18n = getI18N({ currentLocale });
         pointer-events: none;
         user-select: none;
     }
-</style>
+</style> -->

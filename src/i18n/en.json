@@ -18,7 +18,13 @@
         "CONTENT": [
                 "I am a passionate web developer with over 2 years of experience and a dedicated student at the Faculty of Engineering in Uruguay 🌐. I enjoy building web applications using a wide range of technologies, always striving to create excellent and clean solutions for challenging problems 💻.",
                 "In my free time, you'll find me honing my skills on HackerRank, diving into tech articles, and enjoying a good game of chess ♟️. "
-        ]
+        ],
+        "STACK": {
+            "TITLE": {
+                "1": "Tech",
+                "2": "Stack"
+            }
+        }
     },
     "CAREER": {
         "TITLE":{
@@ -140,6 +146,6 @@
     },
     "SETTINGS":{
         "THEME_SWITCH":"Change Theme:",
-        "LENGUAGE_SWITCH":"Change Lenguage:"
+        "LANGUAGE_SWITCH":"Change Language:"
     }
 }

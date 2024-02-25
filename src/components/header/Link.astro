@@ -10,7 +10,7 @@ const { url } = Astro.request;
 
 const isCurrentLink = url.includes(href);
 
-const defaultColor = isCurrentLink ? "text-transparent" : "text-neutral-300";
+const defaultColor = isCurrentLink ? "text-transparent" : "text-neutral-200";
 const activeBg = isCurrentLink
     ? ""
     : "active:bg-background-500 cursor-pointer ";

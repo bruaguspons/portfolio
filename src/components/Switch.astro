@@ -2,30 +2,26 @@
 interface Props {
     id: string;
     isChecked?: boolean;
+    ariaLabel: string;
 }
 
-const { id, isChecked } = Astro.props;
+const { id, isChecked = false } = Astro.props;
 ---
 
-<label class="relative inline-block w-14 h-5">
-    <input
+<div class="relative inline-block w-14 h-5">
+    <button
         id={id}
         name="switch"
-        type="checkbox"
-        class="opacity-0 w-0 h-0"
-        checked={isChecked}
-    />
-    <span
-        class={`absolute cursor-pointer top-0 left-0 right-0 bottom-0 transition duration-[0.4s] bg-gradient-to-r from-purple-500 to-blue-500 rounded-full 
+        class={`switch absolute cursor-pointer top-0 left-0 right-0 bottom-0 transition duration-[0.4s] bg-gradient-to-r from-purple-500 to-blue-500 rounded-full 
         
-        before:absolute before:h-7 before:w-7 before:left-0 before:-bottom-1 before:bg-background-100 before:transition before:duration-[0.4s] before:rounded-full
+            before:absolute before:h-7 before:w-7 before:left-0 before:-bottom-1 before:bg-background-100 before:transition before:duration-[0.4s] before:rounded-full
+            `}
+        aria-label="Name"
+        data-checked={isChecked ? isChecked.toString() : ""}></button>
+</div>
 
-        slider round
-        `}></span>
-</label>
-
-<style is:inline>
-    input:checked + .slider:before {
+<style>
+    button.switch[data-checked="true"]:before {
         -webkit-transform: translateX(30px);
         -ms-transform: translateX(30px);
         transform: translateX(30px);

@@ -1,7 +1,6 @@
 ---
 import StackGroup from "./StackGroup.astro";
 import ImageGroup from "./ImageGroup.astro";
-import TextColor from "@/components/TextColor.astro";
 import Css3Icon from "@/icons/tech/Css3Icon.astro";
 import DjangoIcon from "@/icons/tech/DjangoIcon.astro";
 import DockerIcon from "@/icons/tech/DockerIcon.astro";
@@ -17,11 +16,17 @@ import PythonIcon from "@/icons/tech/PythonIcon.astro";
 import ReactIcon from "@/icons/tech/ReactIcon.astro";
 import ReduxIcon from "@/icons/tech/ReduxIcon.astro";
 import TypescriptIcon from "@/icons/tech/TypescriptIcon.astro";
+
+interface Props {
+    className?: string;
+}
+
+const { className } = Astro.props;
 ---
 
-<TextColor className="mb-10 text-2xl">Stack</TextColor>
-
-<div class="flex flex-wrap items-center justify-center gap-16 mb-20">
+<div
+    class={`flex flex-wrap items-center justify-center gap-16 mb-20 ${className}`}
+>
     <StackGroup title={"Frontend"}>
         <ImageGroup text="Html" color="#dc5d2720" hoverColor="#dc5d2790">
             <Html5Icon />
@@ -47,7 +52,7 @@ import TypescriptIcon from "@/icons/tech/TypescriptIcon.astro";
             <DjangoIcon />
         </ImageGroup>
         <ImageGroup text="ExpressJs" color="#d4d4d420" hoverColor="#d4d4d490">
-            <ExpressIcon className="text-neutral-300" />
+            <ExpressIcon className="text-neutral-200" />
         </ImageGroup>
         <ImageGroup text="MongoDb" color="#4faa4120" hoverColor="#4faa4190">
             <MongodbIcon />
