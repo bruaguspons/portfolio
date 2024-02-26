@@ -71,7 +71,7 @@ const { gradientName, className, from_color, to_color } = Astro.props;
     });
 </script>
 
-<script define:vars={{ gradientName }}>
+<script is:inline define:vars={{ gradientName }}>
     const handleEvent = (elem, start, isMobile) => {
         if (start) {
             const paths = elem.querySelectorAll("path");

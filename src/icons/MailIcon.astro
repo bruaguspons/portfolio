@@ -15,7 +15,13 @@ const { gradientName, desc, href, target, className, from_color, to_color } =
     Astro.props;
 ---
 
-<IconsBgGradient className={className} desc={desc} href={href} target={target}>
+<IconsBgGradient
+    className={className}
+    desc={desc}
+    href={href}
+    target={target}
+    ariaLabel="Mail button"
+>
     <svg
         class={`gradient-bg-${gradientName} ${className}`}
         stroke="currentColor"

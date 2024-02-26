@@ -4,15 +4,17 @@ interface Props {
     href?: string | undefined;
     target?: string | undefined;
     className?: string | undefined;
+    ariaLabel: string;
 }
 
-const { desc, href, target, className } = Astro.props;
+const { desc, href, target, className, ariaLabel } = Astro.props;
 ---
 
 <a
     href={href}
     target={target}
     class={`flex flex-col items-center group ${className}`}
+    aria-label={ariaLabel}
 >
     <slot />
     {
