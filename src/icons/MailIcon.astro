@@ -42,7 +42,7 @@ const { gradientName, desc, href, target, className, from_color, to_color } =
     >
 </IconsBgGradient>
 
-<script define:vars={{ gradientName }}>
+<script is:inline define:vars={{ gradientName }}>
     const handleEvent = (elem, start, isMobile) => {
         const changeSpan = (elem, start, isMobile) => {
             if (!isMobile) return;
