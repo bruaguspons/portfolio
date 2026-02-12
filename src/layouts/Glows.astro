@@ -17,13 +17,13 @@ const { cantSm = 0, cant = 0, zIndex = -20 } = Astro.props;
     {
         cantSm > 0 &&
             [...Array(cantSm)].map(() => (
-                <div class="w-64 aspect-square rounded-full bg-gradient-radial from-purple-500/95 to-transparent blur-[100px] block sm:hidden" />
+                <div class="w-64 aspect-square rounded-full bg-radial from-purple-500/95 to-transparent blur-[100px] block sm:hidden" />
             ))
     }
     {
         cant > 0 &&
             [...Array(cant)].map(() => (
-                <div class="w-96 aspect-square rounded-full bg-gradient-radial from-purple-500/95 to-transparent blur-[100px] hidden sm:block" />
+                <div class="w-96 aspect-square rounded-full bg-radial from-purple-500/95 to-transparent blur-[100px] hidden sm:block" />
             ))
     }
 </div>

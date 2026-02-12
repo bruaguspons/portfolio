@@ -1,4 +1,5 @@
 ---
+import "@/styles/global.css";
 import Header from "@/components/header/Header.astro";
 import { ViewTransitions } from "astro:transitions";
 import InfoTag from "./socialMedia/InfoTag.astro";
@@ -19,7 +20,7 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "");
 ---
 
 <!doctype html>
-<html lang="en">
+<html class="dark" lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Portfolio bruno pons" />
@@ -70,6 +71,7 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "");
 			content={`${baseUrl}image_preview_2024.png`}
 		/>
 		<title>{title}</title>
+		<link href={`${baseUrl}fonts/montserrat.css`} rel="stylesheet" />
 		<ViewTransitions />
 	</head>
 	<body

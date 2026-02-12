@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    /* PRIMARY BLUE */
+    --color-primary-blue-100: #0072D6;
+    --color-primary-blue-200: #0045B7;
+    --color-primary-blue-300: #380080;
+
+    /* PRIMARY PURPLE */
+    --color-primary-purple-100: #B47CF5;
+    --color-primary-purple-200: #915BD1;
+    --color-primary-purple-300: #6E3CAE;
+
+    /* BACKGROUND */
+    --color-background-100: #eeeef8;
+    --color-background-200: #d1d9dc;
+    --color-background-300: #95989E;
+    --color-background-400: #3a3a3a;
+    --color-background-500: #1f1f1f;
+    --color-background-600: #13151A;
+}
