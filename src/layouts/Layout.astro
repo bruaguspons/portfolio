@@ -1,7 +1,7 @@
 ---
 import "@/styles/global.css";
 import Header from "@/components/header/Header.astro";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import InfoTag from "./socialMedia/InfoTag.astro";
 import SocialMediaPanel from "./socialMedia/SocialMediaPanel.astro";
 import GreyPanel from "./GreyPanel.astro";
@@ -72,7 +72,7 @@ const baseUrl = url.replace(/(es|en)(.*)$/, "");
 		/>
 		<title>{title}</title>
 		<link href={`${baseUrl}fonts/montserrat.css`} rel="stylesheet" />
-		<ViewTransitions />
+		<ClientRouter />
 	</head>
 	<body
 		class="text-neutral-200 font-semibold min-h-screen w-screen bg-background-600 box-border flex flex-col overflow-x-hidden transition ease-in-out duration-150 relative z-0 text-sm sm:text-base"

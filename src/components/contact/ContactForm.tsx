@@ -25,7 +25,7 @@ const ContactForm = ({fields, submitError,submitSuccess, sendText}: Props) => {
     const generalErrorsRef = useRef<HTMLSpanElement>(null)
     const generalSuccessRef = useRef<HTMLSpanElement>(null)
 
-    const handleSubmit = (e:React.FormEvent<HTMLFormElement>) =>{
+    const handleSubmit: React.SubmitEventHandler<HTMLFormElement> = (e) =>{
         e.preventDefault()
         const form = e.target as HTMLFormElement
         let hasErrors = false
