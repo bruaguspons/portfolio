@@ -10,7 +10,7 @@
     "astro": "astro",
     "deploy": "gh-pages -d dist",
     "prepare": "husky",
-    "commit": "npx commitlint-prompt"
+    "commit": "npx --package @commitlint/prompt-cli commitlint-prompt"
   },
   "dependencies": {
     "@astrojs/react": "4.4.2",
