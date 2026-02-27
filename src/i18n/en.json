@@ -12,8 +12,9 @@
     },
     "ABOUT": {
         "TITLE":{
-            "1": "About",
-            "2": "me"
+            "1": "¿Quién ",
+            "2": "soy",
+            "3": "?"
         },
         "CONTENT": [
                 "I am a passionate web developer with over 2 years of experience and a dedicated student at the Faculty of Engineering in Uruguay 🌐. I enjoy building web applications using a wide range of technologies, always striving to create excellent and clean solutions for challenging problems 💻.",
@@ -26,7 +27,7 @@
             }
         }
     },
-    "CAREER": {
+    "EXPERIENCE": {
         "TITLE":{
             "1": "My ",
             "2": "Career"
@@ -39,9 +40,7 @@
                     "As a software developer at Montevideo COMM, I have played a key role in designing and maintaining innovative technological solutions. My expertise is primarily focused on front-end development, using HTML, CSS, and JavaScript, along with GeneXus for back-end implementation.",
                     "Throughout my career, I have been involved in a wide range of projects, contributing to the development of custom applications for clients, as well as internal company projects such as Montevideo Portal."
                 ],
-                "IMAGE_SRC":"/montevideo-comm.webp",
-                "LINK": "/career/montevideo-comm",
-                "SLUG": "montevideo-comm"
+                "IMAGE_SRC":"/montevideo-comm.webp"
             },
             {
                 "DATE": "2021 - Present",
@@ -51,11 +50,31 @@
                     "However, my learning didn't stop in the classrooms. I have dedicated time outside of the curriculum to delve into web application development, exploring various technologies both in the front-end and back-end. This personal initiative has allowed me to expand my skills beyond what is taught in class and develop a comprehensive understanding of web programming.",
                     "Through personal projects and self-directed experimentation, I have strengthened my ability to tackle technical challenges and find innovative solutions."
                 ],
-                "IMAGE_SRC":"/fing.webp",
-                "LINK": "/career/university-projects",
-                "SLUG": "university-projects"
+                "IMAGE_SRC":"/fing.webp"
             }
         ]
+    },
+    "EDUCATION": {
+      "TITLE":{
+            "1": "Mi ",
+            "2": "Educación"
+        },
+        "CONTENT": [
+            "Estoy finalizando la carrera de Ingeniería en Computación en la Universidad de la República, donde previamente obtuve el título intermedio de Analista en Computación. Mi formación académica me ha brindado una base sólida en programación, algoritmos, estructuras de datos, bases de datos e ingeniería de software.",
+            "Complemento estos conocimientos con experiencia práctica en desarrollo de aplicaciones web y la exploración de tecnologías modernas, incluyendo soluciones basadas en inteligencia artificial. Esta combinación entre formación académica, proyectos personales y experiencia profesional me ha permitido desarrollar una visión integral para construir soluciones tecnológicas eficientes, escalables y orientadas a resolver problemas reales."
+        ],
+        "ITEMS": [
+            {
+                "DATE": "2021 - Presente",
+                "TITLE": "Universidad | Proyectos personales",
+                "CONTENT": [
+                    "Durante mi tiempo en la UDELAR, he estado inmerso en la carrera de Ingeniería en Computación, donde he adquirido una base sólida de conocimientos en tecnología y desarrollo web.",
+                    "Sin embargo, mi aprendizaje no se detuvo en las aulas. He dedicado tiempo fuera del plan de estudios para profundizar en la creación de aplicaciones web, explorando diversas tecnologías tanto en el front-end como en el back-end. Esta iniciativa personal me ha permitido expandir mis habilidades más allá de lo enseñado en clase y desarrollar una comprensión integral de la programación web.", 
+                    "A través de proyectos personales y experimentación autodidacta, he fortalecido mi capacidad para enfrentar desafíos técnicos y encontrar soluciones innovadoras."
+                ],
+                "IMAGE_SRC":"/fing.webp"
+            }
+        ]  
     },
     "PROJECTS": {
         "TITLE":{
@@ -95,8 +114,7 @@
     },
     "CONTACT": {
         "TITLE":{
-            "1": "Contact",
-            "2": "me"
+            "1": "Contact"
         },
         "FIELDS":[
             {
