@@ -16,18 +16,32 @@
             "2": "soy",
             "3": "?"
         },
-        "CONTENT": [ 
-            "Desarrollador de software con más de dos años de experiencia en el desarrollo de aplicaciones web y estudiante de la Universidad de la República en Uruguay. Me especializo principalmente en desarrollo web, creando soluciones modernas y eficientes utilizando distintas tecnologías tanto en front-end como en back-end.",
-            "A lo largo de mi experiencia profesional he trabajado en el desarrollo de productos digitales, así como en la integración de soluciones basadas en inteligencia artificial para crear nuevas funcionalidades, automatizar procesos y mejorar la experiencia de usuario en distintas plataformas.",
-            "Me interesa especialmente construir software limpio, escalable y bien diseñado, enfrentando problemas desafiantes y explorando constantemente nuevas herramientas y tecnologías.",
-            "Fuera del trabajo y el estudio, disfruto seguir aprendiendo y perfeccionando mis habilidades resolviendo problemas de programación en plataformas como HackerRank, leyendo sobre tecnología y jugando al Ajedrez."
-        ],
-        "STACK": {
-            "TITLE": {
-                "1": "Tech",
-                "2": "Stack"
-            }
-        }
+        "CONTENT": [
+            [
+            "Desarrollador de software con más de tres años de experiencia en aplicaciones web. Soy ",
+            { "highlight": "Analista en Computación" },
+            " egresado de la Universidad de la República y actualmente me encuentro realizando la ",
+            { "highlight": "tesis de Ingeniería en Computación" },
+            ". Me especializo en desarrollo web, trabajando tanto en ",
+            { "highlight": "front-end" },
+            " como en ",
+            { "highlight": "back-end" },
+            " para crear soluciones modernas y eficientes."
+            ],
+            [
+            "He participado en el desarrollo de productos digitales y en la ",
+            { "highlight": "integración de soluciones basadas en inteligencia artificial" },
+            " para crear nuevas funcionalidades, automatizar procesos y mejorar la experiencia de usuario."
+            ],
+            [
+            "Me interesa especialmente construir ",
+            { "highlight": "software limpio, escalable y bien diseñado" },
+            ", enfrentando problemas desafiantes y explorando constantemente nuevas tecnologías."
+            ],
+            [
+            "Fuera del trabajo y el estudio, disfruto seguir aprendiendo resolviendo problemas en HackerRank, leyendo sobre tecnología y jugando al ajedrez."
+            ]
+        ]
     },
     "EXPERIENCE": {
         "TITLE":{
@@ -39,9 +53,26 @@
                 "DATE": "2023, Ene - Presente",
                 "TITLE": "Montevideo COMM",
                 "CONTENT": [
-                    "Formo parte del equipo de desarrollo de Montevideo COMM, donde participo en el diseño, desarrollo y mantenimiento de soluciones tecnológicas para distintos productos digitales. Mi trabajo se centra principalmente en el desarrollo front-end utilizando HTML, CSS y JavaScript, junto con la implementación de lógica de negocio y servicios mediante GeneXus en el back-end.",
-                    "He colaborado en el desarrollo de aplicaciones personalizadas para clientes y en proyectos internos de la empresa, incluyendo plataformas de alto tráfico como Montevideo Portal. Mi rol implica trabajar en la mejora continua de funcionalidades, optimización de interfaces y mantenimiento de sistemas en producción, contribuyendo a la estabilidad y evolución de los productos digitales de la organización.",
-                    "Además, he participado en numerosos proyectos que integran inteligencia artificial, diseñando y desarrollando funcionalidades basadas en IA para automatizar procesos, mejorar la experiencia de usuario y potenciar las capacidades de distintas plataformas digitales."
+                    [
+                        "Formo parte del equipo de desarrollo de ",
+                        { "highlight": "Montevideo COMM" },
+                        ", donde participo en el diseño, desarrollo y mantenimiento de productos digitales. Mi trabajo se centra en ",
+                        { "highlight": "desarrollo front-end" },
+                        " con HTML, CSS y JavaScript, junto con la implementación de lógica de negocio en GeneXus",
+                        " para el back-end."
+                    ],
+                    [
+                        "He trabajado en aplicaciones para clientes y en proyectos internos como ",
+                        { "highlight": "Montevideo Portal" },
+                        ", colaborando en la mejora de funcionalidades, optimización de interfaces y mantenimiento de sistemas en producción."
+                    ],
+                    [
+                        "También he desarrollado múltiples proyectos integrando ",
+                        { "highlight": "inteligencia artificial" },
+                        ", creando funcionalidades para ",
+                        { "highlight": "automatizar procesos" },
+                        " y mejorar la experiencia de usuario en distintas plataformas."
+                    ]
                 ],
                 "IMAGE_SRC":"/montevideo-comm.webp"
             }
@@ -53,22 +84,36 @@
             "2": "Educación"
         },
         "CONTENT": [
-            "Estoy finalizando la carrera de Ingeniería en Computación en la Universidad de la República, donde previamente obtuve el título intermedio de Analista en Computación. Mi formación académica me ha brindado una base sólida en programación, algoritmos, estructuras de datos, bases de datos e ingeniería de software.",
-            "Complemento estos conocimientos con experiencia práctica en desarrollo de aplicaciones web y la exploración de tecnologías modernas, incluyendo soluciones basadas en inteligencia artificial. Esta combinación entre formación académica, proyectos personales y experiencia profesional me ha permitido desarrollar una visión integral para construir soluciones tecnológicas eficientes, escalables y orientadas a resolver problemas reales."
+            [
+                "Estoy finalizando la carrera de ",
+                { "highlight": "Ingeniería en Computación" },
+                " en la Universidad de la República, donde obtuve previamente el título de ",
+                { "highlight": "Analista en Computación" },
+                ". Mi formación me brindó una base sólida en ",
+                { "highlight": "programación, algoritmos y estructuras de datos" },
+                ", además de bases de datos e ingeniería de software."
+            ],
+            [
+                "Complemento estos conocimientos con experiencia en ",
+                { "highlight": "desarrollo de aplicaciones web" },
+                " y exploración de tecnologías modernas como ",
+                { "highlight": "inteligencia artificial" },
+                ", combinando formación académica, proyectos personales y experiencia profesional para construir soluciones eficientes y escalables."
+            ]
         ],
         "ITEMS": [
             {
                 "DATE": "Mar 2021 - Ene 2026",
                 "TITLE": "Analista en Computación — Universidad de la República",
                 "CONTENT": [
-                    "Título universitario intermedio de la carrera Ingeniería en Computación. Formación sólida en programación, algoritmos, estructuras de datos, bases de datos y fundamentos de ingeniería de software. Durante esta etapa desarrollé múltiples proyectos académicos y personales que me permitieron fortalecer mis habilidades en desarrollo web y resolución de problemas complejos."
+                "Título intermedio de la carrera Ingeniería en Computación. Formación en programación, algoritmos, estructuras de datos y bases de datos, complementada con proyectos académicos que fortalecieron mis habilidades de desarrollo y resolución de problemas."
                 ]
             },
             {
                 "DATE": "Mar 2021 - Dic 2026",
                 "TITLE": "Ingeniería en Computación — Universidad de la República",
                 "CONTENT": [
-                    "Título de grado a recibirse en 2026. Formación integral en ciencias de la computación, arquitectura de software y desarrollo de sistemas. A lo largo de la carrera he complementado los conocimientos académicos con aprendizaje autodidacta y proyectos personales, explorando tecnologías modernas de desarrollo web y soluciones basadas en inteligencia artificial."
+                "Título de grado a recibirse en 2026. Formación en ciencias de la computación, arquitectura de software y desarrollo de sistemas, complementada con aprendizaje autodidacta y proyectos personales."
                 ]
             }
         ]

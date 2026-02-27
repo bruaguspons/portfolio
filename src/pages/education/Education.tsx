@@ -1,5 +1,7 @@
 import Glow from "@/components/Glow";
+import Subtitle from "@/components/Subtitle";
 import TextColor from "@/components/TextColor";
+import TextContent from "@/components/TextContent";
 import Timeline from "@/components/Timeline";
 import { getI18N, LANGUAGES } from "@/i18n";
 import { cn } from "@/lib/utils";
@@ -14,17 +16,13 @@ const Education = ({headerHeight}: Props): React.ReactNode => {
   return (
     <div id="education" className="relative w-full">
       <div className={cn(headerHeight)}></div>
-      <h2 data-aos="fade-right" className="font-extrabold text-[clamp(2rem,6vw,4rem)] leading-none tracking-[-0.11em] whitespace-nowrap mt-4">{i18n.EDUCATION.TITLE["1"]}<TextColor>{i18n.EDUCATION.TITLE["2"]}</TextColor></h2>
+      <Subtitle>{i18n.EDUCATION.TITLE["1"]}<TextColor>{i18n.EDUCATION.TITLE["2"]}</TextColor></Subtitle>
 
-      <div className="mt-6 text-lg flex items-start">
+      <div className="mt-6 flex flex-col md:flex-row items-start">
         
-        <div data-aos="fade-right" className="max-w-4xl text-lg">
-          {i18n.EDUCATION.CONTENT.map((paragraph, index) => (
-            <p key={index} className="mb-4">{paragraph}</p>
-          ))}
-        </div>
+        <TextContent CONTENT={i18n.EDUCATION.CONTENT} />
 
-        <div data-aos="fade-left">
+        <div data-aos="zoom-in">
           <Timeline items={i18n.EDUCATION.ITEMS.map((item) => ({
             title: item.TITLE,
             description: item.CONTENT.join(" "),

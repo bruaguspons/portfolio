@@ -10,7 +10,7 @@ const Glow = ({
   className = ""
 }: Props): React.ReactNode => {
   return (
-    <div className={cn("absolute w-64 aspect-square rounded-full bg-radial to-transparent blur-[100px] -z-10", className)} />
+    <div className={cn("absolute w-48 sm:w-64 aspect-square rounded-full bg-radial to-transparent blur-[100px] -z-10", className)} />
   );
 };
 

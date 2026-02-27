@@ -1,4 +1,4 @@
-import { greyBgSubjectManager } from "@/services/greyBg.srvice";
+import { greyBgSubjectManager } from "@/services/greyBg.service";
 import { useEffect, useState } from "react";
 
 const GreyBg = (): React.ReactNode => {

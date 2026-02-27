@@ -58,21 +58,3 @@ html {
 html {
   -ms-overflow-style: none;
 }
-
-/* ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-  background: #13151a;
-  background-image: url("../icons/noisy.webp");
-}
-::-webkit-scrollbar-thumb {
-  background: #d1d9dc;
-  border-radius: 10px;
-  border: 3px solid #13151a;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #eeeef8;
-}
-::-webkit-scrollbar-corner {
-  display: none;
-} */

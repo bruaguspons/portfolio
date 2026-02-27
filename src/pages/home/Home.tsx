@@ -34,7 +34,7 @@ const Home = ({headerHeight}: Props): React.ReactNode => {
         <div className="w-full flex-1 flex flex-col-reverse sm:flex-row items-center justify-center sm:justify-between max-w-196">
           <FlipTitle />
           <picture
-            className="flex-none w-60 h-60 mb-10 sm:w-72 sm:h-72 relative z-10 flex justify-center items-center"
+            className="flex-none w-60 h-60 sm:w-72 sm:h-72 mb-10 sm:mb-0"
           >
             <img
               className="rounded-full object-cover w-full h-full"

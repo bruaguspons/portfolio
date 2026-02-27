@@ -1,4 +1,5 @@
 import Glow from "@/components/Glow";
+import Subtitle from "@/components/Subtitle";
 import TextColor from "@/components/TextColor";
 import { getI18N, LANGUAGES } from "@/i18n";
 import { cn } from "@/lib/utils";
@@ -14,7 +15,7 @@ const Contact = ({headerHeight}: Props): React.ReactNode => {
   return (
     <div id="contact" className="relative w-full mb-20">
       <div className={cn(headerHeight)}></div>
-      <h2 data-aos="fade-right" className="font-extrabold text-[clamp(2rem,6vw,4rem)] leading-none tracking-[-0.11em] whitespace-nowrap mt-4"><TextColor>{i18n.CONTACT.TITLE["1"]}</TextColor></h2>
+      <Subtitle><TextColor>{i18n.CONTACT.TITLE["1"]}</TextColor></Subtitle>
 
       <div data-aos="zoom-in">
         <ContactForm 

@@ -23,7 +23,7 @@ const IconsBgGradient: React.FC<Props> = ({
       {children}
 
       {desc && (
-        <span className="bg-clip-text bg-linear-to-r group-hover:from-blue-500 group-hover:to-sky-500 group-hover:text-transparent text-xl font-semibold">
+        <span className="bg-clip-text bg-linear-to-r group-hover:from-blue-500 group-hover:to-sky-500 group-hover:text-transparent text-xl font-semibold group-active:from-blue-500 group-active:to-sky-500 group-active:text-transparent">
           {desc}
         </span>
       )}

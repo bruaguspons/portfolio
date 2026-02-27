@@ -1,4 +1,4 @@
-import { greyBgSubjectManager } from "@/services/greyBg.srvice";
+import { greyBgSubjectManager } from "@/services/greyBg.service";
 
 const CloseSocialMediaPanel = (): React.ReactNode => {
   return (

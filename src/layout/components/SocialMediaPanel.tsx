@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { greyBgSubjectManager } from "@/services/greyBg.srvice";
+import { greyBgSubjectManager } from "@/services/greyBg.service";
 import CloseSocialMediaPanel from "@/layout/components/CloseSocialMediaPanel";
 import GradientIcon from "@/layout/icons/GradientIcon";
 

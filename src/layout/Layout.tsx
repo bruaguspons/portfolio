@@ -1,6 +1,6 @@
 import Footer from "@/layout/components/Footer";
 import GreyBg from "@/layout/components/GreyBg";
-import Header from "@/layout/components/Header";
+import Header from "@/layout/components/Header/Header";
 import InfoTag from "@/layout/components/InfoTag";
 import SocialMediaPanel from "@/layout/components/SocialMediaPanel";
 import type { ClassValue } from "clsx";
