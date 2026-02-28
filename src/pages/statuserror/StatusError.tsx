@@ -19,7 +19,7 @@ const StatusError = ({ statusCode, message, headerHeight }: Props): React.ReactN
     : message || "Ocurrió un error inesperado.";
 
   return (
-    <Layout className="min-h-screen" headerHeight={headerHeight} showExtras={false}>
+    <Layout className="min-h-dvh" headerHeight={headerHeight} showExtras={false}>
       <div className="w-full h-full flex flex-col items-center justify-center text-center px-6">
         <div className="max-w-xl">
 

@@ -27,7 +27,7 @@ const Home = ({headerHeight}: Props): React.ReactNode => {
   AOS.init();
 
   return (
-    <Section id="home" className="h-screen min-h-screen flex flex-col" headerHeight={headerHeight}>
+    <Section id="home" className="h-dvh min-h-dvh flex flex-col" headerHeight={headerHeight}>
       <div className="grow flex flex-col items-center ">
         <div className="w-full flex-1 flex flex-col-reverse md:flex-row items-center justify-center md:justify-between max-w-196">
           <FlipTitle />
