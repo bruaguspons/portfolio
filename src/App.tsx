@@ -41,7 +41,9 @@ const App = (): React.ReactNode => {
           element: <StatusError statusCode={404} headerHeight={headerHeight} />,
           errorElement: <StatusError statusCode={500} headerHeight={headerHeight} />,
         }
-      ])} />
+      ], {
+        basename: "/portfolio"
+      })} />
     </Suspense>
   );
 };

@@ -23,22 +23,22 @@ const Projects = ({ headerHeight }: Props): React.ReactNode => {
   const LIST_OF_PROJECTS = [
     {
       title: "Chess Game",
-      imgUrl: "/projects/chess-icon.png",
+      imgUrl: "/portfolio/projects/chess-icon.png",
       link: "https://github.com/bruaguspons/chess"
     },
     {
       title: "Spotify Clone",
-      imgUrl: "/projects/spotify-icon.svg",
+      imgUrl: "/portfolio/projects/spotify-icon.svg",
       link: "https://github.com/bruaguspons/spotify-clone-react"
     },
     {
       title: "Space Invaders",
-      imgUrl: "/projects/space-icon.svg",
+      imgUrl: "/portfolio/projects/space-icon.svg",
       link: "https://github.com/bruaguspons/SpaceInvaders"
     },
     {
       title: "Design Patterns",
-      imgUrl: "/projects/go-icon.svg",
+      imgUrl: "/portfolio/projects/go-icon.svg",
       link: "https://github.com/bruaguspons/design-patterns"
     }
   ];

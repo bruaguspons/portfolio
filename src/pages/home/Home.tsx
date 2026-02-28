@@ -36,7 +36,7 @@ const Home = ({headerHeight}: Props): React.ReactNode => {
           >
             <img
               className="rounded-full object-cover w-full h-full"
-              src={"/bruno_pons.jpg"}
+              src={"/portfolio/bruno_pons.jpg"}
               alt="bruno pons"
             />
           </picture>
