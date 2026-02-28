@@ -8,7 +8,7 @@ interface Props {
 
 const Subtitle = ({children, className}: Props): React.ReactNode => {
   return (
-    <h2 data-aos="fade-right" className={cn("font-extrabold text-[clamp(2rem,4vw,6rem)] leading-none tracking-[-0.080em] whitespace-nowrap mt-4 mb-6", className)}>{children}</h2>
+    <h2 data-aos="fade-right" className={cn("font-extrabold text-3xl sm:text-5xl leading-none tracking-[-0.080em] whitespace-nowrap mt-4 mb-6", className)}>{children}</h2>
   );
 };
 export default Subtitle;

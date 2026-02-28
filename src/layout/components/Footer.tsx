@@ -1,4 +1,4 @@
-const Footer = () => {
+const Footer = (): React.ReactNode => {
   return (
     <footer className="w-full bg-zinc-900 z-0">
       <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -12,7 +12,6 @@ const Footer = () => {
             href="https://github.com/bruaguspons"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-neutral-300 transition"
           >
             GitHub
           </a>
@@ -21,14 +20,12 @@ const Footer = () => {
             href="https://www.linkedin.com/in/brunopons/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-neutral-300 transition"
           >
             LinkedIn
           </a>
 
           <a
             href="mailto:bruaguspons@gmail.com"
-            className="hover:text-neutral-300 transition"
           >
             Email
           </a>
@@ -36,7 +33,7 @@ const Footer = () => {
 
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

@@ -7,7 +7,7 @@ const words = [
   { text: "Engineer", className: "from-purple-500 to-pink-500" },
 ];
 
-const FlipTitle = () => {
+const FlipTitle = (): React.ReactNode => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -15,13 +15,13 @@ const FlipTitle = () => {
       setIndex((i) => (i + 1) % words.length);
     }, 2500);
 
-    return () => clearInterval(interval);
+    return (): void => clearInterval(interval);
   }, []);
 
   const current = words[index];
 
   return (
-    <h1 className="font-extrabold text-[clamp(3rem,6vw,10rem)] leading-none tracking-[-.08em] text-center sm:text-start">
+    <h1 className="font-extrabold text-5xl md:text-7xl leading-none tracking-[-.08em] text-center sm:text-start">
       Software<br />
       <span className="inline-block perspective-[1000px]">
         <AnimatePresence mode="wait">
@@ -42,5 +42,5 @@ const FlipTitle = () => {
       </span>
     </h1>
   );
-}
-export default FlipTitle
+};
+export default FlipTitle;

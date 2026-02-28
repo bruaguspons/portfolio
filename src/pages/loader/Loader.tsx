@@ -7,7 +7,7 @@ interface Props {
 
 const Loader = ({ headerHeight }: Props): React.ReactNode => {
   return (
-    <Layout headerHeight={headerHeight } showExtras={false}>
+    <Layout className="min-h-screen" headerHeight={ headerHeight } showExtras={false}>
       <div className="w-full h-full flex flex-col items-center justify-center">
         <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-zinc-300" />
       </div>

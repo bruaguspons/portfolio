@@ -3,6 +3,7 @@ import { greyBgSubjectManager } from "@/services/greyBg.service";
 const CloseSocialMediaPanel = (): React.ReactNode => {
   return (
     <button
+      aria-label="Close social media panel"
       onClick={() => greyBgSubjectManager.setSubject(false)}
       className="w-8 sm:w-6 aspect-square m-[10%] fixed group cursor-pointer"
     >

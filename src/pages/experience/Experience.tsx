@@ -21,15 +21,15 @@ const Experience = ({headerHeight}: Props): React.ReactNode => {
       {i18n.EXPERIENCE.ITEMS.map((item, index) => (
         <div key={index} className="flex gap-10 flex-col md:flex-row">
           <div data-aos="fade-right" className="flex flex-col items-center">
-            <picture className="flex-none w-60 h-60">
+            <picture className="flex-none w-52 h-52 sm:w-60 sm:h-60">
               <img
                 className="rounded-xl object-cover w-full h-full"
                 src={item.IMAGE_SRC}
                 alt="bruno pons"
               />
             </picture>
-            <h3 className="text-neutral-200 text-sm font-bold mb-1">{item.DATE}</h3>
-            <h4 className="text-neutral-200 text-sm font-semibold mb-1">{item.TITLE}</h4>
+            <h3 className="text-neutral-200 text-sm font-bold mt-1">{item.DATE}</h3>
+            <h4 className="text-neutral-200 text-sm font-semibold mt-1">{item.TITLE}</h4>
           </div>
             
           <TextContent CONTENT={item.CONTENT} />

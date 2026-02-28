@@ -34,7 +34,7 @@ const ContactInput = ({
 
 
   const baseClass: ClassValue =
-    "w-full rounded-xl px-4 py-3 bg-white/5 border backdrop-blur-md text-white placeholder-white/50 transition-all duration-300 focus:outline-none";
+    "w-full rounded-xl px-4 py-3 bg-white/5 border backdrop-blur-md placeholder-white/50 transition-all duration-300 focus:outline-none";
 
   const errorClass: ClassValue = error
     ? "border-red-400"
@@ -45,7 +45,7 @@ const ContactInput = ({
 
       <label
         htmlFor={id}
-        className="text-sm text-white/80 font-medium"
+        className="text-sm font-medium"
       >
         {label}
         {required && <span className="text-red-400"> *</span>}

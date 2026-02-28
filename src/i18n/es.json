@@ -1,15 +1,4 @@
 {
-    "HOME": {
-        "GREETING": "Hola, soy Bruno Pons 👋",
-        "PROFESSION": {
-            "1": "Soy un",
-            "2": "Full-Stack",
-            "3": "Developer."
-        },
-        "DESCRIPTION": "Me especializo en proporcionar soluciones integrales y efectivas full-stack. Gran dominio de los frameworks de front-end, hábil en desarrollo de back-end y me enfoco en lograr una integración fluida.",
-        "CAREER": "Mi carrera",
-        "PROJECTS": "Mis proyectos"
-    },
     "ABOUT": {
         "TITLE":{
             "1": "¿Quién ",
@@ -18,10 +7,12 @@
         },
         "CONTENT": [
             [
-            "Desarrollador de software con más de tres años de experiencia en aplicaciones web. Soy ",
+            "Soy Bruno, un desarrollador de software con más de ",
+            { "highlight": "tres años" },
+            " de experiencia en aplicaciones web. Soy ",
             { "highlight": "Analista en Computación" },
-            " egresado de la Universidad de la República y actualmente me encuentro ",
-            { "highlight": "realizando la tesis de Ingeniería en Computación" },
+            " egresado de la Universidad de la República y actualmente me encuentro realizando la ",
+            { "highlight": "tesis de Ingeniería en Computación" },
             ". Me especializo en desarrollo web, trabajando tanto en ",
             { "highlight": "front-end" },
             " como en ",

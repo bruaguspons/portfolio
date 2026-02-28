@@ -1,132 +1,123 @@
 {
-    "HOME": {
-        "GREETING": "Hola, soy Bruno Pons 👋",
-        "PROFESSION": {
-            "1": "Soy un",
-            "2": "Full-Stack",
-            "3": "Developer."
-        },
-        "DESCRIPTION": "Me especializo en proporcionar soluciones integrales y efectivas full-stack. Gran dominio de los frameworks de front-end, hábil en desarrollo de back-end y me enfoco en lograr una integración fluida.",
-        "CAREER": "Mi carrera",
-        "PROJECTS": "Mis proyectos"
-    },
     "ABOUT": {
-        "TITLE":{
-            "1": "¿Quién ",
-            "2": "soy",
+        "TITLE": {
+            "1": "Who ",
+            "2": "am I",
             "3": "?"
         },
         "CONTENT": [
             [
-            "Desarrollador de software con más de tres años de experiencia en aplicaciones web. Soy ",
-            { "highlight": "Analista en Computación" },
-            " egresado de la Universidad de la República y actualmente me encuentro ",
-            { "highlight": "realizando la tesis de Ingeniería en Computación" },
-            ". Me especializo en desarrollo web, trabajando tanto en ",
-            { "highlight": "front-end" },
-            " como en ",
-            { "highlight": "back-end" },
-            " para crear soluciones modernas y eficientes."
+                "I'm Bruno, a software developer with more than ",
+                { "highlight": "three years" },
+                " of experience in web applications. I hold a degree as a ",
+                { "highlight": "Computer Science Analyst" },
+                " from Universidad de la República and I am currently working on my ",
+                { "highlight": "Computer Engineering thesis" },
+                ". I specialize in web development, working on both ",
+                { "highlight": "front-end" },
+                " and ",
+                { "highlight": "back-end" },
+                " to create modern and efficient solutions."
             ],
             [
-            "He participado en el desarrollo de productos digitales y en la ",
-            { "highlight": "integración de soluciones basadas en inteligencia artificial" },
-            " para crear nuevas funcionalidades, automatizar procesos y mejorar la experiencia de usuario."
+                "I have participated in the development of digital products and in the ",
+                { "highlight": "integration of artificial intelligence–based solutions" },
+                " to create new features, automate processes, and improve user experience."
             ],
             [
-            "Me interesa especialmente construir ",
-            { "highlight": "software limpio, escalable y bien diseñado" },
-            ", enfrentando problemas desafiantes y explorando constantemente nuevas tecnologías."
+                "I am especially interested in building ",
+                { "highlight": "clean, scalable, and well-designed software" },
+                ", tackling challenging problems and constantly exploring new technologies."
             ],
             [
-            "Fuera del trabajo y el estudio, disfruto seguir aprendiendo resolviendo problemas en HackerRank, leyendo sobre tecnología y jugando al ajedrez."
+                "Outside of work and study, I enjoy continuing to learn by solving problems on HackerRank, reading about technology, and playing chess."
             ]
         ]
     },
     "EXPERIENCE": {
-        "TITLE":{
-            "1": "Experiencia ",
-            "2": "Laboral"
+        "TITLE": {
+            "1": "Work ",
+            "2": "Experience"
         },
         "ITEMS": [
             {
-                "DATE": "2023, Ene - Presente",
+                "DATE": "Jan 2023 - Present",
                 "TITLE": "Montevideo COMM",
                 "CONTENT": [
                     [
-                        "Formo parte del equipo de desarrollo de ",
+                        "I am part of the development team at ",
                         { "highlight": "Montevideo COMM" },
-                        ", donde participo en el diseño, desarrollo y mantenimiento de productos digitales. Mi trabajo se centra en ",
-                        { "highlight": "desarrollo front-end" },
-                        " con HTML, CSS y JavaScript, junto con la implementación de lógica de negocio en GeneXus",
-                        " para el back-end."
+                        ", where I participate in the design, development, and maintenance of digital products. My work focuses on ",
+                        { "highlight": "front-end development" },
+                        " with HTML, CSS, and JavaScript, along with implementing business logic in GeneXus",
+                        " for the back-end."
                     ],
                     [
-                        "He trabajado en aplicaciones para clientes y en proyectos internos como ",
+                        "I have worked on applications for clients and on internal projects such as ",
                         { "highlight": "Montevideo Portal" },
-                        ", colaborando en la mejora de funcionalidades, optimización de interfaces y mantenimiento de sistemas en producción."
+                        ", collaborating in improving features, optimizing interfaces, and maintaining systems in production."
                     ],
                     [
-                        "También he desarrollado múltiples proyectos integrando ",
-                        { "highlight": "inteligencia artificial" },
-                        ", creando funcionalidades para ",
-                        { "highlight": "automatizar procesos" },
-                        " y mejorar la experiencia de usuario en distintas plataformas."
+                        "I have also developed multiple projects integrating ",
+                        { "highlight": "artificial intelligence" },
+                        ", creating features to ",
+                        { "highlight": "automate processes" },
+                        " and improve user experience across different platforms."
                     ]
                 ],
-                "IMAGE_SRC":"/montevideo-comm.webp"
+                "IMAGE_SRC": "/montevideo-comm.webp"
             }
         ]
     },
     "EDUCATION": {
-      "TITLE":{
-            "1": "Mi ",
-            "2": "Educación"
+        "TITLE": {
+            "1": "My ",
+            "2": "Education"
         },
         "CONTENT": [
             [
-                "Estoy finalizando la carrera de ",
-                { "highlight": "Ingeniería en Computación" },
-                " en la Universidad de la República, donde obtuve previamente el título de ",
-                { "highlight": "Analista en Computación" },
-                ". Mi formación me brindó una base sólida en ",
-                { "highlight": "programación, algoritmos y estructuras de datos" },
-                ", además de bases de datos e ingeniería de software."
+                "I am currently finishing my degree in ",
+                { "highlight": "Computer Engineering" },
+                " at Universidad de la República, where I previously obtained the title of ",
+                { "highlight": "Computer Science Analyst" },
+                ". My education provided me with a solid foundation in ",
+                { "highlight": "programming, algorithms, and data structures" },
+                ", as well as databases and software engineering."
             ],
             [
-                "Complemento estos conocimientos con experiencia en ",
-                { "highlight": "desarrollo de aplicaciones web" },
-                " y exploración de tecnologías modernas como ",
-                { "highlight": "inteligencia artificial" },
-                ", combinando formación académica, proyectos personales y experiencia profesional para construir soluciones eficientes y escalables."
+                "I complement this knowledge with experience in ",
+                { "highlight": "web application development" },
+                " and exploration of modern technologies such as ",
+                { "highlight": "artificial intelligence" },
+                ", combining academic training, personal projects, and professional experience to build efficient and scalable solutions."
             ]
         ],
         "ITEMS": [
             {
-                "DATE": "Mar 2021 - Ene 2026",
-                "TITLE": "Analista en Computación — Universidad de la República",
+                "DATE": "Mar 2021 - Jan 2026",
+                "TITLE": "Computer Science Analyst — Universidad de la República",
                 "CONTENT": [
-                "Título intermedio de la carrera Ingeniería en Computación. Formación en programación, algoritmos, estructuras de datos y bases de datos, complementada con proyectos académicos que fortalecieron mis habilidades de desarrollo y resolución de problemas."
+                    "Intermediate degree within the Computer Engineering program. Training in programming, algorithms, data structures, and databases, complemented with academic projects that strengthened my development and problem-solving skills."
                 ]
             },
             {
-                "DATE": "Mar 2021 - Dic 2026",
-                "TITLE": "Ingeniería en Computación — Universidad de la República",
+                "DATE": "Mar 2021 - Dec 2026",
+                "TITLE": "Computer Engineering — Universidad de la República",
                 "CONTENT": [
-                "Título de grado a recibirse en 2026. Formación en ciencias de la computación, arquitectura de software y desarrollo de sistemas, complementada con aprendizaje autodidacta y proyectos personales."
+                    "Bachelor’s degree expected in 2026. Education in computer science, software architecture, and systems development, complemented with self-learning and personal projects."
                 ]
             }
         ]
     },
     "PROJECTS": {
-        "TITLE":{
-            "1": "Mis ",
-            "2": "Proyectos"
+        "TITLE": {
+            "1": "My ",
+            "2": "Projects"
         },
         "ITEMS": [
             {
                 "TITLE": "Spotify Clone",
-                "CONTENT": "Un clon simplificado de la aplicacion de Spotify, creado con TypeScript + React + Express",
+                "CONTENT": "A simplified clone of the Spotify application, built with TypeScript + React + Express.",
                 "IMAGE_URL": "/spotifyClone.webp",
                 "GITHUB_URL": "https://github.com/bruaguspons/spotify-clone-react",
                 "APP_URL": "",
@@ -134,7 +125,7 @@
             },
             {
                 "TITLE": "Space Invader",
-                "CONTENT": "Recreado a partir del clásico juego de arcade Space Invaders, hecho enteramente con TypeScript.",
+                "CONTENT": "Recreated from the classic arcade game Space Invaders, built entirely with TypeScript.",
                 "IMAGE_URL": "/spaceInvaders.webp",
                 "GITHUB_URL": "https://github.com/bruaguspons/SpaceInvaders",
                 "APP_URL": "https://bruaguspons.github.io/SpaceInvaders/",
@@ -142,26 +133,26 @@
             },
             {
                 "TITLE": "Chess + AI",
-                "CONTENT": "El juego de ajedrez habitual, pero los movimientos de la computadora se realizan con inteligencia artificial.",
+                "CONTENT": "The classic chess game, but the computer moves are powered by artificial intelligence.",
                 "IMAGE_URL": "/knight.svg",
                 "GITHUB_URL": "",
                 "APP_URL": "",
                 "COMMING_SOON": true
             }
         ],
-        "COMMING_SOON_TEXT": "Próximamente ...",
-        "GITHUB_MORE_INFO": "Para más información, checkea el código haciendo click en la imagen de abajo:",
-        "APP_MORE_INFO": "Haciendo click en el botón de abajo, puedes probar la aplicación:",
-        "APP_BUTTON_TEXT": "Pruébala!"
+        "COMMING_SOON_TEXT": "Coming soon...",
+        "GITHUB_MORE_INFO": "For more information, check the code by clicking the image below:",
+        "APP_MORE_INFO": "Click the button below to try the application:",
+        "APP_BUTTON_TEXT": "Try it!"
     },
     "CONTACT": {
-        "TITLE":{
-            "1": "Contáctame"
+        "TITLE": {
+            "1": "Contact me"
         },
-        "FIELDS":[
+        "FIELDS": [
             {
                 "ID": "name",
-                "LABEL": "Nombre",
+                "LABEL": "First name",
                 "AUTOCOMPLETE": "given-name",
                 "TYPE": "text",
                 "REQUIRED": false,
@@ -172,7 +163,7 @@
             },
             {
                 "ID": "lastName",
-                "LABEL": "Apellido",
+                "LABEL": "Last name",
                 "AUTOCOMPLETE": "family-name",
                 "TYPE": "text",
                 "REQUIRED": false,
@@ -181,35 +172,35 @@
                     "format": ""
                 }
             },
-             {
+            {
                 "ID": "email",
                 "LABEL": "Email",
                 "AUTOCOMPLETE": "email",
                 "TYPE": "email",
                 "REQUIRED": true,
                 "ERRORS": {
-                    "empty": "El campo Email no debe estar vacío.",
-                    "format": "El formato del Email no es correcto."
+                    "empty": "The Email field must not be empty.",
+                    "format": "The Email format is not correct."
                 }
             },
             {
                 "ID": "message",
-                "LABEL": "Mensaje",
+                "LABEL": "Message",
                 "AUTOCOMPLETE": "off",
                 "TYPE": "textarea",
                 "REQUIRED": true,
                 "ERRORS": {
-                    "empty": "El campo Mensaje no debe estar vacío.",
+                    "empty": "The Message field must not be empty.",
                     "format": ""
                 }
             }
         ],
-        "SUBMIT_ERROR": "Ha ocurrido un error. Por favor, inténtalo de nuevo más tarde.",
-        "SUBMIT_SUCCESS": "¡Tu correo se ha enviado correctamente! Te responderé lo antes posible. ¡Gracias por ponerte en contacto!",
-        "SEND_TEXT": "Enviar"
+        "SUBMIT_ERROR": "An error has occurred. Please try again later.",
+        "SUBMIT_SUCCESS": "Your email has been sent successfully! I will reply as soon as possible. Thank you for reaching out!",
+        "SEND_TEXT": "Send"
     },
-    "SETTINGS":{
-        "THEME_SWITCH":"Cambia el tema:",
-        "LANGUAGE_SWITCH":"Cambia el lenguaje:"
+    "SETTINGS": {
+        "THEME_SWITCH": "Change theme:",
+        "LANGUAGE_SWITCH": "Change language:"
     }
 }

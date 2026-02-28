@@ -29,10 +29,10 @@ const Home = ({headerHeight}: Props): React.ReactNode => {
   return (
     <Section id="home" className="h-screen min-h-screen flex flex-col" headerHeight={headerHeight}>
       <div className="grow flex flex-col items-center ">
-        <div className="w-full flex-1 flex flex-col-reverse sm:flex-row items-center justify-center sm:justify-between max-w-196">
+        <div className="w-full flex-1 flex flex-col-reverse md:flex-row items-center justify-center md:justify-between max-w-196">
           <FlipTitle />
           <picture
-            className="flex-none w-60 h-60 sm:w-72 sm:h-72 mb-10 sm:mb-0"
+            className="flex-none w-60 h-60 md:w-72 md:h-72 mb-10 md:mb-0"
           >
             <img
               className="rounded-full object-cover w-full h-full"
