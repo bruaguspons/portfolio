@@ -12,12 +12,12 @@ import React from "@/pages/home/icons/React";
 import Redux from "@/pages/home/icons/Redux";
 import Tailwindcss from "@/pages/home/icons/Tailwindcss";
 import Typescript from "@/pages/home/icons/Typescript";
-import { cn } from "@/lib/utils";
 import type { ClassValue } from "clsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import FlipTitle from "@/pages/home/components/FlipTitle";
 import Postgresql from "@/pages/home/icons/Postgresql";
+import Section from "@/components/Section";
 
 interface Props {
   headerHeight: ClassValue;
@@ -27,9 +27,7 @@ const Home = ({headerHeight}: Props): React.ReactNode => {
   AOS.init();
 
   return (
-    <div id="home" className="relative w-full h-screen min-h-screen flex flex-col">
-      <div className={cn(headerHeight)}></div>
-
+    <Section id="home" className="h-screen min-h-screen flex flex-col" headerHeight={headerHeight}>
       <div className="grow flex flex-col items-center ">
         <div className="w-full flex-1 flex flex-col-reverse sm:flex-row items-center justify-center sm:justify-between max-w-196">
           <FlipTitle />
@@ -69,7 +67,7 @@ const Home = ({headerHeight}: Props): React.ReactNode => {
       <Glow className="from-blue-500/95 left-0 top-0"/>
       <Glow className="from-blue-500/95 right-0 bottom-0"/>
 
-    </div>
+    </Section>
   );
 };
 export default Home;

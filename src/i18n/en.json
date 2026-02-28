@@ -163,18 +163,22 @@
                 "ID": "name",
                 "LABEL": "Nombre",
                 "AUTOCOMPLETE": "given-name",
-                "TYPE": null,
+                "TYPE": "text",
                 "REQUIRED": false,
                 "ERRORS": {
+                    "empty": "",
+                    "format": ""
                 }
             },
             {
                 "ID": "lastName",
                 "LABEL": "Apellido",
                 "AUTOCOMPLETE": "family-name",
-                "TYPE": null,
+                "TYPE": "text",
                 "REQUIRED": false,
                 "ERRORS": {
+                    "empty": "",
+                    "format": ""
                 }
             },
              {
@@ -188,14 +192,15 @@
                     "format": "El formato del Email no es correcto."
                 }
             },
-             {
+            {
                 "ID": "message",
                 "LABEL": "Mensaje",
-                "AUTOCOMPLETE": "",
+                "AUTOCOMPLETE": "off",
                 "TYPE": "textarea",
                 "REQUIRED": true,
                 "ERRORS": {
-                    "empty": "El campo Mensaje no debe estar vacío."
+                    "empty": "El campo Mensaje no debe estar vacío.",
+                    "format": ""
                 }
             }
         ],

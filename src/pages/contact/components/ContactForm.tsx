@@ -1,119 +1,76 @@
-import ButtonSubmit from "@/pages/contact/components/ButtonSubmit";
-import ContactInput from "@/pages/contact/components/ContactInput";
-import type { InputError } from "@/pages/contact/types/errorsType";
-import validateInput from "@/pages/contact/utils/validateInput";
-import { fadeIn, fadeOut } from "@/pages/contact/utils/fade";
-import { useRef } from "react";
-import doSubmit from "@/pages/contact/utils/doSubmit";
-
-interface Field {
-    id: string;
-    label: string;
-    autocomplete: string;
-    type: "textarea" | "email" | null | undefined;
-    required: boolean | null;
-    errors?: InputError;
-}
+import ButtonSubmit from "./ButtonSubmit";
+import ContactInput from "./ContactInput";
+import { useContactForm } from "../hooks/useContactForm";
+import type { Field } from "@/pages/contact/types/contact";
 
 interface Props {
-    fields: Field[];
-    submitError: string;
-    submitSuccess:string
-    sendText: string;
+  fields: Field[];
+  submitError: string;
+  submitSuccess: string;
+  sendText: string;
 }
 
-const ContactForm = ({fields, submitError,submitSuccess, sendText}: Props): React.ReactNode => {
+const ContactForm = ({
+  fields,
+  submitError,
+  submitSuccess,
+  sendText
+}: Props): React.ReactNode => {
 
-  const generalErrorsRef = useRef<HTMLSpanElement>(null);
-  const generalSuccessRef = useRef<HTMLSpanElement>(null);
+  const form = useContactForm(fields, {
+    success: submitSuccess,
+    error: submitError
+  });
 
-  const handleSubmit: React.SubmitEventHandler<HTMLFormElement> = (e) =>{
-    e.preventDefault();
-    const form = e.target as HTMLFormElement;
-    let hasErrors = false;
-
-    try {
-
-      fadeOut(generalErrorsRef.current as HTMLSpanElement);
-      fadeOut(generalSuccessRef.current as HTMLSpanElement);
-
-
-      const data = new FormData(form);
-      const message = (data.get("message") as string) ?? "";
-      const email = (data.get("email") as string) ?? "";
-      const name = (data.get("name") as string) ?? "";
-      const lastName = (data.get("lastName") as string) ?? "";
-
-      for (const field of fields) {
-        if (field.id === "email")
-          hasErrors = validateInput(field.type, email, field.errors, `${field.id}-error`);
-        if (field.id === "message")
-          hasErrors = validateInput(field.type, message, field.errors, `${field.id}-error`);
-      }
-
-      if (!hasErrors) {
-        data.set(
-          "message",
-          JSON.stringify({ message, name, lastName }),
-        );
-
-        const dataJson = {
-          email: email,
-          message: JSON.stringify({
-            name,
-            lastName,
-            message,
-          }),
-        };
-
-        doSubmit(JSON.stringify(dataJson))
-          .then(ok => {
-            if (!ok) {
-              fadeIn(generalErrorsRef.current as HTMLSpanElement, submitError);
-            } else {
-              form.reset();
-              fadeIn(generalSuccessRef.current as HTMLSpanElement, submitSuccess);
-            }
-          })
-          .catch(error => {
-            console.error("Error al enviar el formulario:", error);
-            fadeIn(generalErrorsRef.current as HTMLSpanElement, submitError);
-          });
-      }
-    } catch (error) {
-      if (error instanceof Error) {
-        console.error("Error al enviar el formulario:", error.message);
-        fadeIn(generalErrorsRef.current as HTMLSpanElement, submitError);
-      }
-    }
-  };
   return (
     <form
-      id="form-contact"
-      method="POST"
-      className="flex flex-col items-center gap-4 w-full"
+      onSubmit={form.handleSubmit}
+      className="w-full max-w-xl p-8 grid grid-cols-1 md:grid-cols-2 gap-6 rounded-2xl backdrop-blur-xl bg-white/10 border border-white/20 shadow-xl"
       noValidate
-      onSubmit={handleSubmit}
     >
-      {
-        fields.map((field) => (
-          <ContactInput
+      {fields.map((field, index) => {
+
+        const isTextarea = field.type === "textarea";
+        const nextFieldNotIsText = fields[index + 1]?.type !== "text";
+        const isOdd = index % 2 == 0;
+
+        const fullWidth = isTextarea || (isOdd && nextFieldNotIsText);
+
+        return (
+          <div
             key={field.id}
-            id={field.id}
-            label={field.label}
-            autocomplete={field.autocomplete}
-            type={field.type}
-            required={field.required}
-            errors={field.errors}
-          />
-        ))
-      }
+            className={fullWidth ? "md:col-span-2" : ""}
+          >
+            <ContactInput
+              {...field}
+              value={form.values[field.id]}
+              error={form.errors[field.id]}
+              onChange={form.handleChange}
+              onBlur={form.handleBlur}
+            />
+          </div>
+        );
+      })}
 
-      <span ref={generalErrorsRef} id="generalErrors" style={{display:"none"}} className="text-red-400 my-2"></span>
-      <span ref={generalSuccessRef} id="generalErrors" style={{display:"none"}} className="text-green-500 my-2"></span>
+      {form.generalMessage?.success && (
+        <div className="md:col-span-2 fade-in text-center text-sm text-green-400 bg-green-900/10 border border-green-400/20 backdrop-blur-md rounded-lg p-3">
+          {form.generalMessage.success}
+        </div>
+      )}
 
-      <ButtonSubmit>{sendText}</ButtonSubmit>
+      {form.generalMessage?.error && (
+        <div className="md:col-span-2 fade-in text-center text-sm text-red-400 bg-red-900/10 border border-red-400/20 backdrop-blur-md rounded-lg p-3">
+          {form.generalMessage.error}
+        </div>
+      )}
+
+      <div className="md:col-span-2">
+        <ButtonSubmit loading={form.loading}>
+          {sendText}
+        </ButtonSubmit>
+      </div>
     </form>
   );
 };
+
 export default ContactForm;

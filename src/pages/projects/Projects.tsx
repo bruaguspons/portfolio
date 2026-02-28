@@ -3,9 +3,9 @@ import Glow from "@/components/Glow";
 import Subtitle from "@/components/Subtitle";
 import TextColor from "@/components/TextColor";
 import { getI18N, LANGUAGES } from "@/i18n";
-import { cn } from "@/lib/utils";
-import ProjectItem from "@/pages/projects/components/ProJectItem";
+import ProjectItem from "@/pages/projects/components/ProjectItem";
 import type { ClassValue } from "clsx";
+import Section from "@/components/Section";
 
 interface Props {
   headerHeight: ClassValue;
@@ -55,8 +55,7 @@ const Projects = ({ headerHeight }: Props): React.ReactNode => {
       };
 
   return (
-    <div id="projects" className="relative w-full">
-      <div className={cn(headerHeight)}></div>
+    <Section id="projects" headerHeight={headerHeight}>
 
       <Subtitle>
         {i18n.PROJECTS.TITLE["1"]}
@@ -65,7 +64,7 @@ const Projects = ({ headerHeight }: Props): React.ReactNode => {
 
       <div
         data-aos="zoom-in"
-        className="relative grid grid-cols-1 gap-4 px-4 mx-auto mt-10 sm:grid-cols-2 lg:grid-cols-3 md:px-8"
+        className="relative grid grid-cols-1 gap-4 px-4 mx-auto sm:grid-cols-2 lg:grid-cols-3 md:px-8"
       >
         {LIST_OF_PROJECTS.map((project, index) => (
           <ProjectItem
@@ -88,7 +87,7 @@ const Projects = ({ headerHeight }: Props): React.ReactNode => {
 
       <Glow className="from-teal-500/95 left-0 top-0 translate-x-1/2 translate-y-1/2" />
       <Glow className="from-teal-500/95 right-0 bottom-0 -translate-x-1/2 " />
-    </div>
+    </Section>
   );
 };
 

@@ -13,7 +13,7 @@ interface Props {
   fill?: string;
 }
 
-const GradientIcon: React.FC<Props> = ({
+const GradientIcon = ({
   children,
   gradientName,
   desc,
@@ -23,7 +23,7 @@ const GradientIcon: React.FC<Props> = ({
   className,
   viewBox = "0 0 1024 1024",
   fill
-}) => {
+}: Props): React.ReactNode => {
   const [active, setActive] = useState(false);
 
   return (

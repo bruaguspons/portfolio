@@ -1,17 +1,19 @@
-interface Props{
-  children: React.ReactElement | React.ReactElement[] | string
+interface Props {
+  children: React.ReactNode;
+  loading?: boolean;
 }
 
-const ButtonSubmit = ({children}:Props): React.ReactNode => {
+const ButtonSubmit = ({ children, loading }: Props): React.ReactNode => {
+
   return (
     <button
-      className={"relative inline-flex items-center justify-center p-0.5 overflow-hidden font-medium rounded-lg group bg-linear-to-br from-purple-500 to-blue-500 focus:outline-noneactive:from-purple-600 active:to-blue-700 transform active:scale-90 transition-transform cursor-pointer my-4 "}
       type="submit"
+      disabled={loading}
+      className="w-full px-6 py-3 rounded-xl text-white font-medium backdrop-blur-lg bg-linear-to-br from-blue-500/40 to-sky-500/40 border border-white/20 transition hover:scale-[1.03] active:scale-95 disabled:opacity-50 cursor-pointer"
     >
-      <span className="relative px-5 py-2.5 transition-all ease-in-out duration-150 bg-background-600 rounded-md w-max sm:group-hover:bg-transparent group-active:bg-transparent">
-        {children}
-      </span>
+      {loading ? "Enviando..." : children}
     </button>
   );
 };
+
 export default ButtonSubmit;

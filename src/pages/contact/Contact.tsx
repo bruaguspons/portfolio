@@ -1,11 +1,12 @@
 import Glow from "@/components/Glow";
+import Section from "@/components/Section";
 import Subtitle from "@/components/Subtitle";
 import TextColor from "@/components/TextColor";
 import { getI18N, LANGUAGES } from "@/i18n";
-import { cn } from "@/lib/utils";
 import ContactForm from "@/pages/contact/components/ContactForm";
 import type { ClassValue } from "clsx";
-
+import "./styles/fade.css";
+import type { FieldType } from "@/pages/contact/types/contact";
 interface Props {
   headerHeight: ClassValue;
 }
@@ -13,17 +14,16 @@ interface Props {
 const Contact = ({headerHeight}: Props): React.ReactNode => {
   const i18n = getI18N({currentLocale: LANGUAGES.SPANISH});
   return (
-    <div id="contact" className="relative w-full mb-20">
-      <div className={cn(headerHeight)}></div>
+    <Section id="contact" headerHeight={headerHeight}>
       <Subtitle><TextColor>{i18n.CONTACT.TITLE["1"]}</TextColor></Subtitle>
 
-      <div data-aos="zoom-in">
+      <div data-aos="zoom-in" className="w-full flex items-center justify-center mb-10">
         <ContactForm 
           fields={i18n.CONTACT.FIELDS.map((field) => ({
             id: field.ID,
             label: field.LABEL,
             autocomplete: field.AUTOCOMPLETE,
-            type: field.TYPE as "textarea" | "email" | null | undefined,
+            type: field.TYPE as FieldType,
             required: field.REQUIRED,
             errors: field.ERRORS,
           }))}
@@ -34,7 +34,7 @@ const Contact = ({headerHeight}: Props): React.ReactNode => {
       </div>
 
       <Glow className="from-sky-500/95 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"/>
-    </div>
+    </Section>
   );
 };
 export default Contact;

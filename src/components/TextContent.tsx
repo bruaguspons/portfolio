@@ -6,7 +6,7 @@ interface Props {
 
 const TextContent = ({ CONTENT }: Props): React.ReactNode => {
   return (
-    <div data-aos="fade-up" className="max-w-4xl mt-6 text-sm sm:text-base">
+    <div data-aos="fade-up" className="max-w-4xl text-sm sm:text-base">
       {CONTENT.map((paragraph, i) => (
         <p key={i} className="mb-4">
           {paragraph.map((part, j) =>

@@ -1,5 +1,10 @@
-import type { InputError } from "@/pages/contact/types/errorsType";
-import isValidEmail from "@/pages/contact/utils/isValidEmail";
+import type { FieldType, InputError } from "@/pages/contact/types/contact";
+
+const isValidEmail = (email: string): boolean => {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  return re.test(email);
+};
 
 const getError = (errors: InputError | undefined, type: string): string => {
   if (type === "empty") return errors?.empty ?? "";
@@ -7,7 +12,7 @@ const getError = (errors: InputError | undefined, type: string): string => {
   return "";
 };
 
-const getInputError = (inpType: "textarea" | "email" | null | undefined, inpValue: string, errors: InputError | undefined): string => {
+const getInputError = (inpType: FieldType, inpValue: string, errors: InputError | undefined): string => {
 
   if (inpType === "textarea"){
     // format error
