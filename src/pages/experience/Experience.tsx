@@ -25,7 +25,7 @@ const Experience = ({headerHeight}: Props): React.ReactNode => {
               <img
                 className="rounded-xl object-cover w-full h-full"
                 src={item.IMAGE_SRC}
-                alt="bruno pons"
+                alt={item.TITLE}
               />
             </picture>
             <h3 className="text-neutral-200 text-sm font-bold mt-1">{item.DATE}</h3>

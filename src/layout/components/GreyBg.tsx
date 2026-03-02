@@ -6,7 +6,8 @@ const GreyBg = (): React.ReactNode => {
   
   useEffect(() => {
     const subject = greyBgSubjectManager.getSubject();
-    subject.subscribe((data) => setShowGreyBg(data));
+    const sub = subject.subscribe((data) => setShowGreyBg(data));
+    return (): void => sub.unsubscribe();
   }, []);
 
   return (

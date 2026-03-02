@@ -42,9 +42,9 @@ const Timeline = ({ items }: Props): React.ReactNode => {
                 className={cn(
                   "absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full ring-4 ring-white transition-all duration-300",
                   isOpen
-                    ? "bg-linear-to-br from-blue-500 to-sky-500"
+                    ? "bg-linear-to-br from-blue-500 to-cyan-400"
                     : "bg-zinc-300",
-                  "group-hover:bg-linear-to-br group-hover:from-blue-500 group-hover:to-sky-500"
+                  "group-hover:bg-linear-to-br group-hover:from-blue-500 group-hover:to-cyan-400"
                 )}
               >
                 <span className="h-2 w-2 rounded-full bg-white"></span>

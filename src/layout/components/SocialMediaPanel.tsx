@@ -7,7 +7,8 @@ const SocialMediaPanel = (): React.ReactNode => {
   const [showPanel, setShowPanel] = useState(false);
   useEffect(() => {
     const subject = greyBgSubjectManager.getSubject();
-    subject.subscribe((data) => setShowPanel(data));
+    const sub = subject.subscribe((data) => setShowPanel(data));
+    return (): void => sub.unsubscribe();
   }, []);
 
   return (
@@ -60,7 +61,7 @@ const SocialMediaPanel = (): React.ReactNode => {
             gradientName="CV-gradient-dark"
             desc="CV"
             ariaLabel="CV button"
-            href={"/CV_BRUNO_PONS_ES.pdf"}
+            href={"/portfolio/CV_BRUNO_PONS_ES.pdf"}
             target="_blank"
             className="flex w-20"
             viewBox="0 0 24 24"

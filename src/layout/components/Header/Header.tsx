@@ -23,7 +23,8 @@ const Header = ({ headerHeight }: Props): React.ReactNode => {
   const [showNav, setShowNav] = useState(false);
   useEffect(() => {
     const subject = navSubjectManager.getSubject();
-    subject.subscribe((data) => setShowNav(data));
+    const sub = subject.subscribe((data) => setShowNav(data));
+    return (): void => sub.unsubscribe();
   }, []);
   
   useEffect(() => {

@@ -33,7 +33,7 @@ const Contact = ({headerHeight}: Props): React.ReactNode => {
         />
       </div>
 
-      <Glow className="from-sky-500/95 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"/>
+      <Glow className="from-cyan-400/95 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"/>
     </Section>
   );
 };

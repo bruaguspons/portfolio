@@ -6,7 +6,7 @@ const InfoTag = (): React.ReactNode => {
       id="infoTag"
       onClick={() => greyBgSubjectManager.setSubject(true)}
       aria-label="Info Tag"
-      className="fixed bottom-10 right-0 h-14 w-20 bg-linear-to-r from-blue-500 to-sky-500 rounded-s-full translate-x-5 hover:translate-x-0 transition-transform duration-150 z-20 p-1 cursor-pointer"
+      className="fixed bottom-10 right-0 h-14 w-20 bg-linear-to-r from-blue-500 to-cyan-400 rounded-s-full translate-x-5 hover:translate-x-0 transition-transform duration-150 z-20 p-1 cursor-pointer"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
