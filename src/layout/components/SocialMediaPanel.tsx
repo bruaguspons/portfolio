@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { greyBgSubjectManager } from "@/services/greyBg.service";
 import CloseSocialMediaPanel from "@/layout/components/CloseSocialMediaPanel";
 import GradientIcon from "@/layout/icons/GradientIcon";
+import { randomString } from "@/utils/randomString";
 
 const SocialMediaPanel = (): React.ReactNode => {
   const [showPanel, setShowPanel] = useState(false);
@@ -61,7 +62,7 @@ const SocialMediaPanel = (): React.ReactNode => {
             gradientName="CV-gradient-dark"
             desc="CV"
             ariaLabel="CV button"
-            href={"/portfolio/CV_BRUNO_PONS_ES.pdf"}
+            href={"/portfolio/CV_BRUNO_PONS_ES.pdf?" + randomString()}
             target="_blank"
             className="flex w-20"
             viewBox="0 0 24 24"
