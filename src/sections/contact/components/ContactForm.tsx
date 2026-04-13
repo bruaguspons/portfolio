@@ -17,9 +17,9 @@ const ContactForm = ({
   submitSuccess,
   sendText
 }: Props): React.ReactNode => {
+  "use no memo";
 
-  const { form, onSubmit } = useContactForm(submitError);
-  const { register, handleSubmit, formState: { errors, isSubmitting, isSubmitSuccessful } } = form;
+  const { register, handleSubmit, errors, isSubmitting, isSubmitSuccessful, onSubmit } = useContactForm(submitError);
 
   return (
     <form

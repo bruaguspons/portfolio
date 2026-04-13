@@ -5,7 +5,7 @@ import doSubmit from "../utils/doSubmit";
 type FormValues = Record<string, string>;
 
 export const useContactForm = (errorMessage: string) => {
-  const form = useForm<FormValues>();
+  const { register, handleSubmit, setError, formState: { errors, isSubmitting, isSubmitSuccessful } } = useForm<FormValues>();
 
   const onSubmit = async (values: FormValues): Promise<void> => {
     const ok = await doSubmit({
@@ -18,9 +18,9 @@ export const useContactForm = (errorMessage: string) => {
     });
 
     if (!ok) {
-      form.setError("root.serverError", { message: errorMessage });
+      setError("root.serverError", { message: errorMessage });
     }
   };
 
-  return { form, onSubmit };
+  return { register, handleSubmit, errors, isSubmitting, isSubmitSuccessful, onSubmit };
 };

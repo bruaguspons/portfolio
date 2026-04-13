@@ -8,6 +8,7 @@ import CloseSocialMediaPanel from "./CloseSocialMediaPanel";
 import GradientIcon from "./icons/GradientIcon";
 
 import { randomString } from "@/lib/randomString";
+import { BASE_PATH } from "@/lib/site";
 
 export default function SocialMediaPanel(): React.ReactNode {
   const [token, setToken] = useState("");
@@ -81,7 +82,7 @@ export default function SocialMediaPanel(): React.ReactNode {
           gradientName="CV-gradient-dark"
           desc="CV"
           ariaLabel="CV button"
-          href={`/CV_BRUNO_PONS_ES.pdf?${token}`}
+          href={`${BASE_PATH}/CV_BRUNO_PONS_ES.pdf?${token}`}
           target="_blank"
           className="flex w-20"
           viewBox="0 0 24 24"
