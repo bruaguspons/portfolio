@@ -127,11 +127,7 @@
     @apply font-sans;
   }
 
-  main {
-    background-image: url("/noisy.webp");
-  }
-
-  /* Chrome, Edge y Safari */
+/* Chrome, Edge y Safari */
   ::-webkit-scrollbar {
     display: none;
   }

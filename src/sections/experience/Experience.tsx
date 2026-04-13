@@ -8,6 +8,7 @@ import TextColor from "@/components/ui/TextColor";
 import TextContent from "@/components/ui/TextContent";
 import { useTranslations } from "next-intl";
 import type { ClassValue } from "clsx";
+import { BASE_PATH } from "@/lib/site";
 
 interface Props {
   headerHeight: ClassValue;
@@ -37,7 +38,7 @@ const Experience = ({ headerHeight }: Props): React.ReactNode => {
             <div className="relative flex-none w-52 h-52 sm:w-60 sm:h-60">
               <Image
                 className="rounded-xl object-cover"
-                src={item.IMAGE_SRC}
+                src={`${BASE_PATH}${item.IMAGE_SRC}`}
                 alt={item.TITLE}
                 fill
                 sizes="(min-width: 640px) 15rem, 13rem"

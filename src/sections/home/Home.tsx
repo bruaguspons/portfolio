@@ -17,6 +17,7 @@ import FlipTitle from "./components/FlipTitle";
 import Postgresql from "@/icons/tech/Postgresql";
 import Section from "@/components/ui/Section";
 import Image from "next/image";
+import { BASE_PATH } from "@/lib/site";
 
 interface Props {
   headerHeight: ClassValue;
@@ -30,7 +31,7 @@ const Home = ({headerHeight}: Props): React.ReactNode => {
           <FlipTitle />
           <Image
             className="flex-none w-60 h-60 md:w-72 md:h-72 mb-10 md:mb-0 rounded-full object-cover"
-            src="/bruno_pons.jpg"
+            src={`${BASE_PATH}/bruno_pons.jpg`}
             alt="bruno pons"
             width={600}
             height={600}

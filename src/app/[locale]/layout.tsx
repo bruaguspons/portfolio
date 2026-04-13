@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { BASE_PATH } from "@/lib/site";
 import { routing } from "@/i18n/routing";
 import NextIntlProvider from "@/components/providers/NextIntlProvider";
 
@@ -43,6 +44,7 @@ export default async function LocaleLayout({
             "relative z-10 flex grow flex-col items-start justify-center",
             "w-full px-[10vw]"
           )}
+          style={{ backgroundImage: `url(${BASE_PATH}/noisy.webp)` }}
         >
           {children}
         </main>

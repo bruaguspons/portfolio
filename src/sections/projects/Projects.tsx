@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl";
 import ProjectItem from "./components/ProjectItem";
 import type { ClassValue } from "clsx";
 import Section from "@/components/ui/Section";
+import { BASE_PATH } from "@/lib/site";
 
 interface Props {
   headerHeight: ClassValue;
@@ -26,22 +27,22 @@ const isTouchDevice = (): boolean =>
 const LIST_OF_PROJECTS: Project[] = [
   {
     title: "Chess Game",
-    imgUrl: "/projects/chess-icon.png",
+    imgUrl: `${BASE_PATH}/projects/chess-icon.png`,
     link: "https://github.com/bruaguspons/chess"
   },
   {
     title: "Spotify Clone",
-    imgUrl: "/projects/spotify-icon.svg",
+    imgUrl: `${BASE_PATH}/projects/spotify-icon.svg`,
     link: "https://github.com/bruaguspons/spotify-clone-react"
   },
   {
     title: "Space Invaders",
-    imgUrl: "/projects/space-icon.svg",
+    imgUrl: `${BASE_PATH}/projects/space-icon.svg`,
     link: "https://github.com/bruaguspons/SpaceInvaders"
   },
   {
     title: "Design Patterns",
-    imgUrl: "/projects/go-icon.svg",
+    imgUrl: `${BASE_PATH}/projects/go-icon.svg`,
     link: "https://github.com/bruaguspons/design-patterns"
   }
 ];
