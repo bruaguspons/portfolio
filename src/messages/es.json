@@ -1,0 +1,205 @@
+{
+    "ABOUT": {
+        "TITLE":{
+            "1": "¿Quién ",
+            "2": "soy",
+            "3": "?"
+        },
+        "CONTENT": [
+            [
+            "Soy Bruno, un desarrollador de software con más de ",
+            { "highlight": "tres años" },
+            " de experiencia en aplicaciones web. Soy ",
+            { "highlight": "Analista en Computación" },
+            " egresado de la Universidad de la República y actualmente me encuentro realizando la ",
+            { "highlight": "tesis de Ingeniería en Computación" },
+            ". Me especializo en desarrollo web, trabajando tanto en ",
+            { "highlight": "front-end" },
+            " como en ",
+            { "highlight": "back-end" },
+            " para crear soluciones modernas y eficientes."
+            ],
+            [
+            "He participado en el desarrollo de productos digitales y en la ",
+            { "highlight": "integración de soluciones basadas en inteligencia artificial" },
+            " para crear nuevas funcionalidades, automatizar procesos y mejorar la experiencia de usuario."
+            ],
+            [
+            "Me interesa especialmente construir ",
+            { "highlight": "software limpio, escalable y bien diseñado" },
+            ", enfrentando problemas desafiantes y explorando constantemente nuevas tecnologías."
+            ],
+            [
+            "Fuera del trabajo y el estudio, disfruto seguir aprendiendo resolviendo problemas en HackerRank, leyendo sobre tecnología y jugando al ajedrez."
+            ]
+        ]
+    },
+    "EXPERIENCE": {
+        "TITLE":{
+            "1": "Experiencia ",
+            "2": "Laboral"
+        },
+        "ITEMS": [
+            {
+                "DATE": "2023, Ene - Presente",
+                "TITLE": "Montevideo COMM",
+                "CONTENT": [
+                    [
+                        "Formo parte del equipo de desarrollo de ",
+                        { "highlight": "Montevideo COMM" },
+                        ", donde participo en el diseño, desarrollo y mantenimiento de productos digitales. Mi trabajo se centra en ",
+                        { "highlight": "desarrollo front-end" },
+                        " con HTML, CSS y JavaScript, junto con la implementación de lógica de negocio para el back-end."
+                    ],
+                    [
+                        "He trabajado en aplicaciones para clientes y en proyectos internos como ",
+                        { "highlight": "Montevideo Portal" },
+                        ", colaborando en la mejora de funcionalidades, optimización de interfaces y mantenimiento de sistemas en producción."
+                    ],
+                    [
+                        "También he desarrollado múltiples proyectos integrando ",
+                        { "highlight": "inteligencia artificial" },
+                        ", creando funcionalidades para ",
+                        { "highlight": "automatizar procesos" },
+                        " y mejorar la experiencia de usuario en distintas plataformas."
+                    ]
+                ],
+                "IMAGE_SRC": "/montevideo-comm.webp"
+            }
+        ]
+    },
+    "EDUCATION": {
+      "TITLE":{
+            "1": "Mi ",
+            "2": "Educación"
+        },
+        "CONTENT": [
+            [
+                "Estoy finalizando la carrera de ",
+                { "highlight": "Ingeniería en Computación" },
+                " en la Universidad de la República, donde obtuve previamente el título de ",
+                { "highlight": "Analista en Computación" },
+                ". Mi formación me brindó una base sólida en ",
+                { "highlight": "programación, algoritmos y estructuras de datos" },
+                ", además de bases de datos e ingeniería de software."
+            ],
+            [
+                "Complemento estos conocimientos con experiencia en ",
+                { "highlight": "desarrollo de aplicaciones web" },
+                " y exploración de tecnologías modernas como ",
+                { "highlight": "inteligencia artificial" },
+                ", combinando formación académica, proyectos personales y experiencia profesional para construir soluciones eficientes y escalables."
+            ]
+        ],
+        "ITEMS": [
+            {
+                "DATE": "Mar 2021 - Ene 2026",
+                "TITLE": "Analista en Computación — Universidad de la República",
+                "CONTENT": [
+                "Título intermedio de la carrera Ingeniería en Computación. Formación en programación, algoritmos, estructuras de datos y bases de datos, complementada con proyectos académicos que fortalecieron mis habilidades de desarrollo y resolución de problemas."
+                ]
+            },
+            {
+                "DATE": "Mar 2021 - Dic 2026",
+                "TITLE": "Ingeniería en Computación — Universidad de la República",
+                "CONTENT": [
+                "Título de grado a recibirse en 2026. Formación en ciencias de la computación, arquitectura de software y desarrollo de sistemas, complementada con aprendizaje autodidacta y proyectos personales."
+                ]
+            }
+        ]
+    },
+    "PROJECTS": {
+        "TITLE":{
+            "1": "Mis ",
+            "2": "Proyectos"
+        },
+        "ITEMS": [
+            {
+                "TITLE": "Spotify Clone",
+                "CONTENT": "Un clon simplificado de la aplicacion de Spotify, creado con TypeScript + React + Express",
+                "IMAGE_URL": "/spotifyClone.webp",
+                "GITHUB_URL": "https://github.com/bruaguspons/spotify-clone-react",
+                "APP_URL": "",
+                "COMMING_SOON": false
+            },
+            {
+                "TITLE": "Space Invader",
+                "CONTENT": "Recreado a partir del clásico juego de arcade Space Invaders, hecho enteramente con TypeScript.",
+                "IMAGE_URL": "/spaceInvaders.webp",
+                "GITHUB_URL": "https://github.com/bruaguspons/SpaceInvaders",
+                "APP_URL": "https://bruaguspons.github.io/SpaceInvaders/",
+                "COMMING_SOON": false
+            },
+            {
+                "TITLE": "Chess + AI",
+                "CONTENT": "El juego de ajedrez habitual, pero los movimientos de la computadora se realizan con inteligencia artificial.",
+                "IMAGE_URL": "/knight.svg",
+                "GITHUB_URL": "",
+                "APP_URL": "",
+                "COMMING_SOON": true
+            }
+        ],
+        "COMMING_SOON_TEXT": "Próximamente ...",
+        "GITHUB_MORE_INFO": "Para más información, checkea el código haciendo click en la imagen de abajo:",
+        "APP_MORE_INFO": "Haciendo click en el botón de abajo, puedes probar la aplicación:",
+        "APP_BUTTON_TEXT": "Pruébala!"
+    },
+    "CONTACT": {
+        "TITLE":{
+            "1": "Contáctame"
+        },
+        "FIELDS":[
+            {
+                "ID": "name",
+                "LABEL": "Nombre",
+                "AUTOCOMPLETE": "given-name",
+                "TYPE": "text",
+                "REQUIRED": false,
+                "ERRORS": {
+                    "empty": "",
+                    "format": ""
+                }
+            },
+            {
+                "ID": "lastName",
+                "LABEL": "Apellido",
+                "AUTOCOMPLETE": "family-name",
+                "TYPE": "text",
+                "REQUIRED": false,
+                "ERRORS": {
+                    "empty": "",
+                    "format": ""
+                }
+            },
+             {
+                "ID": "email",
+                "LABEL": "Email",
+                "AUTOCOMPLETE": "email",
+                "TYPE": "email",
+                "REQUIRED": true,
+                "ERRORS": {
+                    "empty": "El campo Email no debe estar vacío.",
+                    "format": "El formato del Email no es correcto."
+                }
+            },
+            {
+                "ID": "message",
+                "LABEL": "Mensaje",
+                "AUTOCOMPLETE": "off",
+                "TYPE": "textarea",
+                "REQUIRED": true,
+                "ERRORS": {
+                    "empty": "El campo Mensaje no debe estar vacío.",
+                    "format": ""
+                }
+            }
+        ],
+        "SUBMIT_ERROR": "Ha ocurrido un error. Por favor, inténtalo de nuevo más tarde.",
+        "SUBMIT_SUCCESS": "¡Tu correo se ha enviado correctamente! Te responderé lo antes posible. ¡Gracias por ponerte en contacto!",
+        "SEND_TEXT": "Enviar"
+    },
+    "SETTINGS":{
+        "THEME_SWITCH":"Cambia el tema:",
+        "LANGUAGE_SWITCH":"Cambia el lenguaje:"
+    }
+}
