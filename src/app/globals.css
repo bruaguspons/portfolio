@@ -126,4 +126,53 @@
   html {
     @apply font-sans;
   }
+
+  main {
+    background-image: url("/noisy.webp");
+  }
+
+  /* Chrome, Edge y Safari */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Firefox / IE Edge */
+  html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+}
+
+@keyframes carousel {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@layer utilities {
+  .animate-carousel {
+    animation: carousel var(--carousel-duration, 20s) linear infinite;
+    width: max-content;
+  }
+
+  /* efecto de desvanecimiento en bordes */
+  .carousel-mask {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+  }
 }

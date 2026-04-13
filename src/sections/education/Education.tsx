@@ -18,8 +18,6 @@ const Education = ({ headerHeight }: Props): React.ReactNode => {
   const content = t.raw("CONTENT") as (string | { highlight: string })[][];
   const items = t.raw("ITEMS") as TimelineItem[];
 
-  console.log(content, items);
-
   return (
     <Section id="education" headerHeight={headerHeight}>
       <Subtitle>

@@ -1,5 +1,5 @@
 "use client";
-import StatusError from "./_components/StatusError";
+import StatusError from "@/components/ui/StatusError";
 
 interface Props {
   error: Error & { digest?: string };

@@ -3,7 +3,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { routing } from "@/i18n/routing";
-import NextIntlProvider from "@/app/NextIntlProvider";
+import NextIntlProvider from "@/components/providers/NextIntlProvider";
 
 import Header from "@/components/layout/Header/Header";
 import GreyBg from "@/components/layout/GreyBg";

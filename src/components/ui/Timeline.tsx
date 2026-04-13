@@ -3,9 +3,9 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 export interface TimelineItem {
-  title: string;
-  description?: string;
-  date?: string;
+  TITLE: string;
+  CONTENT?: string[];
+  DATE?: string;
 }
 
 interface Props {
@@ -65,7 +65,7 @@ const Timeline = ({ items }: Props): React.ReactNode => {
                   )}
                 ></div>
 
-                {item.date && (
+                {item.DATE && (
                   <time
                     className={cn(
                       "text-sm transition-colors duration-300",
@@ -73,29 +73,29 @@ const Timeline = ({ items }: Props): React.ReactNode => {
                       "group-hover:text-blue-400"
                     )}
                   >
-                    {item.date}
+                    {item.DATE}
                   </time>
                 )}
 
                 <h3
                   className={cn(
-                    "font-semibold transition-colors duration-300",
+                    "font-semibold text-neutral-100 transition-colors duration-300",
                     isOpen && "text-blue-400",
                     "group-hover:text-blue-400"
                   )}
                 >
-                  {item.title}
+                  {item.TITLE}
                 </h3>
 
-                {item.description && (
+                {item.CONTENT && item.CONTENT.length > 0 && (
                   <p
                     className={cn(
-                      "text-sm mt-1 overflow-hidden transition-all duration-300",
+                      "text-sm text-neutral-300 mt-1 overflow-hidden transition-all duration-300",
                       isOpen ? "opacity-100 max-h-96" : "opacity-0 max-h-0",
                       "group-hover:opacity-100 group-hover:max-h-96"
                     )}
                   >
-                    {item.description}
+                    {item.CONTENT.join(" ")}
                   </p>
                 )}
               </div>

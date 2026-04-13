@@ -1,9 +1,9 @@
-import About from "@/app/sections/about/About";
-import Contact from "@/app/sections/contact/Contact";
-import Education from "@/app/sections/education/Education";
-import Experience from "@/app/sections/experience/Experience";
-import Home from "@/app/sections/home/Home";
-import Projects from "@/app/sections/projects/Projects";
+import About from "@/sections/about/About";
+import Contact from "@/sections/contact/Contact";
+import Education from "@/sections/education/Education";
+import Experience from "@/sections/experience/Experience";
+import Home from "@/sections/home/Home";
+import Projects from "@/sections/projects/Projects";
 
 export default function Page(): React.ReactNode {
   return (

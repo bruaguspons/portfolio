@@ -11,7 +11,6 @@ import {
   SITE_ICONS,
 } from "@/lib/site";
 import "./globals.css";
-import "./index.css";
 
 const montserrat = Montserrat({
   subsets: ["latin"],

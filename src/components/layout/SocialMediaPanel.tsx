@@ -85,6 +85,7 @@ export default function SocialMediaPanel(): React.ReactNode {
           target="_blank"
           className="flex w-20"
           viewBox="0 0 24 24"
+          fill="none"
         >
           {(color) => (
             <path

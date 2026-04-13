@@ -12,9 +12,7 @@ const Carousel = ({ children, className = "", duration = 20 }: Props): React.Rea
     <div className={cn("carousel-mask overflow-hidden w-full", className)}>
       <div
         className="flex animate-carousel"
-        style={{
-          animationDuration: `${duration}s`,
-        }}
+        style={{ "--carousel-duration": `${duration}s` } as React.CSSProperties}
       >
         {children}
       </div>
