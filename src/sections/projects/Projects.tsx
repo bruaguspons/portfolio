@@ -72,7 +72,7 @@ const Projects = ({ headerHeight }: Props): React.ReactNode => {
 
       <div
         data-aos="zoom-in"
-        className="relative grid grid-cols-1 gap-4 px-4 mx-auto sm:grid-cols-2 lg:grid-cols-3 md:px-8"
+        className="relative grid grid-cols-1 gap-4 xl:gap-6 mx-auto sm:grid-cols-2 lg:grid-cols-3 max-w-5xl xl:max-w-6xl"
       >
         {LIST_OF_PROJECTS.map((project, index) => (
           <ProjectItem

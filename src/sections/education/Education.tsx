@@ -25,7 +25,7 @@ const Education = ({ headerHeight }: Props): React.ReactNode => {
         <TextColor>{t("TITLE.2")}</TextColor>
       </Subtitle>
 
-      <div className="flex flex-col md:flex-row items-start">
+      <div className="flex flex-col md:flex-row items-start gap-8 xl:gap-16">
         <TextContent CONTENT={content} />
 
         <div data-aos="zoom-in">

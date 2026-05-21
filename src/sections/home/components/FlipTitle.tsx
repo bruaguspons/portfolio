@@ -24,7 +24,7 @@ const FlipTitle = (): React.ReactNode => {
 
   return (
     <LazyMotion features={domAnimation}>
-      <h1 className="font-extrabold text-5xl md:text-7xl leading-none tracking-[-.08em] text-center sm:text-start">
+      <h1 className="font-extrabold text-5xl md:text-7xl xl:text-8xl 2xl:text-9xl leading-none tracking-[-.08em] text-center sm:text-start">
         Software<br />
         <span className="inline-block perspective-[1000px]">
           <AnimatePresence mode="wait">

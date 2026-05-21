@@ -33,15 +33,15 @@ const Experience = ({ headerHeight }: Props): React.ReactNode => {
       </Subtitle>
 
       {items.map((item, index) => (
-        <div key={index} className="flex gap-10 flex-col md:flex-row">
+        <div key={index} className="flex gap-10 xl:gap-16 flex-col md:flex-row">
           <div data-aos="fade-right" className="flex flex-col items-center">
-            <div className="relative flex-none w-52 h-52 sm:w-60 sm:h-60">
+            <div className="relative flex-none w-52 h-52 sm:w-60 sm:h-60 xl:w-72 xl:h-72">
               <Image
                 className="rounded-xl object-cover"
                 src={`${BASE_PATH}${item.IMAGE_SRC}`}
                 alt={item.TITLE}
                 fill
-                sizes="(min-width: 640px) 15rem, 13rem"
+                sizes="(min-width: 1280px) 18rem, (min-width: 640px) 15rem, 13rem"
               />
             </div>
             <h3 className="text-neutral-200 text-sm font-bold mt-1">{item.DATE}</h3>
