@@ -31,7 +31,7 @@ const Home = ({headerHeight}: Props): React.ReactNode => {
           <FlipTitle />
           <Image
             className="flex-none h-auto w-2/3 md:h-auto md:w-2/5 aspect-square mb-10 md:mb-0 rounded-full object-cover"
-            src={`${BASE_PATH}/bruno_pons.jpg`}
+            src={`${BASE_PATH}/bruno_pons.jpeg`}
             alt="bruno pons"
             width={600}
             height={600}
