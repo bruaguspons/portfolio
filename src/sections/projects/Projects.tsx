@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 import ProjectItem from "./components/ProjectItem";
 import type { ClassValue } from "clsx";
 import Section from "@/components/ui/Section";
-import { BASE_PATH } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
 import type { Project } from "./types/project";
 
 interface Props {
@@ -21,27 +21,27 @@ const isTouchDevice = (): boolean =>
 const LIST_OF_PROJECTS: Project[] = [
   {
     title: "Java Ecommerce",
-    imgUrl: `${BASE_PATH}/projects/java-icon.svg`,
+    imgUrl: `${SITE_URL}/projects/java-icon.svg`,
     link: "https://github.com/bruaguspons/java-ecommerce"
   },
   {
     title: "Chess Game",
-    imgUrl: `${BASE_PATH}/projects/chess-icon.png`,
+    imgUrl: `${SITE_URL}/projects/chess-icon.png`,
     link: "https://github.com/bruaguspons/chess"
   },
   {
     title: "Spotify Clone",
-    imgUrl: `${BASE_PATH}/projects/spotify-icon.svg`,
+    imgUrl: `${SITE_URL}/projects/spotify-icon.svg`,
     link: "https://github.com/bruaguspons/spotify-clone-react"
   },
   {
     title: "Space Invaders",
-    imgUrl: `${BASE_PATH}/projects/space-icon.svg`,
+    imgUrl: `${SITE_URL}/projects/space-icon.svg`,
     link: "https://github.com/bruaguspons/SpaceInvaders"
   },
   {
     title: "Design Patterns",
-    imgUrl: `${BASE_PATH}/projects/go-icon.svg`,
+    imgUrl: `${SITE_URL}/projects/go-icon.svg`,
     link: "https://github.com/bruaguspons/design-patterns"
   }
 ];
