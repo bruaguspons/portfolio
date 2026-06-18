@@ -1,5 +1,4 @@
 import Carousel from "@/components/ui/Carousel";
-import Glow from "@/components/ui/Glow";
 import Css3 from "@/icons/tech/Css3";
 import Docker from "@/icons/tech/Docker";
 import Go from "@/icons/tech/Go";
@@ -18,6 +17,7 @@ import Postgresql from "@/icons/tech/Postgresql";
 import Section from "@/components/ui/Section";
 import Image from "next/image";
 import { BASE_PATH } from "@/lib/site";
+import Spring from "@/icons/tech/Spring";
 
 interface Props {
   headerHeight: ClassValue;
@@ -35,7 +35,8 @@ const Home = ({headerHeight}: Props): React.ReactNode => {
             alt="bruno pons"
             width={600}
             height={600}
-            priority
+            fetchPriority="high"
+            loading="eager"
           />
 
         </div>
@@ -53,6 +54,7 @@ const Home = ({headerHeight}: Props): React.ReactNode => {
               <Carousel.Item><Nodejs className="w-10 h-10" /> Nodejs</Carousel.Item>
               <Carousel.Item><Go className="w-10 h-10" /> Go</Carousel.Item>
               <Carousel.Item><Java className="w-10 h-10" /> Java</Carousel.Item>
+              <Carousel.Item><Spring className="w-10 h-10" /> Spring</Carousel.Item>
               <Carousel.Item><Docker className="w-10 h-10" /> Docker</Carousel.Item>
               <Carousel.Item><Postgresql className="w-10 h-10" /> Postgresql</Carousel.Item>
               <Carousel.Item><Mongodb className="w-10 h-10" /> Mongodb</Carousel.Item>
@@ -61,9 +63,6 @@ const Home = ({headerHeight}: Props): React.ReactNode => {
         </div>
       </div>
 
-
-      <Glow className="from-blue-500/95 left-0 top-0"/>
-      <Glow className="from-blue-500/95 right-0 bottom-0"/>
 
     </Section>
   );

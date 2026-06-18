@@ -1,6 +1,5 @@
 "use client";
 
-import Glow from "@/components/ui/Glow";
 import Section from "@/components/ui/Section";
 import Image from "next/image";
 import Subtitle from "@/components/ui/Subtitle";
@@ -9,16 +8,10 @@ import TextContent from "@/components/ui/TextContent";
 import { useTranslations } from "next-intl";
 import type { ClassValue } from "clsx";
 import { BASE_PATH } from "@/lib/site";
+import type { ExperienceItem } from "./types/experience";
 
 interface Props {
   headerHeight: ClassValue;
-}
-
-interface ExperienceItem {
-  TITLE: string;
-  CONTENT: (string | { highlight: string })[][];
-  DATE: string;
-  IMAGE_SRC: string;
 }
 
 const Experience = ({ headerHeight }: Props): React.ReactNode => {
@@ -52,8 +45,6 @@ const Experience = ({ headerHeight }: Props): React.ReactNode => {
         </div>
       ))}
 
-      <Glow className="from-purple-500/95 right-0 top-0 -translate-x-1/2 translate-y-1/2" />
-      <Glow className="from-purple-500/95 left-0 bottom-0 translate-x-1/2 translate-y-1/2" />
     </Section>
   );
 };

@@ -1,6 +1,5 @@
 "use client";
 
-import Glow from "@/components/ui/Glow";
 import Section from "@/components/ui/Section";
 import Subtitle from "@/components/ui/Subtitle";
 import TextColor from "@/components/ui/TextColor";
@@ -26,7 +25,6 @@ const About = ({ headerHeight }: Props): React.ReactNode => {
 
       <TextContent CONTENT={content} />
 
-      <Glow className="from-green-500/95 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
     </Section>
   );
 };

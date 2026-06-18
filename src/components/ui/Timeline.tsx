@@ -1,12 +1,9 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import type { TimelineItem } from "./types/timeline";
 
-export interface TimelineItem {
-  TITLE: string;
-  CONTENT?: string[];
-  DATE?: string;
-}
+export type { TimelineItem };
 
 interface Props {
   items: TimelineItem[];
@@ -54,7 +51,7 @@ const Timeline = ({ items }: Props): React.ReactNode => {
               </span>
 
               {/* Card */}
-              <div className="relative bg-zinc-600/30 backdrop-blur-md p-4 rounded-lg border border-zinc-600/30 shadow-sm transition-all duration-300 hover:shadow-lg overflow-hidden cursor-pointer">
+              <div className="relative bg-navy-900/30 backdrop-blur-md p-4 rounded-lg border border-navy-800/30 shadow-sm transition-all duration-300 hover:shadow-lg overflow-hidden cursor-pointer">
                 
                 {/* border top animado */}
                 <div

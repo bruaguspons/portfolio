@@ -1,6 +1,8 @@
 "use client";
+import Link from "next/link";
 import TextColor from "@/components/ui/TextColor";
 import Glow from "@/components/ui/Glow";
+import { SITE_URL } from "@/lib/site";
 
 interface Props {
   statusCode?: number;
@@ -18,7 +20,7 @@ const StatusError = ({ statusCode, message, onRetry }: Props): React.ReactNode =
     : message || "Ocurrió un error inesperado.";
 
   return (
-    <div className="relative w-full min-h-[calc(100dvh-4rem)] flex flex-col items-center justify-center text-center px-6">
+    <div className="relative w-full min-h-[calc(100dvh-4rem)] flex flex-col items-center justify-center text-center px-6" style={{ backgroundImage: `url('${SITE_URL}noisy.webp')` }}>
       <div className="max-w-xl">
         <TextColor className="text-6xl md:text-7xl font-extrabold tracking-tight from-red-500! to-pink-500!">
           Oops!
@@ -29,12 +31,12 @@ const StatusError = ({ statusCode, message, onRetry }: Props): React.ReactNode =
         <p className="mt-3 text-lg text-neutral-200">{description}</p>
 
         <div className="flex gap-4 justify-center mt-8 flex-wrap">
-          <a
+          <Link
             href="/"
             className="px-6 py-3 rounded-xl font-medium hover:opacity-90 transition"
           >
             Ir al inicio
-          </a>
+          </Link>
 
           {onRetry ? (
             <button

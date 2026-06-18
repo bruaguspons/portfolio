@@ -1,6 +1,5 @@
 "use client";
 
-import Glow from "@/components/ui/Glow";
 import Section from "@/components/ui/Section";
 import Subtitle from "@/components/ui/Subtitle";
 import TextColor from "@/components/ui/TextColor";
@@ -31,7 +30,6 @@ const Contact = ({ headerHeight }: Props): React.ReactNode => {
         />
       </div>
 
-      <Glow className="from-cyan-400/95 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"/>
     </Section>
   );
 };

@@ -1,6 +1,5 @@
 "use client";
 
-import Glow from "@/components/ui/Glow";
 import Section from "@/components/ui/Section";
 import Subtitle from "@/components/ui/Subtitle";
 import TextColor from "@/components/ui/TextColor";
@@ -33,8 +32,6 @@ const Education = ({ headerHeight }: Props): React.ReactNode => {
         </div>
       </div>
 
-      <Glow className="from-amber-500/95 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
-      <Glow className="from-amber-500/95 right-0 bottom-0 -translate-x-1/2 translate-y-1/2" />
     </Section>
   );
 };

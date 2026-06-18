@@ -68,11 +68,11 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: ReactNode }): ReactNode {
   return (
-    <html className="dark scroll-smooth" suppressHydrationWarning>
+    <html className="dark scroll-smooth" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body
         className={cn(
           montserrat.className,
-          "antialiased flex min-h-screen flex-col text-neutral-50 bg-zinc-800"
+          "antialiased flex min-h-screen flex-col text-neutral-50 bg-transparent"
         )}
       >
         {children}

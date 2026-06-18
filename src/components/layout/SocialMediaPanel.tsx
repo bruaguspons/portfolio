@@ -25,7 +25,7 @@ export default function SocialMediaPanel(): React.ReactNode {
   return (
     <div
       className={cn(
-        "fixed right-0 z-70 h-full w-full bg-zinc-800 transition-transform duration-300 ease-in-out",
+        "fixed right-0 z-70 h-full w-full bg-navy-950 transition-transform duration-300 ease-in-out",
         "sm:w-48 sm:rounded-l-3xl sm:shadow-2xl sm:shadow-black",
         showPanel ? "translate-x-0" : "translate-x-full"
       )}

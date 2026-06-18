@@ -5,6 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-navy-950: #030b10;
+  --color-navy-900: #0a1e30;
+  --color-navy-800: #0d3a40;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
@@ -83,7 +86,7 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: #030b10;
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -125,6 +128,7 @@
   }
   html {
     @apply font-sans;
+    background-color: #030b10;
   }
 
 /* Chrome, Edge y Safari */
@@ -136,6 +140,38 @@
   html {
     scrollbar-width: none;
     -ms-overflow-style: none;
+  }
+}
+
+/* === Loading Screen === */
+.loading-screen {
+  background-color: #030b10;
+  animation: loading-fade-out 600ms ease-out 1200ms forwards;
+}
+
+@keyframes loading-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.loading-spinner {
+  width: clamp(40px, 6vw, 72px);
+  height: clamp(40px, 6vw, 72px);
+  border-radius: 50%;
+  border: clamp(2px, 0.25vw, 3.5px) solid rgba(255, 255, 255, 0.15);
+  border-top-color: #ffffff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+  animation: loading-spin 0.9s linear infinite;
+}
+
+@keyframes loading-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-spinner {
+    animation: none;
+    border-top-color: rgba(255, 255, 255, 0.6);
   }
 }
 

@@ -15,14 +15,15 @@ const CustomLink = ({ id, activeSection, label }: Props): React.ReactNode => {
   return (
     <Link
       className={cn(
-        "relative font-semibold w-full md:w-auto h-full flex items-center justify-center text-lg md:text-sm text-nowrap",
+        "relative font-semibold w-full lg:w-auto h-full flex items-center justify-center text-lg lg:text-sm text-nowrap",
+        "py-3 lg:py-0",
         "transition-all duration-300",
         "hover:text-blue-500",
         
-        "active:scale-95 active:md:scale-100 active:bg-zinc-700 md:active:bg-transparent",
+        "active:scale-95 active:lg:scale-100 active:bg-zinc-700 lg:active:bg-transparent",
         "rounded-md px-2",
 
-        "after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:bg-blue-500",
+        "after:absolute after:bottom-1 after:left-1/2 after:h-0.5 after:bg-blue-500",
         "after:transition-all after:duration-300 after:-translate-x-1/2",
 
         isActive ? "after:w-full text-blue-500" : "after:w-0 hover:after:w-full"

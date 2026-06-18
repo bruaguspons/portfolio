@@ -8,12 +8,12 @@ import Projects from "@/sections/projects/Projects";
 export default function Page(): React.ReactNode {
   return (
     <>
-      <Home headerHeight="h-16" />
-      <About headerHeight="h-16" />
-      <Experience headerHeight="h-16" />
-      <Education headerHeight="h-16" />
-      <Projects headerHeight="h-16" />
-      <Contact headerHeight="h-16" />
+      <Home headerHeight="h-20" />
+      <About headerHeight="h-20" />
+      <Experience headerHeight="h-20" />
+      <Education headerHeight="h-20" />
+      <Projects headerHeight="h-20" />
+      <Contact headerHeight="h-20" />
     </>
   );
 }

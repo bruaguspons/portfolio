@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Glow from "@/components/ui/Glow";
 import Subtitle from "@/components/ui/Subtitle";
 import TextColor from "@/components/ui/TextColor";
 import { useTranslations } from "next-intl";
@@ -9,15 +8,10 @@ import ProjectItem from "./components/ProjectItem";
 import type { ClassValue } from "clsx";
 import Section from "@/components/ui/Section";
 import { BASE_PATH } from "@/lib/site";
+import type { Project } from "./types/project";
 
 interface Props {
   headerHeight: ClassValue;
-}
-
-interface Project {
-  title: string;
-  imgUrl: string;
-  link: string;
 }
 
 const isTouchDevice = (): boolean =>
@@ -25,6 +19,11 @@ const isTouchDevice = (): boolean =>
   window.matchMedia("(hover: none)").matches;
 
 const LIST_OF_PROJECTS: Project[] = [
+  {
+    title: "Java Ecommerce",
+    imgUrl: `${BASE_PATH}/projects/java-icon.svg`,
+    link: "https://github.com/bruaguspons/java-ecommerce"
+  },
   {
     title: "Chess Game",
     imgUrl: `${BASE_PATH}/projects/chess-icon.png`,
@@ -83,7 +82,7 @@ const Projects = ({ headerHeight }: Props): React.ReactNode => {
           />
         ))}
 
-        {Array.from({ length: 2 }).map((_, i) => (
+        {Array.from({ length: 1 }).map((_, i) => (
           <ProjectItem
             imgUrl=""
             title
@@ -93,8 +92,6 @@ const Projects = ({ headerHeight }: Props): React.ReactNode => {
         ))}
       </div>
 
-      <Glow className="from-teal-500/95 left-0 top-0 translate-x-1/2 translate-y-1/2" />
-      <Glow className="from-teal-500/95 right-0 bottom-0 -translate-x-1/2 " />
     </Section>
   );
 };

@@ -1,10 +1,9 @@
 "use client";
 import { useForm } from "react-hook-form";
 import doSubmit from "../utils/doSubmit";
+import type { FormValues, UseContactFormReturn } from "../types/useContactForm";
 
-type FormValues = Record<string, string>;
-
-export const useContactForm = (errorMessage: string) => {
+export const useContactForm = (errorMessage: string): UseContactFormReturn => {
   const { register, handleSubmit, setError, formState: { errors, isSubmitting, isSubmitSuccessful } } = useForm<FormValues>();
 
   const onSubmit = async (values: FormValues): Promise<void> => {

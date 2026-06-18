@@ -35,7 +35,7 @@ const ProjectItemContent = ({ title, active, imgUrl }: Pick<Props, "title" | "ac
           active && "blur-none -translate-y-1/3 opacity-100"
         )}
       >
-        <Image src={imgUrl} className="w-auto h-32" alt="" width={128} height={128} />
+        <Image src={imgUrl} className="w-auto h-32" alt="" width={128} height={128} loading="eager" />
       </div>
     )}
   </>
@@ -50,7 +50,7 @@ const ProjectItem = ({
 }: Props): React.ReactNode => {
 
   const elClassName = cn(
-    "relative flex items-center justify-center py-6 transition border bg-zinc-900 border-zinc-800 rounded-md group px-6 cursor-pointer",
+    "relative flex items-center justify-center py-6 transition border bg-navy-950 border-navy-900 rounded-md group px-6 cursor-pointer",
     "before:w-full before:h-full before:rounded-2xl before:z-10 before:absolute before:inset-0",
     "hover:border-zinc-400/80",
     active && "border-zinc-400/80",

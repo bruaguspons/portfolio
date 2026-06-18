@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { BASE_PATH } from "@/lib/site";
 import { routing } from "@/i18n/routing";
 import NextIntlProvider from "@/components/providers/NextIntlProvider";
 
@@ -12,6 +11,7 @@ import SocialMediaPanel from "@/components/layout/SocialMediaPanel";
 import InfoTag from "@/components/layout/InfoTag";
 import Footer from "@/components/layout/Footer";
 import AOSProvider from "@/components/ui/AOSProvider";
+import GrainientWithLoader from "@/components/ui/GrainientWithLoader";
 
 export function generateStaticParams(): { locale: string }[] {
   return routing.locales.map((locale) => ({ locale }));
@@ -37,14 +37,14 @@ export default async function LocaleLayout({
   return (
     <NextIntlProvider messages={messages} locale={locale}>
       <AOSProvider>
+        <GrainientWithLoader />
         <GreyBg />
-        <Header headerHeight="h-16" />
+        <Header />
         <main
           className={cn(
             "relative z-10 flex grow flex-col items-start justify-center",
             "w-full px-[10vw]"
           )}
-          style={{ backgroundImage: `url(${BASE_PATH}/noisy.webp)` }}
         >
           {children}
         </main>

@@ -10,8 +10,8 @@ interface Props {
 // so it must include its own <html> and <body>.
 export default function GlobalError({ error, reset }: Props): React.ReactNode {
   return (
-    <html className="dark scroll-smooth">
-      <body className="antialiased flex min-h-screen flex-col text-neutral-50 bg-zinc-800">
+    <html className="dark scroll-smooth" data-scroll-behavior="smooth">
+      <body className="antialiased flex min-h-screen flex-col text-neutral-50 bg-navy-900">
         <StatusError statusCode={500} message={error.message} onRetry={reset} />
       </body>
     </html>

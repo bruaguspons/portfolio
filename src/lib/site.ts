@@ -10,4 +10,4 @@ export const SITE_ICONS = {
   dark: `${BASE_PATH}/favicon-dark.svg`,
 };
 
-export const SITE_OG_IMAGE = `${BASE_PATH}/image_preview_2026.png`;
+export const SITE_OG_IMAGE = `${BASE_PATH}/image_preview_2026_2.png`;

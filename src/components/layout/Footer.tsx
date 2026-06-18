@@ -1,6 +1,6 @@
 const Footer = (): React.ReactNode => {
   return (
-    <footer className="w-full bg-zinc-900 z-0">
+    <footer className="w-full bg-navy-950 z-0">
       <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
         
         <p className="text-sm">
