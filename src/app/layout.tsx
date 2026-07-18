@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { Montserrat } from "next/font/google";
+import { headers } from "next/headers";
 import { cn } from "@/lib/utils";
+import { routing } from "@/i18n/routing";
 import {
   SITE_URL,
   SITE_TITLE,
@@ -66,9 +68,12 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({ children }: { children: ReactNode }): ReactNode {
+export default async function RootLayout({ children }: { children: ReactNode }): Promise<ReactNode> {
+  const headersList = await headers();
+  const locale = headersList.get("x-next-intl-locale") ?? routing.defaultLocale;
+
   return (
-    <html className="dark scroll-smooth" data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html lang={locale} className="dark scroll-smooth" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body
         className={cn(
           montserrat.className,
