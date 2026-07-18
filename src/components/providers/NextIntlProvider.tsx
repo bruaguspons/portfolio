@@ -1,7 +1,7 @@
 "use client";
 
 import { NextIntlClientProvider } from "next-intl";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 
 interface Props {
   children: ReactNode;
@@ -10,6 +10,10 @@ interface Props {
 }
 
 export default function NextIntlProvider({ children, messages, locale }: Props): ReactNode {
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
+
   return (
     <NextIntlClientProvider messages={messages} locale={locale} timeZone="UTC">
       {children}
