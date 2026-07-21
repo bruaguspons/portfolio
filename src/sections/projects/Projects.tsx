@@ -20,9 +20,9 @@ const isTouchDevice = (): boolean =>
 
 const LIST_OF_PROJECTS: Project[] = [
   {
-    title: "Java Ecommerce",
+    title: "Java Microservices Ecommerce",
     imgUrl: `${SITE_URL}/projects/java-icon.svg`,
-    link: "https://github.com/bruaguspons/java-ecommerce"
+    link: "https://github.com/bruaguspons/microservices-java-ecommerce"
   },
   {
     title: "Chess Game",
