@@ -20,6 +20,11 @@ const isTouchDevice = (): boolean =>
 
 const LIST_OF_PROJECTS: Project[] = [
   {
+    title: "Fast Java Manager",
+    imgUrl: `${SITE_URL}/projects/fjm.png`,
+    link: "https://github.com/bruaguspons/fjm"
+  },
+  {
     title: "Java Microservices Ecommerce",
     imgUrl: `${SITE_URL}/projects/java-icon.svg`,
     link: "https://github.com/bruaguspons/microservices-java-ecommerce"
@@ -82,7 +87,7 @@ const Projects = ({ headerHeight }: Props): React.ReactNode => {
           />
         ))}
 
-        {Array.from({ length: 1 }).map((_, i) => (
+        {Array.from({ length: 0 }).map((_, i) => (
           <ProjectItem
             imgUrl=""
             title

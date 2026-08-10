@@ -35,7 +35,7 @@ const ProjectItemContent = ({ title, active, imgUrl }: Pick<Props, "title" | "ac
           active && "blur-none -translate-y-1/3 opacity-100"
         )}
       >
-        <Image src={imgUrl} className="w-auto h-32" alt="" width={128} height={128} loading="eager" />
+        <Image src={imgUrl} className="h-32 w-32 object-contain" alt="" width={128} height={128} loading="eager" />
       </div>
     )}
   </>
