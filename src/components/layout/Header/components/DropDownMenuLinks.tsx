@@ -1,8 +1,10 @@
 "use client";
+import { useTranslations } from "next-intl";
 import { navSubjectManager } from "@/lib/nav.service";
 import { useEffect, useState } from "react";
 
 const DropDownMenuLinks = (): React.ReactNode => {
+  const t = useTranslations("A11Y");
   const [showNav, setShowNav] = useState(false);
   useEffect(() => {
     const subject = navSubjectManager.getSubject();
@@ -12,7 +14,7 @@ const DropDownMenuLinks = (): React.ReactNode => {
 
   return (
     <button
-      aria-label="Menu links"
+      aria-label={t("MENU")}
       onClick={() => navSubjectManager.setSubject(!showNav)}
       className={"flex flex-col justify-center items-center h-4/5 aspect-square p-2 border-none bg-transparent gap-2 group ml-2 cursor-pointer"}
     >

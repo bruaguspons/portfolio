@@ -1,9 +1,13 @@
+"use client";
+import { useTranslations } from "next-intl";
 import { greyBgSubjectManager } from "@/lib/greyBg.service";
 
 const CloseSocialMediaPanel = (): React.ReactNode => {
+  const t = useTranslations("A11Y");
+
   return (
     <button
-      aria-label="Close social media panel"
+      aria-label={t("CLOSE_PANEL")}
       onClick={() => greyBgSubjectManager.setSubject(false)}
       className="w-8 sm:w-6 aspect-square m-[10%] fixed group cursor-pointer"
     >

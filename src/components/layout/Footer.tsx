@@ -1,10 +1,14 @@
+import { useTranslations } from "next-intl";
+
 const Footer = (): React.ReactNode => {
+  const t = useTranslations("FOOTER");
+
   return (
     <footer className="w-full bg-navy-950 z-0">
       <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
         
         <p className="text-sm">
-          © {new Date().getFullYear()} Bruno Pons. All rights reserved.
+          {t("RIGHTS", { year: new Date().getFullYear() })}
         </p>
 
         <div className="flex gap-6 text-sm">
@@ -27,7 +31,7 @@ const Footer = (): React.ReactNode => {
           <a
             href="mailto:bruaguspons@gmail.com"
           >
-            Email
+            {t("EMAIL")}
           </a>
         </div>
 

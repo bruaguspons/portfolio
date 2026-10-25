@@ -1,12 +1,15 @@
 "use client";
+import { useTranslations } from "next-intl";
 import { greyBgSubjectManager } from "@/lib/greyBg.service";
 
 const InfoTag = (): React.ReactNode => {
+  const t = useTranslations("A11Y");
+
   return (
     <button
       id="infoTag"
       onClick={() => greyBgSubjectManager.setSubject(true)}
-      aria-label="Info Tag"
+      aria-label={t("INFO")}
       className="fixed bottom-10 right-0 h-14 w-20 bg-linear-to-r from-blue-500 to-cyan-400 rounded-s-full translate-x-5 hover:translate-x-0 transition-transform duration-150 z-20 p-1 cursor-pointer"
     >
       <svg

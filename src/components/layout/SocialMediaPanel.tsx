@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { greyBgSubjectManager } from "@/lib/greyBg.service";
 import { cn } from "@/lib/utils";
 
@@ -11,6 +12,8 @@ import { randomString } from "@/lib/randomString";
 import { SITE_URL } from "@/lib/site";
 
 export default function SocialMediaPanel(): React.ReactNode {
+  const t = useTranslations("A11Y");
+  const locale = useLocale();
   const [token, setToken] = useState("");
   const [showPanel, setShowPanel] = useState(false);
 
@@ -35,8 +38,8 @@ export default function SocialMediaPanel(): React.ReactNode {
       <div className="flex h-full w-full flex-col items-center justify-evenly">
         <GradientIcon
           gradientName="github-gradient-light"
-          desc="Github"
-          ariaLabel="Github button"
+          desc={t("GITHUB")}
+          ariaLabel={t("GITHUB")}
           href="https://github.com/bruaguspons"
           target="_blank"
           className="flex w-20"
@@ -50,8 +53,8 @@ export default function SocialMediaPanel(): React.ReactNode {
 
         <GradientIcon
           gradientName="linkedin-gradient-dark"
-          desc="Linkedin"
-          ariaLabel="Linkedin button"
+          desc={t("LINKEDIN")}
+          ariaLabel={t("LINKEDIN")}
           href="https://www.linkedin.com/in/brunopons/"
           target="_blank"
           className="flex w-20"
@@ -65,8 +68,8 @@ export default function SocialMediaPanel(): React.ReactNode {
 
         <GradientIcon
           gradientName="mail-gradient-dark"
-          desc="Mail"
-          ariaLabel="Mail button"
+          desc={t("EMAIL")}
+          ariaLabel={t("EMAIL")}
           href="mailto:bruaguspons@gmail.com"
           target="_blank"
           className="flex w-20"
@@ -80,9 +83,9 @@ export default function SocialMediaPanel(): React.ReactNode {
 
         <GradientIcon
           gradientName="CV-gradient-dark"
-          desc="CV"
-          ariaLabel="CV button"
-          href={`${SITE_URL}/CV_BRUNO_PONS_ES.pdf?${token}`}
+          desc={t("CV")}
+          ariaLabel={t("CV")}
+          href={`${SITE_URL}/CV_BRUNO_PONS_${locale.toUpperCase()}.pdf?${token}`}
           target="_blank"
           className="flex w-20"
           viewBox="0 0 24 24"

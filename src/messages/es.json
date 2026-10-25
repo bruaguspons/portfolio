@@ -215,5 +215,26 @@
         "HOME": "Ir al inicio",
         "RETRY": "Reintentar",
         "BACK": "Volver atrás"
+    },
+    "NAV": {
+        "HOME": "Inicio",
+        "ABOUT": "Sobre mí",
+        "EXPERIENCE": "Experiencia laboral",
+        "EDUCATION": "Educación",
+        "PROJECTS": "Proyectos",
+        "CONTACT": "Contacto"
+    },
+    "FOOTER": {
+        "RIGHTS": "© {year} Bruno Pons. Todos los derechos reservados.",
+        "EMAIL": "Correo"
+    },
+    "A11Y": {
+        "MENU": "Abrir o cerrar el menú de navegación",
+        "INFO": "Abrir panel de redes sociales",
+        "CLOSE_PANEL": "Cerrar panel de redes sociales",
+        "GITHUB": "Perfil de GitHub",
+        "LINKEDIN": "Perfil de LinkedIn",
+        "EMAIL": "Enviar un correo electrónico",
+        "CV": "Ver CV (PDF)"
     }
 }
