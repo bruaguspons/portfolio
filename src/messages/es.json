@@ -9,20 +9,20 @@
             [
             "Soy Bruno, un desarrollador de software con más de ",
             { "highlight": "tres años" },
-            " de experiencia en aplicaciones web. Soy ",
+            " de experiencia en producción. Soy ",
             { "highlight": "Analista en Computación" },
             " egresado de la Universidad de la República y actualmente me encuentro realizando la ",
             { "highlight": "tesis de Ingeniería en Computación" },
-            ". Me especializo en desarrollo web, trabajando tanto en ",
+            ". Me especializo en React, Next.js y TypeScript en el ",
             { "highlight": "front-end" },
-            " como en ",
+            ", y en Node.js, Python y Java en el ",
             { "highlight": "back-end" },
-            " para crear soluciones modernas y eficientes."
+            ", para crear soluciones modernas y eficientes."
             ],
             [
-            "He participado en el desarrollo de productos digitales y en la ",
-            { "highlight": "integración de soluciones basadas en inteligencia artificial" },
-            " para crear nuevas funcionalidades, automatizar procesos y mejorar la experiencia de usuario."
+             "He participado en el desarrollo de productos digitales de alto tráfico y en la ",
+                { "highlight": "integración de modelos de lenguaje (LLMs) en sistemas reales" },
+                " para automatizar procesos y mejorar la experiencia de usuario."
             ],
             [
             "Me interesa especialmente construir ",
@@ -41,20 +41,28 @@
         },
         "ITEMS": [
             {
-                "DATE": "2023, Ene - Presente",
+                "DATE": "Ene 2023 - Presente",
                 "TITLE": "Montevideo COMM",
                 "CONTENT": [
                     [
                         "Formo parte del equipo de desarrollo de ",
                         { "highlight": "Montevideo COMM" },
-                        ", donde participo en el diseño, desarrollo y mantenimiento de productos digitales. Mi trabajo se centra en ",
-                        { "highlight": "desarrollo front-end" },
-                        " con HTML, CSS y JavaScript, junto con la implementación de lógica de negocio para el back-end."
+                        " como ",
+                        { "highlight": "Desarrollador Full Stack" },
+                        ", donde participo en el diseño, desarrollo y mantenimiento de ",
+                        { "highlight": "productos digitales de alto tráfico" },
+                        ", además de crear ",
+                        { "highlight": "aplicaciones personalizadas para clientes" },
+                        ". Trabajo transversalmente en front-end y back-end, y colaboro en decisiones de arquitectura y entrega continua."
                     ],
                     [
-                        "He trabajado en aplicaciones para clientes y en proyectos internos como ",
+                        "He desarrollado y mantenido funcionalidades en ",
                         { "highlight": "Montevideo Portal" },
-                        ", colaborando en la mejora de funcionalidades, optimización de interfaces y mantenimiento de sistemas en producción."
+                        ", una plataforma utilizada por miles de usuarios. También implementé soluciones de ",
+                        { "highlight": "IA aplicada" },
+                        ", integrando ",
+                        { "highlight": "modelos de lenguaje (LLMs)" },
+                        " en flujos de producción para automatizar procesos internos y enriquecer la experiencia de usuario."
                     ],
                     [
                         "También he desarrollado múltiples proyectos integrando ",
@@ -199,22 +207,12 @@
         "SEND_TEXT": "Enviar"
     },
     "SETTINGS":{
-        "THEME_SWITCH":"Cambia el tema:",
-        "LANGUAGE_SWITCH":"Cambia el lenguaje:"
+        "THEME_SWITCH":"Cambiar tema:",
+        "LANGUAGE_SWITCH":"Cambiar idioma:"
     },
     "META": {
         "TITLE": "Bruno Pons | Desarrollador Full Stack",
         "DESCRIPTION": "Desarrollador Full Stack con más de 3 años de experiencia en producción, creando productos digitales de alto tráfico, aplicaciones personalizadas y soluciones con inteligencia artificial aplicada."
-    },
-    "ERROR": {
-        "OOPS": "Oops!",
-        "NOT_FOUND_TITLE": "Página no encontrada",
-        "NOT_FOUND_DESCRIPTION": "La página que estás buscando no existe o fue movida.",
-        "GENERIC_TITLE": "Ocurrió un error",
-        "GENERIC_DESCRIPTION": "Ocurrió un error inesperado.",
-        "HOME": "Ir al inicio",
-        "RETRY": "Reintentar",
-        "BACK": "Volver atrás"
     },
     "NAV": {
         "HOME": "Inicio",
@@ -227,6 +225,16 @@
     "FOOTER": {
         "RIGHTS": "© {year} Bruno Pons. Todos los derechos reservados.",
         "EMAIL": "Correo"
+    },
+    "ERROR": {
+        "OOPS": "Oops!",
+        "NOT_FOUND_TITLE": "Página no encontrada",
+        "NOT_FOUND_DESCRIPTION": "La página que estás buscando no existe o fue movida.",
+        "GENERIC_TITLE": "Ocurrió un error",
+        "GENERIC_DESCRIPTION": "Ocurrió un error inesperado.",
+        "HOME": "Ir al inicio",
+        "RETRY": "Reintentar",
+        "BACK": "Volver atrás"
     },
     "A11Y": {
         "MENU": "Abrir o cerrar el menú de navegación",

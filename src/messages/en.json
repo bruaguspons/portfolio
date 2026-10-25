@@ -9,20 +9,20 @@
             [
                 "I'm Bruno, a software developer with more than ",
                 { "highlight": "three years" },
-                " of experience in web applications. I hold a degree as a ",
+                " of production experience. I hold a degree as a ",
                 { "highlight": "Computer Science Analyst" },
                 " from Universidad de la República and I am currently working on my ",
                 { "highlight": "Computer Engineering thesis" },
-                ". I specialize in web development, working on both ",
+                ". I specialize in React, Next.js, and TypeScript on the ",
                 { "highlight": "front-end" },
-                " and ",
+                ", and Node.js, Python, and Java on the ",
                 { "highlight": "back-end" },
-                " to create modern and efficient solutions."
+                ", to create modern and efficient solutions."
             ],
             [
-                "I have participated in the development of digital products and in the ",
-                { "highlight": "integration of artificial intelligence–based solutions" },
-                " to create new features, automate processes, and improve user experience."
+                "I have participated in the development of high-traffic digital products and in the ",
+                { "highlight": "integration of large language models (LLMs) into real systems" },
+                " to automate processes and improve user experience."
             ],
             [
                 "I am especially interested in building ",
@@ -47,21 +47,29 @@
                     [
                         "I am part of the development team at ",
                         { "highlight": "Montevideo COMM" },
-                        ", where I participate in the design, development, and maintenance of digital products. My work focuses on ",
-                        { "highlight": "front-end development" },
-                        " with HTML, CSS, and JavaScript, along with implementing business logic for the back-end."
+                        " as a ",
+                        { "highlight": "Full Stack Developer" },
+                        ", where I take part in the design, development, and maintenance of ",
+                        { "highlight": "high-traffic digital products" },
+                        ", as well as building ",
+                        { "highlight": "custom applications for clients" },
+                        ". I work across front-end and back-end, and contribute to architecture decisions and continuous delivery."
                     ],
                     [
-                        "I have worked on applications for clients and on internal projects such as ",
+                        "I have built and maintained features for ",
                         { "highlight": "Montevideo Portal" },
-                        ", collaborating in improving features, optimizing interfaces, and maintaining systems in production."
+                        ", a platform used by thousands of users. I have also implemented ",
+                        { "highlight": "applied AI" },
+                        " solutions, integrating ",
+                        { "highlight": "large language models (LLMs)" },
+                        " into production workflows to automate internal processes and enrich the user experience."
                     ],
                     [
-                        "I have also developed multiple projects integrating ",
+                        "I have also built multiple projects integrating ",
                         { "highlight": "artificial intelligence" },
                         ", creating features to ",
                         { "highlight": "automate processes" },
-                        " and improve user experience across different platforms."
+                        " and improve the user experience across different platforms."
                     ]
                 ],
                 "IMAGE_SRC": "/montevideo-comm.webp"
@@ -206,16 +214,6 @@
         "TITLE": "Bruno Pons | Full Stack Developer",
         "DESCRIPTION": "Full Stack Developer with 3+ years of production experience, building high-traffic digital products, custom applications, and applied artificial intelligence solutions."
     },
-    "ERROR": {
-        "OOPS": "Oops!",
-        "NOT_FOUND_TITLE": "Page not found",
-        "NOT_FOUND_DESCRIPTION": "The page you are looking for does not exist or has been moved.",
-        "GENERIC_TITLE": "Something went wrong",
-        "GENERIC_DESCRIPTION": "An unexpected error occurred.",
-        "HOME": "Go to home",
-        "RETRY": "Try again",
-        "BACK": "Go back"
-    },
     "NAV": {
         "HOME": "Home",
         "ABOUT": "About me",
@@ -227,6 +225,16 @@
     "FOOTER": {
         "RIGHTS": "© {year} Bruno Pons. All rights reserved.",
         "EMAIL": "Email"
+    },
+    "ERROR": {
+        "OOPS": "Oops!",
+        "NOT_FOUND_TITLE": "Page not found",
+        "NOT_FOUND_DESCRIPTION": "The page you are looking for does not exist or has been moved.",
+        "GENERIC_TITLE": "Something went wrong",
+        "GENERIC_DESCRIPTION": "An unexpected error occurred.",
+        "HOME": "Go to home",
+        "RETRY": "Try again",
+        "BACK": "Go back"
     },
     "A11Y": {
         "MENU": "Toggle navigation menu",
