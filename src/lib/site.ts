@@ -1,7 +1,7 @@
 export const SITE_URL = process.env.NODE_ENV === "production" ? "https://bruaguspons.github.io/portfolio/": "http://localhost:54321/";
-export const SITE_TITLE = "Bruno Pons | Software Developer";
-export const SITE_DESCRIPTION = "Bruno Pons | Software Developer | Computer Science Student";
 export const SITE_NAME = "Bruno Pons Portfolio";
+
+export const OG_LOCALES: Record<string, string> = { es: "es_UY", en: "en_US" };
 
 // export const BASE_PATH = process.env.NODE_ENV === "production" ? "/portfolio" : "";
 

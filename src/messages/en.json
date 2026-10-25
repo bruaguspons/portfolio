@@ -201,5 +201,19 @@
     "SETTINGS": {
         "THEME_SWITCH": "Change theme:",
         "LANGUAGE_SWITCH": "Change language:"
+    },
+    "META": {
+        "TITLE": "Bruno Pons | Full Stack Developer",
+        "DESCRIPTION": "Full Stack Developer with 3+ years of production experience, building high-traffic digital products, custom applications, and applied artificial intelligence solutions."
+    },
+    "ERROR": {
+        "OOPS": "Oops!",
+        "NOT_FOUND_TITLE": "Page not found",
+        "NOT_FOUND_DESCRIPTION": "The page you are looking for does not exist or has been moved.",
+        "GENERIC_TITLE": "Something went wrong",
+        "GENERIC_DESCRIPTION": "An unexpected error occurred.",
+        "HOME": "Go to home",
+        "RETRY": "Try again",
+        "BACK": "Go back"
     }
 }

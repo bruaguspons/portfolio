@@ -201,5 +201,19 @@
     "SETTINGS":{
         "THEME_SWITCH":"Cambia el tema:",
         "LANGUAGE_SWITCH":"Cambia el lenguaje:"
+    },
+    "META": {
+        "TITLE": "Bruno Pons | Desarrollador Full Stack",
+        "DESCRIPTION": "Desarrollador Full Stack con más de 3 años de experiencia en producción, creando productos digitales de alto tráfico, aplicaciones personalizadas y soluciones con inteligencia artificial aplicada."
+    },
+    "ERROR": {
+        "OOPS": "Oops!",
+        "NOT_FOUND_TITLE": "Página no encontrada",
+        "NOT_FOUND_DESCRIPTION": "La página que estás buscando no existe o fue movida.",
+        "GENERIC_TITLE": "Ocurrió un error",
+        "GENERIC_DESCRIPTION": "Ocurrió un error inesperado.",
+        "HOME": "Ir al inicio",
+        "RETRY": "Reintentar",
+        "BACK": "Volver atrás"
     }
 }

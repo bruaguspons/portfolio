@@ -4,26 +4,39 @@ import TextColor from "@/components/ui/TextColor";
 import Glow from "@/components/ui/Glow";
 import { SITE_URL } from "@/lib/site";
 
+export interface StatusErrorCopy {
+  oops: string;
+  notFoundTitle: string;
+  notFoundDescription: string;
+  genericTitle: string;
+  genericDescription: string;
+  home: string;
+  retry: string;
+  back: string;
+}
+
 interface Props {
+  copy: StatusErrorCopy;
+  homeHref: string;
   statusCode?: number;
   message?: string;
   onRetry?: () => void;
 }
 
-const StatusError = ({ statusCode, message, onRetry }: Props): React.ReactNode => {
+const StatusError = ({ copy, homeHref, statusCode, message, onRetry }: Props): React.ReactNode => {
   const is404 = statusCode === 404;
 
   const title = is404 ? "404" : statusCode ?? "Error";
-  const heading = is404 ? "Página no encontrada" : "Ocurrió un error";
+  const heading = is404 ? copy.notFoundTitle : copy.genericTitle;
   const description = is404
-    ? "La página que estás buscando no existe o fue movida."
-    : message || "Ocurrió un error inesperado.";
+    ? copy.notFoundDescription
+    : message || copy.genericDescription;
 
   return (
     <div className="relative w-full min-h-[calc(100dvh-4rem)] flex flex-col items-center justify-center text-center px-6" style={{ backgroundImage: `url('${SITE_URL}noisy.webp')` }}>
       <div className="max-w-xl">
         <TextColor className="text-6xl md:text-7xl font-extrabold tracking-tight from-red-500! to-pink-500!">
-          Oops!
+          {copy.oops}
         </TextColor>
 
         <h1 className="mt-4 text-5xl font-bold">{title}</h1>
@@ -32,10 +45,10 @@ const StatusError = ({ statusCode, message, onRetry }: Props): React.ReactNode =
 
         <div className="flex gap-4 justify-center mt-8 flex-wrap">
           <Link
-            href="/"
+            href={homeHref}
             className="px-6 py-3 rounded-xl font-medium hover:opacity-90 transition"
           >
-            Ir al inicio
+            {copy.home}
           </Link>
 
           {onRetry ? (
@@ -43,14 +56,14 @@ const StatusError = ({ statusCode, message, onRetry }: Props): React.ReactNode =
               onClick={onRetry}
               className="px-6 py-3 rounded-xl border border-gray-300 hover:bg-zinc-800/50 transition cursor-pointer"
             >
-              Reintentar
+              {copy.retry}
             </button>
           ) : (
             <button
               onClick={() => window.history.back()}
               className="px-6 py-3 rounded-xl border border-gray-300 hover:bg-zinc-800/50 transition cursor-pointer"
             >
-              Volver atrás
+              {copy.back}
             </button>
           )}
         </div>
