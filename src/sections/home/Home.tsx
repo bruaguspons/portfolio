@@ -5,6 +5,7 @@ import Go from "@/icons/tech/Go";
 import Html5 from "@/icons/tech/Html5";
 import Java from "@/icons/tech/Java";
 import Javascript from "@/icons/tech/Javascript";
+import Kotlin from "@/icons/tech/Kotlin";
 import Mongodb from "@/icons/tech/Mongodb";
 import Nodejs from "@/icons/tech/Nodejs";
 import ReactIcon from "@/icons/tech/React";
@@ -54,6 +55,7 @@ const Home = ({headerHeight}: Props): React.ReactNode => {
               <Carousel.Item><Nodejs className="w-10 h-10" /> Nodejs</Carousel.Item>
               <Carousel.Item><Go className="w-10 h-10" /> Go</Carousel.Item>
               <Carousel.Item><Java className="w-10 h-10" /> Java</Carousel.Item>
+              <Carousel.Item><Kotlin className="w-10 h-10" /> Kotlin</Carousel.Item>
               <Carousel.Item><Spring className="w-10 h-10" /> Spring</Carousel.Item>
               <Carousel.Item><Docker className="w-10 h-10" /> Docker</Carousel.Item>
               <Carousel.Item><Postgresql className="w-10 h-10" /> Postgresql</Carousel.Item>

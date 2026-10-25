@@ -25,6 +25,11 @@ const LIST_OF_PROJECTS: Project[] = [
     link: "https://github.com/bruaguspons/fjm"
   },
   {
+    title: "Kotlin Microservices Ecommerce",
+    imgUrl: `${SITE_URL}/projects/kotlin-icon.svg`,
+    link: "https://github.com/bruaguspons/microservices-kotlin-ecommerce"
+  },
+  {
     title: "Java Microservices Ecommerce",
     imgUrl: `${SITE_URL}/projects/java-icon.svg`,
     link: "https://github.com/bruaguspons/microservices-java-ecommerce"
