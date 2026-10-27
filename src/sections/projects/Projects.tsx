@@ -56,6 +56,10 @@ const LIST_OF_PROJECTS: Project[] = [
   }
 ];
 
+// Must match the `lg:grid-cols-*` class of the projects grid.
+const COLUMNS = 3;
+const GHOST_COUNT = (COLUMNS - (LIST_OF_PROJECTS.length % COLUMNS)) % COLUMNS;
+
 const Projects = ({ headerHeight }: Props): React.ReactNode => {
   const t = useTranslations("PROJECTS");
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -92,12 +96,12 @@ const Projects = ({ headerHeight }: Props): React.ReactNode => {
           />
         ))}
 
-        {Array.from({ length: 0 }).map((_, i) => (
+        {Array.from({ length: GHOST_COUNT }).map((_, i) => (
           <ProjectItem
             imgUrl=""
             title
             key={`${i}-ghost`}
-            className="hidden cursor-not-allowed pointer-events-none min-h-44 opacity-40 md:block"
+            className="hidden cursor-not-allowed pointer-events-none min-h-44 opacity-40 lg:block"
           />
         ))}
       </div>
