@@ -13,6 +13,7 @@ import { SITE_URL } from "@/lib/site";
 
 export default function SocialMediaPanel(): React.ReactNode {
   const t = useTranslations("A11Y");
+  const tSocial = useTranslations("SOCIAL");
   const locale = useLocale();
   const [token, setToken] = useState("");
   const [showPanel, setShowPanel] = useState(false);
@@ -38,7 +39,7 @@ export default function SocialMediaPanel(): React.ReactNode {
       <div className="flex h-full w-full flex-col items-center justify-evenly">
         <GradientIcon
           gradientName="github-gradient-light"
-          desc={t("GITHUB")}
+          desc={tSocial("GITHUB")}
           ariaLabel={t("GITHUB")}
           href="https://github.com/bruaguspons"
           target="_blank"
@@ -53,7 +54,7 @@ export default function SocialMediaPanel(): React.ReactNode {
 
         <GradientIcon
           gradientName="linkedin-gradient-dark"
-          desc={t("LINKEDIN")}
+          desc={tSocial("LINKEDIN")}
           ariaLabel={t("LINKEDIN")}
           href="https://www.linkedin.com/in/brunopons/"
           target="_blank"
@@ -68,7 +69,7 @@ export default function SocialMediaPanel(): React.ReactNode {
 
         <GradientIcon
           gradientName="mail-gradient-dark"
-          desc={t("EMAIL")}
+          desc={tSocial("EMAIL")}
           ariaLabel={t("EMAIL")}
           href="mailto:bruaguspons@gmail.com"
           target="_blank"
@@ -83,7 +84,7 @@ export default function SocialMediaPanel(): React.ReactNode {
 
         <GradientIcon
           gradientName="CV-gradient-dark"
-          desc={t("CV")}
+          desc={tSocial("CV")}
           ariaLabel={t("CV")}
           href={`${SITE_URL}/CV_BRUNO_PONS_${locale.toUpperCase()}.pdf?${token}`}
           target="_blank"

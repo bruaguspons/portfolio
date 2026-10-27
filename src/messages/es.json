@@ -244,5 +244,11 @@
         "LINKEDIN": "Perfil de LinkedIn",
         "EMAIL": "Enviar un correo electrónico",
         "CV": "Ver CV (PDF)"
+    },
+    "SOCIAL": {
+        "GITHUB": "GitHub",
+        "LINKEDIN": "LinkedIn",
+        "EMAIL": "Correo",
+        "CV": "CV"
     }
 }
