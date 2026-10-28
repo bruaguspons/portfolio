@@ -9,7 +9,7 @@ import CloseSocialMediaPanel from "./CloseSocialMediaPanel";
 import GradientIcon from "./icons/GradientIcon";
 
 import { randomString } from "@/lib/randomString";
-import { SITE_URL } from "@/lib/site";
+import { siteUrl } from "@/lib/site";
 
 export default function SocialMediaPanel(): React.ReactNode {
   const t = useTranslations("A11Y");
@@ -86,7 +86,7 @@ export default function SocialMediaPanel(): React.ReactNode {
           gradientName="CV-gradient-dark"
           desc={tSocial("CV")}
           ariaLabel={t("CV")}
-          href={`${SITE_URL}/CV_BRUNO_PONS_${locale.toUpperCase()}.pdf?${token}`}
+          href={siteUrl(`CV_BRUNO_PONS_${locale.toUpperCase()}.pdf?${token}`)}
           target="_blank"
           className="flex w-20"
           viewBox="0 0 24 24"

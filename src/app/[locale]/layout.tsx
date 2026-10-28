@@ -6,10 +6,9 @@ import { cn } from "@/lib/utils";
 import { routing } from "@/i18n/routing";
 import { montserrat } from "@/lib/fonts";
 import {
-  SITE_URL,
+  siteUrl,
   SITE_NAME,
   SITE_OG_IMAGE,
-  SITE_ICONS,
   OG_LOCALES,
 } from "@/lib/site";
 import NextIntlProvider from "@/components/providers/NextIntlProvider";
@@ -34,10 +33,10 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const t = await getTranslations({ locale, namespace: "META" });
   const title = t("TITLE");
   const description = t("DESCRIPTION");
-  const url = `${SITE_URL}${locale}/`;
+  const url = siteUrl(`${locale}/`);
 
   return {
-    metadataBase: new URL(SITE_URL),
+    metadataBase: new URL(siteUrl()),
     title: {
       default: title,
       template: "%s | Bruno Pons",
@@ -47,7 +46,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     alternates: {
       canonical: url,
       languages: Object.fromEntries(
-        routing.locales.map((l) => [l, `${SITE_URL}${l}/`])
+        routing.locales.map((l) => [l, siteUrl(`${l}/`)])
       ),
     },
     openGraph: {
@@ -67,12 +66,6 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       title,
       description,
       images: [SITE_OG_IMAGE],
-    },
-    icons: {
-      icon: [
-        { url: SITE_ICONS.default, type: "image/svg+xml" },
-        { url: SITE_ICONS.dark, type: "image/svg+xml", media: "(prefers-color-scheme: dark)" },
-      ],
     },
   };
 }

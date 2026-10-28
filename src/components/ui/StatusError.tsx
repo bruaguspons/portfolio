@@ -2,7 +2,7 @@
 import Link from "next/link";
 import TextColor from "@/components/ui/TextColor";
 import Glow from "@/components/ui/Glow";
-import { SITE_URL } from "@/lib/site";
+import { siteUrl } from "@/lib/site";
 
 export interface StatusErrorCopy {
   oops: string;
@@ -33,7 +33,7 @@ const StatusError = ({ copy, homeHref, statusCode, message, onRetry }: Props): R
     : message || copy.genericDescription;
 
   return (
-    <div className="relative w-full min-h-[calc(100dvh-4rem)] flex flex-col items-center justify-center text-center px-6" style={{ backgroundImage: `url('${SITE_URL}noisy.webp')` }}>
+    <div className="relative w-full min-h-[calc(100dvh-4rem)] flex flex-col items-center justify-center text-center px-6" style={{ backgroundImage: `url('${siteUrl("noisy.webp")}')` }}>
       <div className="max-w-xl">
         <TextColor className="text-6xl md:text-7xl font-extrabold tracking-tight from-red-500! to-pink-500!">
           {copy.oops}

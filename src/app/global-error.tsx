@@ -3,6 +3,7 @@ import StatusError from "@/components/ui/StatusError";
 import es from "@/messages/es.json";
 import { montserrat } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
+import { SITE_ICONS, SITE_NAME } from "@/lib/site";
 import "./globals.css";
 
 interface Props {
@@ -17,6 +18,16 @@ export default function GlobalError({ error, reset }: Props): React.ReactNode {
 
   return (
     <html lang="es" className="dark scroll-smooth" data-scroll-behavior="smooth">
+      <head>
+        <title>{SITE_NAME}</title>
+        <link rel="icon" href={SITE_ICONS.default} type="image/svg+xml" />
+        <link
+          rel="icon"
+          href={SITE_ICONS.dark}
+          type="image/svg+xml"
+          media="(prefers-color-scheme: dark)"
+        />
+      </head>
       <body
         className={cn(
           montserrat.className,
