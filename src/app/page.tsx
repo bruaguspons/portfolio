@@ -13,11 +13,15 @@ export const metadata: Metadata = {
 };
 
 // Static export has no server redirects, and redirect() would emit an error shell
-// without lang/title. A plain meta refresh works without JavaScript.
+// without lang/title. The inline script redirects as soon as the HTML is parsed;
+// the meta refresh is the no-JS fallback (browsers only fire it after page load).
 export default function RootPage(): ReactNode {
   return (
     <html lang={routing.defaultLocale}>
       <head>
+        <script
+          dangerouslySetInnerHTML={{ __html: `location.replace(${JSON.stringify(REDIRECT_TARGET)});` }}
+        />
         <meta httpEquiv="refresh" content={`0; url=${REDIRECT_TARGET}`} />
       </head>
       <body>
