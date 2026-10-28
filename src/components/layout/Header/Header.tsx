@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { navSubjectManager } from "@/lib/nav.service";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useLocale } from "next-intl";
 
 const sections = [
   "home",
@@ -17,6 +18,7 @@ const sections = [
 ];
 
 const Header = (): React.ReactNode => {
+  const locale = useLocale();
   const [showNav, setShowNav] = useState(false);
   useEffect(() => {
     const subject = navSubjectManager.getSubject();
@@ -70,7 +72,7 @@ const Header = (): React.ReactNode => {
           scrolled ? "bg-navy-900/60" : "bg-navy-900/30"
         )}
       >
-        <Link href="/" className="ml-5 font-bold text-lg whitespace-nowrap">Bruno <TextColor>Pons</TextColor></Link>
+        <Link href={`/${locale}`} className="ml-5 font-bold text-lg whitespace-nowrap">Bruno <TextColor>Pons</TextColor></Link>
 
         <div className="mr-4 h-full lg:hidden flex items-center justify-center">
           <DropDownMenuLinks />
